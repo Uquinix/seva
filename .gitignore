@@ -14,11 +14,6 @@ config.log
 config.status
 .libs
 .deps
-AppKit/CGEvent.h
-AppKit/KTFont.h
-AppKit/NSRaise.h
-Foundation/Headers
-AppKit/Headers
 *.a
 *.core
 *.o
@@ -48,13 +43,10 @@ cscope.files
 cscope.in.out
 cscope.out
 cscope.po.out
-ISO/overlays/uzip/furybsd-common-settings
-ISO/overlays/uzip/furybsd-wallpapers/files/*
 *.save*
 *~
 *.idea*
 __pycache__
-ISO/overlays/ramdisk/version
 tags
 compile_commands.json
 compile_commands.events.json
