@@ -64,7 +64,7 @@ __DO_KERNELS?=yes
 
 # This is included so CC is set to ccache for -V, and COMPILER_TYPE/VERSION
 # can be cached for sub-makes. We can't do this while still running on the
-# old fmake from FreeBSD 9.x or older, so avoid including it then to avoid
+# old fmake from Seva 9.x or older, so avoid including it then to avoid
 # heartburn upgrading from older systems. The need for CC is done with new
 # make later in the build, and caching COMPILER_TYPE/VERSION is only an
 # optimization. Also sinclude it to be friendlier to foreign OS hosted builds.
@@ -72,7 +72,7 @@ __DO_KERNELS?=yes
 .sinclude <bsd.compiler.mk>
 .endif
 
-# Note: we use this awkward construct to be compatible with FreeBSD's
+# Note: we use this awkward construct to be compatible with Seva's
 # old make used in 10.0 and 9.2 and earlier.
 .if defined(MK_DIRDEPS_BUILD) && ${MK_DIRDEPS_BUILD} == "yes" && \
     !make(showconfig) && !make(print-dir)
@@ -229,7 +229,7 @@ MK_META_MODE= no
 .endif	# defined(MK_META_MODE) && ${MK_META_MODE} == yes
 
 # Guess target architecture from target type, and vice versa, based on
-# historic FreeBSD practice of tending to have TARGET == TARGET_ARCH
+# historic Seva practice of tending to have TARGET == TARGET_ARCH
 # expanding to TARGET == TARGET_CPUARCH in recent times, with known
 # exceptions.
 .if !defined(TARGET_ARCH) && defined(TARGET)
@@ -326,7 +326,7 @@ CHECK_TIME!= cmp=`mktemp`; find ${.CURDIR}/sys/sys/param.h -newer "$$cmp" && rm 
 # world
 #
 # Attempt to rebuild and reinstall everything. This target is not to be
-# used for upgrading an existing FreeBSD system, because the kernel is
+# used for upgrading an existing Seva system, because the kernel is
 # not included. One can argue that this target doesn't build everything
 # then.
 #
@@ -357,11 +357,11 @@ world: upgrade_checks .PHONY
 	@echo "--------------------------------------------------------------"
 .else
 world: .PHONY
-	@echo "WARNING: make world will overwrite your existing FreeBSD"
+	@echo "WARNING: make world will overwrite your existing Seva"
 	@echo "installation without also building and installing a new"
 	@echo "kernel.  This can be dangerous.  Please read the handbook,"
 	@echo "'Rebuilding world', for how to upgrade your system."
-	@echo "Define DESTDIR to where you want to install FreeBSD,"
+	@echo "Define DESTDIR to where you want to install Seva,"
 	@echo "including /, to override this warning and proceed as usual."
 	@echo ""
 	@echo "Bailing out now..."
