@@ -1,0 +1,10 @@
+#
+# DEFAULTS -- Default kernel configuration file for FreeBSD/arm
+#
+# $FreeBSD$
+
+device		mem
+
+# Default congestion control algorithm
+options 	CC_NEWRENO		# include newreno congestion control
+
