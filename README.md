@@ -29,3 +29,7 @@ Seva is a hybrid kernel integrating modern code with the base of FreeBSD. Seva r
 | tools | Utilities for regression testing and miscellaneous tasks. |
 | usr.bin | User commands. |
 | usr.sbin | System administration commands. |
+
+# Building Seva
+
+See [building.md](building.md)
