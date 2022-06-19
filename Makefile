@@ -1,5 +1,5 @@
 #
-# $Seva$
+# $FreeBSD$
 #
 # The common user-driven targets are (for a complete list, see build(7)):
 #
@@ -52,6 +52,72 @@
 # native-xtools-install
 #                     - Install the files to the given DESTDIR/NXTP where
 #                       NXTP defaults to /nxb-bin.
+#
+# This makefile is simple by design. The FreeBSD make automatically reads
+# the /usr/share/mk/sys.mk unless the -m argument is specified on the
+# command line. By keeping this makefile simple, it doesn't matter too
+# much how different the installed mk files are from those in the source
+# tree. This makefile executes a child make process, forcing it to use
+# the mk files from the source tree which are supposed to DTRT.
+#
+# Most of the user-driven targets (as listed above) are implemented in
+# Makefile.inc1.  The exceptions are universe, tinderbox and targets.
+#
+# If you want to build your system from source, be sure that /usr/obj has
+# at least 6 GB of disk space available.  A complete 'universe' build of
+# r340283 (2018-11) required 167 GB of space.  ZFS lz4 compression
+# achieved a 2.18x ratio, reducing actual space to 81 GB.
+#
+# For individuals wanting to build from the sources currently on their
+# system, the simple instructions are:
+#
+# 1.  `cd /usr/src'  (or to the directory containing your source tree).
+# 2.  Define `HISTORICAL_MAKE_WORLD' variable (see README).
+# 3.  `make world'
+#
+# For individuals wanting to upgrade their sources (even if only a
+# delta of a few days):
+#
+#  1.  `cd /usr/src'       (or to the directory containing your source tree).
+#  2.  `make buildworld'
+#  3.  `make buildkernel KERNCONF=YOUR_KERNEL_HERE'     (default is GENERIC).
+#  4.  `make installkernel KERNCONF=YOUR_KERNEL_HERE'   (default is GENERIC).
+#       [steps 3. & 4. can be combined by using the "kernel" target]
+#  5.  `reboot'        (in single user mode: boot -s from the loader prompt).
+#  6.  `mergemaster -p'
+#  7.  `make installworld'
+#  8.  `mergemaster'            (you may wish to use -i, along with -U or -F).
+#  9.  `make delete-old'
+# 10.  `reboot'
+# 11.  `make delete-old-libs' (in case no 3rd party program uses them anymore)
+#
+# For individuals wanting to build from source with GCC from ports, first
+# install the appropriate GCC cross toolchain package:
+#   `pkg install ${TARGET_ARCH}-gccN`
+#
+# Once you have installed the necessary cross toolchain, simply pass
+# CROSS_TOOLCHAIN=${TARGET_ARCH}-gccN while building with the above steps,
+# e.g., `make buildworld CROSS_TOOLCHAIN=amd64-gcc6`.
+#
+# The ${TARGET_ARCH}-gccN packages are provided as flavors of the
+# devel/freebsd-gccN ports.
+#
+# See src/UPDATING `COMMON ITEMS' for more complete information.
+#
+# If TARGET=machine (e.g. powerpc, arm64, ...) is specified you can
+# cross build world for other machine types using the buildworld target,
+# and once the world is built you can cross build a kernel using the
+# buildkernel target.
+#
+# Define the user-driven targets. These are listed here in alphabetical
+# order, but that's not important.
+#
+# Targets that begin with underscore are internal targets intended for
+# developer convenience only.  They are intentionally not documented and
+# completely subject to change without notice.
+#
+# For more information, see the build(7) manual page.
+#
 
 .if defined(UNIVERSE_TARGET) || defined(MAKE_JUST_WORLDS) || defined(WITHOUT_KERNELS)
 __DO_KERNELS=no
@@ -64,7 +130,7 @@ __DO_KERNELS?=yes
 
 # This is included so CC is set to ccache for -V, and COMPILER_TYPE/VERSION
 # can be cached for sub-makes. We can't do this while still running on the
-# old fmake from Seva 9.x or older, so avoid including it then to avoid
+# old fmake from FreeBSD 9.x or older, so avoid including it then to avoid
 # heartburn upgrading from older systems. The need for CC is done with new
 # make later in the build, and caching COMPILER_TYPE/VERSION is only an
 # optimization. Also sinclude it to be friendlier to foreign OS hosted builds.
@@ -72,7 +138,7 @@ __DO_KERNELS?=yes
 .sinclude <bsd.compiler.mk>
 .endif
 
-# Note: we use this awkward construct to be compatible with Seva's
+# Note: we use this awkward construct to be compatible with FreeBSD's
 # old make used in 10.0 and 9.2 and earlier.
 .if defined(MK_DIRDEPS_BUILD) && ${MK_DIRDEPS_BUILD} == "yes" && \
     !make(showconfig) && !make(print-dir)
@@ -229,7 +295,7 @@ MK_META_MODE= no
 .endif	# defined(MK_META_MODE) && ${MK_META_MODE} == yes
 
 # Guess target architecture from target type, and vice versa, based on
-# historic Seva practice of tending to have TARGET == TARGET_ARCH
+# historic FreeBSD practice of tending to have TARGET == TARGET_ARCH
 # expanding to TARGET == TARGET_CPUARCH in recent times, with known
 # exceptions.
 .if !defined(TARGET_ARCH) && defined(TARGET)
@@ -326,7 +392,7 @@ CHECK_TIME!= cmp=`mktemp`; find ${.CURDIR}/sys/sys/param.h -newer "$$cmp" && rm 
 # world
 #
 # Attempt to rebuild and reinstall everything. This target is not to be
-# used for upgrading an existing Seva system, because the kernel is
+# used for upgrading an existing FreeBSD system, because the kernel is
 # not included. One can argue that this target doesn't build everything
 # then.
 #
@@ -357,11 +423,11 @@ world: upgrade_checks .PHONY
 	@echo "--------------------------------------------------------------"
 .else
 world: .PHONY
-	@echo "WARNING: make world will overwrite your existing Seva"
+	@echo "WARNING: make world will overwrite your existing FreeBSD"
 	@echo "installation without also building and installing a new"
 	@echo "kernel.  This can be dangerous.  Please read the handbook,"
 	@echo "'Rebuilding world', for how to upgrade your system."
-	@echo "Define DESTDIR to where you want to install Seva,"
+	@echo "Define DESTDIR to where you want to install FreeBSD,"
 	@echo "including /, to override this warning and proceed as usual."
 	@echo ""
 	@echo "Bailing out now..."
