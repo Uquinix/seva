@@ -902,7 +902,7 @@ struct xen_livepatch_name {
  * will be returned. The payload is not applied at this time - that is
  * controlled by XEN_SYSCTL_LIVEPATCH_ACTION.
  *
- * The return value is zero if the payload was succesfully uploaded.
+ * The return value is zero if the payload was successfully uploaded.
  * Otherwise an EXX return value is provided. Duplicate `name` are not
  * supported.
  *

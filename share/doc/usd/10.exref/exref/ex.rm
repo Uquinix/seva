@@ -1975,7 +1975,7 @@ or
 preceeded by a tab or a space.  This string may be anywhere in the
 line and anything after the 
 .I :
-is interpeted as editor commands.  This option defaults to off because
+is interpreted as editor commands.  This option defaults to off because
 of unexpected behavior when editting files such as
 .I /etc/passwd.
 .LC

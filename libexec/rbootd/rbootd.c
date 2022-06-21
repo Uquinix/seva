@@ -124,7 +124,7 @@ main(int argc, char *argv[])
 	if (DebugFlg) {
 		DbgFp = stdout;				/* output to stdout */
 
-		(void) signal(SIGUSR1, SIG_IGN);	/* dont muck w/DbgFp */
+		(void) signal(SIGUSR1, SIG_IGN);	/* don't muck w/DbgFp */
 		(void) signal(SIGUSR2, SIG_IGN);
 		(void) fclose(stderr);			/* finished with it */
 	} else {

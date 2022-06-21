@@ -29,7 +29,7 @@ namespace llvm {
 class Module;
 
 /// The function importer is automatically importing function from other modules
-/// based on the provided summary informations.
+/// based on the provided summary information.
 class FunctionImporter {
 public:
   /// Set of functions to import from a source module. Each entry is a set

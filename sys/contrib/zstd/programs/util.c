@@ -902,7 +902,7 @@ makeUniqueMirroredDestDirs(char** srcDirNames, unsigned nbFile, const char* outD
         char* prevDirName = srcDirNames[i - 1];
         char* currDirName = srcDirNames[i];
 
-        /* note: we alwasy compare trimmed path, i.e.:
+        /* note: we always compare trimmed path, i.e.:
          * src dir of "./foo" and "/foo" will be both saved into:
          * "outDirName/foo/" */
         if (!firstIsParentOrSameDirOfSecond(trimPath(prevDirName),

@@ -262,11 +262,11 @@
 	
 	* kafs_locl.h: include krb5-v4compat.h if needed, define an
 	internal structure struct kafs_token that carries around for rxkad
-	data that is independant of kerberos version
+	data that is independent of kerberos version
 	
 2003-02-18  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* dlfcn.h: s/intialize/initialize, from
+	* dlfcn.h: s/initialize/initialize, from
 	<jmc@prioris.mini.pw.edu.pl>
 
 2003-02-08  Assar Westerlund  <assar@kth.se>

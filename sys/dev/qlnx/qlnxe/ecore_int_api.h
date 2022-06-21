@@ -302,7 +302,7 @@ void ecore_int_sp_dpc(osal_int_ptr_t hwfn_cookie);
 
 /**
  * @brief ecore_int_get_num_sbs - get the number of status 
- *        blocks configured for this funciton in the igu.
+ *        blocks configured for this function in the igu.
  * 
  * @param p_hwfn
  * @param p_sb_cnt_info

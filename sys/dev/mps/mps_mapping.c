@@ -400,7 +400,7 @@ _mapping_get_ir_mt_idx_from_wwid(struct mps_softc *sc, u64 wwid)
 /**
  * _mapping_get_mt_idx_from_id - get map table index from a device ID
  * @sc: per adapter object
- * @dev_id: device identifer (SAS Address)
+ * @dev_id: device identifier (SAS Address)
  *
  * Returns the index of map table entry on success or bad index.
  */

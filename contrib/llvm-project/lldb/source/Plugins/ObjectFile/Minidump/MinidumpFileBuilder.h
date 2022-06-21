@@ -7,7 +7,7 @@
 //===----------------------------------------------------------------------===//
 //
 /// \file
-/// Structure holding data neccessary for minidump file creation.
+/// Structure holding data necessary for minidump file creation.
 ///
 /// The class MinidumpFileWriter is used to hold the data that will eventually
 /// be dumped to the file.

@@ -582,7 +582,7 @@ model::metadata::required_user(void) const
 /// Returns the timeout of the test.
 ///
 /// \return A time delta; should be compared to default_timeout to see if it has
-/// been overriden.
+/// been overridden.
 const datetime::delta&
 model::metadata::timeout(void) const
 {

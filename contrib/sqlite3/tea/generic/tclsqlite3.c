@@ -3429,7 +3429,7 @@ deserialize_error:
   ** Start a new transaction (if we are not already in the midst of a
   ** transaction) and execute the TCL script SCRIPT.  After SCRIPT
   ** completes, either commit the transaction or roll it back if SCRIPT
-  ** throws an exception.  Or if no new transation was started, do nothing.
+  ** throws an exception.  Or if no new transaction was started, do nothing.
   ** pass the exception on up the stack.
   **
   ** This command was inspired by Dave Thomas's talk on Ruby at the

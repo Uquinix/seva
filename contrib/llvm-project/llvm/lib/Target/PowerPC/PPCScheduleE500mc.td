@@ -325,7 +325,7 @@ def PPCE500mcItineraries : ProcessorItineraries<
 def PPCE500mcModel : SchedMachineModel {
   let IssueWidth = 2;  // 2 micro-ops are dispatched per cycle.
   let LoadLatency = 5; // Optimistic load latency assuming bypass.
-                       // This is overriden by OperandCycles if the
+                       // This is overridden by OperandCycles if the
                        // Itineraries are queried instead.
 
   let CompleteModel = 0;

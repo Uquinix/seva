@@ -4958,7 +4958,7 @@ rack_calc_thresh_rack(struct tcp_rack *rack, uint32_t srtt, uint32_t cts)
 	 *
 	 * If reorder-fade is configured, then we track the last time we saw
 	 * re-ordering occur. If we reach the point where enough time as
-	 * passed we no longer consider reordering has occuring.
+	 * passed we no longer consider reordering has occurring.
 	 *
 	 * Or if reorder-face is 0, then once we see reordering we consider
 	 * the connection to alway be subject to reordering and just set lro
@@ -5352,7 +5352,7 @@ activate_tlp:
 			goto activate_rxt;
 		}
 		if (rsm->r_flags & RACK_HAS_FIN) {
-			/* If its a FIN we dont do TLP */
+			/* If its a FIN we don't do TLP */
 			rsm = NULL;
 			goto activate_rxt;
 		}
@@ -7941,7 +7941,7 @@ rack_update_rtt(struct tcpcb *tp, struct tcp_rack *rack,
 					/*
 					 * The peer ack'd from our previous
 					 * transmission. We have a spurious
-					 * retransmission and thus we dont
+					 * retransmission and thus we don't
 					 * want to update our rack_rtt.
 					 *
 					 * Hmm should there be a CC revert here?
@@ -8492,7 +8492,7 @@ do_rest_ofb:
 			rack->r_ctl.rc_sacked += (rsm->r_end - rsm->r_start);
 			if (rsm->r_in_tmap) /* should be true */
 				rack_log_sack_passed(tp, rack, rsm);
-			/* Is Reordering occuring? */
+			/* Is Reordering occurring? */
 			if (rsm->r_flags & RACK_SACK_PASSED) {
 				rsm->r_flags &= ~RACK_SACK_PASSED;
 				rack->r_ctl.rc_reorder_ts = cts;
@@ -8711,7 +8711,7 @@ do_rest_ofb:
 			rack->r_ctl.rc_sacked += (rsm->r_end - rsm->r_start);
 			if (rsm->r_in_tmap) /* should be true */
 				rack_log_sack_passed(tp, rack, rsm);
-			/* Is Reordering occuring? */
+			/* Is Reordering occurring? */
 			if (rsm->r_flags & RACK_SACK_PASSED) {
 				rsm->r_flags &= ~RACK_SACK_PASSED;
 				rack->r_ctl.rc_reorder_ts = cts;
@@ -10125,7 +10125,7 @@ rack_process_ack(struct mbuf *m, struct tcphdr *th, struct socket *so,
 	if (__predict_false(SEQ_LEQ(th->th_ack, tp->snd_una))) {
 		/*
 		 * Old ack, behind (or duplicate to) the last one rcv'd
-		 * Note: We mark reordering is occuring if its
+		 * Note: We mark reordering is occurring if its
 		 * less than and we have not closed our window.
 		 */
 		if (SEQ_LT(th->th_ack, tp->snd_una) && (sbspace(&so->so_rcv) > ctf_fixed_maxseg(tp))) {
@@ -16047,7 +16047,7 @@ rack_fast_rsm_output(struct tcpcb *tp, struct tcp_rack *rack, struct rack_sendma
 		/*
 		 * We have no pacing set or we
 		 * are using old-style rack or
-		 * we are overriden to use the old 1ms pacing.
+		 * we are overridden to use the old 1ms pacing.
 		 */
 		slot = rack->r_ctl.rc_min_to;
 	}
@@ -19020,7 +19020,7 @@ enobufs:
 			/*
 			 * We have no pacing set or we
 			 * are using old-style rack or
-			 * we are overriden to use the old 1ms pacing.
+			 * we are overridden to use the old 1ms pacing.
 			 */
 			slot = rack->r_ctl.rc_min_to;
 		}

@@ -6467,7 +6467,7 @@ void SIInstrInfo::lowerScalarXnor(SetVectorType &Worklist,
     // Using the identity !(x ^ y) == (!x ^ y) == (x ^ !y), we can
     // invert either source and then perform the XOR. If either source is a
     // scalar register, then we can leave the inversion on the scalar unit to
-    // acheive a better distrubution of scalar and vector instructions.
+    // achieve a better distrubution of scalar and vector instructions.
     bool Src0IsSGPR = Src0.isReg() &&
                       RI.isSGPRClass(MRI.getRegClass(Src0.getReg()));
     bool Src1IsSGPR = Src1.isReg() &&

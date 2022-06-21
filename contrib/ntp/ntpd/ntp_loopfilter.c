@@ -319,7 +319,7 @@ ntp_adjtime_error_handler(
 # warning TIME_OOP is not defined
 #endif
 #ifdef TIME_WAIT
-	    case TIME_WAIT: /* 4: leap second has occured */
+	    case TIME_WAIT: /* 4: leap second has occurred */
 		msyslog(LOG_INFO, "kernel reports leap second has occurred");
 	    break;
 #else

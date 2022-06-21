@@ -232,7 +232,7 @@ recv_thread(void *arg __unused)
 			QUEUE_INSERT(adreq, &adist_send_list);
 			continue;
 		case ADIST_CMD_ERROR:
-			pjdlog_error("An error occured on the sender while reading \"%s/%s\".",
+			pjdlog_error("An error occurred on the sender while reading \"%s/%s\".",
 			    adhost->adh_directory, adhost->adh_trail_name);
 			adreq_log(LOG_DEBUG, 2, ADIST_ERROR_READ, adreq,
 			    "recv: (%p) Got request header: ", adreq);

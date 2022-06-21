@@ -494,7 +494,7 @@ cl::opt<bool> DumpTypeExtras("type-extras",
                              cl::cat(TypeOptions), cl::sub(DumpSubcommand));
 
 cl::opt<bool> DontResolveForwardRefs(
-    "dont-resolve-forward-refs",
+    "don't-resolve-forward-refs",
     cl::desc("When dumping type records for classes, unions, enums, and "
              "structs, don't try to resolve forward references"),
     cl::cat(TypeOptions), cl::sub(DumpSubcommand));

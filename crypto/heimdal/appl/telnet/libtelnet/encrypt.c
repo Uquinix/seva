@@ -454,7 +454,7 @@ EncryptDebug(int on)
     return(1);
 }
 
-/* turn on verbose encryption, but dont keep telling the whole world
+/* turn on verbose encryption, but don't keep telling the whole world
  */
 void encrypt_verbose_quiet(int on)
 {
@@ -491,7 +491,7 @@ EncryptAutoDec(int on)
     return(1);
 }
 
-/* Called when we receive a WONT or a DONT ENCRYPT after we sent a DO
+/* Called when we receive a WONT or a DON'T ENCRYPT after we sent a DO
    encrypt */
 void
 encrypt_not(void)

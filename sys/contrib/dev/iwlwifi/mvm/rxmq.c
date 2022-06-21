@@ -1760,7 +1760,7 @@ void iwl_mvm_rx_mpdu_mq(struct iwl_mvm *mvm, struct napi_struct *napi,
 				      IWL_RX_PHY_DATA1_INFO_TYPE_MASK);
 
 	hdr = (void *)(pkt->data + desc_size);
-	/* Dont use dev_alloc_skb(), we'll have enough headroom once
+	/* Don't use dev_alloc_skb(), we'll have enough headroom once
 	 * ieee80211_hdr pulled.
 	 */
 	skb = alloc_skb(128, GFP_ATOMIC);
@@ -2094,7 +2094,7 @@ void iwl_mvm_rx_monitor_no_data(struct iwl_mvm *mvm, struct napi_struct *napi,
 	energy_b = (rssi & RX_NO_DATA_CHAIN_B_MSK) >> RX_NO_DATA_CHAIN_B_POS;
 	channel = (rssi & RX_NO_DATA_CHANNEL_MSK) >> RX_NO_DATA_CHANNEL_POS;
 
-	/* Dont use dev_alloc_skb(), we'll have enough headroom once
+	/* Don't use dev_alloc_skb(), we'll have enough headroom once
 	 * ieee80211_hdr pulled.
 	 */
 	skb = alloc_skb(128, GFP_ATOMIC);

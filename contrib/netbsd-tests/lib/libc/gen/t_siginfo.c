@@ -442,7 +442,7 @@ sigbus_action(int signo, siginfo_t *info, void *ptr)
 
 #if defined(__i386__) || defined(__x86_64__)
 	atf_tc_expect_fail("x86 architecture does not correctly "
-	    "report the address where the unaligned access occured");
+	    "report the address where the unaligned access occurred");
 #endif
 	ATF_REQUIRE_EQ(info->si_addr, (volatile void *)addr);
 

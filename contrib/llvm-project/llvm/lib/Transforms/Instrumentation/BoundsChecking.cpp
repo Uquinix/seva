@@ -86,7 +86,7 @@ static Value *getBoundsCheckCond(Value *Ptr, Value *InstVal,
   // . Size - Offset >= NeededSize  (unsigned)
   //
   // optimization: if Size >= 0 (signed), skip 1st check
-  // FIXME: add NSW/NUW here?  -- we dont care if the subtraction overflows
+  // FIXME: add NSW/NUW here?  -- we don't care if the subtraction overflows
   Value *ObjSize = IRB.CreateSub(Size, Offset);
   Value *Cmp2 = SizeRange.getUnsignedMin().uge(OffsetRange.getUnsignedMax())
                     ? ConstantInt::getFalse(Ptr->getContext())

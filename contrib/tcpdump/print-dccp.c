@@ -263,7 +263,7 @@ static int dccp_print_option(netdissect_options *, const u_char *, u_int);
  * dccp_print - show dccp packet
  * @bp - beginning of dccp packet
  * @data2 - beginning of enclosing
- * @len - lenght of ip packet
+ * @len - length of ip packet
  */
 void dccp_print(netdissect_options *ndo, const u_char *bp, const u_char *data2,
 		u_int len)

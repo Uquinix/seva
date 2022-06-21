@@ -1478,7 +1478,7 @@ typedef struct t_FmPortDsarFilteringInfo
     /* IP protocol filtering parameters */
     uint8_t     ipProtTableSize;
     uint8_t     *p_IpProtTablePtr;
-    bool        ipProtPassOnHit;  /* when TRUE, miss in the table will cause the packet to be droped,
+    bool        ipProtPassOnHit;  /* when TRUE, miss in the table will cause the packet to be dropped,
                                          hit will pass the packet to UDP/TCP filters if needed and if not
                                          to the classification tree. If the classification tree will pass
                                          the packet to a queue it will cause a wake interupt.
@@ -1486,7 +1486,7 @@ typedef struct t_FmPortDsarFilteringInfo
     /* UDP port filtering parameters */
     uint8_t     udpPortsTableSize;
     t_FmPortDsarFilteringEntry *p_UdpPortsTablePtr;
-    bool        udpPortPassOnHit; /* when TRUE, miss in the table will cause the packet to be droped,
+    bool        udpPortPassOnHit; /* when TRUE, miss in the table will cause the packet to be dropped,
                                          hit will pass the packet to classification tree.
                                          If the classification tree will pass the packet to a queue it
                                          will cause a wake interupt.
@@ -1495,7 +1495,7 @@ typedef struct t_FmPortDsarFilteringInfo
     uint16_t    tcpFlagsMask;
     uint8_t     tcpPortsTableSize;
     t_FmPortDsarFilteringEntry *p_TcpPortsTablePtr;
-    bool        tcpPortPassOnHit; /* when TRUE, miss in the table will cause the packet to be droped,
+    bool        tcpPortPassOnHit; /* when TRUE, miss in the table will cause the packet to be dropped,
                                          hit will pass the packet to classification tree.
                                          If the classification tree will pass the packet to a queue it
                                          will cause a wake interupt.

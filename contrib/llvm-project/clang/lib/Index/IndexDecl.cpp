@@ -134,10 +134,10 @@ public:
   bool handleObjCMethod(const ObjCMethodDecl *D,
                         const ObjCPropertyDecl *AssociatedProp = nullptr) {
     SmallVector<SymbolRelation, 4> Relations;
-    SmallVector<const ObjCMethodDecl*, 4> Overriden;
+    SmallVector<const ObjCMethodDecl*, 4> Overridden;
 
-    D->getOverriddenMethods(Overriden);
-    for(auto overridden: Overriden) {
+    D->getOverriddenMethods(Overridden);
+    for(auto overridden: Overridden) {
       Relations.emplace_back((unsigned) SymbolRole::RelationOverrideOf,
                              overridden);
     }

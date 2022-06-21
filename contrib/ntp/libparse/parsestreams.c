@@ -622,7 +622,7 @@ parsersvc(
 
 /*
  * do ioctls and
- * send stuff down - dont care about
+ * send stuff down - don't care about
  * flow control
  */
 static int

@@ -354,7 +354,7 @@ GLOBAL bit32 mpiMsgFreeGetOQ(mpiOCQueue_t *circularQ, bit16 messageSize, void** 
  * function call, to the given Inbound queue
  *
  * Return:
- *         AGSA_RC_SUCCESS if the message has been posted succesfully
+ *         AGSA_RC_SUCCESS if the message has been posted successfully
  */
 /*******************************************************************************/
 #ifdef FAST_IO_TEST
@@ -651,7 +651,7 @@ void mpiMsgProduceBunch(  agsaLLRoot_t  *saRoot)
  * Consume a receive message in the specified outbound queue
  *
  * Return:
- *         AGSA_RC_SUCCESS if the message has been retrieved succesfully
+ *         AGSA_RC_SUCCESS if the message has been retrieved successfully
  *         AGSA_RC_BUSY    if the circular is empty
  */
 /*******************************************************************************/
@@ -809,7 +809,7 @@ mpiMsgConsume(
  * Returns consumed and processed message to the specified outbounf queue
  *
  * Return:
- *         AGSA_RC_SUCCESS if the message has been returned succesfully
+ *         AGSA_RC_SUCCESS if the message has been returned successfully
  */
 /*******************************************************************************/
 GLOBAL FORCEINLINE

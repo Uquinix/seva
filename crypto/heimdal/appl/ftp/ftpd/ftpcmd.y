@@ -1054,11 +1054,11 @@ ftpd_getline(char *s, int n)
 			case WILL:
 			case WONT:
 				c = getc(stdin);
-				printf("%c%c%c", IAC, DONT, 0377&c);
+				printf("%c%c%c", IAC, DON'T, 0377&c);
 				fflush(stdout);
 				continue;
 			case DO:
-			case DONT:
+			case DON'T:
 				c = getc(stdin);
 				printf("%c%c%c", IAC, WONT, 0377&c);
 				fflush(stdout);

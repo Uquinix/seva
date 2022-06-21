@@ -711,7 +711,7 @@ ansi.sys|ANSI.SYS 3.1 and later versions,
 # Consequently the End keypad key could not be set (it is relatively safe and
 # actually useful because it sends ^@ O, which beeps and opens a line above).
 ansi.sysk|ansisysk|PC-DOS 3.1 ANSI.SYS with keypad redefined for vi,
-	is2=U2\sPC-DOS\s3.1\sANSI.SYS\swith\skeypad\sredefined\sfor
+	is2=U2\sPC-DOS\s3.1\sANSI.SYS\switch\skeypad\sredefined\sfor
 	    \svi\s9-29-86\n\E[;75;8p,
 	rmkx=\E[;71;0;71p\E[;72;0;72p\E[;73;0;73p\E[;77;0;77p\E[;80;
 	     0;80p\E[;81;0;81p\E[;82;0;82p\E[;83;0;83p,
@@ -728,7 +728,7 @@ nansi.sys|nansisys|PC-DOS Public Domain NANSI.SYS,
 # See ansi.sysk and nansi.sys above.
 nansi.sysk|nansisysk|PC-DOS Public Domain NANSI.SYS with keypad redefined for vi,
 	dch1=\E[1P, dl1=\E[1M, ich1=\E[1@, il1=\E[1L,
-	is2=U4\sPC-DOS\sPublic\sDomain\sNANSI.SYS\swith\skeypad
+	is2=U4\sPC-DOS\sPublic\sDomain\sNANSI.SYS\switch\skeypad
 	    \sredefined\sfor\svi\s9-29-86\n\E[;75;8p,
 	use=ansi.sysk,
 
@@ -22445,7 +22445,7 @@ z29a-nkc-uc|h29a-nkc-uc|z29 ansi mode with underscore cursor and no keyclick,
 	rs1=\E<\E[1;24r\E[24;1H\E[?7h\E[>2h\E[>1;3;4;5;6;7;8;9l\E[m
 	    \E[11m,
 	use=z29a,
-# From: Jeff Bartig <jeffb@dont.doit.wisc.edu> 31 Mar 1995
+# From: Jeff Bartig <jeffb@don't.doit.wisc.edu> 31 Mar 1995
 z39-a|z39a|zenith39-a|zenith39-ansi|Zenith 39 in ANSI mode,
 	am, eslok, hs, mc5i, mir, msgr, xon,
 	cols#80, lines#24,

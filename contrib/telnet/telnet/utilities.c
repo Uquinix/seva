@@ -182,7 +182,7 @@ printoption(const char *direction, int cmd, int option)
 	} else {
 		const char *fmt;
 		fmt = (cmd == WILL) ? "WILL" : (cmd == WONT) ? "WONT" :
-			(cmd == DO) ? "DO" : (cmd == DONT) ? "DONT" : 0;
+			(cmd == DO) ? "DO" : (cmd == DON'T) ? "DON'T" : 0;
 		if (fmt) {
 		    fprintf(NetTrace, "%s %s ", direction, fmt);
 		    if (TELOPT_OK(option))
@@ -227,11 +227,11 @@ optionstatus(void)
 		    printf("want DO   %d\n", i);
 	    } else {
 		if (TELOPT_OK(i))
-		    printf("want DONT %s\n", TELOPT(i));
+		    printf("want DON'T %s\n", TELOPT(i));
 		else if (TELCMD_OK(i))
-		    printf("want DONT %s\n", TELCMD(i));
+		    printf("want DON'T %s\n", TELCMD(i));
 		else
-		    printf("want DONT %d\n", i);
+		    printf("want DON'T %d\n", i);
 	    }
 	} else {
 	    if (my_state_is_do(i)) {
@@ -563,8 +563,8 @@ printsub(char direction, unsigned char *pointer, int length)
 	    case DO:
 		fprintf(NetTrace, "DO ");
 		goto common;
-	    case DONT:
-		fprintf(NetTrace, "DONT ");
+	    case DON'T:
+		fprintf(NetTrace, "DON'T ");
 	    common:
 		if (length < 3) {
 		    fprintf(NetTrace, "(no option??\?)");
@@ -671,7 +671,7 @@ printsub(char direction, unsigned char *pointer, int length)
 		for (i = 2; i < length; i++) {
 		    switch(pointer[i]) {
 		    case DO:	cp = "DO"; goto common2;
-		    case DONT:	cp = "DONT"; goto common2;
+		    case DON'T:	cp = "DON'T"; goto common2;
 		    case WILL:	cp = "WILL"; goto common2;
 		    case WONT:	cp = "WONT"; goto common2;
 		    common2:

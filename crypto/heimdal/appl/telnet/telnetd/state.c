@@ -36,7 +36,7 @@
 RCSID("$Id$");
 
 unsigned char	doopt[] = { IAC, DO, '%', 'c', 0 };
-unsigned char	dont[] = { IAC, DONT, '%', 'c', 0 };
+unsigned char	don't[] = { IAC, DON'T, '%', 'c', 0 };
 unsigned char	will[] = { IAC, WILL, '%', 'c', 0 };
 unsigned char	wont[] = { IAC, WONT, '%', 'c', 0 };
 int	not42 = 1;
@@ -74,7 +74,7 @@ unsigned char *subsave;
 #define	TS_WILL		5	/* will option negotiation */
 #define	TS_WONT		6	/* wont -''- */
 #define	TS_DO		7	/* do -''- */
-#define	TS_DONT		8	/* dont -''- */
+#define	TS_DONT		8	/* don't -''- */
 
 void
 telrcv(void)
@@ -239,7 +239,7 @@ telrcv(void)
 	    state = TS_DO;
 	    continue;
 
-	case DONT:
+	case DON'T:
 	    state = TS_DONT;
 	    continue;
 	case EOR:
@@ -345,7 +345,7 @@ telrcv(void)
 }  /* end of telrcv */
 
 /*
- * The will/wont/do/dont state machines are based on Dave Borman's
+ * The will/wont/do/don't state machines are based on Dave Borman's
  * Telnet option processing state machine.
  *
  * These correspond to the following states:
@@ -381,7 +381,7 @@ telrcv(void)
  * my_state = new_state;
  *
  * Note that new_state is implied in these functions by the function itself.
- * will and do imply positive new_state, wont and dont imply negative.
+ * will and do imply positive new_state, wont and don't imply negative.
  *
  * Finally, there is one catch.  If we send a negative response to a
  * positive request, my_state will be the positive while want_state will
@@ -409,7 +409,7 @@ send_do(int option, int init)
 	    return;
 	/*
 	 * Special case for TELOPT_TM:  We send a DO, but pretend
-	 * that we sent a DONT, so that we can send more DOs if
+	 * that we sent a DON'T, so that we can send more DOs if
 	 * we want to.
 	 */
 	if (option == TELOPT_TM)
@@ -581,9 +581,9 @@ send_dont(int option, int init)
 	set_his_want_state_wont(option);
 	do_dont_resp[option]++;
     }
-    output_data((const char *)dont, option);
+    output_data((const char *)don't, option);
 
-    DIAG(TD_OPTIONS, printoption("td: send dont", option));
+    DIAG(TD_OPTIONS, printoption("td: send don't", option));
 }
 
 void
@@ -617,7 +617,7 @@ wontoption(int option)
 	    case TELOPT_TM:
 		/*
 		 * If we get a WONT TM, and had sent a DO TM,
-		 * don't respond with a DONT TM, just leave it
+		 * don't respond with a DON'T TM, just leave it
 		 * as is.  Short circut the state machine to
 		 * achive this.
 		 */
@@ -711,8 +711,8 @@ send_will(int option, int init)
 }
 
 /*
- * When we get a DONT SGA, we will try once to turn it
- * back on.  If the other side responds DONT SGA, we
+ * When we get a DON'T SGA, we will try once to turn it
+ * back on.  If the other side responds DON'T SGA, we
  * leave it at that.  This is so that when we talk to
  * clients that understand KLUDGELINEMODE but not LINEMODE,
  * we'll keep them in char-at-a-time mode.
@@ -840,7 +840,7 @@ dontoption(int option)
 	 */
 
 
-    DIAG(TD_OPTIONS, printoption("td: recv dont", option));
+    DIAG(TD_OPTIONS, printoption("td: recv don't", option));
 
     if (will_wont_resp[option]) {
 	will_wont_resp[option]--;
@@ -1310,9 +1310,9 @@ send_status(void)
     /*
      * We check the want_state rather than the current state,
      * because if we received a DO/WILL for an option that we
-     * don't support, and the other side didn't send a DONT/WONT
-     * in response to our WONT/DONT, then the "state" will be
-     * WILL/DO, and the "want_state" will be WONT/DONT.  We
+     * don't support, and the other side didn't send a DON'T/WONT
+     * in response to our WONT/DON'T, then the "state" will be
+     * WILL/DO, and the "want_state" will be WONT/DON'T.  We
      * need to go by the latter.
      */
     for (i = 0; i < (unsigned char)NTELOPTS; i++) {

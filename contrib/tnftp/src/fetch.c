@@ -815,7 +815,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		}
 		if (wwwauth) {
 			if (verbose) {
-				fprintf(ttyout, "%swith authorization",
+				fprintf(ttyout, "%switch authorization",
 				    leading);
 				leading = ", ";
 				hasleading++;
@@ -825,7 +825,7 @@ fetch_url(const char *url, const char *proxyenv, char *proxyauth, char *wwwauth)
 		if (proxyauth) {
 			if (verbose) {
 				fprintf(ttyout,
-				    "%swith proxy authorization", leading);
+				    "%switch proxy authorization", leading);
 				leading = ", ";
 				hasleading++;
 			}

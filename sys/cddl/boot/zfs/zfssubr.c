@@ -373,7 +373,7 @@ zap_hash(uint64_t salt, const char *name)
 	 * Only use 28 bits, since we need 4 bits in the cookie for the
 	 * collision differentiator.  We MUST use the high bits, since
 	 * those are the onces that we first pay attention to when
-	 * chosing the bucket.
+	 * choosing the bucket.
 	 */
 	crc &= ~((1ULL << (64 - ZAP_HASHBITS)) - 1);
 

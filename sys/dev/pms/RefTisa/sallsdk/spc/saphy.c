@@ -1105,7 +1105,7 @@ GLOBAL bit32 saHwEventAck(
     }
     else
     {
-      /*  pPort is NULL - set PORT_ID to not intialized  */
+      /*  pPort is NULL - set PORT_ID to not initialized  */
       if(smIS_SPC(agRoot))
       {
         phyportid = 0xF;
@@ -1118,7 +1118,7 @@ GLOBAL bit32 saHwEventAck(
   }
   else
   {
-    /* agPortContext is NULL - set PORT_ID to not intialized  */
+    /* agPortContext is NULL - set PORT_ID to not initialized  */
     if(smIS_SPC(agRoot))
     {
       phyportid = 0xF;

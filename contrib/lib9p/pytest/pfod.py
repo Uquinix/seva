@@ -107,7 +107,7 @@ def pfod(typename, field_names, verbose=False, rename=False):
     Point(x=11, y=22)
     >>> p['x'] + p['y']                 # indexable
     33
-    >>> p.x + p.y                       # fields also accessable by name
+    >>> p.x + p.y                       # fields also accessible by name
     33
     >>> p._copy()
     Point(x=11, y=22)

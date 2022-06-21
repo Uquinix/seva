@@ -860,7 +860,7 @@ schk_match(void *obj, uintptr_t key, int flags, void *_arg)
 }
 
 /*
- * Create the entry and intialize with the sched hash if needed.
+ * Create the entry and initialize with the sched hash if needed.
  * Leave s->fp unset so we can tell whether a dn_ht_find() returns
  * a new object or a previously existing one.
  */

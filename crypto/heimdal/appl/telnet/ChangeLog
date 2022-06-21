@@ -21,7 +21,7 @@
 
 2008-03-09  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* telnetd/sys_term.c: Dont need to set this as the controlling PTY
+	* telnetd/sys_term.c: Don't need to set this as the controlling PTY
 	on steams sockets, don't abort on failure. From Harald Barth and
 	Ian Delahorne.
 
@@ -56,9 +56,9 @@
 
 	* telnetd/telnetd.h: HP/UX defines SE in sys/uio.h, #undef it.
 
-	* telnetd/sys_term.c: Dont't include some streamspty headers here.
+	* telnetd/sys_term.c: Don't't include some streamspty headers here.
 
-	* telnetd/telnetd.c: Dont't include some streamspty headers here.
+	* telnetd/telnetd.c: Don't't include some streamspty headers here.
 
 	* telnetd/telnetd.h: includes some STREAMSPTY header here to avoid
 	ioctl vs socket_wrapper horror.

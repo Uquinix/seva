@@ -736,7 +736,7 @@ bool GlobalsAAResult::isNonEscapingGlobalNoAlias(const GlobalValue *GV,
       if (InputGV == GV)
         return false;
 
-      // Distinct GlobalVariables never alias, unless overriden or zero-sized.
+      // Distinct GlobalVariables never alias, unless overridden or zero-sized.
       // FIXME: The condition can be refined, but be conservative for now.
       auto *GVar = dyn_cast<GlobalVariable>(GV);
       auto *InputGVar = dyn_cast<GlobalVariable>(InputGV);

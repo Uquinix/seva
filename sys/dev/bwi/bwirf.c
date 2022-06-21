@@ -2543,7 +2543,7 @@ bwi_rf_calc_noise_bcm2053(struct bwi_mac *mac)
 static int
 bwi_rf_calc_noise_bcm2060(struct bwi_mac *mac)
 {
-	/* XXX Dont know how to calc */
+	/* XXX Don't know how to calc */
 	return (BWI_NOISE_FLOOR);
 }
 

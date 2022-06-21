@@ -10272,7 +10272,7 @@
 11 June 2007: Wouter
 	- replies on TCP queries have the address field set in replyinfo,
 	  for serviced queries, because the initiator does not know that
-	  a TCP fallback has occured.
+	  a TCP fallback has occurred.
 	- omit DNSSEC types from nonDO replies, except if qtype is ANY or
 	  if qtype directly queries for the type (and then only show that
 	  'unknown type' in the answer section).

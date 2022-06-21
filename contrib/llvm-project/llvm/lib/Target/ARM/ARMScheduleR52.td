@@ -118,7 +118,7 @@ def : WriteRes<WriteFPDIV64, [R52UnitDiv]> {
 def : WriteRes<WriteFPSQRT32, [R52UnitDiv]> { let Latency = 7; }
 def : WriteRes<WriteFPSQRT64, [R52UnitDiv]> { let Latency = 17; }
 
-// Overriden via InstRW for this processor.
+// Overridden via InstRW for this processor.
 def : WriteRes<WriteVST1, []>;
 def : WriteRes<WriteVST2, []>;
 def : WriteRes<WriteVST3, []>;

@@ -482,7 +482,7 @@ int t3_mac_set_mtu(struct cmac *mac, unsigned int mtu)
 	unsigned int orig_mtu=mtu;
 
 	/*
-	 * MAX_FRAME_SIZE inludes header + FCS, mtu doesn't.  The HW max
+	 * MAX_FRAME_SIZE includes header + FCS, mtu doesn't.  The HW max
 	 * packet size register includes header, but not FCS.
 	 */
 	mtu += 14;

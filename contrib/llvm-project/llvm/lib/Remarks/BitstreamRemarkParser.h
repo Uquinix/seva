@@ -40,7 +40,7 @@ struct BitstreamRemarkParser : public RemarkParser {
   uint64_t RemarkVersion = 0;
   BitstreamRemarkContainerType ContainerType =
       BitstreamRemarkContainerType::Standalone;
-  /// Wether the parser is ready to parse remarks.
+  /// Whether the parser is ready to parse remarks.
   bool ReadyToParseRemarks = false;
 
   /// Create a parser that expects to find a string table embedded in the

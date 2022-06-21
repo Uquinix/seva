@@ -424,10 +424,10 @@ struct pf_os_fingerprint {
 #define PF_OSFP_PSIZE_DC	0x0020		/* packet size don't care */
 #define PF_OSFP_WSCALE		0x0040		/* TCP window scaling */
 #define PF_OSFP_WSCALE_MOD	0x0080		/* TCP window scale modulus */
-#define PF_OSFP_WSCALE_DC	0x0100		/* TCP window scale dont-care */
+#define PF_OSFP_WSCALE_DC	0x0100		/* TCP window scale don't-care */
 #define PF_OSFP_MSS		0x0200		/* TCP MSS */
 #define PF_OSFP_MSS_MOD		0x0400		/* TCP MSS modulus */
-#define PF_OSFP_MSS_DC		0x0800		/* TCP MSS dont-care */
+#define PF_OSFP_MSS_DC		0x0800		/* TCP MSS don't-care */
 #define PF_OSFP_DF		0x1000		/* IPv4 don't fragment bit */
 #define PF_OSFP_TS0		0x2000		/* Zero timestamp */
 #define PF_OSFP_INET6		0x4000		/* IPv6 */

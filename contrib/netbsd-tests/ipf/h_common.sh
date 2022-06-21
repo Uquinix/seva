@@ -79,7 +79,7 @@ failing_test_case()
 failing_test_case_be()
 {
 	# this test fails on some architectures - not fully analyzed, assume
-	# an endianess bug
+	# an endianness bug
 	local name="${1}"; shift
 	local check_function="${1}"; shift
 	local reason="${1}"; shift

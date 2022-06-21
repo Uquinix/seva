@@ -150,7 +150,7 @@ static struct {
 	long	pad15;
 
 	struct	timeval pad16;
-	/* we dont set this, because BSDI's uname used gethostname() instead */
+	/* we don't set this, because BSDI's uname used gethostname() instead */
 	int	bsdi_hostname;		/* hostname on BSD/386 */
 
 	/* the actual string data is appended here */

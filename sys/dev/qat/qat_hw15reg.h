@@ -431,7 +431,7 @@ struct fw_la_mgf_common {
 struct fw_cipher_hdr {
 	uint8_t state_sz;
 	/* State size in quad words of the cipher algorithm used in this session.
-	 * Set to zero if the algorithm doesnt provide any state */
+	 * Set to zero if the algorithm doesn't provide any state */
 	uint8_t offset;
 	/* Quad word offset from the content descriptor parameters address i.e.
 	 * (content_address + (cd_hdr_sz << 3)) to the parameters for the cipher

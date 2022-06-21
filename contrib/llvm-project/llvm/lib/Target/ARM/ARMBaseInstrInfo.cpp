@@ -6307,7 +6307,7 @@ ARMBaseInstrInfo::getOutliningType(MachineBasicBlock::iterator &MIT,
       }
     }
 
-    // Dont't outline calls to "mcount" like functions, in particular Linux
+    // Don't't outline calls to "mcount" like functions, in particular Linux
     // kernel function tracing relies on it.
     if (Callee &&
         (Callee->getName() == "\01__gnu_mcount_nc" ||
@@ -6459,7 +6459,7 @@ void ARMBaseInstrInfo::saveLROnStack(MachineBasicBlock &MBB,
       .addCFIIndex(LRPosEntry)
       .setMIFlags(MachineInstr::FrameSetup);
   if (Auth) {
-    // Add a CFI for the location of the return adddress PAC.
+    // Add a CFI for the location of the return address PAC.
     unsigned DwarfRAC = MRI->getDwarfRegNum(ARM::RA_AUTH_CODE, true);
     int64_t RACPosEntry = MF.addFrameInst(
         MCCFIInstruction::createOffset(nullptr, DwarfRAC, -Align));

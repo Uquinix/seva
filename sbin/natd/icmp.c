@@ -53,7 +53,7 @@ int SendNeedFragIcmp (int sock, struct ip* failedDgram, int mtu)
 	if (ntohs (failedDgram->ip_off) & ~(IP_MF | IP_DF))
 		return 0;
 /*
- * Dont respond if failed datagram is ICMP.
+ * Don't respond if failed datagram is ICMP.
  */
 	if (failedDgram->ip_p == IPPROTO_ICMP)
 		return 0;

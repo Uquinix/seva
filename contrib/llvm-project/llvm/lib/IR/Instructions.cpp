@@ -2901,7 +2901,7 @@ bool CastInst::isNoopCast(Instruction::CastOps Opcode,
     case Instruction::FPToUI:
     case Instruction::FPToSI:
     case Instruction::AddrSpaceCast:
-      // TODO: Target informations may give a more accurate answer here.
+      // TODO: Target information may give a more accurate answer here.
       return false;
     case Instruction::BitCast:
       return true;  // BitCast never modifies bits.

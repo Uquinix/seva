@@ -600,7 +600,7 @@ setup()
 	tests[14].tests[0].params[0].i = 106;	// invalid fd
 	tests[14].tests[0].params[1].cpp = pargv;
 	tests[14].tests[0].params[2].cpp = NULL;
-	// This is EXPECTED to execve /bin/date, so dont expect OK output
+	// This is EXPECTED to execve /bin/date, so don't expect OK output
 	tests[14].tests[1].result = 0;
 	tests[14].tests[1].params[0].i = exec_fd;
 	tests[14].tests[1].params[1].cpp = pargv;

@@ -475,7 +475,7 @@ l9p_new_acl(uint32_t acetype, uint32_t aceasize)
 }
 
 /*
- * Expand ACL to accomodate more entries.
+ * Expand ACL to accommodate more entries.
  *
  * Currently won't shrink, only grow, so it's a fast no-op until
  * we hit the allocated size.  After that, it's best to grow in

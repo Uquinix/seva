@@ -298,7 +298,7 @@ protected:
   ///     technology, or an \a llvm::Error in case of errors.
   llvm::Expected<std::string> GetLiveProcessState();
 
-  /// Method to be overriden by the plug-in to refresh its own state.
+  /// Method to be overridden by the plug-in to refresh its own state.
   ///
   /// This is invoked by RefreshLiveProcessState when a new state is found.
   ///

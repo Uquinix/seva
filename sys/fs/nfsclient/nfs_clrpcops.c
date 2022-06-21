@@ -2337,7 +2337,7 @@ nfsmout:
 
 /*
  * nfs file create call
- * Mostly just call the approriate routine. (I separated out v4, so that
+ * Mostly just call the appropriate routine. (I separated out v4, so that
  * error recovery wouldn't be as difficult.)
  */
 int

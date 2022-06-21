@@ -102,7 +102,7 @@ present and to default  leapfile)
 Force update of the leapfile.
 .sp
 Force update even if current file is OK and not close to expiring.
-.It  Fl \-dont\-wait 
+.It  Fl \-don't\-wait 
 Don't wait for keystroke between plots.
 .sp
 .It Fl \&? , Fl \-help

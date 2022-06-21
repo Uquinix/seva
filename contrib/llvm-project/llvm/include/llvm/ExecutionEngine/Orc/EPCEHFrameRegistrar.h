@@ -27,7 +27,7 @@ class EPCEHFrameRegistrar : public jitlink::EHFrameRegistrar {
 public:
   /// Create from a ExecutorProcessControl instance alone. This will use
   /// the EPC's lookupSymbols method to find the registration/deregistration
-  /// funciton addresses by name.
+  /// function addresses by name.
   static Expected<std::unique_ptr<EPCEHFrameRegistrar>>
   Create(ExecutionSession &ES);
 

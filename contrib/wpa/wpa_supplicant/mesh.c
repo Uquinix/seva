@@ -688,7 +688,7 @@ int wpa_supplicant_join_mesh(struct wpa_supplicant *wpa_s,
 	}
 	params->conf.peer_link_timeout = wpa_s->conf->mesh_max_inactivity;
 
-	/* Always explicitely set forwarding to on or off for now */
+	/* Always explicitly set forwarding to on or off for now */
 	params->conf.flags |= WPA_DRIVER_MESH_CONF_FLAG_FORWARDING;
 	params->conf.forwarding = ssid->mesh_fwding;
 

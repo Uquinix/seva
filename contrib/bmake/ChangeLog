@@ -1492,7 +1492,7 @@
 
 	* var.c: we need stdint.h on some platforms to get uint32_t
 	* unit-test/Makefile: we need to supress the specific error
-	for RE substitution error in modmisc, since it varies accross
+	for RE substitution error in modmisc, since it varies across
 	different OS.
 
 2020-07-02  Simon J Gerraty  <sjg@beast.crufty.net>

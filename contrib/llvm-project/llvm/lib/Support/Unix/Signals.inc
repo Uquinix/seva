@@ -160,7 +160,7 @@ public:
 
     for (FileToRemoveList *currentFile = OldHead; currentFile;
          currentFile = currentFile->Next.load()) {
-      // If erasing was occuring while we're trying to remove files we'd look
+      // If erasing was occurring while we're trying to remove files we'd look
       // at free'd data. Take away the path and put it back when done.
       if (char *path = currentFile->Filename.exchange(nullptr)) {
         // Get the status so we can determine if it's a file or directory. If we

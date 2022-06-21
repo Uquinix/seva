@@ -658,7 +658,7 @@ SCI_STATUS scic_sds_remote_node_context_invalidating_state_event_handler(
       {
          case SCU_EVENT_TYPE_RNC_SUSPEND_TX:
          case SCU_EVENT_TYPE_RNC_SUSPEND_TX_RX:
-            // We really dont care if the hardware is going to suspend
+            // We really don't care if the hardware is going to suspend
             // the device since it's being invalidated anyway
             SCIC_LOG_INFO((
                sci_base_object_get_logger(this_rnc->device),
@@ -713,7 +713,7 @@ SCI_STATUS scic_sds_remote_node_context_resuming_state_event_handler(
       {
          case SCU_EVENT_TYPE_RNC_SUSPEND_TX:
          case SCU_EVENT_TYPE_RNC_SUSPEND_TX_RX:
-            // We really dont care if the hardware is going to suspend
+            // We really don't care if the hardware is going to suspend
             // the device since it's being resumed anyway
             SCIC_LOG_INFO((
                sci_base_object_get_logger(this_rnc->device),

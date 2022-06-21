@@ -1294,7 +1294,7 @@ Twalk = 110: tag[2] fid[4] newfid[4] nwname[2] nwname*(wname[s])
 Rwalk: tag[2] nwqid[2] nwqid*(wqid[qid])
     walk is used to descend a directory represented by fid using
     successive path elements provided in the wname array.  If
-    succesful, newfid represents the new path.
+    successful, newfid represents the new path.
 
     fid can be cloned to newfid by calling walk with nwname set to
     zero.

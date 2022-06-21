@@ -1762,7 +1762,7 @@ each_dumpable_segment(struct thread *td, segment_callback func, void *closure,
 		}
 
 		/*
-		 * Dont include memory segment in the coredump if
+		 * Don't include memory segment in the coredump if
 		 * MAP_NOCORE is set in mmap(2) or MADV_NOCORE in
 		 * madvise(2).  Do not dump submaps (i.e. parts of the
 		 * kernel map).

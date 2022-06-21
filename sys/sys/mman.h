@@ -102,7 +102,7 @@
  */
 #define	MAP_GUARD	 0x00002000 /* reserve but don't map address range */
 #define	MAP_EXCL	 0x00004000 /* for MAP_FIXED, fail if address is used */
-#define	MAP_NOCORE	 0x00020000 /* dont include these pages in a coredump */
+#define	MAP_NOCORE	 0x00020000 /* don't include these pages in a coredump */
 #define	MAP_PREFAULT_READ 0x00040000 /* prefault mapping for reading */
 #ifdef __LP64__
 #define	MAP_32BIT	 0x00080000 /* map in the low 2GB of address space */
@@ -156,7 +156,7 @@
 #define	_MADV_RANDOM	1	/* expect random page references */
 #define	_MADV_SEQUENTIAL 2	/* expect sequential page references */
 #define	_MADV_WILLNEED	3	/* will need these pages */
-#define	_MADV_DONTNEED	4	/* dont need these pages */
+#define	_MADV_DONTNEED	4	/* don't need these pages */
 
 #if __BSD_VISIBLE
 #define	MADV_NORMAL	_MADV_NORMAL
@@ -164,7 +164,7 @@
 #define	MADV_SEQUENTIAL _MADV_SEQUENTIAL
 #define	MADV_WILLNEED	_MADV_WILLNEED
 #define	MADV_DONTNEED	_MADV_DONTNEED
-#define	MADV_FREE	5	/* dont need these pages, and junk contents */
+#define	MADV_FREE	5	/* don't need these pages, and junk contents */
 #define	MADV_NOSYNC	6	/* try to avoid flushes to physical media */
 #define	MADV_AUTOSYNC	7	/* revert to default flushing strategy */
 #define	MADV_NOCORE	8	/* do not include these pages in a core file */

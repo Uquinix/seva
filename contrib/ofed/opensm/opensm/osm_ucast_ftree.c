@@ -3059,7 +3059,7 @@ static void fabric_route_roots(IN ftree_fabric_t * p_ftree)
 	OSM_LOG_ENTER(&p_ftree->p_osm->log);
 
 	/*
-	 * We need a switch that will accomodate all the down/up turns in
+	 * We need a switch that will accommodate all the down/up turns in
 	 * the fabric. Having these turn in a single place in the fabric
 	 * will not create credit loops.
 	 * So we need to select this switch.

@@ -114,11 +114,11 @@ public:
     return m_die == it.m_die;
   }
   const DWARFDIE &operator*() const {
-    assert(m_die.IsValid() && "Derefencing invalid iterator?");
+    assert(m_die.IsValid() && "Dereferencing invalid iterator?");
     return m_die;
   }
   DWARFDIE &operator*() {
-    assert(m_die.IsValid() && "Derefencing invalid iterator?");
+    assert(m_die.IsValid() && "Dereferencing invalid iterator?");
     return m_die;
   }
   child_iterator &operator++() {

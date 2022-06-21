@@ -69,7 +69,7 @@ class ThreadContextBase {
   void SetDestroyed();
   bool GetDestroyed();
 
-  // The following methods may be overriden by subclasses.
+  // The following methods may be overridden by subclasses.
   // Some of them take opaque arg that may be optionally be used
   // by subclasses.
   virtual void OnDead() {}

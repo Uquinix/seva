@@ -1690,7 +1690,7 @@ mpt_raid_set_vol_mwce(struct mpt_softc *mpt, mpt_raid_mwce_t mwce)
 	/*
 	 * Catch MWCE being left on due to a failed shutdown.  Since
 	 * sysctls cannot be set by the loader, we treat the first
-	 * setting of this varible specially and force a full volume
+	 * setting of this variable specially and force a full volume
 	 * resync if MWCE is enabled and a resync is in progress.
 	 */
 	force_full_resync = 0;

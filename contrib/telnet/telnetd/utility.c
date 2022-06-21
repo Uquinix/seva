@@ -154,7 +154,7 @@ nextitem(char *current)
     }
     switch (*(current+1)&0xff) {
     case DO:
-    case DONT:
+    case DON'T:
     case WILL:
     case WONT:
 	return current+3;
@@ -647,8 +647,8 @@ printsub(char direction, unsigned char *pointer, int length)
 	    case DO:
 		output_data("DO ");
 		goto common;
-	    case DONT:
-		output_data("DONT ");
+	    case DON'T:
+		output_data("DON'T ");
 	    common:
 		if (length < 3) {
 		    output_data("(no option??\?)");
@@ -758,7 +758,7 @@ printsub(char direction, unsigned char *pointer, int length)
 		for (i = 2; i < length; i++) {
 		    switch(pointer[i]) {
 		    case DO:	cp = "DO"; goto common2;
-		    case DONT:	cp = "DONT"; goto common2;
+		    case DON'T:	cp = "DON'T"; goto common2;
 		    case WILL:	cp = "WILL"; goto common2;
 		    case WONT:	cp = "WONT"; goto common2;
 		    common2:

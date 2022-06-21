@@ -1844,7 +1844,7 @@ HAL_BOOL ar9300_ant_ctrl_apply(struct ath_hal *ah, HAL_BOOL is_2ghz)
             regval = OS_REG_READ(ah, AR_PHY_CCK_DETECT);
             regval &= (~BBB_SIG_DETECT__ENABLE_ANT_FAST_DIV__MASK);
             OS_REG_WRITE(ah, AR_PHY_CCK_DETECT, regval);        
-            /* For WB225, need to swith ANT2 from BT to Wifi
+            /* For WB225, need to switch ANT2 from BT to Wifi
              * This will not affect HB125 LNA diversity feature.
              */
 	     HALDEBUG(ah, HAL_DEBUG_RESET, "%s: com2=0x%08x\n", __func__,

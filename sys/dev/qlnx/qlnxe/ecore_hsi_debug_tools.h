@@ -661,7 +661,7 @@ struct dbg_bus_storm_eid_range_params
 struct dbg_bus_storm_eid_mask_params
 {
 	u8 val /* Event ID value */;
-	u8 mask /* Event ID mask. 1s in the mask = dont care bits. */;
+	u8 mask /* Event ID mask. 1s in the mask = don't care bits. */;
 };
 
 /*
@@ -881,8 +881,8 @@ enum dbg_grc_params
 	DBG_GRC_PARAM_PARITY_SAFE /* perform dump only if MFW is responding (0/1) */,
 	DBG_GRC_PARAM_DUMP_CM /* dump CM memories (0/1) */,
 	DBG_GRC_PARAM_DUMP_PHY /* dump PHY memories (0/1) */,
-	DBG_GRC_PARAM_NO_MCP /* dont perform MCP commands (0/1) */,
-	DBG_GRC_PARAM_NO_FW_VER /* dont read FW/MFW version (0/1) */,
+	DBG_GRC_PARAM_NO_MCP /* don't perform MCP commands (0/1) */,
+	DBG_GRC_PARAM_NO_FW_VER /* don't read FW/MFW version (0/1) */,
 	MAX_DBG_GRC_PARAMS
 };
 

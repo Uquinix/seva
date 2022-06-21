@@ -119,7 +119,7 @@ const MappingDesc kMemoryLayout[] = {
     {0x3E000000000ULL, 0x3F000000000ULL, MappingDesc::ORIGIN, "origin-8"},
     {0x3F000000000ULL, 0x40000000000ULL, MappingDesc::APP, "app-9"},
     // The mappings below are used only for 48-bits VMA.
-    // TODO(unknown): 48-bit mapping ony covers the usual PIE, non-PIE
+    // TODO(unknown): 48-bit mapping only covers the usual PIE, non-PIE
     // segments and some more segments totalizing 262144GB of VMA (which cover
     // only 0.32% of all 48-bit VMA). Memory availability can be increase by
     // adding multiple application segments like 39 and 42 mapping.

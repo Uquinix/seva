@@ -1027,7 +1027,7 @@ void ecore_set_fw_mac_addr(__le16 *fw_msb, __le16 *fw_mid, __le16 *fw_lsb,
 #define PQ_FLAGS_VFS	(1 << 6)
 #define PQ_FLAGS_LLT	(1 << 7)
 
-/* physical queue index for cm context intialization */
+/* physical queue index for cm context initialization */
 u16 ecore_get_cm_pq_idx(struct ecore_hwfn *p_hwfn, u32 pq_flags);
 u16 ecore_get_cm_pq_idx_mcos(struct ecore_hwfn *p_hwfn, u8 tc);
 u16 ecore_get_cm_pq_idx_vf(struct ecore_hwfn *p_hwfn, u16 vf);

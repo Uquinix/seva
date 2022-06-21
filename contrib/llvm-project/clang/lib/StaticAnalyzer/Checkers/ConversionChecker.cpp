@@ -69,7 +69,7 @@ void ConversionChecker::checkPreStmt(const ImplicitCastExpr *Cast,
   const Stmt *Parent = PM.getParent(Cast);
   if (!Parent)
     return;
-  // Dont warn if this is part of an explicit cast
+  // Don't warn if this is part of an explicit cast
   if (isa<ExplicitCastExpr>(Parent))
     return;
 

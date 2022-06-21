@@ -390,7 +390,7 @@ def P7Model : SchedMachineModel {
                        // cycle (from all queues) is 8.
 
   let LoadLatency = 3; // Optimistic load latency assuming bypass.
-                       // This is overriden by OperandCycles if the
+                       // This is overridden by OperandCycles if the
                        // Itineraries are queried instead.
   let MispredictPenalty = 16;
 

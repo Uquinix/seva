@@ -705,7 +705,7 @@ dconschat_accept_socket(struct dcons_state *dc, struct dcons_port *p)
 #if 1
 	if (IS_CONSOLE(p) && (dc->flags & F_TELNET) != 0) {
 		char sga[] = {IAC, WILL, TELOPT_SGA};
-		char linemode[] = {IAC, DONT, TELOPT_LINEMODE};
+		char linemode[] = {IAC, DON'T, TELOPT_LINEMODE};
 		char echo[] = {IAC, WILL, TELOPT_ECHO};
 		char bin[] = {IAC, DO, TELOPT_BINARY};
 

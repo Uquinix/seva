@@ -5199,7 +5199,7 @@ static unsigned getCallOpcode(PPCTargetLowering::CallFlags CFlags,
   unsigned RetOpc = 0;
   // This is a call through a function pointer.
   if (CFlags.IsIndirect) {
-    // AIX and the 64-bit ELF ABIs need to maintain the TOC pointer accross
+    // AIX and the 64-bit ELF ABIs need to maintain the TOC pointer across
     // indirect calls. The save of the caller's TOC pointer to the stack will be
     // inserted into the DAG as part of call lowering. The restore of the TOC
     // pointer is modeled by using a pseudo instruction for the call opcode that
@@ -5213,7 +5213,7 @@ static unsigned getCallOpcode(PPCTargetLowering::CallFlags CFlags,
     assert(Subtarget.is64BitELFABI() && "PC Relative is only on ELF ABI.");
     RetOpc = PPCISD::CALL_NOTOC;
   } else if (Subtarget.isAIXABI() || Subtarget.is64BitELFABI())
-    // The ABIs that maintain a TOC pointer accross calls need to have a nop
+    // The ABIs that maintain a TOC pointer across calls need to have a nop
     // immediately following the call instruction if the caller and callee may
     // have different TOC bases. At link time if the linker determines the calls
     // may not share a TOC base, the call is redirected to a trampoline inserted
@@ -9224,7 +9224,7 @@ SDValue PPCTargetLowering::LowerBUILD_VECTOR(SDValue Op,
       // Exclude somes case where LD_SPLAT is worse than scalar_to_vector:
       // Below cases should also happen for "lfiwzx/lfiwax + LE target + index
       // 1" and "lxvrhx + BE target + index 7" and "lxvrbx + BE target + index
-      // 15", but funciton IsValidSplatLoad() now will only return true when
+      // 15", but function IsValidSplatLoad() now will only return true when
       // the data at index 0 is not nullptr. So we will not get into trouble for
       // these cases.
       //
@@ -11050,7 +11050,7 @@ SDValue PPCTargetLowering::LowerFP_EXTEND(SDValue Op, SelectionDAG &DAG) const {
                        DAG.getConstant(0, dl, MVT::i32));
   }
   }
-  llvm_unreachable("ERROR:Should return for all cases within swtich.");
+  llvm_unreachable("ERROR:Should return for all cases within switch.");
 }
 
 /// LowerOperation - Provide custom lowering hooks for some operations.

@@ -103,7 +103,7 @@ extern void drm_buffer_free(struct drm_buffer *buf);
 /**
  * Read an object from buffer that may be split to multiple parts. If object
  * is not split function just returns the pointer to object in buffer. But in
- * case of split object data is copied to given stack object that is suplied
+ * case of split object data is copied to given stack object that is supplied
  * by caller.
  *
  * The processing location of the buffer is also advanced to the next byte

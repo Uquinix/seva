@@ -4439,7 +4439,7 @@ GLOBAL void ossaFastSSPCompleted(
 
       TI_DBG1(("itdssIOSuccessHandler: scsi_status %d\n", scsi_status));
 
-      /* endianess is invovled here */
+      /* endianness is invovled here */
       senseLen = SA_SSPRESP_GET_SENSEDATALEN(&agSSPRespIU);
       respLen = SA_SSPRESP_GET_RESPONSEDATALEN(&agSSPRespIU);
       TI_DBG2(("itdssIOSuccessHandler: scsi status=0x%x, senselen=0x%x resplen "

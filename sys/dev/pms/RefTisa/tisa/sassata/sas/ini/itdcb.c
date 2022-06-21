@@ -2130,7 +2130,7 @@ itdssIOSuccessHandler(
 
   data_status = SA_SSPRESP_GET_DATAPRES(&agSSPRespIU);
   scsi_status = agSSPRespIU.status;
-  /* endianess is invovled here */
+  /* endianness is invovled here */
   senseLen = SA_SSPRESP_GET_SENSEDATALEN(&agSSPRespIU);
   respLen = SA_SSPRESP_GET_RESPONSEDATALEN(&agSSPRespIU);
 
@@ -4420,7 +4420,7 @@ itdssIOUnderFlowWithChkConditionHandler(
 
   data_status = SA_SSPRESP_GET_DATAPRES(&agSSPRespIU);
   scsi_status = agSSPRespIU.status;
-  /* endianess is invovled here */
+  /* endianness is invovled here */
   senseLen = SA_SSPRESP_GET_SENSEDATALEN(&agSSPRespIU);
   respLen = SA_SSPRESP_GET_RESPONSEDATALEN(&agSSPRespIU);
 

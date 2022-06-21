@@ -834,7 +834,7 @@ dwc_rxfinish_one(struct dwc_softc *sc, struct dwc_hwdesc *desc,
 	len = (rdesc0 >> RDESC0_FL_SHIFT) & RDESC0_FL_MASK;
 	if (len < 64) {
 		/*
-		 * Lenght is invalid, recycle old mbuf
+		 * Length is invalid, recycle old mbuf
 		 * Probably impossible case
 		 */
 		return (NULL);

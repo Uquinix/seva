@@ -190,7 +190,7 @@ tws_attach(device_t dev)
     sc->subvendor_id = pci_get_subvendor(dev);
     sc->subdevice_id = pci_get_subdevice(dev);
 
-    /* Intialize mutexes */
+    /* Initialize mutexes */
     mtx_init( &sc->q_lock, "tws_q_lock", NULL, MTX_DEF);
     mtx_init( &sc->sim_lock,  "tws_sim_lock", NULL, MTX_DEF);
     mtx_init( &sc->gen_lock,  "tws_gen_lock", NULL, MTX_DEF);

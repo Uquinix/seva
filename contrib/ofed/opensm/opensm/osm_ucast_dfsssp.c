@@ -81,7 +81,7 @@ typedef struct link {
 } link_t;
 
 typedef struct vertex {
-	/* informations of the fabric */
+	/* information of the fabric */
 	uint64_t guid;
 	uint16_t lid;		/* for lft filling */
 	uint32_t num_hca;	/* numbers of Hca/LIDs on the switch, for weight calculation */
@@ -1567,7 +1567,7 @@ static int dijkstra(osm_ucast_mgr_t * p_mgr, vertex_t * adj_list,
 	return 0;
 }
 
-/* update the linear forwarding tables of all switches with the informations
+/* update the linear forwarding tables of all switches with the information
    from the last dijsktra step
 */
 static int update_lft(osm_ucast_mgr_t * p_mgr, vertex_t * adj_list,
@@ -1702,7 +1702,7 @@ static void reset_mgrp_membership(vertex_t * adj_list, uint32_t adj_list_size)
 	}
 }
 
-/* update the multicast forwarding tables of all switches with the informations
+/* update the multicast forwarding tables of all switches with the information
    from the previous dijsktra step for the current mlid
 */
 static int update_mcft(osm_sm_t * p_sm, vertex_t * adj_list,

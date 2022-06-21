@@ -65,7 +65,7 @@ typedef enum {
 
 typedef struct {
     double time;       /* Time at which event occurred */
-    funcTkn function;  /* Type of event that occured */
+    funcTkn function;  /* Type of event that occurred */
     union {
         struct pkt evnt_pkt;
         struct recvbuf evnt_buf;

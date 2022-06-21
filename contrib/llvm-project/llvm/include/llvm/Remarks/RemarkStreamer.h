@@ -64,7 +64,7 @@ public:
   /// Set a pass filter based on a regex \p Filter.
   /// Returns an error if the regex is invalid.
   Error setFilter(StringRef Filter);
-  /// Check wether the string matches the filter.
+  /// Check whether the string matches the filter.
   bool matchesFilter(StringRef Str);
   /// Check if the remarks also need to have associated metadata in a section.
   bool needsSection() const;

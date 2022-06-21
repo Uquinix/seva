@@ -932,7 +932,7 @@ typedef struct smpRespPhyControl_s
 
 #else
 
-#error (Host CPU endianess undefined!!)
+#error (Host CPU endianness undefined!!)
 
 #endif
 

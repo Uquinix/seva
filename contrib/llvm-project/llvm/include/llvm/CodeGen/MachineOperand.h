@@ -122,7 +122,7 @@ private:
   ///
   /// Note that an instruction may have multiple <undef> operands referring to
   /// the same register.  In that case, the instruction may depend on those
-  /// operands reading the same dont-care value.  For example:
+  /// operands reading the same don't-care value.  For example:
   ///
   ///   %1 = XOR undef %2, undef %2
   ///

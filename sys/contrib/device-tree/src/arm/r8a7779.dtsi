@@ -492,7 +492,7 @@
 		extal_clk: extal {
 			compatible = "fixed-clock";
 			#clock-cells = <0>;
-			/* This value must be overriden by the board. */
+			/* This value must be overridden by the board. */
 			clock-frequency = <0>;
 		};
 

@@ -131,7 +131,7 @@ g_journal_record_entries_sysctl(SYSCTL_HANDLER_ARGS)
 SYSCTL_PROC(_kern_geom_journal, OID_AUTO, record_entries,
     CTLTYPE_UINT | CTLFLAG_RW | CTLFLAG_MPSAFE, NULL, 0,
     g_journal_record_entries_sysctl, "I",
-    "Maximum number of entires in one journal record");
+    "Maximum number of entries in one journal record");
 SYSCTL_UINT(_kern_geom_journal, OID_AUTO, optimize, CTLFLAG_RW,
     &g_journal_do_optimize, 0, "Try to combine bios on flush and copy");
 
@@ -696,7 +696,7 @@ g_journal_metadata_update(struct g_journal_softc *sc)
 
 	/*
 	 * Flush the cache, so we know all data are on disk.
-	 * We write here informations like "journal is consistent", so we need
+	 * We write here information like "journal is consistent", so we need
 	 * to be sure it is. Without BIO_FLUSH here, we can end up in situation
 	 * where metadata is stored on disk, but not all data.
 	 */
@@ -1079,7 +1079,7 @@ g_journal_optimize(struct bio *head)
  * These are functions responsible for copying one portion of data from journal
  * to the destination provider.
  * The order goes like this:
- * 1. Read the header, which contains informations about data blocks
+ * 1. Read the header, which contains information about data blocks
  *    following it.
  * 2. Read the data blocks from the journal.
  * 3. Write the data blocks on the data provider.
@@ -1724,7 +1724,7 @@ g_journal_mark_as_dirty(struct g_journal_softc *sc)
 
 /*
  * Function read record header from the given journal.
- * It is very simlar to g_read_data(9), but it doesn't allocate memory for bio
+ * It is very similar to g_read_data(9), but it doesn't allocate memory for bio
  * and data on every call.
  */
 static int

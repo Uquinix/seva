@@ -397,7 +397,7 @@ al_reg_read32(uint32_t *l)
  *
  * @param x 16 bit value
  *
- * @return the value in the cpu endianess
+ * @return the value in the cpu endianness
  */
 #define swap16_from_le(x)	le16toh(x)
 
@@ -406,7 +406,7 @@ al_reg_read32(uint32_t *l)
  *
  * @param x 32 bit value
  *
- * @return the value in the cpu endianess
+ * @return the value in the cpu endianness
  */
 #define swap32_from_le(x)	le32toh(x)
 
@@ -415,7 +415,7 @@ al_reg_read32(uint32_t *l)
  *
  * @param x 64 bit value
  *
- * @return the value in the cpu endianess
+ * @return the value in the cpu endianness
  */
 #define swap64_from_le(x)	le64toh(x)
 

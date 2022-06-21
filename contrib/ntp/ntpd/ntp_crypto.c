@@ -236,7 +236,7 @@ session_key(
 {
 	EVP_MD_CTX *ctx;	/* message digest context */
 	u_char dgst[EVP_MAX_MD_SIZE]; /* message digest */
-	keyid_t	keyid;		/* key identifer */
+	keyid_t	keyid;		/* key identifier */
 	u_int32	header[10];	/* data in network byte order */
 	u_int	hdlen, len;
 
@@ -1216,7 +1216,7 @@ crypto_xmit(
 
 		/*
 		 * Be careful who you trust. If the certificate is not
-		 * found, return an empty response. Note that we dont
+		 * found, return an empty response. Note that we don't
 		 * enforce lifetimes here.
 		 *
 		 * The timestamp and filestamp are taken from the

@@ -380,7 +380,7 @@ struct mntoptnames {
 #define	MNT_GJOURNAL	0x0000000002000000ULL /* GEOM journal support enabled */
 #define	MNT_MULTILABEL	0x0000000004000000ULL /* MAC support for objects */
 #define	MNT_ACLS	0x0000000008000000ULL /* ACL support enabled */
-#define	MNT_NOATIME	0x0000000010000000ULL /* dont update file access time */
+#define	MNT_NOATIME	0x0000000010000000ULL /* don't update file access time */
 #define	MNT_NOCLUSTERR	0x0000000040000000ULL /* disable cluster read */
 #define	MNT_NOCLUSTERW	0x0000000080000000ULL /* disable cluster write */
 #define	MNT_SUJ		0x0000000100000000ULL /* using journaled soft updates */

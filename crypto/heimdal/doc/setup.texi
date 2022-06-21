@@ -545,7 +545,7 @@ also a keep-alive protocol that makes sure all slaves are up and running.
 
 In addition on listening on the network to get connection from new
 slaves, the ipropd-master also listens on a status unix
-socket. kadmind and kpasswdd both open that socket when a transation
+socket. kadmind and kpasswdd both open that socket when a transaction
 is done and written a notification to the socket. That cause
 ipropd-master to check for new version in the log file. As a fallback in
 case a notification is lost by the unix socket, the log file is

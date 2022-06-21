@@ -820,7 +820,7 @@
 
 	* appl/gssmask/gssmask.c: Add mic tests
 
-	* appl/gssmask/gssmaestro.c: dont exit early then when context
+	* appl/gssmask/gssmaestro.c: don't exit early then when context
 	is half built.
 	
 	* lib/krb5/rd_req.c: disable ETypeList parsing usage for now, cfx

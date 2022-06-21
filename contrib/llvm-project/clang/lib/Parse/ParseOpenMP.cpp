@@ -2000,7 +2000,7 @@ void Parser::ParseOMPEndDeclareTargetDirective(OpenMPDirectiveKind BeginDKind,
 ///        annot_pragma_openmp_end
 ///
 ///       declare-mapper-directive:
-///         annot_pragma_openmp 'declare' 'mapper' '(' [<mapper-identifer> ':']
+///         annot_pragma_openmp 'declare' 'mapper' '(' [<mapper-identifier> ':']
 ///         <type> <var> ')' [<clause>[[,] <clause>] ... ]
 ///         annot_pragma_openmp_end
 ///
@@ -2428,7 +2428,7 @@ Parser::DeclGroupPtrTy Parser::ParseOpenMPDeclarativeDirectiveWithExtDecl(
 ///         annot_pragma_openmp_end
 ///
 ///       declare-mapper-directive:
-///         annot_pragma_openmp 'declare' 'mapper' '(' [<mapper-identifer> ':']
+///         annot_pragma_openmp 'declare' 'mapper' '(' [<mapper-identifier> ':']
 ///         <type> <var> ')' [<clause>[[,] <clause>] ... ]
 ///         annot_pragma_openmp_end
 ///

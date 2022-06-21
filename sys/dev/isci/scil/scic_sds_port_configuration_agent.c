@@ -755,7 +755,7 @@ void scic_sds_apc_agent_configure_ports(
             }
 
             // The current Port has no active PHYs and this PHY could be part
-            // of this Port.  Since we dont know as yet setup to start the
+            // of this Port.  Since we don't know as yet setup to start the
             // timer and see if there is a better configuration.
             if (port->active_phy_mask == 0)
             {

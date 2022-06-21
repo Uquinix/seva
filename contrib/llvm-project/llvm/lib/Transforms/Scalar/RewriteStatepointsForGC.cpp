@@ -2007,7 +2007,7 @@ static void relocationViaAlloca(
     Value *Def = Pair.first;
     AllocaInst *Alloca = Pair.second;
 
-    // We pre-record the uses of allocas so that we dont have to worry about
+    // We pre-record the uses of allocas so that we don't have to worry about
     // later update that changes the user information..
 
     SmallVector<Instruction *, 20> Uses;

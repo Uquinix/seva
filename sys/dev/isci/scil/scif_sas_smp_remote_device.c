@@ -131,7 +131,7 @@ void scif_sas_smp_remote_device_clear(
 
 
 /**
- * @brief This method intializes a smp remote device.
+ * @brief This method initializes a smp remote device.
  *
  * @param[in] fw_device the framework SMP device that is being
  *            constructed.

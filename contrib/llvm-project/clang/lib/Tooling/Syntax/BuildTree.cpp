@@ -475,7 +475,7 @@ public:
   }
 
   /// Returns true if \p D is the last declarator in a chain and is thus
-  /// reponsible for creating SimpleDeclaration for the whole chain.
+  /// responsible for creating SimpleDeclaration for the whole chain.
   bool isResponsibleForCreatingDeclaration(const Decl *D) const {
     assert((isa<DeclaratorDecl, TypedefNameDecl>(D)) &&
            "only DeclaratorDecl and TypedefNameDecl are supported.");

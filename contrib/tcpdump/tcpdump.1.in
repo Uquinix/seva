@@ -476,7 +476,7 @@ default is microsecond resolution.
 .B \-K
 .PD 0
 .TP
-.B \-\-dont\-verify\-checksums
+.B \-\-don't\-verify\-checksums
 .PD
 Don't attempt to verify IP, TCP, or UDP checksums.  This is useful for
 interfaces that perform some or all of those checksum calculation in

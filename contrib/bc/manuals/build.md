@@ -544,7 +544,7 @@ error.
 This `bc` and `dc` have a few settings to override default behavior.
 
 The defaults for these settings can be set by package maintainers, and the
-settings themselves can be overriden by users.
+settings themselves can be overridden by users.
 
 To set a default to **on**, use the `-s` or `--set-default-on` option to
 `configure.sh`, with the name of the setting, as follows:

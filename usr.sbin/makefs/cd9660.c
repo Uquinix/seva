@@ -977,7 +977,7 @@ cd9660_sorted_child_insert(cd9660node *parent, cd9660node *cn_new)
 
 	TAILQ_FOREACH(cn, head, cn_next_child) {
 		/*
-		 * Dont insert a node twice -
+		 * Don't insert a node twice -
 		 * that would cause an infinite loop
 		 */
 		if (cn_new == cn)
@@ -1560,7 +1560,7 @@ cd9660_generate_path_table(iso9660_disk *diskStructure)
 		/* Push children onto queue */
 		TAILQ_FOREACH(cn, &dirNode->cn_children, cn_next_child) {
 			/*
-			 * Dont add the DOT and DOTDOT types to the path
+			 * Don't add the DOT and DOTDOT types to the path
 			 * table.
 			 */
 			if ((cn->type != CD9660_TYPE_DOT)

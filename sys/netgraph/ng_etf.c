@@ -138,7 +138,7 @@ struct filter {
 	hook_p		match_hook;	/* Hook to use on a match */
 };
 
-#define HASHSIZE 16 /* Dont change this without changing HASH() */
+#define HASHSIZE 16 /* Don't change this without changing HASH() */
 #define HASH(et) ((((et)>>12)+((et)>>8)+((et)>>4)+(et)) & 0x0f)
 LIST_HEAD(filterhead, filter);
 

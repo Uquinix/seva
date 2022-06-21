@@ -24,7 +24,7 @@ using namespace llvm;
 #define DEBUG_TYPE "mips-lower"
 
 static cl::opt<bool> DontExpandCondPseudos16(
-  "mips16-dont-expand-cond-pseudo",
+  "mips16-don't-expand-cond-pseudo",
   cl::init(false),
   cl::desc("Don't expand conditional move related "
            "pseudos for Mips 16"),

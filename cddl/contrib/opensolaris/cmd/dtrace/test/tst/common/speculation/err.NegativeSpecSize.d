@@ -33,7 +33,7 @@
  * SECTION: Speculative Tracing/Options and Tuning;
  *	Options and Tunables/specsize
  *
- * NOTES: Why dont we have an error tag for this error?
+ * NOTES: Why don't we have an error tag for this error?
  */
 
 #pragma D option quiet

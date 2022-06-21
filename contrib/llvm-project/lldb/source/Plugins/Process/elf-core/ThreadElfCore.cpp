@@ -276,7 +276,7 @@ Status ELFLinuxPrStatus::Parse(const DataExtractor &data,
     return error;
   }
 
-  // Read field by field to correctly account for endianess of both the core
+  // Read field by field to correctly account for endianness of both the core
   // dump and the platform running lldb.
   offset_t offset = 0;
   si_signo = data.GetU32(&offset);

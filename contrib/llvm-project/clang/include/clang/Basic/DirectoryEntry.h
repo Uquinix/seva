@@ -111,7 +111,7 @@ private:
 
 namespace FileMgr {
 
-/// Customized storage for refs derived from map entires in FileManager, using
+/// Customized storage for refs derived from map entries in FileManager, using
 /// the private optional_none_tag to keep it to the size of a single pointer.
 template <class RefTy> class MapEntryOptionalStorage {
   using optional_none_tag = typename RefTy::optional_none_tag;

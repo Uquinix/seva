@@ -156,7 +156,7 @@ asn_put_len(u_char *ptr, asn_len_t len)
 /*
  * Write a header (tag and length fields).
  * Tags are restricted to one byte tags (value <= 0x1e) and the
- * lenght field to 16-bit. All errors stop the encoding.
+ * length field to 16-bit. All errors stop the encoding.
  */
 enum asn_err
 asn_put_header(struct asn_buf *b, u_char type, asn_len_t len)

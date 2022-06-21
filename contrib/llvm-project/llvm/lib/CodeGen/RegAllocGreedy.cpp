@@ -1037,7 +1037,7 @@ BlockFrequency RAGreedy::calcGlobalSplitCost(GlobalSplitCandidate &Cand,
     unsigned Ins = 0;
 
     Cand.Intf.moveToBlock(BC.Number);
-    // Check wheather a local interval is going to be created during the region
+    // Check whether a local interval is going to be created during the region
     // split. Calculate adavanced spilt cost (cost of local intervals) if option
     // is enabled.
     if (EnableAdvancedRASplitCost && Cand.Intf.hasInterference() && BI.LiveIn &&
@@ -1081,7 +1081,7 @@ BlockFrequency RAGreedy::calcGlobalSplitCost(GlobalSplitCandidate &Cand,
         GlobalCost += SpillPlacer->getBlockFrequency(Number);
         GlobalCost += SpillPlacer->getBlockFrequency(Number);
 
-        // Check wheather a local interval is going to be created during the
+        // Check whether a local interval is going to be created during the
         // region split.
         if (EnableAdvancedRASplitCost && CanCauseEvictionChain &&
             splitCanCauseEvictionChain(VirtRegToSplit, Cand, Number, Order)) {

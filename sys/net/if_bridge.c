@@ -655,7 +655,7 @@ sysctl_pfil_ipfw(SYSCTL_HANDLER_ARGS)
 		V_pfil_ipfw = enable;
 
 		/*
-		 * Disable pfil so that ipfw doesnt run twice, if the user
+		 * Disable pfil so that ipfw doesn't run twice, if the user
 		 * really wants both then they can re-enable pfil_bridge and/or
 		 * pfil_member. Also allow non-ip packets as ipfw can filter by
 		 * layer2 type.

@@ -197,7 +197,7 @@ respondthread(void *arg)
 				break;
 			}
 
-			/* just say it was succesful */
+			/* just say it was successful */
 			preq->preq_rv = 0;
 			rump_sys_write(dafd, buf, n);
 			pthread_mutex_lock(&damtx);

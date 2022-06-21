@@ -6710,7 +6710,7 @@ char	*FFRCompileOptions[] =
 	**  if you use this FFR.
 	*/
 
-/* Chris Adams of HiWAAY Informations Services */
+/* Chris Adams of HiWAAY Information Services */
 	"_FFR_SPT_ALIGN",
 #endif
 #if _FFR_SS_PER_DAEMON

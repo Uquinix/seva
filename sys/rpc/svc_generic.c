@@ -320,7 +320,7 @@ freedata:
 	if (madeso)
 		(void)soclose(so);
 	if (xprt) {
-		if (!madeso) /* so that svc_destroy doesnt close fd */
+		if (!madeso) /* so that svc_destroy doesn't close fd */
 			xprt->xp_socket = NULL;
 		xprt_unregister(xprt);
 	}

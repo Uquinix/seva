@@ -533,7 +533,7 @@ bool AVRAsmParser::parseOperand(OperandVector &Operands) {
     return tryParseExpression(Operands);
   case AsmToken::Plus:
   case AsmToken::Minus: {
-    // If the sign preceeds a number, parse the number,
+    // If the sign precedes a number, parse the number,
     // otherwise treat the sign a an independent token.
     switch (getLexer().peekTok().getKind()) {
     case AsmToken::Integer:

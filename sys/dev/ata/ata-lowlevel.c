@@ -488,7 +488,7 @@ ata_generic_reset(device_t dev)
 	mask |= 0x01;
     }
 
-    /* in some setups we dont want to test for a slave */
+    /* in some setups we don't want to test for a slave */
     if (!(ch->flags & ATA_NO_SLAVE)) {
 	ATA_IDX_OUTB(ch, ATA_DRIVE, ATA_D_IBM | ATA_D_LBA | ATA_DEV(ATA_SLAVE));
 	DELAY(10);      

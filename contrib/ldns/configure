@@ -15451,7 +15451,7 @@ _ACEOF
         ;;
 esac
 
-# check wether gost also works
+# check whether gost also works
 
 # Check whether --enable-gost was given.
 if test "${enable_gost+set}" = set; then :

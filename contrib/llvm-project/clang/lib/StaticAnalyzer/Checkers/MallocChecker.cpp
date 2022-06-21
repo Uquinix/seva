@@ -1232,7 +1232,7 @@ static bool isGRealloc(const CallEvent &Call) {
 void MallocChecker::checkRealloc(const CallEvent &Call, CheckerContext &C,
                                  bool ShouldFreeOnFail) const {
   // HACK: CallDescription currently recognizes non-standard realloc functions
-  // as standard because it doesn't check the type, or wether its a non-method
+  // as standard because it doesn't check the type, or whether its a non-method
   // function. This should be solved by making CallDescription smarter.
   // Mind that this came from a bug report, and all other functions suffer from
   // this.

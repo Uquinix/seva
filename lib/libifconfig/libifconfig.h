@@ -129,7 +129,7 @@ ifconfig_handle_t *ifconfig_open(void);
  */
 void ifconfig_close(ifconfig_handle_t *h);
 
-/** Identifies what kind of error occured. */
+/** Identifies what kind of error occurred. */
 ifconfig_errtype ifconfig_err_errtype(ifconfig_handle_t *h);
 
 /** Retrieves the errno associated with the error, if any. */

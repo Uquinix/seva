@@ -177,7 +177,7 @@ ntpq_getvar(
  *			resultbuf
  *  			- OR -
  *			0 (zero) if no reply has been received or
- *			another failure occured
+ *			another failure occurred
  ****************************************************************************/
 
 int ntpq_queryhost(unsigned short VARSET, unsigned short association, char *resultbuf, int maxlen)
@@ -222,10 +222,10 @@ int ntpq_queryhost(unsigned short VARSET, unsigned short association, char *resu
  *
  * Returns:
  *	int		1 if the host connection could be set up, i.e. 
- *			name resolution was succesful and/or IP address
+ *			name resolution was successful and/or IP address
  *			has been validated
  *  			- OR -
- *			0 (zero) if a failure occured
+ *			0 (zero) if a failure occurred
  ****************************************************************************/
 
 int
@@ -298,7 +298,7 @@ int ntpq_closehost(void)
  * Returns:
  *	int		number of association IDs stored in resultbuf
  *  			- OR -
- *			0 (zero) if a failure occured or no association has
+ *			0 (zero) if a failure occurred or no association has
  *			been returned.
  ****************************************************************************/
  
@@ -341,7 +341,7 @@ int ntpq_closehost(void)
  * Returns:
  *	int		number of association IDs stored in resultbuf
  *  			- OR -
- *			0 (zero) if a failure occured or no association has
+ *			0 (zero) if a failure occurred or no association has
  *			been returned.
  ****************************************************************************/
  
@@ -367,7 +367,7 @@ int ntpq_closehost(void)
  *	int		the number of the association array element that is
  *			representing the given association ID
  *  			- OR -
- *			-1 if a failure occured or no matching association 
+ *			-1 if a failure occurred or no matching association 
  * 			ID has been found
  ****************************************************************************/
  
@@ -408,7 +408,7 @@ int ntpq_get_assoc_number ( associd_t associd )
  *	int		number of chars that have been copied to 
  *			resultbuf
  *			- OR - 
- *			0 (zero) if an error occured
+ *			0 (zero) if an error occurred
  ****************************************************************************/
 
 int
@@ -467,7 +467,7 @@ ntpq_read_assoc_peervars(
  *	int		number of chars that have been copied to 
  *			resultbuf
  *			- OR - 
- *			0 (zero) if an error occured
+ *			0 (zero) if an error occurred
  ****************************************************************************/
 size_t
 ntpq_read_sysvars(
@@ -522,7 +522,7 @@ ntpq_read_sysvars(
  * Returns:
  *	int		nonzero if at least one variable set could be read
  * 			- OR - 
- *			0 (zero) if an error occured and both variable sets
+ *			0 (zero) if an error occurred and both variable sets
  *			could not be read
  ****************************************************************************/
  int  ntpq_get_assoc_allvars( associd_t associd  )
@@ -548,7 +548,7 @@ ntpq_read_sysvars(
  * Returns:
  *	int		nonzero if the variable set could be read
  * 			- OR - 
- *			0 (zero) if an error occured and the sysvars
+ *			0 (zero) if an error occurred and the sysvars
  *			could not be read
  ****************************************************************************/
 int
@@ -581,7 +581,7 @@ ntpq_get_sysvars(void)
  * Returns:
  *	int		number of bytes copied to varvalue
  * 			- OR - 
- *			0 (zero) if an error occured or the variable could 
+ *			0 (zero) if an error occurred or the variable could 
  *			not be found
  ****************************************************************************/
 int ntpq_get_peervar( const char *varname, char *varvalue, int maxlen)
@@ -606,7 +606,7 @@ int ntpq_get_peervar( const char *varname, char *varvalue, int maxlen)
  * Returns:
  *	int		1 (one) if the peervars have been read
  * 			- OR - 
- *			0 (zero) if an error occured and the variable set
+ *			0 (zero) if an error occurred and the variable set
  *			could not be read
  ****************************************************************************/
 int
@@ -650,7 +650,7 @@ ntpq_get_assoc_peervars(
  *	int		number of chars that have been copied to 
  *			resultbuf
  *			- OR - 
- *			0 (zero) if an error occured
+ *			0 (zero) if an error occurred
  ****************************************************************************/
 
 int
@@ -750,7 +750,7 @@ ntpq_get_assoc_clocktype(
  * Returns:
  *	int		1 (one) if the clockvars have been read
  * 			- OR - 
- *			0 (zero) if an error occured and the variable set
+ *			0 (zero) if an error occurred and the variable set
  *			could not be read
  ****************************************************************************/
 int  ntpq_get_assoc_clockvars( associd_t associd )

@@ -801,7 +801,7 @@ bool SmartPtrModeling::updateMovedSmartPointers(
         }));
     return true;
   } else {
-    // In case we dont know anything about value we are moving from
+    // In case we don't know anything about value we are moving from
     // remove the entry from map for which smart pointer got moved to.
     auto NullVal = C.getSValBuilder().makeNull();
     State = State->remove<TrackedRegionMap>(ThisRegion);

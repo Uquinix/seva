@@ -227,7 +227,7 @@ __FBSDID("$FreeBSD$");
 #define SCTP_LOG_MAX_TYPES 124
 /*
  * To turn on various logging, you must first enable 'options KTR' and
- * you might want to bump the entires 'options KTR_ENTRIES=80000'.
+ * you might want to bump the entries 'options KTR_ENTRIES=80000'.
  * To get something to log you define one of the logging defines.
  * (see LINT).
  *

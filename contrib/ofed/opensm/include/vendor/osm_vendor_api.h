@@ -336,7 +336,7 @@ ib_mad_t *osm_vendor_get(IN osm_bind_handle_t h_bind,
 *      [out] the returned mad vendor wrapper
 *
 * RETURN VALUE
-*   IB_SUCCESS on succesful completion.
+*   IB_SUCCESS on successful completion.
 *
 * NOTES
 *
@@ -366,7 +366,7 @@ osm_vendor_send(IN osm_bind_handle_t h_bind,
 *      [in] boolean value declaring the mad as a request (expecting a response).
 *
 * RETURN VALUE
-*   IB_SUCCESS on succesful completion.
+*   IB_SUCCESS on successful completion.
 *
 * NOTES
 *   1. Only mads that expect a response are tracked for transaction competion.

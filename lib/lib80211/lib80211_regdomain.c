@@ -443,7 +443,7 @@ lib80211_regdomain_readconfig(struct regdata *rdp, const void *p, size_t len)
 	}
 	XML_ParserFree(mt->parser);
 
-	/* setup the identifer table */
+	/* setup the identifier table */
 	rdp->ident = calloc(sizeof(struct ident), mt->nident + 1);
 	if (rdp->ident == NULL)
 		return ENOMEM;

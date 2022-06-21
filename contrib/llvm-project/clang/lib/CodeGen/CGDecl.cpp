@@ -2665,7 +2665,7 @@ void CodeGenModule::EmitOMPAllocateDecl(const OMPAllocateDecl *D) {
     llvm::PointerType *PTy = llvm::PointerType::get(Ty, TargetAS);
 
     // Replace all uses of the old global with a cast. Since we mutate the type
-    // in place we neeed an intermediate that takes the spot of the old entry
+    // in place we need an intermediate that takes the spot of the old entry
     // until we can create the cast.
     llvm::GlobalVariable *DummyGV = new llvm::GlobalVariable(
         getModule(), Entry->getValueType(), false,

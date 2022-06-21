@@ -469,7 +469,7 @@ set_x_body() {
 			-e not-match:printf -e match:OK -e match:echo \
 		${TEST_SH} -ec 'printf "%s" OK; set -x; echo OK; exit 0'
 
-	# and that it stops again afer -x is disabled
+	# and that it stops again after -x is disabled
 	atf_check -s exit:0 \
 			-o match:OKOK -o not-match:echo -o not-match:printf \
 			-e match:printf -e match:OK -e not-match:echo \
@@ -631,7 +631,7 @@ Option_switching_body() {
 
 	# and these are extensions that might not exist (non-fatal to test)
 	# -i and -s (and -c) are posix options, but are not required to
-	# be accessable via the "set" command, just the command line.
+	# be accessible via the "set" command, just the command line.
 	# We allow for -i to work with set, as that makes some sense,
 	# -c and -s do not.
 	test_optional_on_off E i I p q V || true

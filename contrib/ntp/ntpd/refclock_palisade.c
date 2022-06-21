@@ -848,7 +848,7 @@ TSIP_decode (
 			else
 				printf ("	Time is Set\n");
 			if ((mb(9) & 0x08) != 0)
-				printf("	I dont have UTC info\n");
+				printf("	I don't have UTC info\n");
 			else
 				printf ("	I have UTC info\n");
 			if ((mb(9) & 0x10) != 0)

@@ -319,7 +319,7 @@ static struct sendlist Sendlist[] = {
     { "?",	"Display send options",		0, 0, (int (*)(char *, ...))send_help, 0, 0 },
     { "help",	NULL,				0, 0, (int (*)(char *, ...))send_help, 0, 0 },
     { "do",	NULL,				0, 1, (int (*)(char *, ...))send_docmd, 3, 0 },
-    { "dont",	NULL,				0, 1, (int (*)(char *, ...))send_dontcmd, 3, 0 },
+    { "don't",	NULL,				0, 1, (int (*)(char *, ...))send_dontcmd, 3, 0 },
     { "will",	NULL,				0, 1, (int (*)(char *, ...))send_willcmd, 3, 0 },
     { "wont",	NULL,				0, 1, (int (*)(char *, ...))send_wontcmd, 3, 0 },
     { NULL,	NULL,				0, 0, NULL, 0, 0 }
@@ -426,7 +426,7 @@ static int
 send_dontcmd(name)
     char *name;
 {
-    return(send_tncmd(send_dont, "dont", name));
+    return(send_tncmd(send_dont, "don't", name));
 }
 
 static int

@@ -130,7 +130,7 @@ protected:
   // modules. If file_spec is set, only dump lines in the file. If the
   // start_line option was specified, don't print lines less than start_line.
   // If the end_line option was specified, don't print lines greater than
-  // end_line. If the num_lines option was specified, dont print more than
+  // end_line. If the num_lines option was specified, don't print more than
   // num_lines entries.
   uint32_t DumpLinesInSymbolContexts(Stream &strm,
                                      const SymbolContextList &sc_list,
@@ -191,7 +191,7 @@ protected:
   // contained in one of the modules. If the start_line option was specified,
   // don't print lines less than start_line. If the end_line option was
   // specified, don't print lines greater than end_line. If the num_lines
-  // option was specified, dont print more than num_lines entries.
+  // option was specified, don't print more than num_lines entries.
   uint32_t DumpFileLinesInCompUnit(Stream &strm, Module *module,
                                    CompileUnit *cu, const FileSpec &file_spec) {
     uint32_t start_line = m_options.start_line;
@@ -272,7 +272,7 @@ protected:
   // in one of the modules. If the start_line option was specified, don't print
   // lines less than start_line. If the end_line option was specified, don't
   // print lines greater than end_line. If the num_lines option was specified,
-  // dont print more than num_lines entries.
+  // don't print more than num_lines entries.
   uint32_t DumpFileLinesInModule(Stream &strm, Module *module,
                                  const FileSpec &file_spec) {
     uint32_t num_matches = 0;

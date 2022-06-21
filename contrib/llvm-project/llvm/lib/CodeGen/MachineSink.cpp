@@ -397,7 +397,7 @@ void MachineSinking::FindLoopSinkCandidates(MachineLoop *L, MachineBasicBlock *B
       continue;
     }
     if (MI.mayLoad() && !mayLoadFromGOTOrConstantPool(MI)) {
-      LLVM_DEBUG(dbgs() << "LoopSink: Dont sink GOT or constant pool loads\n");
+      LLVM_DEBUG(dbgs() << "LoopSink: Don't sink GOT or constant pool loads\n");
       continue;
     }
     if (MI.isConvergent())

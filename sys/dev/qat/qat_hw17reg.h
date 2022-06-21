@@ -1616,7 +1616,7 @@ struct fw_cipher_cd_ctrl_hdr
 	/* LW 27 */
 	uint8_t cipher_state_sz;
 	/* State size in quad words of the cipher algorithm used in this session.
-	 * Set to zero if the algorithm doesnt provide any state */
+	 * Set to zero if the algorithm doesn't provide any state */
 
 	uint8_t cipher_key_sz;
 	/* Key size in quad words of the cipher algorithm used in this session */
@@ -1742,7 +1742,7 @@ struct fw_cipher_auth_cd_ctrl_hdr
 	/* LW 27 */
 	uint8_t cipher_state_sz;
 	/* State size in quad words of the cipher algorithm used in this session.
-	 * Set to zero if the algorithm doesnt provide any state */
+	 * Set to zero if the algorithm doesn't provide any state */
 
 	uint8_t cipher_key_sz;
 	/* Key size in quad words of the cipher algorithm used in this session */
@@ -2166,7 +2166,7 @@ struct fw_la_trng_req_mid {
 
 	uint32_t entropy_length;
 	/* Size of the data in bytes to process. Used by the get_random
-	 * command. Set to 0 for commands that dont need a length parameter */
+	 * command. Set to 0 for commands that don't need a length parameter */
 
 };
 

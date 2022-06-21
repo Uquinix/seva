@@ -462,15 +462,15 @@ into two 64-bit pieces which are stored at the locations pointed to by
 */
 INLINE void mul64To128( bits64 a, bits64 b, bits64 *z0Ptr, bits64 *z1Ptr )
 {
-    bits32 aHigh, aLow, bHigh, bLow;
+    bits32 aHigh, allow, bHigh, bLow;
     bits64 z0, zMiddleA, zMiddleB, z1;
 
-    aLow = a;
+    allow = a;
     aHigh = a>>32;
     bLow = b;
     bHigh = b>>32;
-    z1 = ( (bits64) aLow ) * bLow;
-    zMiddleA = ( (bits64) aLow ) * bHigh;
+    z1 = ( (bits64) allow ) * bLow;
+    zMiddleA = ( (bits64) allow ) * bHigh;
     zMiddleB = ( (bits64) aHigh ) * bLow;
     z0 = ( (bits64) aHigh ) * bHigh;
     zMiddleA += zMiddleB;

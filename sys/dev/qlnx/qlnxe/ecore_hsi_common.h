@@ -1809,7 +1809,7 @@ struct protocol_dcb_data
 	u8 dcb_priority /* DCB priority */;
 	u8 dcb_tc /* DCB TC */;
 	u8 dscp_val /* DSCP value to write if dscp_enable_flag is set */;
-	u8 dcb_dont_add_vlan0 /* When DCB is enabled - if this flag is set, dont add VLAN 0 tag to untagged frames */;
+	u8 dcb_dont_add_vlan0 /* When DCB is enabled - if this flag is set, don't add VLAN 0 tag to untagged frames */;
 };
 
 /*
@@ -2634,7 +2634,7 @@ struct sdm_agg_int_comp_params
 	__le16 params;
 #define SDM_AGG_INT_COMP_PARAMS_AGG_INT_INDEX_MASK      0x3F /* the number of aggregated interrupt, 0-31 */
 #define SDM_AGG_INT_COMP_PARAMS_AGG_INT_INDEX_SHIFT     0
-#define SDM_AGG_INT_COMP_PARAMS_AGG_VECTOR_ENABLE_MASK  0x1 /* 1 - set a bit in aggregated vector, 0 - dont set */
+#define SDM_AGG_INT_COMP_PARAMS_AGG_VECTOR_ENABLE_MASK  0x1 /* 1 - set a bit in aggregated vector, 0 - don't set */
 #define SDM_AGG_INT_COMP_PARAMS_AGG_VECTOR_ENABLE_SHIFT 6
 #define SDM_AGG_INT_COMP_PARAMS_AGG_VECTOR_BIT_MASK     0x1FF /* Number of bit in the aggregated vector, 0-279 (TBD) */
 #define SDM_AGG_INT_COMP_PARAMS_AGG_VECTOR_BIT_SHIFT    7

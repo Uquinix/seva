@@ -11016,7 +11016,7 @@ void SelectionDAGBuilder::splitWorkItem(SwitchWorkList &WorkList,
 }
 
 // Scale CaseProb after peeling a case with the probablity of PeeledCaseProb
-// from the swith statement.
+// from the switch statement.
 static BranchProbability scaleCaseProbality(BranchProbability CaseProb,
                                             BranchProbability PeeledCaseProb) {
   if (PeeledCaseProb == BranchProbability::getOne())

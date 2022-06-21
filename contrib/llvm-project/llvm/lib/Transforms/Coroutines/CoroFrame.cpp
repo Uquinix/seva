@@ -661,7 +661,7 @@ void FrameTypeBuilder::addFieldForAllocas(const Function &F,
       // of A should satisfy the requirement for aligning for B.
       //
       // There may be other more fine-grained strategies to handle the alignment
-      // infomation during the merging process. But it seems hard to handle
+      // information during the merging process. But it seems hard to handle
       // these strategies and benefit little.
       bool Alignable = [&]() -> bool {
         auto *LargestAlloca = *AllocaSet.begin();
@@ -927,7 +927,7 @@ static void buildFrameDebugInfo(Function &F, coro::Shape &Shape,
     return;
 
   assert(Shape.ABI == coro::ABI::Switch &&
-         "We could only build debug infomation for C++ coroutine now.\n");
+         "We could only build debug information for C++ coroutine now.\n");
 
   DIBuilder DBuilder(*F.getParent(), /*AllowUnresolved*/ false);
 
@@ -2637,7 +2637,7 @@ void coro::buildCoroutineFrame(Function &F, Shape &Shape) {
   }
 
   // Later code makes structural assumptions about single predecessors phis e.g
-  // that they are not live accross a suspend point.
+  // that they are not live across a suspend point.
   cleanupSinglePredPHIs(F);
 
   // Transforms multi-edge PHI Nodes, so that any value feeding into a PHI will

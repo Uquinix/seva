@@ -98,7 +98,7 @@ typedef enum BcInst
 	BC_INST_BOOL_AND,
 
 #if BC_ENABLED
-	/// Same as the normal operators, but assigment. So ^=, *=, /=, etc.
+	/// Same as the normal operators, but assignment. So ^=, *=, /=, etc.
 	BC_INST_ASSIGN_POWER,
 	BC_INST_ASSIGN_MULTIPLY,
 	BC_INST_ASSIGN_DIVIDE,

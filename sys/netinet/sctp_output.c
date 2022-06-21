@@ -2162,7 +2162,7 @@ skip_count:
 			}
 			if (laddr->ifa->localifa_flags & SCTP_BEING_DELETED)
 				/*
-				 * Address being deleted by the system, dont
+				 * Address being deleted by the system, don't
 				 * list.
 				 */
 				continue;
@@ -3476,7 +3476,7 @@ sctp_find_cmsg(int c_type, void *data, struct mbuf *control, size_t cpsize)
 		}
 		m_copydata(control, off, sizeof(cmh), (caddr_t)&cmh);
 		if (cmh.cmsg_len < CMSG_ALIGN(sizeof(cmh))) {
-			/* We dont't have a complete CMSG header. */
+			/* We don't't have a complete CMSG header. */
 			return (found);
 		}
 		if ((cmh.cmsg_len > INT_MAX) || ((int)cmh.cmsg_len > rem_len)) {
@@ -3576,7 +3576,7 @@ sctp_process_cmsgs_for_init(struct sctp_tcb *stcb, struct mbuf *control, int *er
 		}
 		m_copydata(control, off, sizeof(cmh), (caddr_t)&cmh);
 		if (cmh.cmsg_len < CMSG_ALIGN(sizeof(cmh))) {
-			/* We dont't have a complete CMSG header. */
+			/* We don't't have a complete CMSG header. */
 			*error = EINVAL;
 			return (1);
 		}
@@ -3747,7 +3747,7 @@ sctp_findassociation_cmsgs(struct sctp_inpcb **inp_p,
 		}
 		m_copydata(control, off, sizeof(cmh), (caddr_t)&cmh);
 		if (cmh.cmsg_len < CMSG_ALIGN(sizeof(cmh))) {
-			/* We dont't have a complete CMSG header. */
+			/* We don't't have a complete CMSG header. */
 			*error = EINVAL;
 			return (NULL);
 		}

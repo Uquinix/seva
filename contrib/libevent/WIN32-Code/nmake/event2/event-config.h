@@ -333,7 +333,7 @@
 /* Version number of package */
 #define EVENT__VERSION "2.1.8-stable"
 
-/* Define to appropriate substitue if compiler doesnt have __func__ */
+/* Define to appropriate substitue if compiler doesn't have __func__ */
 #define EVENT____func__ __FUNCTION__
 
 /* Define to empty if `const' does not conform to ANSI C. */
@@ -351,7 +351,7 @@
 /* Define to `unsigned' if <sys/types.h> does not define. */
 /* #undef EVENT__size_t */
 
-/* Define to unsigned int if you dont have it */
+/* Define to unsigned int if you don't have it */
 #define EVENT__socklen_t unsigned int
 
 /* Define to `int' if <sys/types.h> does not define. */

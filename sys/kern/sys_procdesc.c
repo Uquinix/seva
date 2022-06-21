@@ -231,7 +231,7 @@ procdesc_new(struct proc *p, int flags)
 }
 
 /*
- * Create a new process decriptor for the process that refers to it.
+ * Create a new process descriptor for the process that refers to it.
  */
 int
 procdesc_falloc(struct thread *td, struct file **resultfp, int *resultfd,

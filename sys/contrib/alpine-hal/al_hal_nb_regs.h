@@ -1114,7 +1114,7 @@ Each bit if set to 1 selects the corresponding sb_override_awuser bit. Otherwise
 #define NB_GLOBAL_SB_SEL_OVERRIDE_AWUSER_SEL_SHIFT 0
 
 /**** sb_override_awuser register ****/
-/* Awuser to use on overriden transactions
+/* Awuser to use on overridden transactions
 Only applicable if sel_override_awuser.sel is set to 1'b1 for the coressponding bit */
 #define NB_GLOBAL_SB_OVERRIDE_AWUSER_AWUSER_MASK 0x03FFFFFF
 #define NB_GLOBAL_SB_OVERRIDE_AWUSER_AWUSER_SHIFT 0
@@ -1126,7 +1126,7 @@ Each bit if set to 1 selects the corresponding sb_override_aruser bit. Otherwise
 #define NB_GLOBAL_SB_SEL_OVERRIDE_ARUSER_SEL_SHIFT 0
 
 /**** sb_override_aruser register ****/
-/* Aruser to use on overriden transactions
+/* Aruser to use on overridden transactions
 Only applicable if sb_sel_override_aruser.sel is set to 1'b1 for the coressponding bit */
 #define NB_GLOBAL_SB_OVERRIDE_ARUSER_ARUSER_MASK 0x03FFFFFF
 #define NB_GLOBAL_SB_OVERRIDE_ARUSER_ARUSER_SHIFT 0

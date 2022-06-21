@@ -3112,7 +3112,7 @@ bbr_pick_probebw_substate(struct tcp_bbr *bbr, uint32_t cts)
 	 * substate and then the state change is called which increments by
 	 * one. So if we return 1 (DRAIN) we will increment to 2 (LEVEL1) when
 	 * we fully enter the state. Note that the (8 - 1 - ran) assures that
-	 * we return 1 - 7, so we dont return 0 and end up starting in
+	 * we return 1 - 7, so we don't return 0 and end up starting in
 	 * state 1 (DRAIN).
 	 */
 	ret_val = BBR_SUBSTATE_COUNT - 1 - ran;
@@ -4095,7 +4095,7 @@ bbr_calc_thresh_rack(struct tcp_bbr *bbr, uint32_t srtt, uint32_t cts, struct bb
 	 *
 	 * If reorder-fade is configured, then we track the last time we saw
 	 * re-ordering occur. If we reach the point where enough time as
-	 * passed we no longer consider reordering has occuring.
+	 * passed we no longer consider reordering has occurring.
 	 *
 	 * Or if reorder-face is 0, then once we see reordering we consider
 	 * the connection to alway be subject to reordering and just set lro
@@ -7101,7 +7101,7 @@ do_rest_ofb:
 			if (rsm->r_flags & BBR_MARKED_LOST) {
 				bbr->r_ctl.rc_lost_bytes -= rsm->r_end - rsm->r_start;
 			}
-			/* Is Reordering occuring? */
+			/* Is Reordering occurring? */
 			if (rsm->r_flags & BBR_SACK_PASSED) {
 				BBR_STAT_INC(bbr_reorder_seen);
 				bbr->r_ctl.rc_reorder_ts = cts;
@@ -7164,7 +7164,7 @@ do_rest_ofb:
 	changed += (rsm->r_end - rsm->r_start);
 	bbr->r_ctl.rc_sacked += (rsm->r_end - rsm->r_start);
 	bbr_log_sack_passed(tp, bbr, rsm);
-	/* Is Reordering occuring? */
+	/* Is Reordering occurring? */
 	if (rsm->r_flags & BBR_MARKED_LOST) {
 		bbr->r_ctl.rc_lost_bytes -= rsm->r_end - rsm->r_start;
 	}
@@ -10537,7 +10537,7 @@ bbr_set_probebw_gains(struct tcp_bbr *bbr, uint32_t cts, uint32_t losses)
 	}
 	if (cts == 0) {
 		/*
-		 * Never alow cts to be 0 we
+		 * Never allow cts to be 0 we
 		 * do this so we can judge if
 		 * we have set a timestamp.
 		 */
@@ -12291,7 +12291,7 @@ recheck_resend:
 			KMOD_TCPSTAT_ADD(tcps_sack_rexmit_bytes,
 			    min(len, maxseg));
 		} else {
-			/* I dont think this can happen */
+			/* I don't think this can happen */
 			rsm = NULL;
 			goto recheck_resend;
 		}
@@ -12844,7 +12844,7 @@ just_return_nolock:
 	}
 	if (tot_len == 0)
 		counter_u64_add(bbr_out_size[TCP_MSS_ACCT_JUSTRET], 1);
-	/* Dont update the time if we did not send */
+	/* Don't update the time if we did not send */
 	bbr->r_ctl.rc_last_delay_val = 0;
 	bbr->rc_output_starts_timer = 1;
 	bbr_start_hpts_timer(bbr, tp, cts, 9, slot, tot_len);

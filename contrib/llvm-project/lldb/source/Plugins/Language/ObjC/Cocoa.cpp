@@ -965,7 +965,7 @@ bool lldb_private::formatters::NSDateSummaryProvider(
     return true;
   }
 
-  // Accomodate for the __NSTaggedDate format introduced in Foundation 1600.
+  // Accommodate for the __NSTaggedDate format introduced in Foundation 1600.
   if (class_name == g___NSTaggedDate) {
     auto *runtime = llvm::dyn_cast_or_null<AppleObjCRuntime>(
         ObjCLanguageRuntime::Get(*process_sp));

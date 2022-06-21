@@ -70,7 +70,7 @@ Next
 Breaks build & header compatibility due to:
 
 - Improved build configuration and feature check macros
-- Endianess configuration fixes (by Erwin Kroon and David Grigsby)
+- Endianness configuration fixes (by Erwin Kroon and David Grigsby)
 - pkg-config compatibility (by Vincent Bernat)
 - enable use of versioned SONAME (by Vincent Bernat)
 - better fuzzer (wasn't random until now, ooops)
@@ -99,7 +99,7 @@ Breaks build & header compatibility due to:
 
 - `cbor_ctrl_bool` -> `cbor_ctrl_is_bool`
 - Added `cbor_array_allocated` & map equivalent
-- Overhauled endianess conversion - ARM now works as expected
+- Overhauled endianness conversion - ARM now works as expected
 - 'sort.c' example added
 - Significantly improved and doxyfied documentation
 

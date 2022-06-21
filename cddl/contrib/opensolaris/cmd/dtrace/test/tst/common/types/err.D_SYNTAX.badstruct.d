@@ -28,7 +28,7 @@
 
 /*
  * ASSERTION:
- *   Attempt a bogus struct declaration using an invalid identifer.
+ *   Attempt a bogus struct declaration using an invalid identifier.
  *
  * SECTION: Structs and Unions/Structs
  */

@@ -2170,7 +2170,7 @@ static void ecore_rdma_set_pf_params(struct ecore_hwfn *p_hwfn,
 	u32 num_cons, num_qps;
 	enum protocol_type proto;
 
-	/* The only case RDMA personality can be overriden is if NVRAM is
+	/* The only case RDMA personality can be overridden is if NVRAM is
 	 * configured with ETH_RDMA or if no rdma protocol was requested
 	 */
 	switch (p_params->rdma_protocol) {

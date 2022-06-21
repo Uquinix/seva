@@ -1705,7 +1705,7 @@ wwv_epoch(
 		/*
 		 * If the amplitude or SNR is below threshold, average a
 		 * 0 in the the integrators; otherwise, average the
-		 * bipolar signal. This is done to avoid noise polution.
+		 * bipolar signal. This is done to avoid noise pollution.
 		 */
 		if (engmax < DTHR || up->datsnr < DSNR) {
 			up->status |= DGATE;

@@ -314,12 +314,12 @@ ATF_TEST_CASE_BODY(some_options__all_known)
         "-bvalue_b",
         "-c", "value_c",
         //"-d",  // Options with default optional values are unsupported.
-        "-evalue_e",  // Has default; overriden.
+        "-evalue_e",  // Has default; overridden.
         "--f_long",
         "--g_long=value_g",
         "--h_long", "value_h",
         //"--i_long",  // Options with default optional values are unsupported.
-        "--j_long", "value_j",  // Has default; overriden as separate argument.
+        "--j_long", "value_j",  // Has default; overridden as separate argument.
         "arg1", "arg2", NULL,
     };
     const bool_option a('a', "a_long", "");

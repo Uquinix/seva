@@ -230,7 +230,7 @@ static cl::opt<PreferPredicateTy::Option> PreferPredicateOverEpilogue(
                          "prefer tail-folding, create scalar epilogue if tail "
                          "folding fails."),
               clEnumValN(PreferPredicateTy::PredicateOrDontVectorize,
-                         "predicate-dont-vectorize",
+                         "predicate-don't-vectorize",
                          "prefers tail-folding, don't attempt vectorization if "
                          "tail-folding fails.")));
 
@@ -472,7 +472,7 @@ public:
   /// of various checks and bypasses. Return the pre-header block of the new
   /// loop and the start value for the canonical induction, if it is != 0. The
   /// latter is the case when vectorizing the epilogue loop. In the case of
-  /// epilogue vectorization, this function is overriden to handle the more
+  /// epilogue vectorization, this function is overridden to handle the more
   /// complex control flow around the loops.
   virtual std::pair<BasicBlock *, Value *> createVectorizedLoopSkeleton();
 

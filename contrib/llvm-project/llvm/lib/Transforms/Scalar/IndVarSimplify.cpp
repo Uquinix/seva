@@ -1429,7 +1429,7 @@ bool IndVarSimplify::canonicalizeExitCondition(Loop *L) {
     auto *RHS = ICmp->getOperand(1);
     // For the range reasoning, avoid computing SCEVs in the loop to avoid
     // poisoning cache with sub-optimal results.  For the must-execute case,
-    // this is a neccessary precondition for correctness.
+    // this is a necessary precondition for correctness.
     if (!L->isLoopInvariant(RHS)) {
       if (!L->isLoopInvariant(LHS))
         continue;
@@ -1752,7 +1752,7 @@ bool IndVarSimplify::predicateLoopExits(Loop *L, SCEVExpander &Rewriter) {
   // If we have any exits which can't be predicated themselves, than we can't
   // predicate any exit which isn't guaranteed to execute before it.  Consider
   // two exits (a) and (b) which would both exit on the same iteration.  If we
-  // can predicate (b), but not (a), and (a) preceeds (b) along some path, then
+  // can predicate (b), but not (a), and (a) precedes (b) along some path, then
   // we could convert a loop from exiting through (a) to one exiting through
   // (b).  Note that this problem exists only for exits with the same exit
   // count, and we could be more aggressive when exit counts are known inequal.

@@ -323,7 +323,7 @@
 	* krb5/inquire_cred.c: Fix copy and paste error, bug spotted by
 	from Phil Fisher.
 
-	* mech: dont keep track of gc_usage, just figure it out at
+	* mech: don't keep track of gc_usage, just figure it out at
 	gss_inquire_cred() time
 
 	* mech/gss_mech_switch.c (add_builtin): ok for
@@ -413,7 +413,7 @@
 	* test_acquire_cred.c: use this test as part of the regression
 	suite.
 
-	* mech/gss_acquire_cred.c (gss_acquire_cred): dont init
+	* mech/gss_acquire_cred.c (gss_acquire_cred): don't init
 	cred->gc_mc every time in the loop.
 	
 2007-04-15  Love Hörnquist Åstrand  <lha@it.su.se>
@@ -695,7 +695,7 @@
 	of the NegTokenInit, this makes SPNEGO acceptor life a lot harder.
 	
 	* spnego: try harder to handle names better. handle missing
-	acceptor and initator creds better (ie dont propose/accept mech
+	acceptor and initator creds better (ie don't propose/accept mech
 	that there are no credentials for) split NegTokenInit and
 	NegTokenResp in acceptor
 

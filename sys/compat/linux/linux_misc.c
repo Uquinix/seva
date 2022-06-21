@@ -1866,7 +1866,7 @@ linux_exit_group(struct thread *td, struct linux_exit_group_args *args)
 	/*
 	 * XXX: we should send a signal to the parent if
 	 * SIGNAL_EXIT_GROUP is set. We ignore that (temporarily?)
-	 * as it doesnt occur often.
+	 * as it doesn't occur often.
 	 */
 	exit1(td, args->error_code, 0);
 		/* NOTREACHED */

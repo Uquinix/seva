@@ -449,7 +449,7 @@ codel_getq(struct codel *c, class_queue_t *q)
 		if (codel_time_before(now - c->vars.drop_next,
 		    16 * c->params.interval)) {
 			c->vars.count = (c->vars.count - c->vars.lastcount) | 1;
-			/* we dont care if rec_inv_sqrt approximation
+			/* we don't care if rec_inv_sqrt approximation
 			 * is not very precise :
 			 * Next Newton steps will correct it quadratically.
 			 */

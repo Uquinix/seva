@@ -1814,7 +1814,7 @@ lomac_priv_check(struct ucred *cred, int priv)
 	case PRIV_VM_SWAP_NORLIMIT:
 
 	/*
-	 * Allow some but not all network privileges.  In general, dont allow
+	 * Allow some but not all network privileges.  In general, don't allow
 	 * reconfiguring the network stack, just normal use.
 	 */
 	case PRIV_NETINET_RESERVEDPORT:

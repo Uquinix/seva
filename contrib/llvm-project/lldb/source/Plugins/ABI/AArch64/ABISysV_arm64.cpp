@@ -118,7 +118,7 @@ bool ABISysV_arm64::PrepareTrivialCall(Thread &thread, addr_t sp,
   return true;
 }
 
-// TODO: We dont support fp/SIMD arguments in v0-v7
+// TODO: We don't support fp/SIMD arguments in v0-v7
 bool ABISysV_arm64::GetArgumentValues(Thread &thread, ValueList &values) const {
   uint32_t num_values = values.GetSize();
 

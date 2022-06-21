@@ -444,7 +444,7 @@ private:
   // Both the hlasm and att variants still rely on the basic gnu asm
   // format with respect to inputs, clobbers, outputs etc.
   //
-  // However, calling the overriden getAssemblerDialect() method in
+  // However, calling the overridden getAssemblerDialect() method in
   // AsmParser is problematic. It either returns the AssemblerDialect field
   // in the MCAsmInfo instance if the AssemblerDialect field in AsmParser is
   // unset, otherwise it returns the private AssemblerDialect field in
@@ -452,7 +452,7 @@ private:
   //
   // The problematic part is because, we forcibly set the inline asm dialect
   // in the AsmParser instance in AsmPrinterInlineAsm.cpp. Soo any query
-  // to the overriden getAssemblerDialect function in AsmParser.cpp, will
+  // to the overridden getAssemblerDialect function in AsmParser.cpp, will
   // not return the assembler dialect set in the respective MCAsmInfo instance.
   //
   // For this purpose, we explicitly query the SystemZMCAsmInfo instance

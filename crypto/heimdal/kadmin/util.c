@@ -170,7 +170,7 @@ time_t2str(time_t t, char *str, size_t len, int include_time)
 
 /*
  * Convert the time representation in `str' to a time in `time'.
- * Return 0 if succesful, else -1.
+ * Return 0 if successful, else -1.
  */
 
 int
@@ -625,7 +625,7 @@ hex2n (char c)
 
 /*
  * convert a key in a readable format into a keyblock.
- * return 0 iff succesful, otherwise `err' should point to an error message
+ * return 0 iff successful, otherwise `err' should point to an error message
  */
 
 int

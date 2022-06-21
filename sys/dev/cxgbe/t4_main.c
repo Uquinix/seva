@@ -7723,7 +7723,7 @@ vi_sysctls(struct vi_info *vi)
 	children = SYSCTL_CHILDREN(oid);
 
 	SYSCTL_ADD_UINT(ctx, children, OID_AUTO, "viid", CTLFLAG_RD, NULL,
-	    vi->viid, "VI identifer");
+	    vi->viid, "VI identifier");
 	SYSCTL_ADD_INT(ctx, children, OID_AUTO, "nrxq", CTLFLAG_RD,
 	    &vi->nrxq, 0, "# of rx queues");
 	SYSCTL_ADD_INT(ctx, children, OID_AUTO, "ntxq", CTLFLAG_RD,

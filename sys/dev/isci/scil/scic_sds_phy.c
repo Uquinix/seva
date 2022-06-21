@@ -452,7 +452,7 @@ SCI_STATUS scic_sds_phy_link_layer_initialization(
 
 /**
  * This function will handle the sata SIGNATURE FIS timeout condition.  It
- * will restart the starting substate machine since we dont know what has
+ * will restart the starting substate machine since we don't know what has
  * actually happening.
  *
  * @param[in] cookie This object is cast to the SCIC_SDS_PHY_T object.
@@ -2981,7 +2981,7 @@ SCI_STATUS scic_sds_phy_starting_substate_await_sata_phy_event_handler(
       break;
 
    case SCU_EVENT_SATA_SPINUP_HOLD:
-      // These events might be received since we dont know how many may be in
+      // These events might be received since we don't know how many may be in
       // the completion queue while waiting for power
       break;
 

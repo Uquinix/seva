@@ -486,7 +486,7 @@ struct al_pcie_port_config_params {
 	struct al_pcie_gen3_params		*gen3_params;
 	/*
 	 * Sets all internal timers to Fast Mode for speeding up simulation.
-	 * this varible should be set always to AL_FALSE unless user is running
+	 * this variable should be set always to AL_FALSE unless user is running
 	 * on simulation setup
 	 */
 	al_bool					fast_link_mode;

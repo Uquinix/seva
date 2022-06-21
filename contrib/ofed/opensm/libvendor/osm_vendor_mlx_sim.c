@@ -385,7 +385,7 @@ __osmv_ibms_mad_addr_to_osm_addr(IN osm_vendor_t const *p_vend,
 		p_osm_addr->addr_type.gsi.service_level = p_ibms_addr->sl;
 
 		p_osm_addr->addr_type.gsi.global_route = FALSE;
-		/* copy the GRH data if relevant - TopSpin imp doesnt relate to GRH!!! */
+		/* copy the GRH data if relevant - TopSpin imp doesn't relate to GRH!!! */
 		/*
 		   if (p_osm_addr->addr_type.gsi.global_route)
 		   {

@@ -720,7 +720,7 @@ complete xfig	'c/-/(display)/' 'p/*/f:*.fig/'
 complete wget 	c/--/"(accept= append-output= background cache= \
 		    continue convert-links cut-dirs= debug \
 		    delete-after directory-prefix= domains= \
-		    dont-remove-listing dot-style= exclude-directories= \
+		    don't-remove-listing dot-style= exclude-directories= \
 		    exclude-domains= execute= follow-ftp \
 		    force-directories force-html glob= header= help \
 		    http-passwd= http-user= ignore-length \

@@ -583,7 +583,7 @@
  * 	Max renew time of ticket [integer optional]
  * 	Flags [hdb flags]
  * 	Generation number [generation optional]
- * 	Extensions [extentions optional]
+ * 	Extensions [extensions optional]
  * @endcode
  *
  * Fields following these silently are ignored.
@@ -691,7 +691,7 @@
  *
  * HDB-extension is encoded the DER encoded HDB-Extension from
  * lib/hdb/hdb.asn1. Consumers HDB extensions should be aware that
- * unknown entires needs to be preserved even thought the ASN.1 data
+ * unknown entries needs to be preserved even thought the ASN.1 data
  * content might be unknown. There is a critical flag in the data to show
  * to the KDC that the entry MUST be understod if the entry is to be
  * used.

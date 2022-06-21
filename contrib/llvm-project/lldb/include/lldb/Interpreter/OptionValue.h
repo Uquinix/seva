@@ -323,7 +323,7 @@ public:
 protected:
   using TopmostBase = OptionValue;
 
-  // Must be overriden by a derived class for correct downcasting the result of
+  // Must be overridden by a derived class for correct downcasting the result of
   // DeepCopy to it. Inherit from Cloneable to avoid doing this manually.
   virtual lldb::OptionValueSP Clone() const = 0;
 

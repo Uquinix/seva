@@ -661,7 +661,7 @@ GLOBAL bit32 saGetDeviceInfo(
  *  \param queueNum        IQ/OQ number
  *  \param agDevHandle     Pointer of device handle
  *  \param option          device general information or extended information
- *  \param param           Parameter of Set Device Infomation
+ *  \param param           Parameter of Set Device Information
  *
  *  \return
  *          - \e AGSA_RC_SUCCESS

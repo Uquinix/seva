@@ -400,7 +400,7 @@ vmci_qp_guest_endpoints_sync(void)
  *     that the QP list mutex is held by the caller.
  *
  * Results:
- *     Pointer to structure intialized.
+ *     Pointer to structure initialized.
  *
  * Side effects:
  *     None.

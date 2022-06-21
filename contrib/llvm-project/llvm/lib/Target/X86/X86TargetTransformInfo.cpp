@@ -4088,7 +4088,7 @@ InstructionCost X86TTIImpl::getAddressComputationCost(Type *Ty,
   const unsigned NumVectorInstToHideOverhead = 10;
 
   // Cost modeling of Strided Access Computation is hidden by the indexing
-  // modes of X86 regardless of the stride value. We dont believe that there
+  // modes of X86 regardless of the stride value. We don't believe that there
   // is a difference between constant strided access in gerenal and constant
   // strided value which is less than or equal to 64.
   // Even in the case of (loop invariant) stride whose value is not known at

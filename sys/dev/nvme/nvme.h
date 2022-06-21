@@ -1778,7 +1778,7 @@ extern int nvme_use_nvd;
 
 #endif /* _KERNEL */
 
-/* Endianess conversion functions for NVMe structs */
+/* Endianness conversion functions for NVMe structs */
 static inline
 void	nvme_completion_swapbytes(struct nvme_completion *s __unused)
 {

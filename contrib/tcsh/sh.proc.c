@@ -627,7 +627,7 @@ loop:
     for (pp = proclist.p_next; pp; pp = pp->p_next)
 	if (pp->p_procid &&	/* pp->p_procid == pp->p_jobid && */
 	    pp->p_flags & PRUNNING) {
-	    /* wait for (or pick up alredy blocked) SIGCHLD */
+	    /* wait for (or pick up already blocked) SIGCHLD */
 	    sigsuspend(&pause_mask);
 
 	    /* make the 'wait' interuptable by CTRL-C */

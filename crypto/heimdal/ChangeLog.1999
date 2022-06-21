@@ -1467,7 +1467,7 @@ Thu Apr 15 11:34:38 1999  Johan Danielsson  <joda@hella.pdc.kth.se>
 
 	* lib/krb5/heim_err.et: add `host not found' error
 
-	* kdc/connect.c: don't use data after clearing decriptor
+	* kdc/connect.c: don't use data after clearing descriptor
 
 	* lib/krb5/auth_context.c: abort -> krb5_abortx
 
@@ -2121,7 +2121,7 @@ Sat Jan 30 13:43:02 1999  Assar Westerlund  <assar@sics.se>
 	* lib/krb5/Makefile.am: explicit rules for *.et files
 
  	* lib/kadm5/init_c.c (get_kadm_ticket): only remove creds if
- 	krb5_get_credentials was succesful.
+ 	krb5_get_credentials was successful.
  	(get_new_cache): return better error codes and return earlier.
  	(get_cred_cache): only delete default_client if it's different
  	from client

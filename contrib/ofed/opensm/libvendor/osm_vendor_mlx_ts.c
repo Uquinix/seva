@@ -449,7 +449,7 @@ __osmv_TOPSPIN_mad_addr_to_osm_addr(IN osm_vendor_t const *p_vend,
 		p_mad_addr->addr_type.gsi.service_level = p_mad->sl;
 
 		p_mad_addr->addr_type.gsi.global_route = FALSE;
-		/* copy the GRH data if relevant - TopSpin imp doesnt relate to GRH!!! */
+		/* copy the GRH data if relevant - TopSpin imp doesn't relate to GRH!!! */
 		/*
 		   if (p_mad_addr->addr_type.gsi.global_route)
 		   {

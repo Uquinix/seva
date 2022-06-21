@@ -599,7 +599,7 @@ cl_fmap_item_t *cl_fmap_insert(IN cl_fmap_t * const p_map,
 *
 *	p_key
 *		[in] Pointer to the key value to assign to the item.  Storage
-*		for the key must be persistant, as only the pointer is stored.
+*		for the key must be persistent, as only the pointer is stored.
 *		Users are responsible for maintaining the validity of key
 *		pointers while they are in use.
 *

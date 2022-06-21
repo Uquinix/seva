@@ -985,7 +985,7 @@ bus_space_barrier(bus_space_tag_t tag __unused, bus_space_handle_t bsh __unused,
 
 /*
  * Stream accesses are the same as normal accesses on x86; there are no
- * supported bus systems with an endianess different from the host one.
+ * supported bus systems with an endianness different from the host one.
  */
 #define	bus_space_read_stream_1(t, h, o)	bus_space_read_1((t), (h), (o))
 #define	bus_space_read_stream_2(t, h, o)	bus_space_read_2((t), (h), (o))

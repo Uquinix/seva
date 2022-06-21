@@ -97,7 +97,7 @@ acquire_release_loop(gss_name_t name, int counter, gss_cred_usage_t usage)
 				    NULL,
 				    NULL);
 	if (maj_stat != GSS_S_COMPLETE)
-	    gss_err(1, min_stat, "aquire %d %d != GSS_S_COMPLETE",
+	    gss_err(1, min_stat, "acquire %d %d != GSS_S_COMPLETE",
 		    i, (int)maj_stat);
 
 	maj_stat = gss_release_cred(&min_stat, &cred);
@@ -122,7 +122,7 @@ acquire_add_release_add(gss_name_t name, gss_cred_usage_t usage)
 				NULL,
 				NULL);
     if (maj_stat != GSS_S_COMPLETE)
-	gss_err(1, min_stat, "aquire %d != GSS_S_COMPLETE", (int)maj_stat);
+	gss_err(1, min_stat, "acquire %d != GSS_S_COMPLETE", (int)maj_stat);
 
     maj_stat = gss_add_cred(&min_stat,
 			    cred,

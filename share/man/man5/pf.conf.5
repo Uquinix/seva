@@ -765,24 +765,24 @@ has the following options:
 .Bl -tag -width xxxx
 .It Ar no-df
 Clears the
-.Ar dont-fragment
+.Ar don't-fragment
 bit from a matching IP packet.
 Some operating systems are known to generate fragmented packets with the
-.Ar dont-fragment
+.Ar don't-fragment
 bit set.
 This is particularly true with NFS.
 .Ar Scrub
 will drop such fragmented
-.Ar dont-fragment
+.Ar don't-fragment
 packets unless
 .Ar no-df
 is specified.
 .Pp
 Unfortunately some operating systems also generate their
-.Ar dont-fragment
+.Ar don't-fragment
 packets with a zero IP identification field.
 Clearing the
-.Ar dont-fragment
+.Ar don't-fragment
 bit on packets with a zero IP ID may cause deleterious results if an
 upstream router later fragments the packet.
 Using the

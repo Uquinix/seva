@@ -85,7 +85,7 @@ BEGIN
 BEGIN
 /self->commit/
 {
-	printf("Succesfully commited both buffers");
+	printf("Successfully commited both buffers");
 	exit(0);
 }
 

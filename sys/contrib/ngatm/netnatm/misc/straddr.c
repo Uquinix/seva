@@ -43,7 +43,7 @@
  * Convert an NSAP address from the ASCII format to the binary.
  * ASCII format means each byte formatted as a 2-byte hex number
  * with dots freely interspersed between the bytes.
- * If the conversion is succesful, the function returns 0, -1
+ * If the conversion is successful, the function returns 0, -1
  * on conversion errors.
  */
 int

@@ -2043,7 +2043,7 @@ fasttrap_meta_provide(void *arg, dtrace_helper_provdesc_t *dhpv, pid_t pid)
 	if (strlen(dhpv->dthpv_provname) + 10 >=
 	    sizeof (provider->ftp_name)) {
 		printf("failed to instantiate provider %s: "
-		    "name too long to accomodate pid", dhpv->dthpv_provname);
+		    "name too long to accommodate pid", dhpv->dthpv_provname);
 		return (NULL);
 	}
 

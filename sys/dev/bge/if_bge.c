@@ -130,7 +130,7 @@ MODULE_DEPEND(bge, miibus, 1, 1, 1);
 /*
  * Various supported device vendors/types and their names. Note: the
  * spec seems to indicate that the hardware still has Alteon's vendor
- * ID burned into it, though it will always be overriden by the vendor
+ * ID burned into it, though it will always be overridden by the vendor
  * ID in the EEPROM. Just to be safe, we cover all possibilities.
  */
 static const struct bge_type {
@@ -1268,7 +1268,7 @@ bge_miibus_statchg(device_t dev)
 }
 
 /*
- * Intialize a standard receive ring descriptor.
+ * Initialize a standard receive ring descriptor.
  */
 static int
 bge_newbuf_std(struct bge_softc *sc, int i)

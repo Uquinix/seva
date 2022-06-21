@@ -1964,7 +1964,7 @@ tiTGTSendTmResp(
  *  Parameters:
  *     tiRoot:        Pointer to driver/port instance.
  *     tiIORequest:   I/O request context.
- *     length:        Lenght in bytes of the sense buffer.
+ *     length:        Length in bytes of the sense buffer.
  *
  *  Return:  none
  *

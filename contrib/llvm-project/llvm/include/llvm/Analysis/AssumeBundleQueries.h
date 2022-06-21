@@ -82,7 +82,7 @@ using Assume2KnowledgeMap = DenseMap<AssumeInst *, MinMax>;
 using RetainedKnowledgeMap =
     DenseMap<RetainedKnowledgeKey, Assume2KnowledgeMap>;
 
-/// Insert into the map all the informations contained in the operand bundles of
+/// Insert into the map all the information contained in the operand bundles of
 /// the llvm.assume. This should be used instead of hasAttributeInAssume when
 /// many queries are going to be made on the same llvm.assume.
 /// String attributes are not inserted in the map.

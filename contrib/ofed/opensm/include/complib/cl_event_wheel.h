@@ -346,7 +346,7 @@ void cl_event_wheel_dump(IN cl_event_wheel_t * const p_event_wheel);
 *
 * NOTES
 *	Note that this function should be called inside a lock of the event wheel!
-*  It doesn't aquire the lock by itself.
+*  It doesn't acquire the lock by itself.
 *
 * SEE ALSO
 *	Event_Wheel, cl_event_wheel_construct, cl_event_wheel_init

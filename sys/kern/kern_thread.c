@@ -1144,7 +1144,7 @@ restart:
 		 * ALLPROC suspend tries to avoid spurious EINTR for
 		 * threads sleeping interruptable, by suspending the
 		 * thread directly, similarly to sig_suspend_threads().
-		 * Since such sleep is not neccessary performed at the user
+		 * Since such sleep is not necessary performed at the user
 		 * boundary, TDF_ALLPROCSUSP is used to avoid immediate
 		 * un-suspend.
 		 */

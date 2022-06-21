@@ -397,7 +397,7 @@ The command line options relating to configuration and/or usage help are:
 
 Print the program version to standard out, optionally with licensing
 information, then exit 0.  The optional argument specifies how much licensing
-detail to provide.  The default is to print just the version.  The licensing infomation may be selected with an option argument.
+detail to provide.  The default is to print just the version.  The licensing information may be selected with an option argument.
 Only the first letter of the argument is examined:
 
 @table @samp

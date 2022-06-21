@@ -2381,7 +2381,7 @@ static void unswitchNontrivialInvariants(
     // for each invariant operand.
     // For 'OR' we can infer that false branch ("continue") means false
     // for each invariant operand.
-    // So it happens that for multiple-partial case we dont replace
+    // So it happens that for multiple-partial case we don't replace
     // in the unswitched branch.
     bool ReplaceUnswitched =
         FullUnswitch || (Invariants.size() == 1) || PartiallyInvariant;

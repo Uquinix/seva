@@ -40,8 +40,8 @@
  * or IRIG timecode (20 digits) as each new string is constructed. The
  * display is followed by the BCD binary bits as transmitted. Note that
  * the transmissionorder is low-order first as the frame is processed
- * left to right. For WWV/H The leap warning L preceeds the first bit.
- * For IRIG the on-time marker M preceeds the first (units) bit, so its
+ * left to right. For WWV/H The leap warning L precedes the first bit.
+ * For IRIG the on-time marker M precedes the first (units) bit, so its
  * code is delayed one bit and the next digit (tens) needs only three
  * bits.
  *

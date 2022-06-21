@@ -276,7 +276,7 @@ mfi_tbolt_init_desc_pool(struct mfi_softc *sc, uint8_t* mem_location,
 
 	/* Request Descriptor Base physical Address */
 
-	/* For Request Decriptors Virtual Memory */
+	/* For Request Descriptors Virtual Memory */
 	/* Initialise the aligned IO Frames Virtual Memory Pointer */
 	if (((uintptr_t)addr) & (0xFF)) {
 		addr = &addr[sc->raid_io_msg_size];

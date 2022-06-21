@@ -129,7 +129,7 @@ public:
     }
   };
 
-  MachOUniversalBinary(MemoryBufferRef Souce, Error &Err);
+  MachOUniversalBinary(MemoryBufferRef Source, Error &Err);
   static Expected<std::unique_ptr<MachOUniversalBinary>>
   create(MemoryBufferRef Source);
 

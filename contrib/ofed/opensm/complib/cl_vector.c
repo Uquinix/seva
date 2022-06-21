@@ -311,7 +311,7 @@ cl_status_t cl_vector_set(IN cl_vector_t * const p_vector,
 
 	/* Determine if the vector has room for this element. */
 	if (index >= p_vector->size) {
-		/* Resize to accomodate the given index. */
+		/* Resize to accommodate the given index. */
 		status = cl_vector_set_size(p_vector, index + 1);
 
 		/* Check for failure on or before the given index. */

@@ -360,7 +360,7 @@ public:
     %feature("autodoc","
     Given an argument of str to specify the type of thread-origin extended
     backtrace to retrieve, query whether the origin of this thread is
-    available.  An SBThread is retured; SBThread.IsValid will return true
+    available.  An SBThread is returned; SBThread.IsValid will return true
     if an extended backtrace was available.  The returned SBThread is not
     a part of the SBProcess' thread list and it cannot be manipulated like
     normal threads -- you cannot step or resume it, for instance -- it is

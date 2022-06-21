@@ -1495,7 +1495,7 @@ write_line("sysmk", string.format([[# FreeBSD system call object files.
 MIASM = ]], generated_tag, config['os_id_keyword']))
 
 write_line("systrace", string.format([[/*
- * System call argument to DTrace register array converstion.
+ * System call argument to DTrace register array conversion.
  *
  * DO NOT EDIT-- this file is automatically %s.
  * $%s$

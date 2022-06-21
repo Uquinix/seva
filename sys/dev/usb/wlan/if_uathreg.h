@@ -436,7 +436,7 @@ struct uath_cmd_set_stabeacon_timers {	/* WDCMSG_SET_STA_BEACON_TIMERS */
 } __packed;
 
 enum {
-	CFG_NONE,			/* Sentinal to indicate "no config" */
+	CFG_NONE,			/* Sentinel to indicate "no config" */
 	CFG_REG_DOMAIN,			/* Regulatory Domain */
 	CFG_RATE_CONTROL_ENABLE,
 	CFG_DEF_XMIT_DATA_RATE,		/* NB: if rate control is not enabled */
@@ -475,7 +475,7 @@ enum {
 };
 
 enum {
-	/* Sentinal to indicate "no capability" */
+	/* Sentinel to indicate "no capability" */
 	CAP_NONE,
 	CAP_ALL,			/* ALL capabilities */
 	CAP_TARGET_VERSION,
@@ -525,7 +525,7 @@ enum {
 };
 
 enum {
-	ST_NONE,                    /* Sentinal to indicate "no status" */
+	ST_NONE,                    /* Sentinel to indicate "no status" */
 	ST_ALL,
 	ST_SERVICE_TYPE,
 	ST_WLAN_MODE,

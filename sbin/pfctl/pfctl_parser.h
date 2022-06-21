@@ -223,7 +223,7 @@ struct pfctl_watermarks {
 /*
  * XXX
  * Absolutely this is not correct location to define this.
- * Should we use an another sperate header file?
+ * Should we use an another separate header file?
  */
 #define	SIMPLEQ_HEAD			STAILQ_HEAD
 #define	SIMPLEQ_HEAD_INITIALIZER	STAILQ_HEAD_INITIALIZER

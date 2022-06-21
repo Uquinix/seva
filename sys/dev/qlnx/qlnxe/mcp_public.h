@@ -854,9 +854,9 @@ struct public_func {
 	u32 iscsi_boot_signature;
 	u32 iscsi_boot_block_offset;
 
-	/* MTU size per funciton is needed for the OV feature */
+	/* MTU size per function is needed for the OV feature */
 	u32 mtu_size;
-	/* 9 entires for the C2S PCP map for each inner VLAN PCP + 1 default */
+	/* 9 entries for the C2S PCP map for each inner VLAN PCP + 1 default */
 	/* For PCP values 0-3 use the map lower */
 	/* 0xFF000000 - PCP 0, 0x00FF0000 - PCP 1,
 	 * 0x0000FF00 - PCP 2, 0x000000FF PCP 3

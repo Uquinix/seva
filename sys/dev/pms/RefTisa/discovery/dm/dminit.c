@@ -649,7 +649,7 @@ dmExpanderDeviceDataInit(
   return;
 }
 
-/* re-intialize an expander */
+/* re-initialize an expander */
 osGLOBAL void
 dmExpanderDeviceDataReInit(
                            dmRoot_t         *dmRoot, 

@@ -5908,7 +5908,7 @@ ath_newstate(struct ieee80211vap *vap, enum ieee80211_state nstate, int arg)
 		   vap->iv_opmode == IEEE80211_M_IBSS);
 
 	/*
-	 * XXX Dont need to do this (and others) if we've transitioned
+	 * XXX Don't need to do this (and others) if we've transitioned
 	 * from SLEEP->RUN.
 	 */
 	if (stamode && nstate == IEEE80211_S_RUN) {

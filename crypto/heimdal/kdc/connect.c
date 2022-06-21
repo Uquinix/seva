@@ -612,7 +612,7 @@ grow_descr (krb5_context context,
 
 /*
  * Try to handle the TCP data at `d->buf, d->len'.
- * Return -1 if failed, 0 if succesful, and 1 if data is complete.
+ * Return -1 if failed, 0 if successful, and 1 if data is complete.
  */
 
 static int
@@ -640,7 +640,7 @@ handle_vanilla_tcp (krb5_context context,
 
 /*
  * Try to handle the TCP/HTTP data at `d->buf, d->len'.
- * Return -1 if failed, 0 if succesful, and 1 if data is complete.
+ * Return -1 if failed, 0 if successful, and 1 if data is complete.
  */
 
 static int

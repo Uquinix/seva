@@ -61,7 +61,7 @@ static void	unload_cleanup(const char *);
 /* --------------------------------------------------------------------- */
 
 /*
- * A function checking wether we are allowed to load modules currently
+ * A function checking whether we are allowed to load modules currently
  * (either the kernel is not modular, or securelevel may prevent it)
  */
 static void

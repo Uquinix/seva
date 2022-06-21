@@ -337,7 +337,7 @@ struct sctpUnifiedAbortHeavy{
 };
 
 /* For the graceful shutdown we must carry
- * the tag (in common header)  and the highest consequitive acking value
+ * the tag (in common header)  and the highest sonsecutive acking value
  */
 struct sctpShutdown {
   uint32_t TSN_Seen;

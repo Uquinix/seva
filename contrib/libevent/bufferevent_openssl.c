@@ -323,7 +323,7 @@ struct bufferevent_openssl {
 
 	/* Are we currently connecting, accepting, or doing IO? */
 	unsigned state : 2;
-	/* If we reset fd, we sould reset state too */
+	/* If we reset fd, we should reset state too */
 	unsigned old_state : 2;
 };
 

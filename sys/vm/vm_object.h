@@ -200,7 +200,7 @@ struct vm_object {
 #define	OBJ_ANON	0x0010		/* (c) contains anonymous memory */
 #define	OBJ_UMTXDEAD	0x0020		/* umtx pshared was terminated */
 #define	OBJ_SIZEVNLOCK	0x0040		/* lock vnode to check obj size */
-#define	OBJ_PG_DTOR	0x0080		/* dont reset object, leave that for dtor */
+#define	OBJ_PG_DTOR	0x0080		/* don't reset object, leave that for dtor */
 #define	OBJ_SHADOWLIST	0x0100		/* Object is on the shadow list. */
 #define	OBJ_SWAP	0x0200		/* object swaps */
 #define	OBJ_SPLIT	0x0400		/* object is being split */

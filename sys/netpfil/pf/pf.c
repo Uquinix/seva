@@ -4488,7 +4488,7 @@ pf_test_rule(struct pf_krule **rm, struct pf_kstate **sm, int direction,
 	    direction == PF_OUT &&
 	    V_pfsync_defer_ptr != NULL && V_pfsync_defer_ptr(*sm, m))
 		/*
-		 * We want the state created, but we dont
+		 * We want the state created, but we don't
 		 * want to send this in case a partner
 		 * firewall has to know about it to allow
 		 * replies through it.

@@ -519,9 +519,9 @@ static bool prefixIn(const IndicesVector &Indices,
 
 /// Mark the given indices (ToMark) as safe in the given set of indices
 /// (Safe). Marking safe usually means adding ToMark to Safe. However, if there
-/// is already a prefix of Indices in Safe, Indices are implicitely marked safe
+/// is already a prefix of Indices in Safe, Indices are implicitly marked safe
 /// already. Furthermore, any indices that Indices is itself a prefix of, are
-/// removed from Safe (since they are implicitely safe because of Indices now).
+/// removed from Safe (since they are implicitly safe because of Indices now).
 static void markIndicesSafe(const IndicesVector &ToMark,
                             std::set<IndicesVector> &Safe) {
   std::set<IndicesVector>::iterator Low;

@@ -720,7 +720,7 @@ bcma_erom_seek_matching_core(struct bcma_erom *sc,
 		return (0);
 	}
 
-	/* Not found, or a parse error occured */
+	/* Not found, or a parse error occurred */
 	return (error);
 }
 

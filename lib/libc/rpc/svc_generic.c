@@ -310,7 +310,7 @@ freedata:
 	if (madefd)
 		(void)_close(fd);
 	if (xprt) {
-		if (!madefd) /* so that svc_destroy doesnt close fd */
+		if (!madefd) /* so that svc_destroy doesn't close fd */
 			xprt->xp_fd = RPC_ANYFD;
 		SVC_DESTROY(xprt);
 	}

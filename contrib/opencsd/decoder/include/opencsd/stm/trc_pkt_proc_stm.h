@@ -174,7 +174,7 @@ private:
     uint8_t  m_nibble;                      //!< current nibble being processed.
     uint8_t  m_nibble_2nd;                  //!< 2nd unused nibble from a processed byte.
     bool     m_nibble_2nd_valid;            //!< 2nd nibble is valid;
-    uint8_t  m_num_data_nibbles;            //!< number of nibbles needed to acheive payload.
+    uint8_t  m_num_data_nibbles;            //!< number of nibbles needed to achieve payload.
 
     const uint8_t *m_p_data_in;             //!< pointer to input data.
     uint32_t  m_data_in_size;               //!< amount of data in.

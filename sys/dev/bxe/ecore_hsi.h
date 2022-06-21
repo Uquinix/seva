@@ -2811,7 +2811,7 @@ struct shmem2_region {
 		uint32_t oem_i2c_data_addr;
 	}u;
 
-	/* 9 entires for the C2S PCP map for each inner VLAN PCP + 1 default */
+	/* 9 entries for the C2S PCP map for each inner VLAN PCP + 1 default */
 	/* For PCP values 0-3 use the map lower */
 	/* 0xFF000000 - PCP 0, 0x00FF0000 - PCP 1,
 	 * 0x0000FF00 - PCP 2, 0x000000FF PCP 3
@@ -7765,7 +7765,7 @@ enum eth_tx_vlan_type
  */
 enum eth_vlan_filter_mode
 {
-	ETH_VLAN_FILTER_ANY_VLAN /* Dont filter by vlan */,
+	ETH_VLAN_FILTER_ANY_VLAN /* Don't filter by vlan */,
 	ETH_VLAN_FILTER_SPECIFIC_VLAN /* Only the vlan_id is allowed */,
 	ETH_VLAN_FILTER_CLASSIFY /* Vlan will be added to CAM for classification */,
 	MAX_ETH_VLAN_FILTER_MODE};
@@ -7886,7 +7886,7 @@ struct tstorm_eth_function_common_config
 		#define TSTORM_ETH_FUNCTION_COMMON_CONFIG_RSS_IPV6_TCP_CAPABILITY_SHIFT              3
 		#define TSTORM_ETH_FUNCTION_COMMON_CONFIG_RSS_MODE                                   (0x7<<4) /* BitField config_flagsGeneral configuration flags	RSS mode of operation (use enum eth_rss_mode) */
 		#define TSTORM_ETH_FUNCTION_COMMON_CONFIG_RSS_MODE_SHIFT                             4
-		#define TSTORM_ETH_FUNCTION_COMMON_CONFIG_VLAN_FILTERING_ENABLE                      (0x1<<7) /* BitField config_flagsGeneral configuration flags	0 - Dont filter by vlan, 1 - Filter according to the vlans specificied in mac_filter_config */
+		#define TSTORM_ETH_FUNCTION_COMMON_CONFIG_VLAN_FILTERING_ENABLE                      (0x1<<7) /* BitField config_flagsGeneral configuration flags	0 - Don't filter by vlan, 1 - Filter according to the vlans specificied in mac_filter_config */
 		#define TSTORM_ETH_FUNCTION_COMMON_CONFIG_VLAN_FILTERING_ENABLE_SHIFT                7
 		#define __TSTORM_ETH_FUNCTION_COMMON_CONFIG_RESERVED0                                (0xFF<<8) /* BitField config_flagsGeneral configuration flags	 */
 		#define __TSTORM_ETH_FUNCTION_COMMON_CONFIG_RESERVED0_SHIFT                          8
@@ -10159,9 +10159,9 @@ struct tstorm_tcp_st_context_section
 		#define __TSTORM_TCP_ST_CONTEXT_SECTION_KA_PROBE_SENT_SHIFT                          26
 		#define __TSTORM_TCP_ST_CONTEXT_SECTION_PERSIST_PROBE_SENT                           (0x1<<27) /* BitField flags2various state flags	persist packet was sent */
 		#define __TSTORM_TCP_ST_CONTEXT_SECTION_PERSIST_PROBE_SENT_SHIFT                     27
-		#define TSTORM_TCP_ST_CONTEXT_SECTION_UPDATE_L2_STATSTICS                            (0x1<<28) /* BitField flags2various state flags	determines wheather or not to update l2 statistics */
+		#define TSTORM_TCP_ST_CONTEXT_SECTION_UPDATE_L2_STATSTICS                            (0x1<<28) /* BitField flags2various state flags	determines whether or not to update l2 statistics */
 		#define TSTORM_TCP_ST_CONTEXT_SECTION_UPDATE_L2_STATSTICS_SHIFT                      28
-		#define TSTORM_TCP_ST_CONTEXT_SECTION_UPDATE_L4_STATSTICS                            (0x1<<29) /* BitField flags2various state flags	determines wheather or not to update l4 statistics */
+		#define TSTORM_TCP_ST_CONTEXT_SECTION_UPDATE_L4_STATSTICS                            (0x1<<29) /* BitField flags2various state flags	determines whether or not to update l4 statistics */
 		#define TSTORM_TCP_ST_CONTEXT_SECTION_UPDATE_L4_STATSTICS_SHIFT                      29
 		#define __TSTORM_TCP_ST_CONTEXT_SECTION_IN_WINDOW_RST_ATTACK                         (0x1<<30) /* BitField flags2various state flags	possible blind-in-window RST attack detected */
 		#define __TSTORM_TCP_ST_CONTEXT_SECTION_IN_WINDOW_RST_ATTACK_SHIFT                   30
@@ -10535,17 +10535,17 @@ struct xstorm_tcp_context_section
 	uint16_t reserved2 /* The ID of the statistics client for counting common/L2 statistics */;
 	uint8_t statistics_counter_id /* The ID of the statistics client for counting common/L2 statistics */;
 	uint8_t statistics_params;
-		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L2_STATSTICS                               (0x1<<0) /* BitField statistics_paramsTcp parameters	set by the driver, determines wheather or not to update l2 statistics */
+		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L2_STATSTICS                               (0x1<<0) /* BitField statistics_paramsTcp parameters	set by the driver, determines whether or not to update l2 statistics */
 		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L2_STATSTICS_SHIFT                         0
-		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L4_STATSTICS                               (0x1<<1) /* BitField statistics_paramsTcp parameters	set by the driver, determines wheather or not to update l4 statistics */
+		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L4_STATSTICS                               (0x1<<1) /* BitField statistics_paramsTcp parameters	set by the driver, determines whether or not to update l4 statistics */
 		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L4_STATSTICS_SHIFT                         1
 		#define XSTORM_TCP_CONTEXT_SECTION_RESERVED                                          (0x3F<<2) /* BitField statistics_paramsTcp parameters	 */
 		#define XSTORM_TCP_CONTEXT_SECTION_RESERVED_SHIFT                                    2
 #elif defined(__LITTLE_ENDIAN)
 	uint8_t statistics_params;
-		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L2_STATSTICS                               (0x1<<0) /* BitField statistics_paramsTcp parameters	set by the driver, determines wheather or not to update l2 statistics */
+		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L2_STATSTICS                               (0x1<<0) /* BitField statistics_paramsTcp parameters	set by the driver, determines whether or not to update l2 statistics */
 		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L2_STATSTICS_SHIFT                         0
-		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L4_STATSTICS                               (0x1<<1) /* BitField statistics_paramsTcp parameters	set by the driver, determines wheather or not to update l4 statistics */
+		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L4_STATSTICS                               (0x1<<1) /* BitField statistics_paramsTcp parameters	set by the driver, determines whether or not to update l4 statistics */
 		#define XSTORM_TCP_CONTEXT_SECTION_UPDATE_L4_STATSTICS_SHIFT                         1
 		#define XSTORM_TCP_CONTEXT_SECTION_RESERVED                                          (0x3F<<2) /* BitField statistics_paramsTcp parameters	 */
 		#define XSTORM_TCP_CONTEXT_SECTION_RESERVED_SHIFT                                    2
@@ -10571,7 +10571,7 @@ struct xstorm_common_context_section
 		#define XSTORM_COMMON_CONTEXT_SECTION_PHYSQ_INITIALIZED_SHIFT                        0
 		#define XSTORM_COMMON_CONTEXT_SECTION_PBF_PORT                                       (0x7<<1) /* BitField flagsTcp parameters	determines to which voq credit will be returned */
 		#define XSTORM_COMMON_CONTEXT_SECTION_PBF_PORT_SHIFT                                 1
-		#define XSTORM_COMMON_CONTEXT_SECTION_VLAN_MODE                                      (0x1<<4) /* BitField flagsTcp parameters	Flag that states wether inner valn was provided by the OS */
+		#define XSTORM_COMMON_CONTEXT_SECTION_VLAN_MODE                                      (0x1<<4) /* BitField flagsTcp parameters	Flag that states whether inner valn was provided by the OS */
 		#define XSTORM_COMMON_CONTEXT_SECTION_VLAN_MODE_SHIFT                                4
 		#define XSTORM_COMMON_CONTEXT_SECTION_ORIGINAL_PRIORITY                              (0x7<<5) /* BitField flagsTcp parameters	original priority given from the OS */
 		#define XSTORM_COMMON_CONTEXT_SECTION_ORIGINAL_PRIORITY_SHIFT                        5
@@ -10597,7 +10597,7 @@ struct xstorm_common_context_section
 		#define XSTORM_COMMON_CONTEXT_SECTION_PHYSQ_INITIALIZED_SHIFT                        0
 		#define XSTORM_COMMON_CONTEXT_SECTION_PBF_PORT                                       (0x7<<1) /* BitField flagsTcp parameters	determines to which voq credit will be returned */
 		#define XSTORM_COMMON_CONTEXT_SECTION_PBF_PORT_SHIFT                                 1
-		#define XSTORM_COMMON_CONTEXT_SECTION_VLAN_MODE                                      (0x1<<4) /* BitField flagsTcp parameters	Flag that states wether inner valn was provided by the OS */
+		#define XSTORM_COMMON_CONTEXT_SECTION_VLAN_MODE                                      (0x1<<4) /* BitField flagsTcp parameters	Flag that states whether inner valn was provided by the OS */
 		#define XSTORM_COMMON_CONTEXT_SECTION_VLAN_MODE_SHIFT                                4
 		#define XSTORM_COMMON_CONTEXT_SECTION_ORIGINAL_PRIORITY                              (0x7<<5) /* BitField flagsTcp parameters	original priority given from the OS */
 		#define XSTORM_COMMON_CONTEXT_SECTION_ORIGINAL_PRIORITY_SHIFT                        5

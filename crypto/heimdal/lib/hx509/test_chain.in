@@ -188,7 +188,7 @@ ${hxtool} verify \
     crl:FILE:$srcdir/data/crl1.der > /dev/null && exit 1
 
 if ${hxtool} info | grep 'ecdsa: hcrypto null' > /dev/null ; then
-    echo "not testing ECDSA since hcrypto doesnt support ECDSA"
+    echo "not testing ECDSA since hcrypto doesn't support ECDSA"
 else
     echo "eccert -> root"
     ${hxtool} verify --missing-revoke \

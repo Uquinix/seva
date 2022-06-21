@@ -2310,7 +2310,7 @@ bpf_tap(struct bpf_if *bp, u_char *pkt, u_int pktlen)
 	CK_LIST_FOREACH(d, &bp->bif_dlist, bd_next) {
 		counter_u64_add(d->bd_rcount, 1);
 		/*
-		 * NB: We dont call BPF_CHECK_DIRECTION() here since there
+		 * NB: We don't call BPF_CHECK_DIRECTION() here since there
 		 * is no way for the caller to indiciate to us whether this
 		 * packet is inbound or outbound. In the bpf_mtap() routines,
 		 * we use the interface pointers on the mbuf to figure it out.

@@ -489,7 +489,7 @@ and then adjust the necessary configuration files.
 You should also set up the file
 .Pn /etc/aliases
 for your installation, creating mail groups as appropriate.
-For more informations see
+For more information see
 ``Sendmail Installation and Operation Guide'' (SMM:8) and
 ``Sendmail \- An Internetwork Mail Router'' (SMM:9).
 .Sh 3 "Setting up a UUCP connection"

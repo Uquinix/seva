@@ -114,7 +114,7 @@ enum SCIC_SDS_CONTROLLER_MEMORY_DESCRIPTORS
    SCU_MDE_TASK_CONTEXT,
 
    /**
-    * Unsolicited frame buffer MDE entrys this is the start of the unsolicited
+    * Unsolicited frame buffer MDE entries this is the start of the unsolicited
     * frame buffer entries.
     */
    SCU_MDE_UF_BUFFER,
@@ -568,7 +568,7 @@ extern SCI_BASE_STATE_T scic_sds_controller_state_table[];
  * This is a helper macro to increment the io sequence count.
  *
  * We may find in the future that it will be faster to store the sequence
- * count in such a way as we dont perform the shift operation to build io
+ * count in such a way as we don't perform the shift operation to build io
  * tag values so therefore need a way to incrment them correctly
  */
 #define scic_sds_io_sequence_increment(value) \

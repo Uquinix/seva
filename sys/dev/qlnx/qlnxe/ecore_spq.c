@@ -1064,7 +1064,7 @@ enum _ecore_status_t ecore_spq_completion(struct ecore_hwfn *p_hwfn,
 		}
 
 		/* This is debug and should be relatively uncommon - depends
-		 * on scenarios which have mutliple per-PF sent ramrods.
+		 * on scenarios which have multiple per-PF sent ramrods.
 		 */
 		DP_VERBOSE(p_hwfn, ECORE_MSG_SPQ,
 			   "Got completion for echo %04x - doesn't match echo %04x in completion pending list\n",

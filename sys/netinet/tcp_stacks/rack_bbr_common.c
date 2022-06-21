@@ -323,7 +323,7 @@ ctf_get_enet_type(struct ifnet *ifp, struct mbuf *m)
  * that until the transport pulls in the mbuf chain queued
  * for it more ack's may get on the mbufs that were already
  * delivered. There currently is a limit of 6 acks condensed
- * into 1 mbuf which means often when this is occuring, we
+ * into 1 mbuf which means often when this is occurring, we
  * don't get that effect but it does happen.
  *
  * Now there are some interesting Caveats that the transport
@@ -410,7 +410,7 @@ ctf_process_inbound_raw(struct tcpcb *tp, struct socket *so, struct mbuf *m, int
 	if (ifp == NULL) {
 		/*
 		 * We probably should not work around
-		 * but kassert, since lro alwasy sets rcvif.
+		 * but kassert, since lro always sets rcvif.
 		 */
 		no_vn = 1;
 		goto skip_vnet;

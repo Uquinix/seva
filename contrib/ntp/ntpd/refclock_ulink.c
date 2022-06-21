@@ -59,7 +59,7 @@
  * on the Ultralink model 33X decoder Dip switch 2 controls
  * polled or continous timecode 
  * set fudge flag1 if using polled (needed for model 320 and 325)
- * dont set fudge flag1 if dip switch 2 is set on model 33x decoder
+ * don't set fudge flag1 if dip switch 2 is set on model 33x decoder
 */
 
 

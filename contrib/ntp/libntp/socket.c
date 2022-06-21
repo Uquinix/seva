@@ -31,7 +31,7 @@
  * file descriptors we attempt to move them above
  * FOPEN_MAX. This is not as easy as it sounds as
  * FOPEN_MAX changes from implementation to implementation
- * and may exceed to current file decriptor limits.
+ * and may exceed to current file descriptor limits.
  * We are using following strategy:
  * - keep a current socket fd boundary initialized with
  *   max(0, min(GETDTABLESIZE() - FD_CHUNK, FOPEN_MAX))

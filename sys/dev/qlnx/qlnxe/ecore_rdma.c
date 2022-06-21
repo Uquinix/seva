@@ -674,7 +674,7 @@ static void ecore_rdma_init_devinfo(
 	dev->max_mr_mw_fmr_pbl = (OSAL_PAGE_SIZE/8) * (OSAL_PAGE_SIZE/8);
 	dev->max_mr_mw_fmr_size = dev->max_mr_mw_fmr_pbl * OSAL_PAGE_SIZE;
 	dev->max_pkey = ECORE_RDMA_MAX_P_KEY;
-	/* Right now we dont take any parameters from user
+	/* Right now we don't take any parameters from user
 	 * So assign predefined max_srq to num_srqs.
 	 */
 	dev->max_srq = p_hwfn->p_rdma_info->num_srqs;

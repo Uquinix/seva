@@ -170,7 +170,7 @@ void cl_spinlock_destroy(IN cl_spinlock_t * const p_spinlock);
 * DESCRIPTION
 *	The cl_spinlock_acquire function acquires a spin lock.
 *	This version of lock does not prevent an interrupt from
-*	occuring on the processor on which the code is being
+*	occurring on the processor on which the code is being
 *	executed.
 *
 * SYNOPSIS

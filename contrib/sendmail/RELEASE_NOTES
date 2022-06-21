@@ -1052,7 +1052,7 @@ summary of the changes in that release.
 		request silently.
 	LIBMILTER: Deal with sigwait(2) implementations that return
 		-1 and set errno instead of returning an error code
-		directly.  Patch from Chris Adams of HiWAAY Informations
+		directly.  Patch from Chris Adams of HiWAAY Information
 		Services.
 	Portability:
 		Fix compilation checks for closefrom(3) and statvfs(2)
@@ -1655,7 +1655,7 @@ summary of the changes in that release.
 		amendments to support header insertion operations.
 	MAIL.LOCAL: Add support for hashed mail directories, see
 		mail.local/README.  Contributed by Chris Adams of HiWAAY
-		Informations Services.
+		Information Services.
 	MAILSTATS: Display quarantine message counts.
 	MAKEMAP: Add new flag -D to specify the comment character to use
 		instead of '#'.
@@ -2008,7 +2008,7 @@ summary of the changes in that release.
 		Courtesan Consulting.
 	Make sure that an envelope is queued in the selected queue group
 		even if some recipients are deleted or invalid.  Problem
-		found by Chris Adams of HiWAAY Informations Services.
+		found by Chris Adams of HiWAAY Information Services.
 	Do not send a bounce message if a message is completely collected
 		from the SMTP client.  Problem noted by Kari Hurtta of the
 		Finnish Meteorological Institute.
@@ -2406,7 +2406,7 @@ summary of the changes in that release.
 		of the Finnish Meteorological Institute.
 	Since 8.12 no longer forks at the SMTP MAIL command, the daemon
 		needs to collect children status to avoid zombie processes.
-		Problem noted by Chris Adams of HiWAAY Informations Services.
+		Problem noted by Chris Adams of HiWAAY Information Services.
 	Shut down "nullserver" and ETRN-only connections after 25 bad
 		commands are issued.  This makes it consistent with normal
 		SMTP connections.
@@ -2447,7 +2447,7 @@ summary of the changes in that release.
 		CRAM-MD5.  Problem noted by Bjoern Voigt of TU Berlin.
 	Avoid a potential information leak if AUTH PLAIN is used and the
 		server gets stuck while processing that command.  Problem
-		noted by Chris Adams from HiWAAY Informations Services.
+		noted by Chris Adams from HiWAAY Information Services.
 	In addition to printing errors when parsing recipients during
 		command line invocations log them to make it simpler
 		to understand possible DSNs to postmaster.
@@ -2588,7 +2588,7 @@ summary of the changes in that release.
 	LIBMILTER: Install mfdef.h, required by mfapi.h.  Problem noted by
 		Richard A. Nelson of Debian.
 	LIBMILTER: Add __P definition for OS that lack it.  Problem noted
-		by Chris Adams from HiWAAY Informations Services.
+		by Chris Adams from HiWAAY Information Services.
 	LIBSMDB: Fix a lock race condition that affects makemap, praliases,
 		and vacation.
 	MAKEMAP: Avoid going beyond the end of an input line if it does
@@ -3074,7 +3074,7 @@ summary of the changes in that release.
 		options friends/haters instead of "To:" and enable
 		specification of whole domains instead of just users.
 		Notice: this change is not backward compatible.
-		Suggested by Chris Adams from HiWAAY Informations Services.
+		Suggested by Chris Adams from HiWAAY Information Services.
 	CONFIG: Allow for local extensions for most new rulesets, see
 		cf/README for details.
 	CONFIG: New FEATURE(`lookupdotdomain') to lookup also .domain in
@@ -3129,7 +3129,7 @@ summary of the changes in that release.
 		instructs the rulesets on what to do if the address being
 		looked up has +detail information.  See cf/README for more
 		information.
-	CONFIG: When chosing a new destination via LDAP Routing, also look
+	CONFIG: When choosing a new destination via LDAP Routing, also look
 		up the new routing address/host in the mailertable.  Based
 		on patch from Don Badrak of the United States Census Bureau.
 	CONFIG: Do not reject the SMTP Mail from: command if LDAP Routing
@@ -6430,7 +6430,7 @@ summary of the changes in that release.
 		exist would fail.  Patch from Raymund Will of LST Software
 		GmbH.
 	Bogus incoming SMTP commands would reset the SMTP conversation.
-		Problem noted by Fredrik Jönsson of the Royal Institute
+		Problem noted by Fredrik Jï¿½nsson of the Royal Institute
 		of Technology, Stockholm.
 	Since TCP Wrappers includes setenv(), unsetenv(), and putenv(),
 		some environments could give "multiple definitions" for these
@@ -6997,8 +6997,8 @@ summary of the changes in that release.
 		it never inserts that class into the output file.  Fix it
 		so it will honor EXPOSED_USER but will _not_ include root
 		automatically in this class.  Problem noted by Ronan KERYELL
-		of Centre de Recherche en Informatique de l'École Nationale
-		Supérieure des Mines de Paris (CRI-ENSMP).
+		of Centre de Recherche en Informatique de l'ï¿½cole Nationale
+		Supï¿½rieure des Mines de Paris (CRI-ENSMP).
 	CONFIG: Clean up handling of "local:" syntax in relay specifications
 		such as LUSER_RELAY.  This change permits the following
 		syntaxes:  ``local:'' will send to the same user on the
@@ -7108,7 +7108,7 @@ summary of the changes in that release.
 			compiled with -DUSE_VENDOR_CF_PATH -- another reason
 			to stick with /etc/sendmail.cf as your One True Path.
 		Digital UNIX (OSF/1 on Alpha) load average computation from
-			Martin Laubach of the Technischen Universität Wien.
+			Martin Laubach of the Technischen Universitï¿½t Wien.
 	CONFIG: change default Received: line to be multiple lines rather
 		than one long one.  By popular demand.
 	MAIL.LOCAL: warnings weren't being logged on some systems.  Patch
@@ -7193,7 +7193,7 @@ summary of the changes in that release.
 		AIX4: 4.1 doesn't have a working setreuid(2); change the
 			AIX4 defines to use seteuid(2) instead, which
 			works on 4.1 as well as 4.2.  Problem noted by
-			Håkan Lindholm of interAF, Sweden.
+			Hï¿½kan Lindholm of interAF, Sweden.
 		AIX4: use tzname[] vector to determine time zone name.
 			Patch from NAKAMURA Motonori of Kyoto University.
 		MkLinux: add Makefile.Linux.ppc and OSTYPE(mklinux) support.
@@ -9100,8 +9100,8 @@ summary of the changes in that release.
 		Hitachi 3050R & 3050RX running HI-UX/WE2: portability
 			fixes from Akihiro Hashimoto ("Hash") of Chiba
 			University.
-		AIX changes to allow setproctitle to work from Rainer Schöpf
-			of Zentrum für Datenverarbeitung der Universität
+		AIX changes to allow setproctitle to work from Rainer Schï¿½pf
+			of Zentrum fï¿½r Datenverarbeitung der Universitï¿½t
 			Mainz.
 		AIX changes for load average from Ed Ravin of NASA/Goddard.
 		SCO Unix from Chip Rosenthal of Unicom (code was using the

@@ -883,7 +883,7 @@ export_var ( ) {		# Don't wawnt a subshell
 }
 
 # Call this function to set defaults _after_ parsing options.
-# dont want a subshell otherwise variable setting is thrown away.
+# don't want a subshell otherwise variable setting is thrown away.
 set_defaults_and_export ( ) {
 	: ${NANO_OBJ:=/usr/obj/nanobsd.${NANO_NAME}}
 	: ${MAKEOBJDIRPREFIX:=${NANO_OBJ}}

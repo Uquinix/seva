@@ -113,7 +113,7 @@ load_event_table(void)
 
 	/*
 	 * XXX: Would assert 'mutex'.
-	 * Loading of the cache happens only once; dont check if cache is
+	 * Loading of the cache happens only once; don't check if cache is
 	 * already loaded.
 	 */
 	LIST_INIT(&ev_cache);

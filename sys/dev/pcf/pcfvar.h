@@ -85,7 +85,7 @@ struct pcf_softc {
 #define	PCF_ASSERT_LOCKED(sc)	mtx_assert(&(sc)->pcf_lock, MA_OWNED)
 
 /*
- * PCF8584 datasheet : when operate at 8 MHz or more, a minimun time of
+ * PCF8584 datasheet : when operate at 8 MHz or more, a minimum time of
  * 6 clocks cycles must be left between two consecutives access
  */
 #define pcf_nops()	DELAY(10)

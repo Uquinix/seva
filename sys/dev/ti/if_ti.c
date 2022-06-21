@@ -1374,7 +1374,7 @@ ti_dma_free(struct ti_softc *sc)
 }
 
 /*
- * Intialize a standard receive ring descriptor.
+ * Initialize a standard receive ring descriptor.
  */
 static int
 ti_newbuf_std(struct ti_softc *sc, int i)
@@ -1428,7 +1428,7 @@ ti_newbuf_std(struct ti_softc *sc, int i)
 }
 
 /*
- * Intialize a mini receive ring descriptor. This only applies to
+ * Initialize a mini receive ring descriptor. This only applies to
  * the Tigon 2.
  */
 static int

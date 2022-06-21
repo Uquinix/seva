@@ -271,7 +271,7 @@ ieee80211_mesh_rt_update(struct ieee80211_mesh_route *rt, int new_lifetime)
 	now = ticks;
 	MESH_RT_ENTRY_LOCK(rt);
 
-	/* dont clobber a proxy entry gated by us */
+	/* don't clobber a proxy entry gated by us */
 	if (rt->rt_flags & IEEE80211_MESHRT_FLAGS_PROXY && rt->rt_nhops == 0) {
 		MESH_RT_ENTRY_UNLOCK(rt);
 		return rt->rt_lifetime;
@@ -1161,7 +1161,7 @@ mesh_forward(struct ieee80211vap *vap, struct mbuf *m,
 	/*
 	 * mesh ttl of 1 means we are the last one receiving it,
 	 * according to amendment we decrement and then check if
-	 * 0, if so we dont forward.
+	 * 0, if so we don't forward.
 	 */
 	if (mc->mc_ttl < 1) {
 		IEEE80211_NOTE_FRAME(vap, IEEE80211_MSG_MESH, wh,
@@ -1414,7 +1414,7 @@ mesh_recv_indiv_data_to_fwrd(struct ieee80211vap *vap, struct mbuf *m,
 	    ms->ms_ppath->mpp_inact));
 
 	mesh_forward(vap, m, mc);
-	return (1); /* dont process locally */
+	return (1); /* don't process locally */
 }
 
 /*
@@ -1473,7 +1473,7 @@ mesh_recv_indiv_data_to_me(struct ieee80211vap *vap, struct mbuf *m,
 			IEEE80211_ADDR_COPY(qwh->i_addr3, mc10->mc_addr5);
 			mesh_forward(vap, m,
 			    (const struct ieee80211_meshcntl *)mc10);
-			return (1); /* dont process locally */
+			return (1); /* don't process locally */
 		}
 		/*
 		 * All other cases: forward of MSDUs from the MBSS to DS indiv.
@@ -2176,7 +2176,7 @@ mesh_parse_meshpeering_action(struct ieee80211_node *ni,
 		    wh, NULL, "%s", "not for our mesh");
 		if (subtype == IEEE80211_ACTION_MESHPEERING_CLOSE) {
 			/*
-			 * Standard not clear about this, if we dont ignore
+			 * Standard not clear about this, if we don't ignore
 			 * there will be an endless loop between nodes sending
 			 * CLOSE frames between each other with wrong meshid.
 			 * Discard and timers will bring FSM to IDLE state.

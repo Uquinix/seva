@@ -836,7 +836,7 @@ osm_vendor_send(IN osm_bind_handle_t h_bind,
 	status = osm_ts_send_mad(p_bind, p_madw);
 
 	/* we do not get an asycn callback so call it ourselves */
-	/* this will handle all cleanup if neccessary */
+	/* this will handle all cleanup if necessary */
 	__osm_ts_send_callback(p_bind, !resp_expected, p_madw, status);
 
 Exit:

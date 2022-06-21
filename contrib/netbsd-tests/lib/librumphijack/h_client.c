@@ -65,7 +65,7 @@ main(int argc, char *argv[])
 		if (rv == -1)
 			err(EXIT_FAILURE, "select");
 		if (rv != 0)
-			errx(EXIT_FAILURE, "select succesful");
+			errx(EXIT_FAILURE, "select successful");
 
 		if (FD_ISSET(pipefd[0], &rfds))
 			errx(EXIT_FAILURE, "stdin fileno is still set");
@@ -84,13 +84,13 @@ main(int argc, char *argv[])
 		if (rv == -1)
 			err(EXIT_FAILURE, "select");
 		if (rv != 0)
-			errx(EXIT_FAILURE, "select succesful");
+			errx(EXIT_FAILURE, "select successful");
 
 		rv = select(0, NULL, NULL, NULL, &tv);
 		if (rv == -1)
 			err(EXIT_FAILURE, "select2");
 		if (rv != 0)
-			errx(EXIT_FAILURE, "select2 succesful");
+			errx(EXIT_FAILURE, "select2 successful");
 
 		return EXIT_SUCCESS;
 	} else if (strcmp(argv[1], "invafd") == 0) {

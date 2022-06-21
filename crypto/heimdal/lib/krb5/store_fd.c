@@ -99,7 +99,7 @@ krb5_storage_from_fd(krb5_socket_t fd_in)
 	fd = _open_osfhandle(fd_in, 0);
     }
 #else
-#error Dont know how to deal with fd that may or may not be a socket.
+#error Don't know how to deal with fd that may or may not be a socket.
 #endif
 #else  /* SOCKET_IS_NOT_AN_FD */
     fd = dup(fd_in);

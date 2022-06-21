@@ -761,7 +761,7 @@ public:
   /// process starts and stops. Public stops are when clients will be notified
   /// that the process is stopped. These events typically trigger UI updates
   /// (thread stack frames to be displayed, variables to be displayed, and
-  /// more). This function can be overriden and allows process subclasses to
+  /// more). This function can be overridden and allows process subclasses to
   /// do something before the eBroadcastBitStateChanged event is sent to
   /// public clients.
   virtual void WillPublicStop() {}

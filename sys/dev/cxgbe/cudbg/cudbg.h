@@ -379,9 +379,9 @@ struct cudbg_init {
 						    debug */
 	u32			 full_mode:1;	 /* If set, cudbg will pull in
 						    common code */
-	u32			 no_compress:1;  /* Dont compress will storing
+	u32			 no_compress:1;  /* Don't compress will storing
 						    the collected debug */
-	u32			 info:1;	 /* Show just the info, Dont
+	u32			 info:1;	 /* Show just the info, Don't
 						    interpret */
 	u32			 reserved:27;
 	u8			 dbg_bitmap[CUDBG_MAX_BITMAP_LEN];

@@ -4856,7 +4856,7 @@ sli_cq_alloc_set(sli4_t *sli4, sli4_queue_t *qs[], uint32_t num_cqs,
 	} else {
 		/* Check if we got all requested CQs. */
 		if (res->num_q_allocated != num_cqs) {
-			ocs_log_crit(sli4->os, "Requested count CQs doesnt match.\n");
+			ocs_log_crit(sli4->os, "Requested count CQs doesn't match.\n");
 			goto error;
 		}
 

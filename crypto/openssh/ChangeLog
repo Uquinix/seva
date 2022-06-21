@@ -5478,7 +5478,7 @@ commit 7cd7f302d3a072748299f362f9e241d81fcecd26
 Author: Vincent Brillault <vincent.brillault@cern.ch>
 Date:   Sun May 24 09:15:06 2020 +0200
 
-    auth_log: dont log partial successes as failures
+    auth_log: don't log partial successes as failures
     
     By design, 'partial' logins are successful logins, so initially with
     authenticated set to 1, for which another authentication is required. As
@@ -8748,7 +8748,7 @@ commit 771b7795c0ef6a2fb43b4c6c66b615c2085cb9cd
 Author: Darren Tucker <dtucker@dtucker.net>
 Date:   Fri Nov 6 13:55:33 2020 +1100
 
-    Move AC_PROG_CC_C99 to immediately afer AC_PROG_CC.
+    Move AC_PROG_CC_C99 to immediately after AC_PROG_CC.
     
     This puts the related C version selection output in the same place.
 

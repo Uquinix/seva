@@ -272,7 +272,7 @@ static DecodeStatus DecodeSORegRegOperand(MCInst &Inst, unsigned Insn,
 
 static DecodeStatus DecodeMemMultipleWritebackInstruction(MCInst & Inst,
                                                   unsigned Insn,
-                                                  uint64_t Adddress,
+                                                  uint64_t Address,
                                                   const void *Decoder);
 static DecodeStatus DecodeT2MOVTWInstruction(MCInst &Inst, unsigned Insn,
                                uint64_t Address, const void *Decoder);

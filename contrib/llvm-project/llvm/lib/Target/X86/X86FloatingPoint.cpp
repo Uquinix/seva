@@ -1668,7 +1668,7 @@ void FPS::handleSpecialFP(MachineBasicBlock::iterator &Inst) {
 #endif
 
     // Collect all FP registers (register operands with constraints "t", "u",
-    // and "f") to kill afer the instruction.
+    // and "f") to kill after the instruction.
     unsigned FPKills = ((1u << NumFPRegs) - 1) & ~0xff;
     for (const MachineOperand &Op : MI.operands()) {
       if (!Op.isReg() || Op.getReg() < X86::FP0 || Op.getReg() > X86::FP6)

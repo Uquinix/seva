@@ -178,7 +178,7 @@ ata_promise_probe(device_t dev)
     if (!(idx = ata_match_chip(dev, ids)))
 	return ENXIO;
 
-    /* if we are on a SuperTrak SX6000 dont attach */
+    /* if we are on a SuperTrak SX6000 don't attach */
     if ((idx->cfg2 & PR_SX6K) && pci_get_class(GRANDPARENT(dev))==PCIC_BRIDGE &&
 	!BUS_READ_IVAR(device_get_parent(GRANDPARENT(dev)),
 		       GRANDPARENT(dev), PCI_IVAR_DEVID, &devid) &&

@@ -165,7 +165,7 @@ fire_init(video_adapter_t *adp)
 		return (ENODEV);
 	}
 
-	/* intialize the palette */
+	/* initialize the palette */
 	red = green = blue = 0;
 	for (i = 0; i < 256; i++) {
 		red++;

@@ -159,7 +159,7 @@ static constexpr char const *_LLVM_Scalarize_ = "_LLVM_Scalarize_";
 ///
 /// \param MangledName -> input string in the format
 /// _ZGV<isa><mask><vlen><parameters>_<scalarname>[(<redirection>)].
-/// \param M -> Module used to retrieve informations about the vector
+/// \param M -> Module used to retrieve information about the vector
 /// function that are not possible to retrieve from the mangled
 /// name. At the moment, this parameter is needed only to retrieve the
 /// Vectorization Factor of scalable vector functions from their

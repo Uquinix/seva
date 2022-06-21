@@ -2065,7 +2065,7 @@ ErrorOr<Status> RedirectingFileSystem::status(const Twine &OriginalPath) {
 
 namespace {
 
-/// Provide a file wrapper with an overriden status.
+/// Provide a file wrapper with an overridden status.
 class FileWithFixedStatus : public File {
   std::unique_ptr<File> InnerFile;
   Status S;

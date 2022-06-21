@@ -380,7 +380,7 @@ fetch_long_imm(struct x86emu *emu)
  * addresses relative to SS (ie: on the stack). So, at the minimum, all
  * decodings of addressing modes would have to set/clear a bit describing
  * whether the access is relative to DS or SS.  That is the function of the
- * cpu-state-varible emu->x86.mode. There are several potential states:
+ * cpu-state-variable emu->x86.mode. There are several potential states:
  * 
  * 	repe prefix seen  (handled elsewhere)
  * 	repne prefix seen  (ditto)
@@ -2579,7 +2579,7 @@ x86emuOp_movs_byte(struct x86emu *emu)
 		inc = 1;
 	count = 1;
 	if (emu->x86.mode & (SYSMODE_PREFIX_REPE | SYSMODE_PREFIX_REPNE)) {
-		/* dont care whether REPE or REPNE */
+		/* don't care whether REPE or REPNE */
 		/* move them until CX is ZERO. */
 		count = emu->x86.R_CX;
 		emu->x86.R_CX = 0;
@@ -2614,7 +2614,7 @@ x86emuOp_movs_word(struct x86emu *emu)
 
 	count = 1;
 	if (emu->x86.mode & (SYSMODE_PREFIX_REPE | SYSMODE_PREFIX_REPNE)) {
-		/* dont care whether REPE or REPNE */
+		/* don't care whether REPE or REPNE */
 		/* move them until CX is ZERO. */
 		count = emu->x86.R_CX;
 		emu->x86.R_CX = 0;
@@ -2794,7 +2794,7 @@ x86emuOp_stos_byte(struct x86emu *emu)
 	else
 		inc = 1;
 	if (emu->x86.mode & (SYSMODE_PREFIX_REPE | SYSMODE_PREFIX_REPNE)) {
-		/* dont care whether REPE or REPNE */
+		/* don't care whether REPE or REPNE */
 		/* move them until CX is ZERO. */
 		while (emu->x86.R_CX != 0) {
 			store_byte(emu, emu->x86.R_ES, emu->x86.R_DI,
@@ -2829,7 +2829,7 @@ x86emuOp_stos_word(struct x86emu *emu)
 
 	count = 1;
 	if (emu->x86.mode & (SYSMODE_PREFIX_REPE | SYSMODE_PREFIX_REPNE)) {
-		/* dont care whether REPE or REPNE */
+		/* don't care whether REPE or REPNE */
 		/* move them until CX is ZERO. */
 		count = emu->x86.R_CX;
 		emu->x86.R_CX = 0;
@@ -2861,7 +2861,7 @@ x86emuOp_lods_byte(struct x86emu *emu)
 	else
 		inc = 1;
 	if (emu->x86.mode & (SYSMODE_PREFIX_REPE | SYSMODE_PREFIX_REPNE)) {
-		/* dont care whether REPE or REPNE */
+		/* don't care whether REPE or REPNE */
 		/* move them until CX is ZERO. */
 		while (emu->x86.R_CX != 0) {
 			emu->x86.R_AL = fetch_data_byte(emu, emu->x86.R_SI);
@@ -2895,7 +2895,7 @@ x86emuOp_lods_word(struct x86emu *emu)
 
 	count = 1;
 	if (emu->x86.mode & (SYSMODE_PREFIX_REPE | SYSMODE_PREFIX_REPNE)) {
-		/* dont care whether REPE or REPNE */
+		/* don't care whether REPE or REPNE */
 		/* move them until CX is ZERO. */
 		count = emu->x86.R_CX;
 		emu->x86.R_CX = 0;
@@ -7824,7 +7824,7 @@ test_byte(struct x86emu *emu, uint8_t d, uint8_t s)
 	CONDITIONAL_SET_FLAG(res & 0x80, F_SF);
 	CONDITIONAL_SET_FLAG(res == 0, F_ZF);
 	CONDITIONAL_SET_FLAG(PARITY(res & 0xff), F_PF);
-	/* AF == dont care */
+	/* AF == don't care */
 	CLEAR_FLAG(F_CF);
 }
 
@@ -7843,7 +7843,7 @@ test_word(struct x86emu *emu, uint16_t d, uint16_t s)
 	CONDITIONAL_SET_FLAG(res & 0x8000, F_SF);
 	CONDITIONAL_SET_FLAG(res == 0, F_ZF);
 	CONDITIONAL_SET_FLAG(PARITY(res & 0xff), F_PF);
-	/* AF == dont care */
+	/* AF == don't care */
 	CLEAR_FLAG(F_CF);
 }
 
@@ -7862,7 +7862,7 @@ test_long(struct x86emu *emu, uint32_t d, uint32_t s)
 	CONDITIONAL_SET_FLAG(res & 0x80000000, F_SF);
 	CONDITIONAL_SET_FLAG(res == 0, F_ZF);
 	CONDITIONAL_SET_FLAG(PARITY(res & 0xff), F_PF);
-	/* AF == dont care */
+	/* AF == don't care */
 	CLEAR_FLAG(F_CF);
 }
 
@@ -8225,7 +8225,7 @@ ins(struct x86emu *emu, int size)
 		inc = -size;
 	}
 	if (emu->x86.mode & (SYSMODE_PREFIX_REPE | SYSMODE_PREFIX_REPNE)) {
-		/* dont care whether REPE or REPNE */
+		/* don't care whether REPE or REPNE */
 		/* in until CX is ZERO. */
 		uint32_t count = ((emu->x86.mode & SYSMODE_PREFIX_DATA) ?
 		    emu->x86.R_ECX : emu->x86.R_CX);
@@ -8290,7 +8290,7 @@ outs(struct x86emu *emu, int size)
 		inc = -size;
 	}
 	if (emu->x86.mode & (SYSMODE_PREFIX_REPE | SYSMODE_PREFIX_REPNE)) {
-		/* dont care whether REPE or REPNE */
+		/* don't care whether REPE or REPNE */
 		/* out until CX is ZERO. */
 		uint32_t count = ((emu->x86.mode & SYSMODE_PREFIX_DATA) ?
 		    emu->x86.R_ECX : emu->x86.R_CX);

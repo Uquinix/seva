@@ -2324,7 +2324,7 @@ void scic_sds_controller_event_completion(
                SCIC_LOG_OBJECT_SMP_IO_REQUEST |
                SCIC_LOG_OBJECT_SSP_IO_REQUEST |
                SCIC_LOG_OBJECT_STP_IO_REQUEST,
-               "SCIC Controller 0x%x received event 0x%x for io request object that doesnt exist.\n",
+               "SCIC Controller 0x%x received event 0x%x for io request object that doesn't exist.\n",
                this_controller, completion_entry
             ));
          }
@@ -2344,7 +2344,7 @@ void scic_sds_controller_event_completion(
                SCIC_LOG_OBJECT_SMP_REMOTE_TARGET |
                SCIC_LOG_OBJECT_SSP_REMOTE_TARGET |
                SCIC_LOG_OBJECT_STP_REMOTE_TARGET,
-               "SCIC Controller 0x%x received event 0x%x for remote device object that doesnt exist.\n",
+               "SCIC Controller 0x%x received event 0x%x for remote device object that doesn't exist.\n",
                this_controller, completion_entry
             ));
          }
@@ -2384,7 +2384,7 @@ void scic_sds_controller_event_completion(
             SCIC_LOG_OBJECT_SMP_REMOTE_TARGET |
             SCIC_LOG_OBJECT_SSP_REMOTE_TARGET |
             SCIC_LOG_OBJECT_STP_REMOTE_TARGET,
-            "SCIC Controller 0x%x received event 0x%x for remote device object 0x%0x that doesnt exist.\n",
+            "SCIC Controller 0x%x received event 0x%x for remote device object 0x%0x that doesn't exist.\n",
             this_controller, completion_entry, index
          ));
       }
@@ -2987,7 +2987,7 @@ void scic_sds_controller_single_vector_completion_handler(
    {
       scic_sds_controller_process_completions(this_controller);
 
-      // We dont care which interrupt got us to processing the completion queu
+      // We don't care which interrupt got us to processing the completion queu
       // so clear them both.
       SMU_ISR_WRITE(
          this_controller,
@@ -3163,7 +3163,7 @@ void scic_sds_controller_error_vector_completion_handler(
       return;
    }
 
-   // If we dont process any completions I am not sure that we want to do this.
+   // If we don't process any completions I am not sure that we want to do this.
    // We are in the middle of a hardware fault and should probably be reset.
    SMU_IMR_WRITE(this_controller, 0x00000000);
 }
@@ -4566,7 +4566,7 @@ void scic_sds_controller_reset_hardware(
    SCIC_SDS_CONTROLLER_T * this_controller
 )
 {
-   // Disable interrupts so we dont take any spurious interrupts
+   // Disable interrupts so we don't take any spurious interrupts
    scic_controller_disable_interrupts(this_controller);
 
    // Reset the SCU

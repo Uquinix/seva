@@ -123,7 +123,7 @@
 #endif
 #endif
 
-/* if cygwin doesnt have WTMPX_FILE, it uses wtmp for wtmpx
+/* if cygwin doesn't have WTMPX_FILE, it uses wtmp for wtmpx
  * http://www.cygwin.com/ml/cygwin/2006-12/msg00630.html */
 #ifdef __CYGWIN__
 #ifndef WTMPX_FILE

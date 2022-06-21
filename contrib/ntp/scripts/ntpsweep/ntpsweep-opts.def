@@ -4,7 +4,7 @@ autogen definitions perlopt;
 #include autogen-version.def
 
 prog-name      = 'ntpsweep';
-prog-title     = 'Print various informations about given ntp servers';
+prog-title     = 'Print various information about given ntp servers';
 package        = ntp;
 #include       version.def
 

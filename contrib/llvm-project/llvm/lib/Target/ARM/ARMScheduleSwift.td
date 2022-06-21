@@ -1072,7 +1072,7 @@ let SchedModel = SwiftModel in {
   def : ReadAdvance<ReadFPMUL, 0>;
   def : ReadAdvance<ReadFPMAC, 0>;
 
-  // Overriden via InstRW for this processor.
+  // Overridden via InstRW for this processor.
   def : WriteRes<WriteVLD1, []>;
   def : WriteRes<WriteVLD2, []>;
   def : WriteRes<WriteVLD3, []>;

@@ -1031,7 +1031,7 @@ probe_adapters(void)
     outb(biosadapter[V_ADP_PRIMARY].va_crtc_addr + 1, 0);
 
     /* the video mode parameter table in EGA/VGA BIOS */
-    /* NOTE: there can be only one EGA/VGA, wheather color or mono,
+    /* NOTE: there can be only one EGA/VGA, whether color or mono,
      * recognized by the video BIOS.
      */
     if ((biosadapter[V_ADP_PRIMARY].va_type == KD_EGA) ||

@@ -82,7 +82,7 @@
 /*
  * Fudge Factors
  *
- * Fudge time1 is used to accomodate the timecode serial interface adjustment.
+ * Fudge time1 is used to accommodate the timecode serial interface adjustment.
  * Fudge flag4 can be set to request a receiver status screen summary, which
  * is recorded in the clockstats file.
  */

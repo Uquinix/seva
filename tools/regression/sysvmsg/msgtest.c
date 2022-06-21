@@ -59,7 +59,7 @@ void	usage (void);
 #define	MESSAGE_TEXT_LEN	255
 
 /*
- * Define it as test_mymsg because we already have struct mymsg and we dont
+ * Define it as test_mymsg because we already have struct mymsg and we don't
  * want to conflict with it.  Also, regression fails when the default mymsg
  * struct is used, because mtext[] array is '1', so the passed string cannot
  * be processed.

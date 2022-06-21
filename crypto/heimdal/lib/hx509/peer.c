@@ -39,7 +39,7 @@
  * @page page_peer Hx509 crypto selecting functions
  *
  * Peer info structures are used togeter with hx509_crypto_select() to
- * select the best avaible crypto algorithm to use.
+ * select the best available crypto algorithm to use.
  *
  * See the library functions here: @ref hx509_peer
  */

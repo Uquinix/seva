@@ -1335,7 +1335,7 @@ def : RWSysReg<"PRLAR_EL2",        0b11, 0b100, 0b0110, 0b1000, 0b001>;
 
 foreach n = 1-15 in {
 foreach x = 1-2 in {
-//Direct acces to Protection Region Base Address Register for n th MPU region
+//Direct access to Protection Region Base Address Register for n th MPU region
   def : RWSysReg<!strconcat("PRBAR"#n, "_EL"#x),
     0b11, 0b000, 0b0110, 0b1000, 0b000>{
     let Encoding{5-2} = n;

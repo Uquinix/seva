@@ -2682,7 +2682,7 @@ tdsaGetHwConfigParams(
     }
   }
 
-  /* For hwInterruptCoalescingTimer, 0 disables interrrupt, not allowed */
+  /* For hwInterruptCoalescingTimer, 0 disables interrupt, not allowed */
   if (HwConfig->hwInterruptCoalescingControl == 1 && HwConfig->hwInterruptCoalescingTimer == 0)
   {
     HwConfig->hwInterruptCoalescingTimer = 1;
@@ -4794,7 +4794,7 @@ tiCOMPortStart(
    */
   if (tdsaAllShared->Ports[portID].flags.portInitialized == agFALSE)
   {
-    TI_DBG1(("tiCOMPortStart: not intialized error\n"));
+    TI_DBG1(("tiCOMPortStart: not initialized error\n"));
     return tiError;
   }
 

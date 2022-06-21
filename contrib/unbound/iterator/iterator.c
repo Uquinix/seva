@@ -2744,7 +2744,7 @@ processQueryResponse(struct module_qstate* qstate, struct iter_qstate* iq,
 		&& type != RESPONSE_TYPE_THROWAWAY 
 		&& type != RESPONSE_TYPE_UNTYPED) {
 		/* a possible answer, see if it is missing DNSSEC */
-		/* but not when forwarding, so we dont mark fwder lame */
+		/* but not when forwarding, so we don't mark fwder lame */
 		if(!iter_msg_has_dnssec(iq->response)) {
 			/* Mark this address as dnsseclame in this dp,
 			 * because that will make serverselection disprefer

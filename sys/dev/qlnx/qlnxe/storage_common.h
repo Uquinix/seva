@@ -143,7 +143,7 @@ struct scsi_init_func_queues
 	__le16 rq_buffer_size /* The buffer size of RQ BDQ */;
 	__le16 cq_num_entries /* CQ num entries */;
 	__le16 cmdq_num_entries /* CMDQ num entries */;
-	u8 bdq_resource_id /* Each function-init Ramrod maps its funciton ID to a BDQ function ID, each BDQ function ID contains per-BDQ-ID BDQs */;
+	u8 bdq_resource_id /* Each function-init Ramrod maps its function ID to a BDQ function ID, each BDQ function ID contains per-BDQ-ID BDQs */;
 	u8 q_validity;
 #define SCSI_INIT_FUNC_QUEUES_RQ_VALID_MASK               0x1
 #define SCSI_INIT_FUNC_QUEUES_RQ_VALID_SHIFT              0

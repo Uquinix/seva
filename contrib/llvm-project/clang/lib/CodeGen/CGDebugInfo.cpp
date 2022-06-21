@@ -1043,14 +1043,14 @@ static bool hasCXXMangling(const TagDecl *TD, llvm::DICompileUnit *TheCU) {
 // C does not have the ODR, and it is common for codebases to contain multiple
 // different definitions of a struct with the same name in different TUs.
 // Therefore, if the type doesn't have a C++ mangling, don't give it an
-// identifer. Type information in C is smaller and simpler than C++ type
+// identifier. Type information in C is smaller and simpler than C++ type
 // information, so the increase in debug info size is negligible.
 //
 // If the type is not externally visible, it should be unique to the current TU,
 // and should not need an identifier to participate in type deduplication.
 // However, when emitting CodeView, the format internally uses these
 // unique type name identifers for references between debug info. For example,
-// the method of a class in an anonymous namespace uses the identifer to refer
+// the method of a class in an anonymous namespace uses the identifier to refer
 // to its parent class. The Microsoft C++ ABI attempts to provide unique names
 // for such types, so when emitting CodeView, always use identifiers for C++
 // types. This may create problems when attempting to emit CodeView when the MS
@@ -2472,7 +2472,7 @@ static bool isDefinedInClangModule(const RecordDecl *RD) {
   if (auto *CXXDecl = dyn_cast<CXXRecordDecl>(RD)) {
     if (!CXXDecl->isCompleteDefinition())
       return false;
-    // Check wether RD is a template.
+    // Check whether RD is a template.
     auto TemplateKind = CXXDecl->getTemplateSpecializationKind();
     if (TemplateKind != TSK_Undeclared) {
       // Unfortunately getOwningModule() isn't accurate enough to find the

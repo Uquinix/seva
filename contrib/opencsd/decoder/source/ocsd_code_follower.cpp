@@ -93,7 +93,7 @@ bool OcsdCodeFollower::initFollowerState()
  * @return ocsd_err_t : OCSD_OK - decode correct, check flags for next address
  *                    : OCSD_ERR_MEM_NACC - unable to access memory area @ address - need new address in trace packet stream.
  *                    : OCSD_ERR_NOT_INIT - not initialised - fatal.
- *                    : OCSD_<other>  - other error occured - fatal.
+ *                    : OCSD_<other>  - other error occurred - fatal.
  */
 ocsd_err_t OcsdCodeFollower::followSingleAtom(const ocsd_vaddr_t addrStart, const ocsd_atm_val A)
 {

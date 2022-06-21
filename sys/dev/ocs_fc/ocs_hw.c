@@ -607,7 +607,7 @@ ocs_hw_init(ocs_hw_t *hw)
 	ocs_list_init(&hw->io_timed_wqe, ocs_hw_io_t, wqe_link);
 	ocs_list_init(&hw->io_port_dnrx, ocs_hw_io_t, dnrx_link);
 
-	/* If MRQ not required, Make sure we dont request feature. */
+	/* If MRQ not required, Make sure we don't request feature. */
 	if (hw->config.n_rq == 1) {
 		hw->sli.config.features.flag.mrqp = FALSE;
 	}

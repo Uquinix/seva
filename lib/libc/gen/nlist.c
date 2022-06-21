@@ -103,7 +103,7 @@ __elf_is_okay__(Elf_Ehdr *ehdr)
 {
 	int retval = 0;
 	/*
-	 * We need to check magic, class size, endianess,
+	 * We need to check magic, class size, endianness,
 	 * and version before we look at the rest of the
 	 * Elf_Ehdr structure.  These few elements are
 	 * represented in a machine independent fashion.

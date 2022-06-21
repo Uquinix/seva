@@ -1102,7 +1102,7 @@ void StackColoring::remapInstructions(DenseMap<int, int> &SlotRemap) {
               for (Value *V : Objs) {
                 // If this memory location comes from a known stack slot
                 // that is not remapped, we continue checking.
-                // Otherwise, we need to invalidate AA infomation.
+                // Otherwise, we need to invalidate AA information.
                 const AllocaInst *AI = dyn_cast_or_null<AllocaInst>(V);
                 if (AI && MergedAllocas.count(AI)) {
                   MayHaveConflictingAAMD = true;

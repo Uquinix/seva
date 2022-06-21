@@ -347,7 +347,7 @@ ib_api_status_t osm_sm_state_mgr_process(osm_sm_t * sm,
 		case OSM_SM_SIGNAL_POLLING_TIMEOUT:
 		case OSM_SM_SIGNAL_DISCOVER:
 			/*
-			 * case 1: Polling timeout occured - this means that the Master SM
+			 * case 1: Polling timeout occurred - this means that the Master SM
 			 * is no longer alive.
 			 * case 2: Got a signal to move to DISCOVERING
 			 * Move to DISCOVERING state and start sweeping

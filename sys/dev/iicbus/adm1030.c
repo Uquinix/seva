@@ -159,7 +159,7 @@ adm1030_attach(device_t dev)
 
 	/*
 	 * Wait until interrupts are available, which won't be until the openpic is
-	 * intialized.
+	 * initialized.
 	 */
 
 	if (config_intrhook_establish(&sc->enum_hook) != 0)

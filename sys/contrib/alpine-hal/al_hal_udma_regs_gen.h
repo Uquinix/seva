@@ -88,7 +88,7 @@ struct udma_gen_axi {
 	uint32_t cfg_1;
 	/* [0x4] Configuration of the AXI masters */
 	uint32_t cfg_2;
-	/* [0x8] Configuration of the AXI masters. Endianess configuration */
+	/* [0x8] Configuration of the AXI masters. Endianness configuration */
 	uint32_t endian_cfg;
 	uint32_t rsrvd[61];
 };

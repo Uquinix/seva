@@ -1015,7 +1015,7 @@ int cleanopen(char *line)
 
 int login_tty(int t)
 {
-    /* Dont need to set this as the controlling PTY on steams sockets,
+    /* Don't need to set this as the controlling PTY on steams sockets,
      * don't abort on failure. */
 # if defined(TIOCSCTTY) && !defined(__hpux)
     if (ioctl(t, TIOCSCTTY, (char *)0) < 0 && !really_stream)

@@ -2863,7 +2863,7 @@ void ObjectFileELF::ParseUnwindSymbols(Symtab *symbol_table,
 
   // First we save the new symbols into a separate list and add them to the
   // symbol table after we collected all symbols we want to add. This is
-  // neccessary because adding a new symbol invalidates the internal index of
+  // necessary because adding a new symbol invalidates the internal index of
   // the symtab what causing the next lookup to be slow because it have to
   // recalculate the index first.
   std::vector<Symbol> new_symbols;

@@ -203,7 +203,7 @@ public:
   /// Addresses are stored as offsets frrom the gsym::Header::BaseAddress.
   ///
   /// \param Index A index into the address table.
-  /// \returns A resolved virtual address for adddress in the address table
+  /// \returns A resolved virtual address for address in the address table
   /// or llvm::None if Index is out of bounds.
   Optional<uint64_t> getAddress(size_t Index) const;
 

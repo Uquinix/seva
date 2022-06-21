@@ -321,7 +321,7 @@ void iwl_mvm_rx_rx_mpdu(struct iwl_mvm *mvm, struct napi_struct *napi,
 	rx_pkt_status = get_unaligned_le32((__le32 *)
 		(pkt->data + sizeof(*rx_res) + len));
 
-	/* Dont use dev_alloc_skb(), we'll have enough headroom once
+	/* Don't use dev_alloc_skb(), we'll have enough headroom once
 	 * ieee80211_hdr pulled.
 	 */
 	skb = alloc_skb(128, GFP_ATOMIC);

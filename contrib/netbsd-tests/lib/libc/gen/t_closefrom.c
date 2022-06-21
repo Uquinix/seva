@@ -155,7 +155,7 @@ ATF_TC_BODY(closefrom_one, tc)
 	(void)wait(&sta);
 
 	/*
-	 * STDIN_FILENO sould still be open; WEXITSTATUS(1) == 0.
+	 * STDIN_FILENO should still be open; WEXITSTATUS(1) == 0.
 	 */
 	if (WIFEXITED(sta) == 0 || WEXITSTATUS(sta) != 0)
 		atf_tc_fail("not all descriptors were closed");

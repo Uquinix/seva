@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 //
-// This file contain tools to preserve informations. They should be used before
+// This file contain tools to preserve information. They should be used before
 // performing a transformation that may move and delete instructions as those
 // transformation may destroy or worsen information that can be derived from the
 // IR.
@@ -26,7 +26,7 @@ namespace llvm {
 class AssumptionCache;
 class DominatorTree;
 
-/// Build a call to llvm.assume to preserve informations that can be derived
+/// Build a call to llvm.assume to preserve information that can be derived
 /// from the given instruction.
 /// If no information derived from \p I, this call returns null.
 /// The returned instruction is not inserted anywhere.

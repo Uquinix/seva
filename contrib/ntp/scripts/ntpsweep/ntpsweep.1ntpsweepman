@@ -19,7 +19,7 @@
 .\" and the template file agman-cmd.tpl
 .SH NAME
 \f\*[B-Font]ntpsweep\fP
-\- Print various informations about given ntp servers
+\- Print various information about given ntp servers
 .SH SYNOPSIS
 \f\*[B-Font]ntpsweep\fP
 .\" Mixture of short (flag) options and long options

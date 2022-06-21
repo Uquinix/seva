@@ -143,7 +143,7 @@ void sci_base_subject_detach_observer(
          this_subject->observer_list = observer->next;
       }
 
-      // protect the list so people dont follow bad pointers
+      // protect the list so people don't follow bad pointers
       observer->next = NULL;
    }
 }

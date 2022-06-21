@@ -1446,7 +1446,7 @@ public:
 /// a vector operand into a scalar value, and adding the result to a chain.
 /// The Operands are {ChainOp, VecOp, [Condition]}.
 class VPReductionRecipe : public VPRecipeBase, public VPValue {
-  /// The recurrence decriptor for the reduction in question.
+  /// The recurrence descriptor for the reduction in question.
   const RecurrenceDescriptor *RdxDesc;
   /// Pointer to the TTI, needed to create the target reduction
   const TargetTransformInfo *TTI;

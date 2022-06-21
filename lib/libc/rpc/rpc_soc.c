@@ -331,7 +331,7 @@ clnt_broadcast_key_init(void)
 
 /*
  * Need to translate the netbuf address into sockaddr_in address.
- * Dont care about netid here.
+ * Don't care about netid here.
  */
 /* ARGSUSED */
 static bool_t

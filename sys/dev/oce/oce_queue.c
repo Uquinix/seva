@@ -500,7 +500,7 @@ oce_rq_create(struct oce_rq *rq, uint32_t if_id, struct oce_eq *eq)
 	rq->cq = cq;
 	rq->cfg.if_id = if_id;
 
-	/* Dont create RQ here. Create in if_activate */
+	/* Don't create RQ here. Create in if_activate */
 	rq->qstate     = 0;
 	rq->ring->cidx = 0;
 	rq->ring->pidx = 0;
@@ -766,7 +766,7 @@ oce_mq_free(struct oce_mq *mq)
 
 /**
  * @brief		Function to delete a EQ, CQ, MQ, WQ or RQ
- * @param sc		sofware handle to the device
+ * @param sc		software handle to the device
  * @param mbx		mailbox command to send to the fw to delete the queue
  *			(mbx contains the queue information to delete)
  * @param req_size	the size of the mbx payload dependent on the qtype

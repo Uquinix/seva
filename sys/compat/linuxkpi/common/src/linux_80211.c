@@ -4463,7 +4463,7 @@ linuxkpi_ieee80211_connection_loss(struct ieee80211_vif *vif)
 	/*
 	 * Go to init; otherwise we need to elaborately check state and
 	 * handle accordingly, e.g., if in RUN we could call iv_bmiss.
-	 * Let the statemachine handle all neccessary changes.
+	 * Let the statemachine handle all necessary changes.
 	 */
 	nstate = IEEE80211_S_INIT;
 	arg = 0;	/* Not a valid reason. */

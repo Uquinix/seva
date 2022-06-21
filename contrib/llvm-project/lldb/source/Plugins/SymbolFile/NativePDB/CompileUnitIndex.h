@@ -34,7 +34,7 @@ class PdbIndex;
 
 /// Represents a single compile unit.  This class is useful for collecting the
 /// important accessors and information about a compile unit from disparate
-/// parts of the PDB into a single place, simplifying acess to compile unit
+/// parts of the PDB into a single place, simplifying access to compile unit
 /// information for the callers.
 struct CompilandIndexItem {
   CompilandIndexItem(PdbCompilandId m_id,

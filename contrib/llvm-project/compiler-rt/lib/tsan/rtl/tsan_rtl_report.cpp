@@ -31,7 +31,7 @@ using namespace __sanitizer;
 
 static ReportStack *SymbolizeStack(StackTrace trace);
 
-// Can be overriden by an application/test to intercept reports.
+// Can be overridden by an application/test to intercept reports.
 #ifdef TSAN_EXTERNAL_HOOKS
 bool OnReport(const ReportDesc *rep, bool suppressed);
 #else

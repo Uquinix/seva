@@ -226,7 +226,7 @@ uni_verify(struct uni *uni, enum uni_msgact msgact)
 	}
 
 	/*
-	 * Now look whether some IE wants to explicitely ignore the message
+	 * Now look whether some IE wants to explicitly ignore the message
 	 * without any report.
 	 */
 	FOREACH_ERR(e1, uni) {
@@ -307,7 +307,7 @@ uni_verify(struct uni *uni, enum uni_msgact msgact)
 	}
 
 	/*
-	 * Now only non-mandatory IEs are left, that want to be explicitely
+	 * Now only non-mandatory IEs are left, that want to be explicitly
 	 * ignored.
 	 */
 	if (uni->cx.errcnt != 0)

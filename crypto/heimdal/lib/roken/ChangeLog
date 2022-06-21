@@ -257,7 +257,7 @@
 2006-01-13  Love Hörnquist Åstrand  <lha@it.su.se>
 	
 	* getcap.c: Don't use db support unless its build into libc but we
-	dont check for that now, so just disable the code. This removes
+	don't check for that now, so just disable the code. This removes
 	the dependency on libdb for roken, and that is a good thing since
 	it causes problem with nss plugins that uses DB3 that also
 	provides the same symbol, but with a diffrent ABI. so when the
@@ -1551,7 +1551,7 @@
 	* roken.h.in (struct sockaddr_storage): redefine with the example
  	code from rfc2553
 
-	* getaddrinfo.c (get_null): set loopback with correct endianess
+	* getaddrinfo.c (get_null): set loopback with correct endianness
 	for v4.  dunno about v6.
 
 1999-12-13  Assar Westerlund  <assar@sics.se>

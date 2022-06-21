@@ -696,7 +696,7 @@ void SIScheduleBlockCreator::colorHighLatenciesGroups() {
         bool HasSubGraph;
         std::vector<int> SubGraph;
         // By construction (topological order), if SU and
-        // DAG->SUnits[j] are linked, DAG->SUnits[j] is neccessary
+        // DAG->SUnits[j] are linked, DAG->SUnits[j] is necessary
         // in the parent graph of SU.
 #ifndef NDEBUG
         SubGraph = DAG->GetTopo()->GetSubGraph(SU, DAG->SUnits[j],
@@ -1131,7 +1131,7 @@ void SIScheduleBlockCreator::colorExports() {
         bool HasSubGraph;
         std::vector<int> SubGraph;
         // By construction (topological order), if SU and
-        // DAG->SUnits[j] are linked, DAG->SUnits[j] is neccessary
+        // DAG->SUnits[j] are linked, DAG->SUnits[j] is necessary
         // in the parent graph of SU.
 #ifndef NDEBUG
         SubGraph = DAG->GetTopo()->GetSubGraph(SU, DAG->SUnits[j],

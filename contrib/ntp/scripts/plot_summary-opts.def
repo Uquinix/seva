@@ -76,7 +76,7 @@ flag = {
 };
 
 flag = {
-    name        = dont-wait;
+    name        = don't-wait;
     descrip     = "Don't wait for keystroke between plots";
     doc         = <<-  _EndOfDoc_
 	_EndOfDoc_;

@@ -1147,7 +1147,7 @@ bool WebAssemblyCFGStackify::fixCallUnwindMismatches(MachineFunction &MF) {
       if (EHPadStack.back() == UnwindDest)
         continue;
 
-      // Include EH_LABELs in the range before and afer the invoke
+      // Include EH_LABELs in the range before and after the invoke
       MachineInstr *RangeBegin = &MI, *RangeEnd = &MI;
       if (RangeBegin->getIterator() != MBB.begin() &&
           std::prev(RangeBegin->getIterator())->isEHLabel())

@@ -5240,7 +5240,7 @@ int sqlite3_decimal_init(
 **    SELECT decimal_mul(ieee754_mantissa(c.n),pow2.v)
 **      FROM pow2, c WHERE pow2.x=ieee754_exponent(c.n);
 **
-** Here is a query to show various boundry values for the binary64
+** Here is a query to show various boundary values for the binary64
 ** number format:
 **
 **    WITH c(name,bin) AS (VALUES

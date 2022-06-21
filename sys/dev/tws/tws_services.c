@@ -64,7 +64,7 @@ static struct error_desc array[] = {
        "%s: (0x%02X: 0x%04X): %s:\n", "ERROR" },
     { "Can't set up interrupt", 0x2004, ERROR,
        "%s: (0x%02X: 0x%04X): %s:\n", "ERROR" },
-    { "Couldn't intialize CAM", 0x2007, ERROR,
+    { "Couldn't initialize CAM", 0x2007, ERROR,
        "%s: (0x%02X: 0x%04X): %s:\n", "ERROR" },
     { "Couldn't create SIM device queue", 0x2100, ENOMEM,
        "%s: (0x%02X: 0x%04X): %s:\n", "ERROR" },
@@ -76,9 +76,9 @@ static struct error_desc array[] = {
        "%s: (0x%02X: 0x%04X): %s:\n", "ERROR" },
     { "Bus scan request to CAM failed", 0x2104, ENXIO,
        "%s: (0x%02X: 0x%04X): %s:\n", "ERROR" },
-    { "Unable to intialize the driver", 0x2008, ENXIO,
+    { "Unable to initialize the driver", 0x2008, ENXIO,
        "%s: (0x%02X: 0x%04X): %s:\n", "ERROR" },
-    { "Unable to intialize the controller", 0x2009, ENXIO,
+    { "Unable to initialize the controller", 0x2009, ENXIO,
        "%s: (0x%02X: 0x%04X): %s:\n", "ERROR" },
 };
 
@@ -195,7 +195,7 @@ tws_read_reg(struct tws_softc *sc, int offset, int size)
 /* --------------------- Q service --------------------- */
 
 /* 
- * intialize q  pointers with null.
+ * initialize q  pointers with null.
  */
 void
 tws_init_qs(struct tws_softc *sc)

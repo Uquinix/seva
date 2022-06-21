@@ -277,7 +277,7 @@ oce_hw_pci_alloc(POCE_SOFTC sc)
 		goto error;
 
 	if (intf.bits.sli_rev != OCE_INTF_SLI_REV4) {
-		device_printf(sc->dev, "Adapter doesnt support SLI4\n");
+		device_printf(sc->dev, "Adapter doesn't support SLI4\n");
 		goto error;
 	}
 
@@ -340,7 +340,7 @@ oce_hw_shutdown(POCE_SOFTC sc)
 	oce_queue_release_all(sc);
 	/*Delete Network Interface*/
 	oce_delete_nw_interface(sc);
-	/* After fw clean we dont send any cmds to fw.*/
+	/* After fw clean we don't send any cmds to fw.*/
 	oce_fw_clean(sc);
 	/* release intr resources */
 	oce_intr_free(sc);

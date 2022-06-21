@@ -2567,7 +2567,7 @@ ieee80211_newstate_cb(void *xvap, int npending)
 	}
 
 	/*
-	 * Handle the case of a RUN->RUN transition occuring when STA + AP
+	 * Handle the case of a RUN->RUN transition occurring when STA + AP
 	 * VAPs occur on the same radio.
 	 *
 	 * The mark and wakeup waiting routines call iv_newstate() directly,

@@ -201,7 +201,7 @@ m_getm(struct mbuf *top, size_t len, struct mbuf **mpp)
 /*
  * Check if object of size 'size' fit to the current position and
  * allocate new mbuf if not. Advance pointers and increase length of mbuf(s).
- * Return pointer to the object placeholder or NULL if any error occured.
+ * Return pointer to the object placeholder or NULL if any error occurred.
  */
 int
 mb_fit(struct mbdata *mbp, size_t size, char **pp)

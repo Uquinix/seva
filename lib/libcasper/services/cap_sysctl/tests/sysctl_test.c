@@ -56,7 +56,7 @@ __FBSDID("$FreeBSD$");
 
 /*
  * We need some sysctls to perform the tests on.
- * We remember their values and restore them afer the test is done.
+ * We remember their values and restore them after the test is done.
  */
 #define	SYSCTL0_PARENT	"kern"
 #define	SYSCTL0_NAME	"kern.sync_on_panic"

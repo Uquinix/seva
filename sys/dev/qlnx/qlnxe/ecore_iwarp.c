@@ -2270,7 +2270,7 @@ ecore_iwarp_copy_fpdu(struct ecore_hwfn *p_hwfn,
 
 	fpdu->mpa_buf = buf;
 	/* fpdu->pkt_hdr remains as is */
-	/* fpdu->mpa_frag is overriden with new buf */
+	/* fpdu->mpa_frag is overridden with new buf */
 	fpdu->mpa_frag = buf->data_phys_addr;
 	fpdu->mpa_frag_virt = buf->data;
 	fpdu->mpa_frag_len += tcp_payload_size;

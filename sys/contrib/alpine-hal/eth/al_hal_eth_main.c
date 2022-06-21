@@ -634,7 +634,7 @@ int al_eth_adapter_init(struct al_hal_eth_adapter *adapter, struct al_eth_adapte
 	/* set s2m (rx) max descriptors to max data buffers */
 	al_udma_s2m_max_descs_set(&adapter->rx_udma, AL_ETH_PKT_MAX_BUFS);
 
-	/* set s2m burst lenght when writing completion descriptors to 64 bytes
+	/* set s2m burst length when writing completion descriptors to 64 bytes
 	 */
 	al_udma_s2m_compl_desc_burst_config(&adapter->rx_udma, 64);
 
@@ -4741,7 +4741,7 @@ int al_eth_wol_enable(
 		al_reg_write32(&adapter->ec_regs_base->wol.ethertype, reg);
 	}
 
-	/* make sure we dont forwarding packets without interrupt */
+	/* make sure we don't forwarding packets without interrupt */
 	al_assert((wol->forward_mask | wol->int_mask) == wol->int_mask);
 
 	reg = ((uint32_t)wol->forward_mask << 16);

@@ -488,7 +488,7 @@ Date:   2020-02-05 19:33:37 +0200
     I don't know if the problem is in gnulib's gl_POSIX_SHELL macro
     or if xzgrep does something that isn't in POSIX. The workaround
     adds a special case for Solaris: if /usr/xpg4/bin/sh exists and
-    gl_cv_posix_shell wasn't overriden on the configure command line,
+    gl_cv_posix_shell wasn't overridden on the configure command line,
     use that shell for xzgrep and other scripts. That shell is known
     to work and exists on most Solaris systems.
 

@@ -43,7 +43,7 @@
 
 #define	RB_ASKNAME	0x001	/* force prompt of device of root filesystem */
 #define	RB_SINGLE	0x002	/* reboot to single user only */
-#define	RB_NOSYNC	0x004	/* dont sync before reboot */
+#define	RB_NOSYNC	0x004	/* don't sync before reboot */
 #define	RB_HALT		0x008	/* don't reboot, just halt */
 #define	RB_INITNAME	0x010	/* Unused placeholder to specify init path */
 #define	RB_DFLTROOT	0x020	/* use compiled-in rootdev */

@@ -169,7 +169,7 @@ public:
 // to be deduplicated by the linker within the linked image. Across linked image
 // boundaries, such types are thus considered different types.
 
-// This value can be overriden in the __config_site. When it's not overriden,
+// This value can be overridden in the __config_site. When it's not overridden,
 // we pick a default implementation based on the platform here.
 #ifndef _LIBCPP_TYPEINFO_COMPARISON_IMPLEMENTATION
 

@@ -1606,7 +1606,7 @@ enum _ecore_status_t ecore_ll2_post_rx_buffer(void *cxt,
 		}
 	}
 
-	/* If we're lacking entires, let's try to flush buffers to FW */
+	/* If we're lacking entries, let's try to flush buffers to FW */
 	if (!p_curp || !p_curb) {
 		rc =  ECORE_BUSY;
 		p_curp = OSAL_NULL;

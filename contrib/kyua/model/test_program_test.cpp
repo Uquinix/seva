@@ -242,13 +242,13 @@ check_metadata_inheritance(void)
         .add("inherit-all")
         .add("inherit-some",
              model::metadata_builder()
-             .set_description("Overriden description")
+             .set_description("Overridden description")
              .build())
         .add("inherit-none",
              model::metadata_builder()
-             .add_allowed_architecture("overriden-arch")
-             .add_allowed_platform("overriden-platform")
-             .set_description("Overriden description")
+             .add_allowed_architecture("overridden-arch")
+             .add_allowed_platform("overridden-platform")
+             .set_description("Overridden description")
              .build())
         .build();
 
@@ -272,7 +272,7 @@ check_metadata_inheritance(void)
     {
         const model::metadata exp_metadata = model::metadata_builder()
             .add_allowed_architecture("base-arch")
-            .set_description("Overriden description")
+            .set_description("Overridden description")
             .build();
         ATF_REQUIRE_EQ(exp_metadata,
                        test_program.find("inherit-some").get_metadata());
@@ -280,9 +280,9 @@ check_metadata_inheritance(void)
 
     {
         const model::metadata exp_metadata = model::metadata_builder()
-            .add_allowed_architecture("overriden-arch")
-            .add_allowed_platform("overriden-platform")
-            .set_description("Overriden description")
+            .add_allowed_architecture("overridden-arch")
+            .add_allowed_platform("overridden-platform")
+            .set_description("Overridden description")
             .build();
         ATF_REQUIRE_EQ(exp_metadata,
                        test_program.find("inherit-none").get_metadata());

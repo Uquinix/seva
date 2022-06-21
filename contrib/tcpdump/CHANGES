@@ -393,7 +393,7 @@ Wednesday Jul. 2, 2014 mcr@sandelman.ca
         a number of unaligned access faults fixed
         -A flag does not consider CR to be printable anymore
         fx.lebail took over coverity baby sitting
-        default snapshot size increased to 256K for accomodate USB captures
+        default snapshot size increased to 256K for accommodate USB captures
         WARNING: this release contains a lot of very worthwhile code churn.
 
 Wednesday Jan. 15, 2014 guy@alum.mit.edu

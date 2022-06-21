@@ -2683,7 +2683,7 @@ try_free_snapdata(struct vnode *devvp)
 /*
  * Revert a vnode lock from using the snapshot lock back to its own lock.
  *
- * Aquire a lock on the vnode's own lock and release the lock on the
+ * Acquire a lock on the vnode's own lock and release the lock on the
  * snapshot lock. If there are any recursions on the snapshot lock
  * get the same number of recursions on the vnode's own lock.
  */

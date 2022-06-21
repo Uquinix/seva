@@ -120,7 +120,7 @@
 #define PACKET_8FAC     0xAC	/* Supplementary Thunderbolt Time Packet */
 #define PACKET_8FAB     0xAB	/* Primary Thunderbolt Time Packet */
 #define PACKET_6D	0x6D	/* Supplementary Thunderbolt Tracking Stats */
-#define PACKET_41	0x41	/* Thunderbolt I dont know what this packet is, it's not documented on my manual*/
+#define PACKET_41	0x41	/* Thunderbolt I don't know what this packet is, it's not documented on my manual*/
 
 /* Acutime Packets */
 #define PACKET_41A      0x41    /* GPS time */

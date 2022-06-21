@@ -1562,7 +1562,7 @@ refclock_pps(
  *  - no PPS/ATOM unit given
  *  - PPS stamp is stale (that is, the difference between the PPS stamp
  *    and the corrected time stamp would exceed two seconds)
- *  - The phase difference is too close to 0.5, and the decision wether
+ *  - The phase difference is too close to 0.5, and the decision whether
  *    to move up or down is too sensitive to noise.
  *
  * On output, the receive time stamp is updated with the 'fixed' receive

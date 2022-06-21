@@ -727,7 +727,7 @@ void PassManagerBuilder::populateModulePassManager(
       MPM.add(createCanonicalizeAliasesPass());
       // Rename anon globals to be able to export them in the summary.
       // This has to be done after we add the extensions to the pass manager
-      // as there could be passes (e.g. Adddress sanitizer) which introduce
+      // as there could be passes (e.g. Address sanitizer) which introduce
       // new unnamed globals.
       MPM.add(createNameAnonGlobalPass());
     }

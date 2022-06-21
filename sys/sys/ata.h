@@ -619,7 +619,7 @@ struct atapi_sense {
 #define ATA_SENSE_ABORTED_COMMAND	0x0b    /* command aborted, try again */
 #define ATA_SENSE_EQUAL			0x0c    /* equal */
 #define ATA_SENSE_VOLUME_OVERFLOW	0x0d    /* volume overflow */
-#define ATA_SENSE_MISCOMPARE		0x0e    /* data dont match the medium */
+#define ATA_SENSE_MISCOMPARE		0x0e    /* data don't match the medium */
 #define ATA_SENSE_RESERVED		0x0f
 #define	ATA_SENSE_ILI			0x20;
 #define	ATA_SENSE_EOM			0x40;

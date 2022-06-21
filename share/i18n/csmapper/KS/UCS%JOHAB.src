@@ -29,7 +29,7 @@ BEGIN_MAP
 #               2nd byte : 0x31-0x7e, 0x91-0xfe
 #          0xd831-0xd87e and 0xd891-0xd8fe are user-defined area 
 #
-# 3. KS X 1003(formely KS C 5636)/ISO 646-KR  or US-ASCII (1byte)  
+# 3. KS X 1003(formerly KS C 5636)/ISO 646-KR  or US-ASCII (1byte)  
 #         : 0x21-0x7e        
 #    KS X 1003 is identical to US-ASCII except for WON SIGN, U20A9
 #                 in place of BACK SLASH, U005C at 0x5C

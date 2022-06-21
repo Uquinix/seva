@@ -351,7 +351,7 @@ struct buf {
 	lockdestroy(&(bp)->b_lock)
 
 /*
- * Print informations on a buffer lock.
+ * Print information on a buffer lock.
  */
 #define BUF_LOCKPRINTINFO(bp) 						\
 	lockmgr_printinfo(&(bp)->b_lock)

@@ -1706,7 +1706,7 @@ bool JumpThreadingPass::processThreadableEdges(Value *Cond, BasicBlock *BB,
 
   // If all the predecessors go to a single known successor, we want to fold,
   // not thread. By doing so, we do not need to duplicate the current block and
-  // also miss potential opportunities in case we dont/cant duplicate.
+  // also miss potential opportunities in case we don't/cant duplicate.
   if (OnlyDest && OnlyDest != MultipleDestSentinel) {
     if (BB->hasNPredecessors(PredToDestList.size())) {
       bool SeenFirstBranchToOnlyDest = false;

@@ -714,7 +714,7 @@ public:
     return false;
   }
 
-  /// Get a hash that can be used for caching object file releated information.
+  /// Get a hash that can be used for caching object file related information.
   ///
   /// Data for object files can be cached between runs of debug sessions and
   /// a module can end up using a main file and a symbol file, both of which

@@ -150,7 +150,7 @@ ti_am3359_cppi41_attach(device_t dev)
 	parent = device_get_parent(dev);
 	reset_bit = ti_sysc_get_soft_reset_bit(parent);
 	if (reset_bit == 0) {
-		DPRINTF(dev, "Dont have reset bit\n");
+		DPRINTF(dev, "Don't have reset bit\n");
 		return (0);
 	}
 	sysc_address = ti_sysc_get_sysc_address_offset_host(parent);

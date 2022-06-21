@@ -193,7 +193,7 @@ static TNC_Result TNC_TNCC_RequestHandshakeRetry(
 
 	/*
 	 * TODO: trigger a call to eapol_sm_request_reauth(). This would
-	 * require that the IMC continues to be loaded in memory afer
+	 * require that the IMC continues to be loaded in memory after
 	 * authentication..
 	 */
 

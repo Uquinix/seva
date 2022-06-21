@@ -138,7 +138,7 @@ test(void)
 
 	memset(&msg, 0, sizeof(msg));
 
-	/* having zero msg_iovlen or iov_len doesnt seem to work */
+	/* having zero msg_iovlen or iov_len doesn't seem to work */
 	vec.iov_base = &ch;
 	vec.iov_len = 1;
 	msg.msg_iov = &vec;

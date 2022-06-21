@@ -1114,7 +1114,7 @@ fdpass(int nfd)
 	exit(0);
 }
 
-/* Deal with RFC 854 WILL/WONT DO/DONT negotiation. */
+/* Deal with RFC 854 WILL/WONT DO/DON'T negotiation. */
 void
 atelnet(int nfd, unsigned char *buf, unsigned int size)
 {
@@ -1132,8 +1132,8 @@ atelnet(int nfd, unsigned char *buf, unsigned int size)
 		obuf[0] = IAC;
 		p++;
 		if ((*p == WILL) || (*p == WONT))
-			obuf[1] = DONT;
-		else if ((*p == DO) || (*p == DONT))
+			obuf[1] = DON'T;
+		else if ((*p == DO) || (*p == DON'T))
 			obuf[1] = WONT;
 		else
 			continue;

@@ -369,7 +369,7 @@ public:
     if (LocMO.isReg()) {
       if (LocMO.getReg() == 0)
         return UndefLocNo;
-      // For register locations we dont care about use/def and other flags.
+      // For register locations we don't care about use/def and other flags.
       for (unsigned i = 0, e = locations.size(); i != e; ++i)
         if (locations[i].isReg() &&
             locations[i].getReg() == LocMO.getReg() &&

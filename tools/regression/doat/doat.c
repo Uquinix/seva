@@ -67,7 +67,7 @@ struct test {
 };
 
 struct test *tests;
-#define	NUM_OF_TESTS	14		/* we dont want the fexecve test to run */
+#define	NUM_OF_TESTS	14		/* we don't want the fexecve test to run */
 
 char *absolute_path = NULL;
 const char *relative_path = "tmp/";
@@ -607,7 +607,7 @@ setup(void)
 	tests[14].tests[0].params[0].i = 106;	/* invalid fd */
 	tests[14].tests[0].params[1].cpp = pargv;
 	tests[14].tests[0].params[2].cpp = NULL;
-	/* This is EXPECTED to execve /bin/date, so dont expect OK output */
+	/* This is EXPECTED to execve /bin/date, so don't expect OK output */
 	tests[14].tests[1].result = 0;
 	tests[14].tests[1].params[0].i = exec_fd;
 	tests[14].tests[1].params[1].cpp = pargv;
