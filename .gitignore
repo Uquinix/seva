@@ -54,3 +54,6 @@ tags
 .clangd
 .ccls-cache
 .DS_Store
+build
+Build
+BUILD
