@@ -53,6 +53,8 @@ __FBSDID("$FreeBSD$");
 
 #define	TZ_ZEROC			2731
 
+#define THERM_CRITICAL_STATUS_LOG       0x20
+#define THERM_CRITICAL_STATUS           0x10
 #define	THERM_STATUS_LOG		0x02
 #define	THERM_STATUS			0x01
 #define	THERM_STATUS_TEMP_SHIFT		16
@@ -378,7 +380,7 @@ coretemp_get_val_sysctl(SYSCTL_HANDLER_ARGS)
 		}
 	}
 
-	if (msr & THERM_STATUS_LOG) {
+	if (msr & THERM_CRITICAL_STATUS_LOG) {
 		coretemp_clear_thermal_msr(device_get_unit(dev));
 		sc->sc_throttle_log = 1;
 
