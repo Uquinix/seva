@@ -52,7 +52,7 @@ int
 crypt_nthash(const char *pw, const char *salt __unused, char *buffer)
 {
 	size_t unipwLen;
-	int i;
+	u_int i;
 	static const char hexconvtab[] = "0123456789abcdef";
 	static const char *magic = "$3$";
 	u_int16_t unipw[128];
@@ -60,7 +60,7 @@ crypt_nthash(const char *pw, const char *salt __unused, char *buffer)
 	const char *s;
 	MD4_CTX	ctx;
   
-	bzero(unipw, sizeof(unipw)); 
+	memset(unipw, 0, sizeof(unipw));
 	/* convert to unicode (thanx Archie) */
 	unipwLen = 0;
 	for (s = pw; unipwLen < sizeof(unipw) / 2 && *s; s++)

@@ -131,8 +131,8 @@ crypt_sha512(const char *key, const char *salt, char *buffer)
 
 	/* Take the binary representation of the length of the key and for
 	 * every 1 add the alternate sum, for every 0 the key. */
-	for (cnt = key_len; cnt > 0; cnt >>= 1)
-		if ((cnt & 1) != 0)
+	for (cnt = key_len; cnt; cnt >>= 1)
+		if (cnt & 1)
 			SHA512_Update(&ctx, alt_result, 64);
 		else
 			SHA512_Update(&ctx, key, key_len);
@@ -144,7 +144,7 @@ crypt_sha512(const char *key, const char *salt, char *buffer)
 	SHA512_Init(&alt_ctx);
 
 	/* For every character in the password add the entire password. */
-	for (cnt = 0; cnt < key_len; ++cnt)
+	for (cnt = key_len; cnt; --cnt)
 		SHA512_Update(&alt_ctx, key, key_len);
 
 	/* Finish the digest. */
@@ -162,7 +162,7 @@ crypt_sha512(const char *key, const char *salt, char *buffer)
 	SHA512_Init(&alt_ctx);
 
 	/* For every character in the password add the entire password. */
-	for (cnt = 0; cnt < 16 + alt_result[0]; ++cnt)
+	for (cnt = 16 + alt_result[0]; cnt; --cnt)
 		SHA512_Update(&alt_ctx, salt, salt_len);
 
 	/* Finish the digest. */
@@ -178,26 +178,26 @@ crypt_sha512(const char *key, const char *salt, char *buffer)
 
 	/* Repeatedly run the collected hash value through SHA512 to burn CPU
 	 * cycles. */
-	for (cnt = 0; cnt < rounds; ++cnt) {
+	for (cnt = rounds; cnt; --cnt) {
 		/* New context. */
 		SHA512_Init(&ctx);
 
 		/* Add key or last result. */
-		if ((cnt & 1) != 0)
+		if (cnt & 1)
 			SHA512_Update(&ctx, p_bytes, key_len);
 		else
 			SHA512_Update(&ctx, alt_result, 64);
 
 		/* Add salt for numbers not divisible by 3. */
-		if (cnt % 3 != 0)
+		if (cnt % 3)
 			SHA512_Update(&ctx, s_bytes, salt_len);
 
 		/* Add key for numbers not divisible by 7. */
-		if (cnt % 7 != 0)
+		if (cnt % 7)
 			SHA512_Update(&ctx, p_bytes, key_len);
 
 		/* Add key or last result. */
-		if ((cnt & 1) != 0)
+		if (cnt & 1)
 			SHA512_Update(&ctx, alt_result, 64);
 		else
 			SHA512_Update(&ctx, p_bytes, key_len);
