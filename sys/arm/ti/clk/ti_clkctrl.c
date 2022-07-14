@@ -303,7 +303,7 @@ create_clkctrl(struct ti_clkctrl_softc *sc, cell_t *reg, uint32_t index, uint32_
 	def.clkdef.id = reg[index] + reg_offset - reg[0] + special_gdbclk_reg;
 	def.register_offset = parent_offset + reg[index] + reg_offset;
 
-	/* Indicate this clkctrl is special and don't use IDLEST/MODULEMODE */
+	/* Indicate this clkctrl is special and dont use IDLEST/MODULEMODE */
 	def.gdbclk = special_gdbclk_reg;
 
 	/* Make up an uniq name in the namespace for each clkctrl */

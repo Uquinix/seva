@@ -907,11 +907,11 @@ char *getline FUNCTION((s, n, iop), char *s AND int n AND FILE *iop)
 			case WILL:
 			case WONT:
 				c = getc(iop);
-				printf("%c%c%c", IAC, DON'T, 0377&c);
+				printf("%c%c%c", IAC, DONT, 0377&c);
 				(void) fflush(stdout);
 				continue;
 			case DO:
-			case DON'T:
+			case DONT:
 				c = getc(iop);
 				printf("%c%c%c", IAC, WONT, 0377&c);
 				(void) fflush(stdout);

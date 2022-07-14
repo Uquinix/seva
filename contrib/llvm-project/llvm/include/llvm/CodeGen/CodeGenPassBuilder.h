@@ -409,7 +409,7 @@ protected:
   /// codegen pass pipeline where targets may insert passes. Methods with
   /// out-of-line standard implementations are major CodeGen stages called by
   /// addMachinePasses. Some targets may override major stages when inserting
-  /// passes is insufficient, but maintaining overridden stages is more work.
+  /// passes is insufficient, but maintaining overriden stages is more work.
   ///
 
   /// addMachineSSAOptimization - Add standard passes that optimize machine
@@ -448,7 +448,7 @@ protected:
   /// this target at the current optimization level.
   void addTargetRegisterAllocator(AddMachinePass &, bool Optimized) const;
 
-  /// addMachinePasses helper to create the target-selected or overridden
+  /// addMachinePasses helper to create the target-selected or overriden
   /// regalloc pass.
   void addRegAllocPass(AddMachinePass &, bool Optimized) const;
 
@@ -830,7 +830,7 @@ Error CodeGenPassBuilder<Derived>::addCoreISelPasses(
 /// with nontrivial configuration or multiple passes are broken out below in
 /// add%Stage routines.
 ///
-/// Any CodeGenPassBuilder<Derived>::addXX routine may be overridden by the
+/// Any CodeGenPassBuilder<Derived>::addXX routine may be overriden by the
 /// Target. The addPre/Post methods with empty header implementations allow
 /// injecting target-specific fixups just before or after major stages.
 /// Additionally, targets have the flexibility to change pass order within a

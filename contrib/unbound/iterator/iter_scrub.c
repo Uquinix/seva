@@ -776,7 +776,7 @@ scrub_sanitize(sldns_buffer* pkt, struct msg_parse* msg,
 				 * the zone. This is LAME! 
 				 * Leave in the NS for lame classification. */
 				/* remove everything from the additional
-				 * (we don't want its glue that was approved
+				 * (we dont want its glue that was approved
 				 * during the normalize action) */
 				del_addi = 1;
 			} else if(!env->cfg->harden_glue && (

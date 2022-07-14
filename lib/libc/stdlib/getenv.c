@@ -529,7 +529,7 @@ __setenv(const char *name, size_t nameLen, const char *value, int overwrite)
 
 /*
  * If the program attempts to replace the array of environment variables
- * (environ) environ or sets the first variable to NULL, then deactivate all
+ * (environ) environ or sets the first varible to NULL, then deactivate all
  * variables and merge in the new list from environ.
  */
 static int

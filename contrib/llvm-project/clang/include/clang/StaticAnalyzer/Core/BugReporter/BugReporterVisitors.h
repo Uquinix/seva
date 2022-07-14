@@ -686,7 +686,7 @@ protected:
   /// immediate successor to \p CallEnterN or immediate predecessor to
   /// \p CallExitEndN.
   /// Clients should override this function if a state changes local to the
-  /// inlined function are not interesting, only the change occurring as a
+  /// inlined function are not interesting, only the change occuring as a
   /// result of it.
   /// Example: we want to leave a not about a leaked resource object not being
   /// deallocated / its ownership changed inside a function, and we don't care

@@ -775,7 +775,7 @@ atse_reset(struct atse_softc *sc)
 	CSR_WRITE_4(sc, BASE_CFG_RX_SECTION_FULL, 0);
 #endif
 	/* c. MAC address configuration. */
-	/* Also initialize supplementary addresses to our primary one. */
+	/* Also intialize supplementary addresses to our primary one. */
 	/* XXX-BZ FreeBSD really needs to grow and API for using these. */
 	atse_get_eth_address(sc);
 	atse_set_eth_address(sc, ATSE_ETH_ADDR_ALL);

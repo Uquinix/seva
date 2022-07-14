@@ -6,7 +6,7 @@ OS ?=		HP-UX
 ROOT_GROUP ?=	root
 unix ?=		We run ${OS}.
 
-# HP-UX's cc does not provide any clues as to whether this is 9.x or 10.x
+# HP-UX's cc does not provide any clues as to wether this is 9.x or 10.x
 # nor does sys/param.h, so we'll use the existence of /hp-ux
 .if exists("/hp-ux")
 OSMAJOR ?=9

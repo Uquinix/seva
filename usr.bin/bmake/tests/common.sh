@@ -57,7 +57,7 @@ ensure_run()
 }
 
 #
-# Output usage message.
+# Output usage messsage.
 #
 print_usage()
 {
@@ -184,7 +184,7 @@ eval_setup()
 }
 
 #
-# Default setup_test function does nothing. This may be overridden by
+# Default setup_test function does nothing. This may be overriden by
 # the test.
 #
 setup_test()
@@ -227,7 +227,7 @@ eval_reset()
 }
 
 #
-# Default reset_test function does nothing. This may be overridden by
+# Default reset_test function does nothing. This may be overriden by
 # the test.
 #
 reset_test()

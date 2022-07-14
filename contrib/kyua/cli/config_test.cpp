@@ -305,11 +305,11 @@ ATF_TEST_CASE_BODY(load_config__overrides__yes)
 
     std::map< std::string, std::vector< std::string > > options;
     options["config"].push_back("config");
-    options["variable"].push_back("architecture=overridden");
+    options["variable"].push_back("architecture=overriden");
     const cmdline::parsed_cmdline mock_cmdline(options, cmdline::args_vector());
 
     const config::tree user_config = cli::load_config(mock_cmdline, true);
-    ATF_REQUIRE_EQ("overridden",
+    ATF_REQUIRE_EQ("overriden",
                    user_config.lookup< config::string_node >("architecture"));
     ATF_REQUIRE_EQ("see me",
                    user_config.lookup< config::string_node >("platform"));

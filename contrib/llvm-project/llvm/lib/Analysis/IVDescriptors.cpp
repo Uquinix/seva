@@ -1087,7 +1087,7 @@ RecurrenceDescriptor::getReductionOpChain(PHINode *Phi, Loop *L) const {
   };
 
   // The loop exit instruction we check first (as a quick test) but add last. We
-  // check the opcode is correct (and don't allow them to be Subs) and that they
+  // check the opcode is correct (and dont allow them to be Subs) and that they
   // have expected to have the expected number of uses. They will have one use
   // from the phi and one from a LCSSA value, no matter the type.
   if (!isCorrectOpcode(LoopExitInstr) || !LoopExitInstr->hasNUses(2))

@@ -251,7 +251,7 @@ def FeatureUseWideStrideVFP : SubtargetFeature<"wide-stride-vfp",
                                                "Use a wide stride when allocating VFP registers">;
 
 // Some targets (e.g. Cortex-A15) never want VMOVS to be widened to VMOVD.
-def FeatureDontWidenVMOVS : SubtargetFeature<"don't-widen-vmovs",
+def FeatureDontWidenVMOVS : SubtargetFeature<"dont-widen-vmovs",
                                              "DontWidenVMOVS", "true",
                                              "Don't widen VMOVS to VMOVD">;
 

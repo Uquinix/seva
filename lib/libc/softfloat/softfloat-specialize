@@ -341,13 +341,13 @@ signaling NaN; otherwise returns 0.
 */
 flag floatx80_is_signaling_nan( floatx80 a )
 {
-    bits64 allow;
+    bits64 aLow;
 
-    allow = a.low & ~ LIT64( 0x4000000000000000 );
+    aLow = a.low & ~ LIT64( 0x4000000000000000 );
     return
            ( ( a.high & 0x7FFF ) == 0x7FFF )
-        && (bits64) ( allow<<1 )
-        && ( a.low == allow );
+        && (bits64) ( aLow<<1 )
+        && ( a.low == aLow );
 
 }
 

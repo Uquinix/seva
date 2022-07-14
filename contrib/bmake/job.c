@@ -672,7 +672,7 @@ JobPassSig_int(int signo)
 MAKE_ATTR_DEAD static void
 JobPassSig_term(int signo)
 {
-	/* Don't run .INTERRUPT target then exit */
+	/* Dont run .INTERRUPT target then exit */
 	JobInterrupt(false, signo);
 }
 

@@ -379,7 +379,7 @@ out:
 /*
  * Wrapper function to write a buffer (one sector) to disk.
  * Seeks and writes the buffer.
- * NOTE: You don't NEED to use this function, but it might make your
+ * NOTE: You dont NEED to use this function, but it might make your
  * life easier if you have to write things that align to a sector
  * (such as volume descriptors).
  *

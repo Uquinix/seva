@@ -294,10 +294,10 @@ _kvm_dpcpu_init(kvm_t *kd)
  * initialize it if permitted.
  */
 int
-_kvm_dpcpu_initialized(kvm_t *kd, int initialize)
+_kvm_dpcpu_initialized(kvm_t *kd, int intialize)
 {
 
-	if (kd->dpcpu_initialized || !initialize)
+	if (kd->dpcpu_initialized || !intialize)
 		return (kd->dpcpu_initialized);
 
 	(void)_kvm_dpcpu_init(kd);

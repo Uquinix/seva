@@ -693,7 +693,7 @@ struct ath_hal_9300 {
 #define HAL_RXBUFSIZE_DEFAULT 0xfff
     u_int16_t            rx_buf_size;
 
-    u_int32_t            ah_wa_reg_val; // Store the permanent value of Reg 0x4004 so we don't have to R/M/W. (We should not be reading this register when in sleep states).
+    u_int32_t            ah_wa_reg_val; // Store the permanent value of Reg 0x4004 so we dont have to R/M/W. (We should not be reading this register when in sleep states).
 
     /* Indicate the PLL source clock rate is 25Mhz or not.
      * clk_25mhz = 0 by default.

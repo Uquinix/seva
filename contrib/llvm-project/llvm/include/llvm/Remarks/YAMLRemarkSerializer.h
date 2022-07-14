@@ -65,7 +65,7 @@ struct YAMLMetaSerializer : public MetaSerializer {
 /// like the regular YAML remark but instead of string entries it's using
 /// numbers that map to an index in the string table.
 struct YAMLStrTabRemarkSerializer : public YAMLRemarkSerializer {
-  /// Whether we already emitted the metadata in standalone mode.
+  /// Wether we already emitted the metadata in standalone mode.
   /// This should be set to true after the first invocation of `emit`.
   bool DidEmitMeta = false;
 

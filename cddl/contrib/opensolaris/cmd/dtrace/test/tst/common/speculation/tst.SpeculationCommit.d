@@ -63,7 +63,7 @@ BEGIN
 BEGIN
 /(1 == self->commit)/
 {
-	printf("Successfully tested buffer commit\n");
+	printf("Succesfully tested buffer commit\n");
 	exit(0);
 }
 

@@ -405,7 +405,7 @@ SCI_STATUS scif_sas_controller_initialized_start_handler(
          address += scif_sas_internal_request_get_object_size();
       }
 
-      // Using DPC for starting internal IOs, if yes, we need to initialize
+      // Using DPC for starting internal IOs, if yes, we need to intialize
       // DPC here.
       scif_cb_start_internal_io_task_create(fw_controller);
    }

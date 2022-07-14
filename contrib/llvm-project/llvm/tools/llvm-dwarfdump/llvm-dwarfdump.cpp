@@ -455,7 +455,7 @@ static bool lookup(ObjectFile &Obj, DWARFContext &DICtx, uint64_t Address,
       DIEsForAddr.BlockDIE.dump(OS, 4, DumpOpts);
   }
 
-  // TODO: it is necessary to set proper SectionIndex here.
+  // TODO: it is neccessary to set proper SectionIndex here.
   // object::SectionedAddress::UndefSection works for only absolute addresses.
   if (DILineInfo LineInfo = DICtx.getLineInfoForAddress(
           {Lookup, object::SectionedAddress::UndefSection}))

@@ -117,7 +117,7 @@ def G5Itineraries : ProcessorItineraries<
 def G5Model : SchedMachineModel {
   let IssueWidth = 4;  // 4 (non-branch) instructions are dispatched per cycle.
   let LoadLatency = 3; // Optimistic load latency assuming bypass.
-                       // This is overridden by OperandCycles if the
+                       // This is overriden by OperandCycles if the
                        // Itineraries are queried instead.
   let MispredictPenalty = 16;
 

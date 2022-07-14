@@ -156,7 +156,7 @@ drop_root(char const *user, char const *group)
 
 	if ((uid = getuid()) != 0) {
 		log_notice("Cannot set uid/gid. Not a superuser");
-		return (0); /* don't do anything unless root */
+		return (0); /* dont do anything unless root */
 	}
 
 	gid = getgid();

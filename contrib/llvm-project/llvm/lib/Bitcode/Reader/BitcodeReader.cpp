@@ -5872,7 +5872,7 @@ Error ModuleSummaryIndexBitcodeReader::parseValueSymbolTable(
       unsigned ValueID = Record[0];
       GlobalValue::GUID RefGUID = Record[1];
       // The "original name", which is the second value of the pair will be
-      // overridden later by a FS_COMBINED_ORIGINAL_NAME in the combined index.
+      // overriden later by a FS_COMBINED_ORIGINAL_NAME in the combined index.
       ValueIdToValueInfoMap[ValueID] =
           std::make_pair(TheIndex.getOrInsertValueInfo(RefGUID), RefGUID);
       break;

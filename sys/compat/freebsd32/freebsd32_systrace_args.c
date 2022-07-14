@@ -2,7 +2,7 @@
 #define PAD64_REQUIRED
 #endif
 /*
- * System call argument to DTrace register array conversion.
+ * System call argument to DTrace register array converstion.
  *
  * DO NOT EDIT-- this file is automatically @generated.
  * $FreeBSD$

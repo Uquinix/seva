@@ -228,7 +228,7 @@ void SetPrintfAndReportCallback(void (*callback)(const char *)) {
   PrintfAndReportCallback = callback;
 }
 
-// Can be overridden in frontend.
+// Can be overriden in frontend.
 #if SANITIZER_GO && defined(TSAN_EXTERNAL_HOOKS)
 // Implementation must be defined in frontend.
 extern "C" void __sanitizer_on_print(const char *str);

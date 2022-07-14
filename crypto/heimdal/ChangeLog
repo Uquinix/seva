@@ -360,7 +360,7 @@ We stop writing change logs, see the source code version control systems history
 
 	* lib/krb5/get_cred.c: Insecure tgs referrals.
 
-	* lib/krb5/get_cred.c: Don't try key usage KRB5_KU_AP_REQ_AUTH for
+	* lib/krb5/get_cred.c: Dont try key usage KRB5_KU_AP_REQ_AUTH for
 	TGS-REQ. This drop compatibility with pre 0.3d KDCs.
 	
 	* lib/krb5/get_cred.c: catch KRB5_GC_CANONICALIZE.

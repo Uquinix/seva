@@ -1746,7 +1746,7 @@ union iscsi_ttt_txlen_union
 struct iscsi_uhqe
 {
 	__le32 reg1;
-#define ISCSI_UHQE_PDU_PAYLOAD_LEN_MASK     0xFFFFF /* iSCSI payload (doesn't include padding or digest) or AHS length */
+#define ISCSI_UHQE_PDU_PAYLOAD_LEN_MASK     0xFFFFF /* iSCSI payload (doesnt include padding or digest) or AHS length */
 #define ISCSI_UHQE_PDU_PAYLOAD_LEN_SHIFT    0
 #define ISCSI_UHQE_LOCAL_COMP_MASK          0x1 /* local compleiton flag */
 #define ISCSI_UHQE_LOCAL_COMP_SHIFT         20
@@ -1830,7 +1830,7 @@ struct iscsi_xhqe
 struct mstorm_iscsi_stats_drv
 {
 	struct regpair iscsi_rx_dropped_PDUs_task_not_valid /* Number of Rx silently dropped PDUs due to task not valid */;
-	struct regpair iscsi_rx_dup_ack_cnt /* Received Dup-ACKs - after 3 dup ack, the counter doesn't count the same dup ack */;
+	struct regpair iscsi_rx_dup_ack_cnt /* Received Dup-ACKs - after 3 dup ack, the counter doesnt count the same dup ack */;
 };
 
 /*

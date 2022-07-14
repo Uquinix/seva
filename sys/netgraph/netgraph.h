@@ -123,7 +123,7 @@ struct ng_hook {
 	LIST_ENTRY(ng_hook) hk_hooks;	/* linked list of all hooks on node */
 	ng_rcvmsg_t	*hk_rcvmsg;	/* control messages come here */
 	ng_rcvdata_t	*hk_rcvdata;	/* data comes here */
-	int	hk_refs;		/* don't actually free this till 0 */
+	int	hk_refs;		/* dont actually free this till 0 */
 #ifdef	NETGRAPH_DEBUG /*----------------------------------------------*/
 #define HK_MAGIC 0x78573011
 	int	hk_magic;

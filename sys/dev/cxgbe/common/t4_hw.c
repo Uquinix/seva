@@ -11054,7 +11054,7 @@ int t4_i2c_io(struct adapter *adap, unsigned int mbox,
 	if (len > I2C_PAGE_SIZE)
 		return -EINVAL;
 
-	/* Don't allow reads that spans multiple pages */
+	/* Dont allow reads that spans multiple pages */
 	if (offset < I2C_PAGE_SIZE && offset + len > I2C_PAGE_SIZE)
 		return -EINVAL;
 

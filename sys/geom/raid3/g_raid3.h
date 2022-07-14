@@ -93,7 +93,7 @@ extern u_int g_raid3_debug;
 					 G_RAID3_BIO_PFLAG_VERIFY)
 
 /*
- * Information needed for synchronization.
+ * Informations needed for synchronization.
  */
 struct g_raid3_disk_sync {
 	struct g_consumer *ds_consumer;	/* Consumer connected to our device. */
@@ -107,7 +107,7 @@ struct g_raid3_disk_sync {
 };
 
 /*
- * Information needed for synchronization.
+ * Informations needed for synchronization.
  */
 struct g_raid3_device_sync {
 	struct g_geom	*ds_geom;	/* Synchronization geom. */

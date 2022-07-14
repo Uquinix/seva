@@ -36,7 +36,7 @@ uint8_t getByte(const uint32_t* data, size_t offset) {
 #elif __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
   return byteData[offset];
 #else
-#error "Unable to determine endianness"
+#error "Unable to determine endianess"
 #endif
 }
 
@@ -1114,7 +1114,7 @@ _Unwind_VRS_Pop(_Unwind_Context *context, _Unwind_VRS_RegClass regclass,
 #elif __BYTE_ORDER__ == __ORDER_BIG_ENDIAN__
         uint64_t value = (w0 << 32) | w1;
 #else
-#error "Unable to determine endianness"
+#error "Unable to determine endianess"
 #endif
         if (_Unwind_VRS_Set(context, regclass, i, representation, &value) !=
             _UVRSR_OK)

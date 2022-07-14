@@ -350,7 +350,7 @@ struct spacectl_range {
 #define	POSIX_FADV_RANDOM	1	/* expect random page references */
 #define	POSIX_FADV_SEQUENTIAL	2	/* expect sequential page references */
 #define	POSIX_FADV_WILLNEED	3	/* will need these pages */
-#define	POSIX_FADV_DONTNEED	4	/* don't need these pages */
+#define	POSIX_FADV_DONTNEED	4	/* dont need these pages */
 #define	POSIX_FADV_NOREUSE	5	/* access data only once */
 #endif
 

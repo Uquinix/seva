@@ -1250,7 +1250,7 @@ def : InstRW<[A57Write_6cyc_1V, A57Write_6cyc_1V],
 
 // --- 3.17 ASIMD Load Instructions ---
 
-// Overridden via InstRW for this processor.
+// Overriden via InstRW for this processor.
 def : WriteRes<WriteVLD1, []>;
 def : WriteRes<WriteVLD2, []>;
 def : WriteRes<WriteVLD3, []>;

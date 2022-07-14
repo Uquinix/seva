@@ -177,7 +177,7 @@ struct lro_ctrl {
 };
 
 struct tcp_ackent {
-	uint64_t timestamp;	/* hardware or software timestamp, valid if TSTMP_LRO or TSTMP_HDRW set */
+	uint64_t timestamp;	/* hardware or sofware timestamp, valid if TSTMP_LRO or TSTMP_HDRW set */
 	uint32_t seq;		/* th_seq value */
 	uint32_t ack;		/* th_ack value */
 	uint32_t ts_value;	/* If ts option value, valid if HAS_TSTMP is set */

@@ -122,7 +122,7 @@ bootp_fill_request(unsigned char *bp_vend)
 	bp_vend[30] = TAG_END;
 }
 
-/* Fetch required bootp information */
+/* Fetch required bootp infomation */
 void
 bootp(int sock)
 {

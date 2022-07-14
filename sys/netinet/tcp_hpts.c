@@ -1151,7 +1151,7 @@ again:
 	     ((NUM_OF_HPTSI_SLOTS-1) * HPTS_TICKS_PER_SLOT)) &&
 	    (hpts->p_on_queue_cnt != 0)) {
 		/*
-		 * Wheel wrap is occurring, basically we
+		 * Wheel wrap is occuring, basically we
 		 * are behind and the distance between
 		 * run's has spread so much it has exceeded
 		 * the time on the wheel (1.024 seconds). This
@@ -1380,7 +1380,7 @@ again:
 				 * than the previous inp) and there no
 				 * assurance that ninp was not pulled while
 				 * we were processing inp and freed. If this
-				 * occurred it could mean that either:
+				 * occured it could mean that either:
 				 *
 				 * a) Its NULL (which is fine we won't go
 				 * here) <or> b) Its valid (which is cool we

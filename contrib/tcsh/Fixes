@@ -632,7 +632,7 @@
      (Martin Kraemer)
  17. Make -shell invocations always treated as a login shell.
  16. V6.11.01 - 20020308
- 15. Fixes to polish nls locale (Paweï¿½ Niewiadomski)
+ 15. Fixes to polish nls locale (Pawe³ Niewiadomski)
  14. russian locale fixes (Alexey Dokuchaev)
  13. document door support (Shaen)
  12. tcsh euc handling extensions (Alexey Zelkin)
@@ -656,7 +656,7 @@
  38. make c_insert not static so that it can be used from win32 (amol)
  37. Fix rmstar not to corrupt memory when we say no. (Mark Peek)
  36. V6.10.02 - 20010806
- 35. polish nls locale (Paweï¿½ Niewiadomski))
+ 35. polish nls locale (Pawe³ Niewiadomski))
  34. Fix a tcsetattr race running background jobs as the last line on an xterm
      window (Andrew Brown)
  33. jobcmd alias (Greg Parker)
@@ -1681,7 +1681,7 @@ V6.02.00, 5/15/92
 35. sysv_echo is gone too. Now we have a variable called echo_style
     which can be set to "none", "bsd", "sysv", "both" that defines
     the builtin echo_style. The default is "bsd" for systems with
-    SYSVREL == 0, "sysv" otherwise. This can be overridden in config.h
+    SYSVREL == 0, "sysv" otherwise. This can be overriden in config.h
     by defining ECHO_STYLE ro be BSD_ECHO, SYSV_ECHO, BOTH_ECHO, 
     or NONE_ECHO.
 34. asynchronous notification in run-fg-editor would try to change the 

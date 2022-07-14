@@ -72,7 +72,7 @@ profile:::tick-1sec
 
 END
 {
-	printf("Successfully commited both buffers");
+	printf("Succesfully commited both buffers");
 	exit(0);
 }
 

@@ -27,10 +27,10 @@
 REGISTER_MAP_WITH_PROGRAMSTATE(DynamicTypeMap, const clang::ento::MemRegion *,
                                clang::ento::DynamicTypeInfo)
 
-/// A set factory of dynamic cast information.
+/// A set factory of dynamic cast informations.
 REGISTER_SET_FACTORY_WITH_PROGRAMSTATE(CastSet, clang::ento::DynamicCastInfo)
 
-/// A map from symbols to cast information.
+/// A map from symbols to cast informations.
 REGISTER_MAP_WITH_PROGRAMSTATE(DynamicCastMap, const clang::ento::MemRegion *,
                                CastSet)
 

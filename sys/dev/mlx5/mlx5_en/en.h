@@ -797,7 +797,7 @@ struct mlx5e_iq_data {
 };
 
 struct mlx5e_iq {
-	/* persistent fields */
+	/* persistant fields */
 	struct mtx lock;
 	struct mtx comp_lock;
 	int	db_inhibit;

@@ -566,7 +566,7 @@ static const struct option longopts[] = {
 #ifdef HAVE_PCAP_SET_TSTAMP_PRECISION
 	{ "time-stamp-precision", required_argument, NULL, OPTION_TSTAMP_PRECISION},
 #endif
-	{ "don't-verify-checksums", no_argument, NULL, 'K' },
+	{ "dont-verify-checksums", no_argument, NULL, 'K' },
 	{ "list-data-link-types", no_argument, NULL, 'L' },
 	{ "no-optimize", no_argument, NULL, 'O' },
 	{ "no-promiscuous-mode", no_argument, NULL, 'p' },

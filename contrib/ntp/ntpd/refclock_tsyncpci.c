@@ -307,7 +307,7 @@ static RefIdLookup RefIdLookupTbl[] =
 /******************************************************************************
  *
  * Function:    tsync_start()
- * Description: Used to initialize the Spectracom TSYNC reference driver.
+ * Description: Used to intialize the Spectracom TSYNC reference driver.
  *
  * Parameters:
  *     IN:  unit - not used.

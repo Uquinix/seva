@@ -950,7 +950,7 @@ void HexagonCommonGEP::separateChainForNode(GepNode *Node, Use *U,
   GepNode *N = Node;
   GepNode *C = nullptr, *NewNode = nullptr;
   while (is_constant(N) && !(N->Flags & GepNode::Root)) {
-    // XXX if (single-use) don't-replicate;
+    // XXX if (single-use) dont-replicate;
     GepNode *NewN = new (*Mem) GepNode(N);
     Nodes.push_back(NewN);
     Loc[NewN] = PB;

@@ -1430,7 +1430,7 @@ addserver(
 
 /*
  * findserver - find a server in the list given its address
- * ***(For now it isn't totally AF-Independent, to check later..)
+ * ***(For now it isn't totally AF-Independant, to check later..)
  */
 static struct server *
 findserver(

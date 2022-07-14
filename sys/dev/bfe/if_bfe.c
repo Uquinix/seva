@@ -1630,7 +1630,7 @@ bfe_start_locked(struct ifnet *ifp)
 			break;
 
 		/*
-		 * Pack the data into the tx ring.  If we don't have
+		 * Pack the data into the tx ring.  If we dont have
 		 * enough room, let the chip drain the ring.
 		 */
 		if (bfe_encap(sc, &m_head)) {

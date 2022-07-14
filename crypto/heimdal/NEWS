@@ -163,7 +163,7 @@ Release Notes - Heimdal - Version Heimdal 1.2
   [HEIMDAL-120] - Use new OpenLDAP API (older deprecated)
 
 * Task
-  [HEIMDAL-63] - Don't try key usage KRB5_KU_AP_REQ_AUTH for TGS-REQ.
+  [HEIMDAL-63] - Dont try key usage KRB5_KU_AP_REQ_AUTH for TGS-REQ.
                  This drop compatibility with pre 0.3d KDCs.
   [HEIMDAL-64] - kcm: first implementation of kcm-move-cache
   [HEIMDAL-65] - Failed to compile with --disable-pk-init

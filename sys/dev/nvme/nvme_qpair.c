@@ -649,7 +649,7 @@ nvme_qpair_process_completions(struct nvme_qpair *qpair)
 			nvme_printf(qpair->ctrlr,
 			    "cpl (cid = %u) does not map to outstanding cmd\n",
 				cpl.cid);
-			/* nvme_dump_completion expects device endianness */
+			/* nvme_dump_completion expects device endianess */
 			nvme_dump_completion(&qpair->cpl[qpair->cq_head]);
 			KASSERT(0, ("received completion for unknown cmd"));
 		}

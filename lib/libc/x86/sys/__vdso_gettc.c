@@ -224,7 +224,7 @@ __vdso_init_hpet(uint32_t u)
 		return;
 
 	/*
-	 * Explicitly check for the capability mode to avoid
+	 * Explicitely check for the capability mode to avoid
 	 * triggering trap_enocap on the device open by absolute path.
 	 */
 	if ((cap_getmode(&mode) == 0 && mode != 0) ||

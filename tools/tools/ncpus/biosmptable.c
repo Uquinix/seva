@@ -76,7 +76,7 @@ biosmptable_detect(void)
 	ncpu = 0;
     } else if (mpfps->config_type != 0) {
 	/* 
-	 * If this config_type is nonzero then this is a default configuration
+	 * If thie config_type is nonzero then this is a default configuration
 	 * from Chapter 5 in the MP spec.  Report 2 cpus and 1 I/O APIC.
 	 */
     	ncpu = 2;

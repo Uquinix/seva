@@ -609,7 +609,7 @@ netdump_ioctl(struct cdev *dev __unused, u_long cmd, caddr_t addr,
  *	priv, Unused.
  *
  * Returns:
- *	int, An errno value if an error occurred, 0 otherwise.
+ *	int, An errno value if an error occured, 0 otherwise.
  */
 static int
 netdump_modevent(module_t mod __unused, int what, void *priv __unused)
@@ -689,7 +689,7 @@ DECLARE_MODULE(netdump, netdump_mod, SI_SUB_PSEUDO, SI_ORDER_ANY);
  * Currently, this command does not support configuring encryption or
  * compression.
  */
-DB_FUNC(netdump, db_netdump_cmd, db_cmd_table, CS_OWN, NULL)
+DB_COMMAND_FLAGS(netdump, db_netdump_cmd, CS_OWN)
 {
 	static struct diocskerneldump_arg conf;
 	static char blockbuf[NETDUMP_DATASIZE];

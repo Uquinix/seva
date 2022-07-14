@@ -107,7 +107,7 @@ command = {
 	option = {
 		long = "embedded-certs"
 		type = "-flag"
-		help = "don't embedded certficiates"
+		help = "dont embedded certficiates"
 	}
 	option = {
 		long = "embed-leaf-only"

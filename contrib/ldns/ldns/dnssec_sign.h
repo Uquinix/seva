@@ -109,7 +109,7 @@ ldns_dnssec_zone_mark_and_get_glue(
  * be taken into account separately.
  *
  * \param[in] zone the zone in which to mark the names
- * \return LDNS_STATUS_OK on successful completion
+ * \return LDNS_STATUS_OK on succesful completion
  */
 ldns_status
 ldns_dnssec_zone_mark_glue(ldns_dnssec_zone *zone);

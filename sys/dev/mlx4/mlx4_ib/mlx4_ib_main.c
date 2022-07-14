@@ -1667,7 +1667,7 @@ static struct ib_flow *mlx4_ib_create_flow(struct ib_qp *qp,
 
 	switch (flow_attr->type) {
 	case IB_FLOW_ATTR_NORMAL:
-		/* If don't trap flag (continue match) is set, under specific
+		/* If dont trap flag (continue match) is set, under specific
 		 * condition traffic be replicated to given qp,
 		 * without stealing it
 		 */

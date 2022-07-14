@@ -85,7 +85,7 @@ void __kmpc_end(ident_t *loc) {
 
 This function can be called in any context.
 
-If the runtime has only been entered at the outermost level from a
+If the runtime has ony been entered at the outermost level from a
 single (necessarily non-OpenMP<sup>*</sup>) thread, then the thread number is
 that which would be returned by omp_get_thread_num() in the outermost
 active parallel construct. (Or zero if there is no active parallel

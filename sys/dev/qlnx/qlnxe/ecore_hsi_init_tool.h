@@ -224,7 +224,7 @@ struct init_if_mode_op
 #define INIT_IF_MODE_OP_OP_SHIFT         0
 #define INIT_IF_MODE_OP_RESERVED1_MASK   0xFFF
 #define INIT_IF_MODE_OP_RESERVED1_SHIFT  4
-#define INIT_IF_MODE_OP_CMD_OFFSET_MASK  0xFFFF /* Commands to skip if the modes don't match */
+#define INIT_IF_MODE_OP_CMD_OFFSET_MASK  0xFFFF /* Commands to skip if the modes dont match */
 #define INIT_IF_MODE_OP_CMD_OFFSET_SHIFT 16
 	u16 reserved2;
 	u16 modes_buf_offset /* offset (in bytes) in modes expression buffer */;
@@ -242,7 +242,7 @@ struct init_if_phase_op
 #define INIT_IF_PHASE_OP_DMAE_ENABLE_SHIFT 4
 #define INIT_IF_PHASE_OP_RESERVED1_MASK    0x7FF
 #define INIT_IF_PHASE_OP_RESERVED1_SHIFT   5
-#define INIT_IF_PHASE_OP_CMD_OFFSET_MASK   0xFFFF /* Commands to skip if the phases don't match */
+#define INIT_IF_PHASE_OP_CMD_OFFSET_MASK   0xFFFF /* Commands to skip if the phases dont match */
 #define INIT_IF_PHASE_OP_CMD_OFFSET_SHIFT  16
 	u32 phase_data;
 #define INIT_IF_PHASE_OP_PHASE_MASK        0xFF /* Init phase */
@@ -354,8 +354,8 @@ enum init_op_types
 {
 	INIT_OP_READ /* GRC read init command */,
 	INIT_OP_WRITE /* GRC write init command */,
-	INIT_OP_IF_MODE /* Skip init commands if the init modes expression doesn't match */,
-	INIT_OP_IF_PHASE /* Skip init commands if the init phase doesn't match */,
+	INIT_OP_IF_MODE /* Skip init commands if the init modes expression doesnt match */,
+	INIT_OP_IF_PHASE /* Skip init commands if the init phase doesnt match */,
 	INIT_OP_DELAY /* delay init command */,
 	INIT_OP_CALLBACK /* callback init command */,
 	MAX_INIT_OP_TYPES

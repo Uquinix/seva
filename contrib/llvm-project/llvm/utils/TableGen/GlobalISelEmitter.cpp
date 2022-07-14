@@ -5152,7 +5152,7 @@ Expected<RuleMatcher> GlobalISelEmitter::runOnPattern(const PatternToMatch &P) {
   // naming being the same. One possible solution would be to have
   // explicit operator for operation capture and reference those.
   // The plus side is that it would expose opportunities to share
-  // the capture across rules. The downside is that it would
+  // the capture accross rules. The downside is that it would
   // introduce a dependency between predicates (captures must happen
   // before their first use.)
   InstructionMatcher &InsnMatcherTemp = M.addInstructionMatcher(Src->getName());
@@ -6042,7 +6042,7 @@ bool GroupMatcher::candidateConditionMatches(
 
   const Matcher &Representative = **Matchers.begin();
   const auto &RepresentativeCondition = Representative.getFirstCondition();
-  // ... if not empty, the group can only accommodate matchers with the exact
+  // ... if not empty, the group can only accomodate matchers with the exact
   // same first condition:
   return Predicate.isIdentical(RepresentativeCondition);
 }
@@ -6123,7 +6123,7 @@ bool SwitchMatcher::candidateConditionMatches(
     // getValue() / isIdenticalDownToValue() yet:
     if (!Predicate.hasValue())
       return false;
-    // ... otherwise an empty Switch can accommodate the condition with no
+    // ... otherwise an empty Switch can accomodate the condition with no
     // further requirements:
     return true;
   }

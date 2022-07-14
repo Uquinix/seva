@@ -704,7 +704,7 @@ public class JDTrace {
 	try {
 	    dtrace.open(oflags);
 
-	    // Set default options that may be overridden by options or #pragma
+	    // Set default options that may be overriden by options or #pragma
 	    dtrace.setOption(Option.bufsize, Option.mb(4));
 	    dtrace.setOption(Option.aggsize, Option.mb(4));
 

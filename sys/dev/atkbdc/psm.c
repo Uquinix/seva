@@ -4472,7 +4472,7 @@ proc_elantech(struct psm_softc *sc, packetbuf_t *pb, mousestatus_t *ms,
 		}
 
 		/*
-		 * HW v2 don't report exact finger positions when 3 or more
+		 * HW v2 dont report exact finger positions when 3 or more
 		 * fingers are on touchpad.
 		 */
 		if (nfingers > 2)
@@ -4535,7 +4535,7 @@ proc_elantech(struct psm_softc *sc, packetbuf_t *pb, mousestatus_t *ms,
 		    ((pb->ipacket[3] & 0x30) >> 4);
 
 		/*
-		 * HW v3 don't report exact finger positions when 3 or more
+		 * HW v3 dont report exact finger positions when 3 or more
 		 * fingers are on touchpad.
 		 */
 		if (nfingers > 1)

@@ -110,7 +110,7 @@ ata_cyrix_setmode(device_t dev, int target, int mode)
 	    { 0x00921250, 0x00911140, 0x00911030 };
 
 	mode = min(mode, ATA_UDMA2);
-	/* don't try to set the mode if we don't have the resource */
+	/* dont try to set the mode if we dont have the resource */
 	if (ctlr->r_res1) {
 		if (mode >= ATA_UDMA0) {
 			/* Set UDMA timings, and PIO4. */

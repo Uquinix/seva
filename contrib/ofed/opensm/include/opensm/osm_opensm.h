@@ -252,7 +252,7 @@ typedef struct osm_opensm {
 *		The Subnet Administration (SA) object for this subnet.
 *
 *	db
-*		Persistent storage of some data required between sessions.
+*		Persistant storage of some data required between sessions.
 *
 *	mad_pool
 *		Pool of Management Datagram (MAD) objects.

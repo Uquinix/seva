@@ -2007,7 +2007,7 @@ enum {
 };
 
 // Display an action graph human-readably.  Action A is the "sink" node
-// and latest-occurring action. Traversal is in pre-order, visiting the
+// and latest-occuring action. Traversal is in pre-order, visiting the
 // inputs to each action before printing the action itself.
 static unsigned PrintActions1(const Compilation &C, Action *A,
                               std::map<Action *, unsigned> &Ids,

@@ -628,7 +628,7 @@ static Error writeArchiveToStream(raw_ostream &Out,
     if (Sym64Env)
       StringRef(Sym64Env).getAsInteger(10, Sym64Threshold);
 
-    // If LastOffset isn't going to fit in a 32-bit variable we need to switch
+    // If LastOffset isn't going to fit in a 32-bit varible we need to switch
     // to 64-bit. Note that the file can be larger than 4GB as long as the last
     // member starts before the 4GB offset.
     if (LastOffset >= Sym64Threshold) {

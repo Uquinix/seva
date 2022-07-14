@@ -533,7 +533,7 @@ static bool hasUnguardedAccess(const FieldDecl *FD, ProgramStateRef State) {
     return true;
 
   Parent = Parent->getDefinition();
-  assert(Parent && "The record's definition must be available if an uninitialized"
+  assert(Parent && "The record's definition must be avaible if an uninitialized"
                    " field of it was found!");
 
   ASTContext &AC = State->getStateManager().getContext();

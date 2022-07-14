@@ -346,7 +346,7 @@
 	
 2005-10-01  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* kuser/klist.c: Add option --list-caches that lists the available
+	* kuser/klist.c: Add option --list-caches that lists the avaible
 	caches and their status.
 
 	$ klist --list-caches
@@ -440,7 +440,7 @@
 	
 2005-09-01  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* kdc/kerberos5.c (make_etype_info_entry): Don't send salttype at
+	* kdc/kerberos5.c (make_etype_info_entry): Dont send salttype at
 	all, use KRB5-PADATA-AFS3-SALT
 	
 2005-08-31  Love Hörnquist Åstrand  <lha@it.su.se>
@@ -503,7 +503,7 @@
 
 	* lib/hdb/dbinfo.c: provide interface to find databases
 
-	* lib/hdb/mkey.c: hdb_seal_key_mkey): don't double encrypt keys
+	* lib/hdb/mkey.c: hdb_seal_key_mkey): dont double encrypt keys
 
 2005-08-15  Love Hörnquist Åstrand  <lha@it.su.se>
 
@@ -638,7 +638,7 @@
 	krb5_socklen_t
 
 	* kdc/connect.c (de_http): sscanf takes a char *, not unsigned
-	ditto, cast appropriately
+	ditto, cast approriately
 
 	* lib/krb5/crypto.c (_krb5_pk_octetstring2key): make sha1 output
 	unsigned char to match openssl
@@ -963,7 +963,7 @@
 	from krb5_init_context From: Mathias Feiler
 	<feiler@uni-hohenheim.de>
 
-	* lib/krb5/verify_krb5_conf.c: Add more missig entries, from
+	* lib/krb5/verify_krb5_conf.c: Add more missig entires, from
 	Mathias Feiler <feiler@uni-hohenheim.de>
 
 2005-06-11  Love Hörnquist Åstrand  <lha@it.su.se>
@@ -1004,7 +1004,7 @@
 
 2005-06-01  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* lib/krb5/store.c: If we are allocating 0 entries, avoid failing
+	* lib/krb5/store.c: If we are allocating 0 entires, avoid failing
 	if ALLOC returns NULL
 
 	* lib/krb5/verify_krb5_conf.c: Check for [kdc]v4-realm
@@ -1210,7 +1210,7 @@
 	message in the context for certificate errors.
 	
 	* lib/krb5/keytab.c (krb5_kt_free_entry): zero out content of all
-	krb5_free_x_content like functions to make sure data doesn't get
+	krb5_free_x_content like functions to make sure data doesnt get
 	reused, idea from Wynn Wilkes <wwilkes@vintela.com>
 
 	* configure.in: depend on automake 1.8, we don't test anything
@@ -1250,7 +1250,7 @@
 
 	* lib/krb5{addr_families,context,creds,free,keyblock,
 	mit_glue,rd_error}.c:zero out content of all krb5_free_x_content
-	like functions to make sure data doesn't get reused, idea from
+	like functions to make sure data doesnt get reused, idea from
 	Wynn Wilkes <wwilkes@vintela.com>
 
 	* lib/krb5/krb5_get_credentials.3: document KRB5_GC_EXPIRED_OK

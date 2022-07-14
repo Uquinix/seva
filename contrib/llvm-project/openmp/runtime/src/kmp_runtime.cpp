@@ -6723,7 +6723,7 @@ void __kmp_register_library_startup(void) {
     if (shm_preexist == 0) {
       // we created SHM now set size
       if (ftruncate(fd1, SHM_SIZE) == -1) {
-        // error occurred setting size;
+        // error occured setting size;
         __kmp_fatal(KMP_MSG(FunctionError, "Can't set size of SHM"),
                     KMP_ERR(errno), __kmp_msg_null);
       }

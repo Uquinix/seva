@@ -39,7 +39,7 @@ examples:
     stmpe {
         stmpe_adc {
             compatible = "st,stmpe-adc";
-            st,norequest-mask = <0x0F>; /* don't use ADC CH3-0 */
+            st,norequest-mask = <0x0F>; /* dont use ADC CH3-0 */
         };
     };
 ...

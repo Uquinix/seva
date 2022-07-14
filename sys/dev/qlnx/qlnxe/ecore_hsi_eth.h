@@ -1222,7 +1222,7 @@ struct eth_filter_cmd_header
 	u8 rx /* If set, apply these commands to the RX path */;
 	u8 tx /* If set, apply these commands to the TX path */;
 	u8 cmd_cnt /* Number of filter commands */;
-	u8 assert_on_error /* 0 - don't assert in case of filter configuration error. Just return an error code. 1 - assert in case of filter configuration error. */;
+	u8 assert_on_error /* 0 - dont assert in case of filter configuration error. Just return an error code. 1 - assert in case of filter configuration error. */;
 	u8 reserved1[4];
 };
 
@@ -1595,7 +1595,7 @@ struct rx_update_gft_filter_data
 	u8 rx_qid_valid /* If set, rx_qid will used for traffic steering, in additional to vport_id. flow_id_valid must be cleared. If cleared, queue ID will selected by RSS. */;
 	u8 flow_id_valid /* If set, flow_id will reported by CQE, rx_qid_valid must be cleared. If cleared, flow_id 0 will reported by CQE. */;
 	u8 filter_action /* Use to set type of action on filter (use enum gft_filter_update_action) */;
-	u8 assert_on_error /* 0 - don't assert in case of error. Just return an error code. 1 - assert in case of error. */;
+	u8 assert_on_error /* 0 - dont assert in case of error. Just return an error code. 1 - assert in case of error. */;
 	u8 reserved;
 };
 
@@ -2750,7 +2750,7 @@ struct gft_cam_line
 #define GFT_CAM_LINE_VALID_SHIFT     0
 #define GFT_CAM_LINE_DATA_MASK       0x3FFF /* Data bits, the word that compared with the profile key */
 #define GFT_CAM_LINE_DATA_SHIFT      1
-#define GFT_CAM_LINE_MASK_BITS_MASK  0x3FFF /* Mask bits, indicate the bits in the data that are Don't-Care */
+#define GFT_CAM_LINE_MASK_BITS_MASK  0x3FFF /* Mask bits, indicate the bits in the data that are Dont-Care */
 #define GFT_CAM_LINE_MASK_BITS_SHIFT 15
 #define GFT_CAM_LINE_RESERVED1_MASK  0x7
 #define GFT_CAM_LINE_RESERVED1_SHIFT 29

@@ -3429,7 +3429,7 @@ out:
 			}
 			if (laddr->ifa->localifa_flags & SCTP_BEING_DELETED)
 				/*
-				 * Address being deleted by the system, don't
+				 * Address being deleted by the system, dont
 				 * list.
 				 */
 				continue;

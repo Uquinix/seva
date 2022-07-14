@@ -1075,7 +1075,7 @@ g_union_setmap(struct bio *bp, struct g_union_softc *sc)
 
 	G_WLOCKOWNED(sc);
 	KASSERT(bp->bio_offset % sc->sc_sectorsize == 0,
-	    ("g_union_setmap: offset not on sector boundary"));
+	    ("g_union_setmap: offset not on sector boundry"));
 	KASSERT(bp->bio_length % sc->sc_sectorsize == 0,
 	    ("g_union_setmap: length not a multiple of sectors"));
 	start = bp->bio_offset / sc->sc_sectorsize;
@@ -1111,7 +1111,7 @@ g_union_getmap(struct bio *bp, struct g_union_softc *sc, off_t *len2read)
 	size_t root_idx;
 
 	KASSERT(bp->bio_offset % sc->sc_sectorsize == 0,
-	    ("g_union_getmap: offset not on sector boundary"));
+	    ("g_union_getmap: offset not on sector boundry"));
 	KASSERT(bp->bio_length % sc->sc_sectorsize == 0,
 	    ("g_union_getmap: length not a multiple of sectors"));
 	start = bp->bio_offset / sc->sc_sectorsize;
@@ -1140,7 +1140,7 @@ g_union_getmap(struct bio *bp, struct g_union_softc *sc, off_t *len2read)
 			start += leafresid;
 			continue;
 		}
-		/* Check up to a word boundary, then check word by word */
+		/* Check up to a word boundry, then check word by word */
 		leaf = sc->sc_writemap_root[root_idx];
 		word = leaf[(start % sc->sc_bits_per_leaf) / BITS_PER_ENTRY];
 		bitloc = start % BITS_PER_ENTRY;

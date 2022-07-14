@@ -4099,7 +4099,7 @@ iwn_notif_intr(struct iwn_softc *sc)
 			/*
 			 * State change allows hardware switch change to be
 			 * noted. However, we handle this in iwn_intr as we
-			 * get both the enable/disable intr.
+			 * get both the enable/disble intr.
 			 */
 			uint32_t *status = (uint32_t *)(desc + 1);
 			DPRINTF(sc, IWN_DEBUG_INTR | IWN_DEBUG_STATE,

@@ -387,15 +387,15 @@ into two 32-bit pieces which are stored at the locations pointed to by
 */
 INLINE void mul32To64( bits32 a, bits32 b, bits32 *z0Ptr, bits32 *z1Ptr )
 {
-    bits16 aHigh, allow, bHigh, bLow;
+    bits16 aHigh, aLow, bHigh, bLow;
     bits32 z0, zMiddleA, zMiddleB, z1;
 
-    allow = a;
+    aLow = a;
     aHigh = a>>16;
     bLow = b;
     bHigh = b>>16;
-    z1 = ( (bits32) allow ) * bLow;
-    zMiddleA = ( (bits32) allow ) * bHigh;
+    z1 = ( (bits32) aLow ) * bLow;
+    zMiddleA = ( (bits32) aLow ) * bHigh;
     zMiddleB = ( (bits32) aHigh ) * bLow;
     z0 = ( (bits32) aHigh ) * bHigh;
     zMiddleA += zMiddleB;

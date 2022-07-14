@@ -56,7 +56,7 @@ static jmp_buf jmpbuf;
  * The phone numbers are in PN, and the call unit is in CU.
  *
  * If the PN is an '@', then we consult the PHONES file for
- *   the phone numbers.  This file is /etc/phones, unless overridden
+ *   the phone numbers.  This file is /etc/phones, unless overriden
  *   by an exported shell variable.
  *
  * The data base files must be in the format:

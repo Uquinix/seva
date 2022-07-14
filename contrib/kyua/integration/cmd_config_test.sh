@@ -103,14 +103,14 @@ many__ok_body() {
     mkdir "${HOME}/.kyua"
     cat >"${HOME}/.kyua/kyua.conf" <<EOF
 syntax(2)
-architecture = "overridden"
+architecture = "overriden"
 unknown_setting = "foo"
 test_suites.first.one = 1
 test_suites.first.two = 2
 EOF
 
     cat >expout <<EOF
-architecture = overridden
+architecture = overriden
 test_suites.first.two = 2
 test_suites.first.one = 1
 EOF
@@ -271,19 +271,19 @@ EOF
 
     atf_check -s exit:0 \
         -o match:'test_suites.suite1.the_variable = value1' \
-        -o match:'test_suites.suite2.the_variable = overridden' \
+        -o match:'test_suites.suite2.the_variable = overriden' \
         -o match:'test_suites.suite3.the_variable = new' \
         -e empty kyua \
-        -v "test_suites.suite2.the_variable=overridden" \
+        -v "test_suites.suite2.the_variable=overriden" \
         -v "test_suites.suite3.the_variable=new" \
         config
 
     atf_check -s exit:0 \
         -o match:'test_suites.suite1.the_variable = value1' \
-        -o match:'test_suites.suite2.the_variable = overridden' \
+        -o match:'test_suites.suite2.the_variable = overriden' \
         -o match:'test_suites.suite3.the_variable = new' \
         -e empty kyua \
-        --variable="test_suites.suite2.the_variable=overridden" \
+        --variable="test_suites.suite2.the_variable=overriden" \
         --variable="test_suites.suite3.the_variable=new" \
         config
 }
@@ -298,14 +298,14 @@ test_suites.suite2.the_variable = "should not be used"
 EOF
 
     atf_check -s exit:0 \
-        -o match:'test_suites.suite2.the_variable = overridden' \
+        -o match:'test_suites.suite2.the_variable = overriden' \
         -e empty kyua -c config \
-        -v "test_suites.suite2.the_variable=overridden" config
+        -v "test_suites.suite2.the_variable=overriden" config
 
     atf_check -s exit:0 \
-        -o match:'test_suites.suite2.the_variable = overridden' \
+        -o match:'test_suites.suite2.the_variable = overriden' \
         -e empty kyua -c config \
-        --variable="test_suites.suite2.the_variable=overridden" config
+        --variable="test_suites.suite2.the_variable=overriden" config
 }
 
 

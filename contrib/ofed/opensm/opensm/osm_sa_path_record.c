@@ -1060,7 +1060,7 @@ static void pr_rcv_get_port_pair_paths(IN osm_sa_t * sa,
 
 	   We desire to return high-quality paths first.
 	   In OpenSM, higher quality means least overlap with other paths.
-	   This is achieved in practice by returning paths with
+	   This is acheived in practice by returning paths with
 	   different LID value on each end, which means these
 	   paths are more redundant that paths with the same LID repeated
 	   on one side.  For example, in OpenSM the paths between two

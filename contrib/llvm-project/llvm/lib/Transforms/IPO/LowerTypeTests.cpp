@@ -1081,7 +1081,7 @@ void LowerTypeTestsModule::importFunction(
   std::string Name = std::string(F->getName());
 
   if (F->isDeclarationForLinker() && isJumpTableCanonical) {
-    // Non-dso_local functions may be overridden at run time,
+    // Non-dso_local functions may be overriden at run time,
     // don't short curcuit them
     if (F->isDSOLocal()) {
       Function *RealF = Function::Create(F->getFunctionType(),

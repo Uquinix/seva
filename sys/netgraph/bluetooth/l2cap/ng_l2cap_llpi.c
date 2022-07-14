@@ -94,7 +94,7 @@ ng_l2cap_lp_con_req(ng_l2cap_p l2cap, bdaddr_p bdaddr, int type)
 		return (ENOTCONN);
 	}
 
-	/* Create and initialize new connection descriptor */
+	/* Create and intialize new connection descriptor */
 	con = ng_l2cap_new_con(l2cap, bdaddr, type);
 	if (con == NULL)
 		return (ENOMEM);
@@ -245,7 +245,7 @@ ng_l2cap_lp_con_ind(ng_l2cap_p l2cap, struct ng_mesg *msg)
 		return (ENOTCONN);
 	}
 
-	/* Create and initialize new connection descriptor */
+	/* Create and intialize new connection descriptor */
 	con = ng_l2cap_new_con(l2cap, &ep->bdaddr, ep->link_type);
 	if (con == NULL)
 		return (ENOMEM);

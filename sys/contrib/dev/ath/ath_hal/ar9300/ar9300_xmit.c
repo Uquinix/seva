@@ -908,7 +908,7 @@ ar9300_abort_tx_dma(struct ath_hal *ah)
     /*
      * wait on all tx queues
      * This need to be checked in the last to gain extra 50 usec. on avg. 
-     * Currently checked first since we don't have a previous channel information currently. 
+     * Currently checked first since we dont have a previous channel information currently. 
      * Which is needed to revert the rf changes. 
      */
     for (q = AR_NUM_QCU - 1; q >= 0; q--) {

@@ -138,7 +138,7 @@ extern char
 
 extern char
     doopt[],
-    don't[],
+    dont[],
     will[],
     wont[],
     options[],		/* All the little options */

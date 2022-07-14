@@ -1266,7 +1266,7 @@ const u8 * crypto_csr_get_attribute(struct crypto_csr *csr,
 /**
  * crypto_csr_sign - Sign CSR and return ASN.1 CertificationRequest
  * @csr: CSR structure from @crypto_csr_init()
- * @key: Private key to sign the CSR (for now only EC key are supported)
+ * @key: Private key to sign the CSR (for now ony EC key are supported)
  * @algo: Hash algorithm to use for the signature
  * Returns: DER encoding of ASN.1 CertificationRequest for the CSR or %NULL on
  * failure

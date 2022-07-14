@@ -405,7 +405,7 @@ void NVPTX::Assembler::ConstructJob(Compilation &C, const JobAction &JA,
     // ptxas does not accept -g option if optimization is enabled, so
     // we ignore the compiler's -O* options if we want debug info.
     CmdArgs.push_back("-g");
-    CmdArgs.push_back("--don't-merge-basicblocks");
+    CmdArgs.push_back("--dont-merge-basicblocks");
     CmdArgs.push_back("--return-at-end");
   } else if (Arg *A = Args.getLastArg(options::OPT_O_Group)) {
     // Map the -O we received to -O{0,1,2,3}.

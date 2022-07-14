@@ -975,7 +975,7 @@ amd_ntb_init_isr(struct amd_ntb_softc *ntb)
 		msi = true;
 		/*
 		 * Else set ntb->hw_info->db_count = ntb->msix_vec_count =
-		 * num_vectors, msi=false and don't release msi.
+		 * num_vectors, msi=false and dont release msi.
 		 */
 	}
 

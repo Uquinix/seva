@@ -116,7 +116,7 @@ am335x_pwmss_attach(device_t dev)
 		return (ENXIO);
 	}
 	if (!OF_hasprop(opp_table, "syscon")) {
-		device_printf(dev, "/opp-table doesn't have required syscon property\n");
+		device_printf(dev, "/opp-table doesnt have required syscon property\n");
 		return (ENXIO);
 	}
 	if (syscon_get_by_ofw_property(dev, opp_table, "syscon", &sc->syscon) != 0) {

@@ -158,7 +158,7 @@ union al_udma_cdesc {
 /** Basic Buffer structure */
 struct al_buf {
 	al_phys_addr_t addr; /**< Buffer physical address */
-	uint32_t len; /**< Buffer length in bytes */
+	uint32_t len; /**< Buffer lenght in bytes */
 };
 
 /** Block is a set of buffers that belong to same source or destination */

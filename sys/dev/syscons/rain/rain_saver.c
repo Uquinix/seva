@@ -155,7 +155,7 @@ rain_init(video_adapter_t *adp)
 	scrw = info.vi_width;
 	scrh = info.vi_height;
 
-	/* initialize the palette */
+	/* intialize the palette */
 	for (i = 1; i < MAX; i++)
 		rain_pal[BLUE(i)] = rain_pal[BLUE(i - 1)] + INCREMENT;
 

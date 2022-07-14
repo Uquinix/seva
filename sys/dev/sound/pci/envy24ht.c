@@ -103,7 +103,7 @@ struct sc_chinfo {
 	int			run;
 };
 
-/* codec interface entries */
+/* codec interface entrys */
 struct codec_entry {
 	void *(*create)(device_t dev, void *devinfo, int dir, int num);
 	void (*destroy)(void *codec);

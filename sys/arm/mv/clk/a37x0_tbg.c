@@ -191,7 +191,7 @@ a37x0_tbg_attach(device_t dev)
 	error = clkdom_finit(sc->clkdom);
 	if (error) {
 		device_printf(dev,
-		    "Cannot finalize clock domain initialization\n");
+		    "Cannot finalize clock domain intialization\n");
 		bus_release_resources(dev, a37x0_tbg_clk_spec, &sc->res);
 		return (ENXIO);
 	}

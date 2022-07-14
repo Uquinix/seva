@@ -36,7 +36,7 @@ void ExitSymbolizer() {
 }
 
 // Legacy API.
-// May be overridden by JIT/JAVA/etc,
+// May be overriden by JIT/JAVA/etc,
 // whatever produces PCs marked with kExternalPCBit.
 SANITIZER_WEAK_DEFAULT_IMPL
 bool __tsan_symbolize_external(uptr pc, char *func_buf, uptr func_siz,

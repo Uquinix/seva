@@ -33,7 +33,7 @@
 /*
  * The conninfo_t structure should be used by all application protocal
  * providers as the first arguments to indicate some basic information
- * about the connection. This structure may be augmented to accommodate
+ * about the connection. This structure may be augmented to accomodate
  * the particularities of additional protocols in the future.
  */
 typedef struct conninfo {

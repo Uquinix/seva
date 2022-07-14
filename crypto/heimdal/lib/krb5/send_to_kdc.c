@@ -43,7 +43,7 @@ struct send_to_kdc {
  * send the data in `req' on the socket `fd' (which is datagram iff udp)
  * waiting `tmout' for a reply and returning the reply in `rep'.
  * iff limit read up to this many bytes
- * returns 0 and data in `rep' if successful, otherwise -1
+ * returns 0 and data in `rep' if succesful, otherwise -1
  */
 
 static int
@@ -250,7 +250,7 @@ init_port(const char *s, int fallback)
 }
 
 /*
- * Return 0 if successful, otherwise 1
+ * Return 0 if succesful, otherwise 1
  */
 
 static int

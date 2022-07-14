@@ -192,7 +192,7 @@ out:
 }
 
 /*
- * parse the string `key_string' into `key', returning 0 iff successful.
+ * parse the string `key_string' into `key', returning 0 iff succesful.
  */
 
 /*

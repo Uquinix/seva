@@ -121,7 +121,7 @@ main(int argc, char *argv[])
 	int  ch;
 	int  retval;
 	char *inputfilename;
-	scope_t *sentinel;
+	scope_t *sentinal;
 
 	STAILQ_INIT(&patches);
 	SLIST_INIT(&search_path);
@@ -129,9 +129,9 @@ main(int argc, char *argv[])
 	TAILQ_INIT(&cs_tailq);
 	SLIST_INIT(&scope_stack);
 
-	/* Set Sentinel scope node */
-	sentinel = scope_alloc();
-	sentinel->type = SCOPE_ROOT;
+	/* Set Sentinal scope node */
+	sentinal = scope_alloc();
+	sentinal->type = SCOPE_ROOT;
 
 	includes_search_curdir = 1;
 	appname = *argv;

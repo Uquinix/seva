@@ -1022,7 +1022,7 @@ DB_SHOW_COMMAND(pgrpdump, pgrpdump)
 
 /*
  * Calculate the kinfo_proc members which contain process-wide
- * information.
+ * informations.
  * Must be called with the target process locked.
  */
 static void

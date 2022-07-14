@@ -1200,11 +1200,11 @@ get_line(char *s, int n, FILE *iop)
 			case WONT:
 				if ((c = getc(iop)) == EOF)
 					goto got_eof;
-				printf("%c%c%c", IAC, DON'T, 0377&c);
+				printf("%c%c%c", IAC, DONT, 0377&c);
 				(void) fflush(stdout);
 				continue;
 			case DO:
-			case DON'T:
+			case DONT:
 				if ((c = getc(iop)) == EOF)
 					goto got_eof;
 				printf("%c%c%c", IAC, WONT, 0377&c);

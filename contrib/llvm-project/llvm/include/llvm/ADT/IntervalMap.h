@@ -987,11 +987,11 @@ private:
   template <typename T> T &dataAs() const { return *bit_cast<T *>(&data); }
 
   const RootLeaf &rootLeaf() const {
-    assert(!branched() && "Cannot access leaf data in branched root");
+    assert(!branched() && "Cannot acces leaf data in branched root");
     return dataAs<RootLeaf>();
   }
   RootLeaf &rootLeaf() {
-    assert(!branched() && "Cannot access leaf data in branched root");
+    assert(!branched() && "Cannot acces leaf data in branched root");
     return dataAs<RootLeaf>();
   }
 

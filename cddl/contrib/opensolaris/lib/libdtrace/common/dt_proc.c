@@ -703,7 +703,7 @@ pwait_locked:
 	/*
 	 * Destroy and remove any remaining breakpoints, set dpr_done and clear
 	 * dpr_tid to indicate the control thread has exited, and notify any
-	 * waiting thread in dt_proc_destroy() that we have successfully exited.
+	 * waiting thread in dt_proc_destroy() that we have succesfully exited.
 	 */
 	(void) pthread_mutex_lock(&dpr->dpr_lock);
 

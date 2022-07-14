@@ -330,7 +330,7 @@ void coro::Shape::buildFrom(Function &F) {
         if (CoroEnds.back()->isFallthrough() && isa<CoroEndInst>(II)) {
           // Make sure that the fallthrough coro.end is the first element in the
           // CoroEnds vector.
-          // Note: I don't think this is necessary anymore.
+          // Note: I don't think this is neccessary anymore.
           if (CoroEnds.size() > 1) {
             if (CoroEnds.front()->isFallthrough())
               report_fatal_error(

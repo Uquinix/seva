@@ -55,9 +55,9 @@ typedef unsigned short u_short;
 #define EV_READ		0x02
 #define EV_WRITE	0x04
 #define EV_SIGNAL	0x08
-#define EV_PERSIST	0x10	/* Persistent event */
+#define EV_PERSIST	0x10	/* Persistant event */
 
-/* Fix so that ppl don't have to run with <sys/queue.h> */
+/* Fix so that ppl dont have to run with <sys/queue.h> */
 #ifndef TAILQ_ENTRY
 #define _EVENT_DEFINED_TQENTRY
 #define TAILQ_ENTRY(type)						\

@@ -1708,7 +1708,7 @@ fail:
 /*
  *  Read at most max_packets from the capture stream and call the callback
  *  for each of them. Returns the number of packets handled or -1 if an
- *  error occurred.
+ *  error occured.
  */
 static int
 pcap_read_linux(pcap_t *handle, int max_packets _U_, pcap_handler callback, u_char *user)
@@ -1782,7 +1782,7 @@ linux_check_direction(const pcap_t *handle, const struct sockaddr_ll *sll)
 /*
  *  Read a packet from the socket calling the handler provided by
  *  the user. Returns the number of packets received or -1 if an
- *  error occurred.
+ *  error occured.
  */
 static int
 pcap_read_packet(pcap_t *handle, pcap_handler callback, u_char *userdata)
@@ -1885,7 +1885,7 @@ pcap_read_packet(pcap_t *handle, pcap_handler callback, u_char *userdata)
 #endif /* defined(HAVE_PACKET_AUXDATA) && defined(HAVE_STRUCT_TPACKET_AUXDATA_TP_VLAN_TCI) */
 	} while (packet_len == -1 && errno == EINTR);
 
-	/* Check if an error occurred */
+	/* Check if an error occured */
 
 	if (packet_len == -1) {
 		switch (errno) {
@@ -2914,7 +2914,7 @@ pcap_setfilter_linux_common(pcap_t *handle, struct bpf_program *filter,
 		return -1;
 
 	/*
-	 * Run user level packet filter by default. Will be overridden if
+	 * Run user level packet filter by default. Will be overriden if
 	 * installing a kernel filter succeeds.
 	 */
 	handlep->filter_in_userland = 1;

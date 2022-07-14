@@ -97,7 +97,7 @@ struct bfd_auth_header_t {
     uint8_t auth_type;
     uint8_t auth_len;
     uint8_t auth_data;
-    uint8_t dummy; /* minimum 4 bytes */
+    uint8_t dummy; /* minimun 4 bytes */
 };
 
 enum auth_type {

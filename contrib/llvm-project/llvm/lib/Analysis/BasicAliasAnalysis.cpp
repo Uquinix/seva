@@ -1232,7 +1232,7 @@ AliasResult BasicAAResult::aliasGEP(
     return AliasResult::NoAlias;
   }
 
-  // We need to know both access sizes for all the following heuristics.
+  // We need to know both acess sizes for all the following heuristics.
   if (!V1Size.hasValue() || !V2Size.hasValue())
     return AliasResult::MayAlias;
 

@@ -1433,7 +1433,7 @@ struct pt_event {
 
 		/** Event: tick. */
 		struct {
-			/** The instruction address near which the tick occurred.
+			/** The instruction address near which the tick occured.
 			 *
 			 * A timestamp can sometimes be attributed directly to
 			 * an instruction (e.g. to an indirect branch that

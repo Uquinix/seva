@@ -95,7 +95,7 @@ extern char
 
 extern char
     doopt[],
-    don't[],
+    dont[],
     will[],
     wont[],
     do_dont_resp[],

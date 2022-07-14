@@ -2693,7 +2693,7 @@ static void RenderFloatingPointOptions(const ToolChain &TC, const Driver &D,
   bool SignedZeros = true;
   bool TrappingMath = false; // Implemented via -ffp-exception-behavior
   bool TrappingMathPresent = false; // Is trapping-math in args, and not
-                                    // overridden by ffp-exception-behavior?
+                                    // overriden by ffp-exception-behavior?
   bool RoundingFPMath = false;
   bool RoundingMathPresent = false; // Is rounding-math in args?
   // -ffp-model values: strict, fast, precise

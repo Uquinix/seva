@@ -201,7 +201,7 @@ typedef struct
 
 /*
 ** FICL_WANT_DEBUGGER
-** Includes a simple source level debugger
+** Inludes a simple source level debugger
 */
 #if !defined (FICL_WANT_DEBUGGER)
 #define FICL_WANT_DEBUGGER 1
@@ -244,7 +244,7 @@ typedef struct
 
 /*
 ** FICL_WANT_OOP
-** Includes object oriented programming support (in softwords)
+** Inludes object oriented programming support (in softwords)
 ** OOP support requires locals and user variables!
 */
 #if !(FICL_WANT_LOCALS) || !(FICL_WANT_USER)

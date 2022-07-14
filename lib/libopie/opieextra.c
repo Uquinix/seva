@@ -14,7 +14,7 @@ __FBSDID("$FreeBSD$");
 /*
  * opie_haopie()
  *
- * Returns: 1 user doesn't exist, -1 file error, 0 user exists.
+ * Returns: 1 user doesnt exist, -1 file error, 0 user exists.
  *
  */
 int

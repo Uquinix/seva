@@ -130,7 +130,7 @@ proto_common_setup(const char *srcaddr, const char *dstaddr, int timeout,
 		/*
 		 * ret == 0  - success
 		 * ret == -1 - dstaddr is not for this protocol
-		 * ret > 0   - right protocol, but an error occurred
+		 * ret > 0   - right protocol, but an error occured
 		 */
 		if (ret >= 0)
 			break;
@@ -141,7 +141,7 @@ proto_common_setup(const char *srcaddr, const char *dstaddr, int timeout,
 		return (-1);
 	}
 	if (ret > 0) {
-		/* An error occurred. */
+		/* An error occured. */
 		errno = ret;
 		return (-1);
 	}

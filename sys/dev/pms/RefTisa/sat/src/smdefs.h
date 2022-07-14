@@ -657,7 +657,7 @@ extern bit32 gSMDebugLevel;
 
 #else
 
-#error (Host CPU endianness undefined!!)
+#error (Host CPU endianess undefined!!)
 
 #endif
 

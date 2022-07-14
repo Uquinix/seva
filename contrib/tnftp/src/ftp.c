@@ -393,11 +393,11 @@ getreply(int expecteof)
 				case WILL:
 				case WONT:
 					c = getc(cin);
-					fprintf(cout, "%c%c%c", IAC, DON'T, c);
+					fprintf(cout, "%c%c%c", IAC, DONT, c);
 					(void)fflush(cout);
 					break;
 				case DO:
-				case DON'T:
+				case DONT:
 					c = getc(cin);
 					fprintf(cout, "%c%c%c", IAC, WONT, c);
 					(void)fflush(cout);

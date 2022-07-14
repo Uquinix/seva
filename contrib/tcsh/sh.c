@@ -1193,7 +1193,7 @@ main(int argc, char **argv)
 #endif
 	    /*
 	     * Wait till in foreground, in case someone stupidly runs csh &
-	     * don't want to try to grab away the tty.
+	     * dont want to try to grab away the tty.
 	     */
 	    if (isatty(FSHDIAG))
 		f = FSHDIAG;

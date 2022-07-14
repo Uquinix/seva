@@ -2089,7 +2089,7 @@ static void sym_fw_bind_script (hcb_p np, u32 *start, int len)
 		case 0x8:
 			/*
 			 *  JUMP / CALL
-			 *  don't't relocate if relative :-)
+			 *  dont't relocate if relative :-)
 			 */
 			if (opcode & 0x00800000)
 				relocs = 0;
@@ -2440,7 +2440,7 @@ static void sym_print_targets_flag(hcb_p np, int mask, char *msg)
  *  Save initial settings of some IO registers.
  *  Assumed to have been set by BIOS.
  *  We cannot reset the chip prior to reading the
- *  IO registers, since information will be lost.
+ *  IO registers, since informations will be lost.
  *  Since the SCRIPTS processor may be running, this
  *  is not safe on paper, but it seems to work quite
  *  well. :)
@@ -6347,7 +6347,7 @@ static	ccb_p sym_get_ccb (hcb_p np, u_char tn, u_char ln, u_char tag_order)
 	sym_insque_tail(&cp->link_ccbq, &np->busy_ccbq);
 
 	/*
-	 *  Remember all information needed to free this CCB.
+	 *  Remember all informations needed to free this CCB.
 	 */
 	cp->to_abort = 0;
 	cp->tag	   = tag;

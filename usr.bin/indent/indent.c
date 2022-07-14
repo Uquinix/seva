@@ -531,7 +531,7 @@ check_type:
 		if (opt.verbose)
 		    diag2(0, "Line broken");
 		dump_line();
-		ps.want_blank = false;	/* don't insert blank at line start */
+		ps.want_blank = false;	/* dont insert blank at line start */
 		force_nl = false;
 	    }
 	    ps.in_stmt = true;	/* turn on flag which causes an extra level of
@@ -648,7 +648,7 @@ check_type:
 		force_nl = true;/* must force newline after if */
 		ps.last_u_d = true;	/* inform lexi that a following
 					 * operator is unary */
-		ps.in_stmt = false;	/* don't use stmt continuation
+		ps.in_stmt = false;	/* dont use stmt continuation
 					 * indentation */
 
 		parse(hd_type);	/* let parser worry about if, or whatever */
@@ -794,7 +794,7 @@ check_type:
 		if (sp_sw) {	/* this is a check for an if, while, etc. with
 				 * unbalanced parens */
 		    sp_sw = false;
-		    parse(hd_type);	/* don't lose the if, or whatever */
+		    parse(hd_type);	/* dont lose the if, or whatever */
 		}
 	    }
 	    *e_code++ = ';';
@@ -809,7 +809,7 @@ check_type:
 	    break;
 
 	case lbrace:		/* got a '{' */
-	    ps.in_stmt = false;	/* don't indent the {} */
+	    ps.in_stmt = false;	/* dont indent the {} */
 	    if (!ps.block_init)
 		force_nl = true;/* force other stuff on same line as '{' onto
 				 * new line */
@@ -847,7 +847,7 @@ check_type:
 		}
 	    }
 	    if (s_code == e_code)
-		ps.ind_stmt = false;	/* don't put extra indentation on line
+		ps.ind_stmt = false;	/* dont put extra indentation on line
 					 * with '{' */
 	    if (ps.in_decl && ps.in_or_st) {	/* this is either a structure
 						 * declaration or an init */
@@ -1058,7 +1058,7 @@ check_type:
 	case period:		/* treat a period kind of like a binary
 				 * operation */
 	    *e_code++ = '.';	/* move the period into line */
-	    ps.want_blank = false;	/* don't put a blank after a period */
+	    ps.want_blank = false;	/* dont put a blank after a period */
 	    break;
 
 	case comma:

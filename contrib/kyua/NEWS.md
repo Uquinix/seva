@@ -169,7 +169,7 @@ Changes in version 0.11
   it remains in place.
 
 * Issue #72: Added caching support to the `getcwd(3)` test in configure
-  so that the result can be overridden for cross-compilation purposes.
+  so that the result can be overriden for cross-compilation purposes.
 
 * Issue #83: Changed manual page headings to include a `kyua` prefix in
   their name.  This prevents some possible confusion when displaying,

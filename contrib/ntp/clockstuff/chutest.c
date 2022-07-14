@@ -801,7 +801,7 @@ chufilter(
 	M_ADD(date_ui, tmp, offset_fudge.l_ui, offset_fudge.l_uf);
 
 	/*
-	 * Find the minimum and maximum offset
+	 * Find the minimun and maximum offset
 	 */
 	imin = imax = 0;
 	for (i = 1; i < NCHUCHARS; i++) {

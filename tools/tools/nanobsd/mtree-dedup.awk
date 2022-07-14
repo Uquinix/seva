@@ -85,7 +85,7 @@ function mtree_from_kvs(path, kvs)
 	return lv;
 }
 
-# Parse the mtree line into path + KVs. Use a sentinel value
+# Parse the mtree line into path + KVs. Use a sentinal value
 # for a bare keyword, which is extremely unlikely to be used
 # for real.
 function line2kv(kvs, str)

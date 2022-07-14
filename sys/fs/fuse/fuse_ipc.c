@@ -611,7 +611,7 @@ fuse_ticket_fetch(struct fuse_data *data)
 	ftick = fticket_alloc(data);
 
 	if (!(data->dataflags & FSESS_INITED)) {
-		/* Sleep until get answer for INIT message */
+		/* Sleep until get answer for INIT messsage */
 		FUSE_LOCK();
 		if (!(data->dataflags & FSESS_INITED) && data->ticketer > 2) {
 			err = msleep(&data->ticketer, &fuse_mtx, PCATCH | PDROP,

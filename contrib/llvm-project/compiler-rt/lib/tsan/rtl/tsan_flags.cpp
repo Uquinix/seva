@@ -20,7 +20,7 @@
 
 namespace __tsan {
 
-// Can be overridden in frontend.
+// Can be overriden in frontend.
 #ifdef TSAN_EXTERNAL_HOOKS
 extern "C" const char* __tsan_default_options();
 #else

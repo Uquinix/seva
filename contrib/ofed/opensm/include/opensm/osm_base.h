@@ -96,7 +96,7 @@ BEGIN_C_DECLS
 *	OSM_DEFAULT_M_KEY
 *
 * DESCRIPTION
-*	Management key value used by the OpenSM.
+*	Managment key value used by the OpenSM.
 *
 * SYNOPSIS
 */

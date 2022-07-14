@@ -514,7 +514,7 @@ private:
                                LoopInfo &LI) {
     auto *I = dyn_cast_or_null<Instruction>(U);
     // If not an instruction we do not know how to evaluate.
-    // Keep minimum possible cost for now so that it doesn't affect
+    // Keep minimum possible cost for now so that it doesnt affect
     // specialization.
     if (!I)
       return std::numeric_limits<unsigned>::min();

@@ -2037,7 +2037,7 @@ ATF_TC_BODY(uvm_page_physunload_none, tc)
 	/*
 	 * Note: start != avail_start and end != avail_end.
 	 *
-	 * This prevents any unload from occurring.
+	 * This prevents any unload from occuring.
 	 */
 	upm = uvm_page_physload(VALID_START_PFN_2, VALID_END_PFN_2,
 	    VALID_AVAIL_START_PFN_2 + 1, VALID_AVAIL_END_PFN_2 - 1,

@@ -948,10 +948,12 @@ IMAKE_INSTALL=	INSTALL="${INSTALL_CMD} ${INSTALLFLAGS}"
 IMAKE_MTREE=	MTREE_CMD="${MTREE_CMD} ${MTREEFLAGS}"
 .endif
 .if make(distributeworld)
-CERTCTLDESTDIR=	${DESTDIR}/${DISTDIR}/base
+CERTCTLDESTDIR=	${DESTDIR}/${DISTDIR}
+CERTCTLFLAGS+=	-d /base
 .else
 CERTCTLDESTDIR=	${DESTDIR}
 .endif
+CERTCTLFLAGS+=	-D "${CERTCTLDESTDIR}"
 
 DESTDIR_MTREEFLAGS=	-deU
 # When creating worldtmp we don't need to set the directories as owned by root
@@ -1368,12 +1370,8 @@ distributeworld installworld stageworld: _installcheck_world .PHONY
 		fi; \
 	    done); \
 	if [ -z "${CROSSBUILD_HOST}" ] ; then \
-		libs=$$(ldd -f "%o %p\n" -f "%o %p\n" $$progs 2>/dev/null | sort -u | \
+		libs=$$(ldd -f "%o %p\n" -f "%o %p\n" $$progs 2>/dev/null | sort -u | grep -Ev '\[.*]' | \
 		    while read line; do \
-			case $$line in \
-			"["*"]") \
-				continue;; \
-			esac; \
 			set -- $$line; \
 			if [ "$$2 $$3" != "not found" ]; then \
 				echo $$2; \
@@ -1399,7 +1397,7 @@ distributeworld installworld stageworld: _installcheck_world .PHONY
 	${DESTDIR_MTREE} -f ${.CURDIR}/etc/mtree/BSD.include.dist \
 	    -p ${DESTDIR}/${DISTDIR}/${dist}/usr/include >/dev/null
 .if ${TARGET_ARCH} == "amd64"
-	-mkdir  ${DESTDIR}/${DISTDIR}/usr/include/i386
+	-mkdir ${DESTDIR}/${DISTDIR}/${dist}/usr/include/i386
 .endif
 .if ${MK_DEBUG_FILES} != "no"
 	${DESTDIR_MTREE} -f ${.CURDIR}/etc/mtree/BSD.debug.dist \
@@ -1447,6 +1445,14 @@ distributeworld installworld stageworld: _installcheck_world .PHONY
 .endif # make(distributeworld)
 	${_+_}cd ${.CURDIR}; ${IMAKE} re${.TARGET:S/world$//}; \
 	    ${IMAKEENV} rm -rf ${INSTALLTMP}
+.if !make(packageworld) && ${MK_CAROOT} != "no"
+	@if which openssl>/dev/null; then \
+		PATH=${TMPPATH}:${PATH} \
+		    sh ${SRCTOP}/usr.sbin/certctl/certctl.sh ${CERTCTLFLAGS} rehash; \
+	else \
+		echo "No openssl on the host, not rehashing certificates target -- /etc/ssl may not be populated."; \
+	fi
+.endif
 .if make(distributeworld)
 .for dist in ${EXTRA_DISTRIBUTIONS}
 	find ${DESTDIR}/${DISTDIR}/${dist} -mindepth 1 -type d -empty -delete
@@ -1474,14 +1480,6 @@ distributeworld installworld stageworld: _installcheck_world .PHONY
 .endfor
 .endif
 .endif # make(distributeworld)
-.if !make(packageworld) && ${MK_CAROOT} != "no"
-	@if which openssl>/dev/null; then \
-		DESTDIR=${CERTCTLDESTDIR} PATH=${TMPPATH}:${PATH} \
-		    sh ${SRCTOP}/usr.sbin/certctl/certctl.sh ${CERTCTLFLAGS} rehash \
-	else \
-		echo "No openssl on the host, not rehashing certificates target -- /etc/ssl may not be populated."; \
-	fi
-.endif
 
 packageworld: .PHONY
 .for dist in base ${EXTRA_DISTRIBUTIONS}

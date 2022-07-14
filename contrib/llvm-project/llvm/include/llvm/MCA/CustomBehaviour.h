@@ -27,7 +27,7 @@
 namespace llvm {
 namespace mca {
 
-/// Class which can be overridden by targets to modify the
+/// Class which can be overriden by targets to modify the
 /// mca::Instruction objects before the pipeline starts.
 /// A common usage of this class is to add immediate operands to certain
 /// instructions or to remove Defs/Uses from an instruction where the
@@ -43,7 +43,7 @@ public:
 
   virtual ~InstrPostProcess() = default;
 
-  /// This method can be overridden by targets to modify the mca::Instruction
+  /// This method can be overriden by targets to modify the mca::Instruction
   /// object after it has been lowered from the MCInst.
   /// This is generally a less disruptive alternative to modifying the
   /// scheduling model.
@@ -51,7 +51,7 @@ public:
                                       const MCInst &MCI) {}
 };
 
-/// Class which can be overridden by targets to enforce instruction
+/// Class which can be overriden by targets to enforce instruction
 /// dependencies and behaviours that aren't expressed well enough
 /// within the scheduling model for mca to automatically simulate
 /// them properly.

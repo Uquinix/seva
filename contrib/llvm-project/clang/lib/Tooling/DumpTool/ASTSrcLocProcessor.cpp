@@ -173,7 +173,7 @@ CaptureMethods(std::string TypeString, const clang::CXXRecordDecl *ASTClass,
       const auto *TypeLocBase =
           BN.getNodeAs<clang::CXXRecordDecl>("typeLocBase");
       const auto *ExprBase = BN.getNodeAs<clang::CXXRecordDecl>("exprBase");
-      // The clang AST has several methods on base classes which are overridden
+      // The clang AST has several methods on base classes which are overriden
       // pseudo-virtually by derived classes.
       // We record only the pseudo-virtual methods on the base classes to
       // avoid duplication.

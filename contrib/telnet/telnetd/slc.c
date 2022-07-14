@@ -170,7 +170,7 @@ end_slc(unsigned char **bufp)
 	int len;
 
 	/*
-	 * If a change has occurred, store the new terminal control
+	 * If a change has occured, store the new terminal control
 	 * structures back to the terminal driver.
 	 */
 	if (slcchange) {
@@ -283,7 +283,7 @@ change_slc(char func, char flag, cc_t val)
 	/*
 	 * If client is setting a function to NOSUPPORT
 	 * or DEFAULT, then we can easily and directly
-	 * accommodate the request.
+	 * accomodate the request.
 	 */
 	if (hislevel == SLC_NOSUPPORT) {
 		slctab[(int)func].current.flag = flag;

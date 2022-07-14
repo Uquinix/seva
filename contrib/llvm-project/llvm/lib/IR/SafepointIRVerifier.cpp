@@ -14,7 +14,7 @@
 // safepoint semenatics.
 //
 // In its current form, this verify checks a property which is sufficient, but
-// not necessary for correctness.  There are some cases where an unrelocated
+// not neccessary for correctness.  There are some cases where an unrelocated
 // pointer can be used after the safepoint.  Consider this example:
 //
 //    a = ...

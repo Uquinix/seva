@@ -1327,7 +1327,7 @@ main_active(void *ptr)
 			    hostlist_copy, nullAuthAllowed);
 		}
 
-		// If the connection is closed by the user explicitly, don't try to connect to it again
+		// If the connection is closed by the user explicitely, don't try to connect to it again
 		// just exit the program
 		if (activeclose == 1)
 			break;

@@ -159,7 +159,7 @@
 	* gen.c: Add struct units; as a forward declaration. Pointed out
 	by Marcus Watts.
 
-	* rfc2459.asn1: Netscape extensions
+	* rfc2459.asn1: Netscape extentions
 
 	* Makefile.am: add U.S. Federal PKI Common Policy Framework
 
@@ -1439,7 +1439,7 @@
 	* der_put.c (der_put_heim_integer): try handle negative integers
 	better
 
-	* der_get.c (der_get_heim_integer): don't abort on negative integer just
+	* der_get.c (der_get_heim_integer): dont abort on negative integer just
 	return ASN1_OVERRUN for now
 
 	* parse.y: add ia5string, and printablestring
@@ -1600,7 +1600,7 @@
 	mumble OPTIONAL, make CertificateSet a heim_any_set
 
 	* extra.c, heim_asn1.h: add any_set, instead of just consuming one
-	der object, its consumes the rest of the data available
+	der object, its consumes the rest of the data avaible
 
 	* extra.c, heim_asn1.h: extern implementation of ANY, decoder
 	needs to have hack removed when generator handles tagless optional

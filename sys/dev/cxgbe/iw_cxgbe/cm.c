@@ -1147,7 +1147,7 @@ process_socket_event(struct c4iw_ep *ep)
 			}
 			process_newconn(lep, new_so);
 
-			/* solisten_dequeue() unlocks while return, so acquire
+			/* solisten_dequeue() unlocks while return, so aquire
 			 * lock again for sol_qlen and also for next iteration.
 			 */
 			SOLISTEN_LOCK(listen_so);
@@ -2737,7 +2737,7 @@ c4iw_create_listen(struct iw_cm_id *cm_id, int backlog)
 	if (c4iw_any_addr((struct sockaddr *)&lep->com.local_addr)) {
 		port_info = add_ep_to_listenlist(lep);
 		/* skip solisten() if refcnt > 1, as the listeners were
-		 * already created by 'Master lep'
+		 * alredy created by 'Master lep'
 		 */
 		if (port_info->refcnt > 1) {
 			/* As there will be only one listener socket for a TCP

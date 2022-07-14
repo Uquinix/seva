@@ -30,7 +30,7 @@
  * For all this, all divisions by constant are coded manually, even when
  * there is a joined div/mod operation: The optimiser should sort that
  * out, if possible. Most of the calculations are done with unsigned
- * types, explicitly using two's complement arithmetics where
+ * types, explicitely using two's complement arithmetics where
  * necessary. This minimises the dependecies to compiler and target,
  * while still giving reasonable to good performance.
  *

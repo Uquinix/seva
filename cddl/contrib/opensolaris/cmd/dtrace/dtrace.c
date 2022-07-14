@@ -482,7 +482,7 @@ etcsystem_prune(void)
 	}
 
 	if (start > end) {
-		fatal("end sentinel precedes start sentinel in %s; manual "
+		fatal("end sentinel preceeds start sentinel in %s; manual "
 		    "repair of %s required\n", fname, fname);
 	}
 

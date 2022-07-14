@@ -50,7 +50,7 @@
  *
  * Expected average request size:			1.5 kB (Ethernet MTU)
  * Packets per average request:				(1.5 kB / 1.75 kB) = 1
- * SA descriptors per average request (worst case):	1 * 2 = 2
+ * SA decriptors per average request (worst case):	1 * 2 = 2
  * TDMA desctiptors per average request (worst case):	1 * 8 = 8
  *
  * More TDMA descriptors should be allocated, if data fragmentation is expected

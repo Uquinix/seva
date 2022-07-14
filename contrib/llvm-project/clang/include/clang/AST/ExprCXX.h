@@ -2162,7 +2162,7 @@ class CXXNewExpr final
   // They are in order:
   //
   // * An optional "Stmt *" for the array size expression.
-  //    Present if and only if isArray().
+  //    Present if and ony if isArray().
   //
   // * An optional "Stmt *" for the init expression.
   //    Present if and only if hasInitializer().

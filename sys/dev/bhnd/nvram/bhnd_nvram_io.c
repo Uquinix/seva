@@ -51,7 +51,7 @@ __FBSDID("$FreeBSD$");
  * @param nbytes The maximum number of bytes to be read from @p io.
  *
  * @retval 0 success
- * @retval EIO if an input error occurred reading @p io.
+ * @retval EIO if an input error occured reading @p io.
  * @retval ENXIO if the request for @p offset or @p nbytes exceeds the size
  * of @p io.
  * @retval EFAULT if @p io requires I/O request alignment and @p offset is
@@ -84,7 +84,7 @@ bhnd_nvram_io_read(struct bhnd_nvram_io *io, size_t offset, void *buffer,
  * provided.
  * 
  * @retval 0 success
- * @retval EIO if an input error occurred reading @p io.
+ * @retval EIO if an input error occured reading @p io.
  * @retval ENODEV if @p io does not support direct access to its backing read 
  * buffer.
  * @retval ENXIO if the request exceeds the size of @p io.

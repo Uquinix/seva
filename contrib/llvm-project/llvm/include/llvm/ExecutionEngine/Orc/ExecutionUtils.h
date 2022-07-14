@@ -170,7 +170,7 @@ private:
 /// called.
 class LocalCXXRuntimeOverridesBase {
 public:
-  /// Run any destructors recorded by the overridden __cxa_atexit function
+  /// Run any destructors recorded by the overriden __cxa_atexit function
   /// (CXAAtExitOverride).
   void runDestructors();
 

@@ -4062,7 +4062,7 @@ bool getPredefinedStyle(StringRef Name, FormatStyle::LanguageKind Language,
 /// document, are retained in \p Style.
 ///
 /// If AllowUnknownOptions is true, no errors are emitted if unknown
-/// format options are occurred.
+/// format options are occured.
 ///
 /// If set all diagnostics are emitted through the DiagHandler.
 std::error_code

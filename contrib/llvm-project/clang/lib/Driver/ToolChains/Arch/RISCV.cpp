@@ -174,7 +174,7 @@ StringRef riscv::getRISCVABI(const ArgList &Args, const llvm::Triple &Triple) {
   // Clang does not have `--with-arch=` or `--with-abi=`, so we use `-march=`
   // and `-mabi=` respectively instead.
   //
-  // In order to make choosing logic more clear, Clang uses the following logic,
+  // In order to make chosing logic more clear, Clang uses the following logic,
   // in order:
   // 1. Explicit choices using `-mabi=`
   // 2. A default based on the architecture as determined by getRISCVArch

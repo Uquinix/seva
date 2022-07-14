@@ -142,7 +142,7 @@ IndexedReference::IndexedReference(Instruction &StoreOrLoadInst,
 
   IsValid = delinearize(LI);
   if (IsValid)
-    LLVM_DEBUG(dbgs().indent(2) << "Successfully delinearized: " << *this
+    LLVM_DEBUG(dbgs().indent(2) << "Succesfully delinearized: " << *this
                                 << "\n");
 }
 

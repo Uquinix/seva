@@ -116,7 +116,7 @@
 
 #else
 
-#error (Host CPU endianness undefined!!)
+#error (Host CPU endianess undefined!!)
 
 #endif
 
@@ -1498,7 +1498,7 @@
 /************************************************************
 * ossaHwCB Encryption status of agsaHWEventEncrypt_t
 ************************************************************/
-/* KEK and DEK management status from PM */
+/* KEK and DEK managment status from PM */
 #define OSSA_INVALID_ENCRYPTION_SECURITY_MODE           0x1003
 #define OSSA_KEK_MGMT_SUBOP_NOT_SUPPORTED_              0x2000     /*not in PM 101222*/
 #define OSSA_DEK_MGMT_SUBOP_NOT_SUPPORTED               0x2000
@@ -2093,9 +2093,9 @@ typedef struct agsaControllerStatus_s
 
 } agsaControllerStatus_t;
 
-/** \brief describe a GPIO Event Setup Information in the SAS/SATA hardware
+/** \brief describe a GPIO Event Setup Infomation in the SAS/SATA hardware
  *
- * Describe a configuration for a GPIO Event Setup Information in the SAS/SATA hardware
+ * Describe a configuration for a GPIO Event Setup Infomation in the SAS/SATA hardware
  *
  */
 typedef struct agsaGpioEventSetupInfo_s
@@ -2106,9 +2106,9 @@ typedef struct agsaGpioEventSetupInfo_s
   bit32         gpioEventFallingEdge;
 } agsaGpioEventSetupInfo_t;
 
-/** \brief describe a GPIO Pin Setup Information in the SAS/SATA hardware
+/** \brief describe a GPIO Pin Setup Infomation in the SAS/SATA hardware
  *
- * Describe a configuration for a GPIO Pin Setup Information in the SAS/SATA hardware
+ * Describe a configuration for a GPIO Pin Setup Infomation in the SAS/SATA hardware
  *
  */
 typedef struct agsaGpioPinSetupInfo_t
@@ -2121,7 +2121,7 @@ typedef struct agsaGpioPinSetupInfo_t
 
 /** \brief describe a serial GPIO operation in the SAS/SATA hardware
  *
- * Describe a configuration for a GPIO write Setup Information in the SAS/SATA hardware
+ * Describe a configuration for a GPIO write Setup Infomation in the SAS/SATA hardware
  *
  */
 typedef struct agsaGpioWriteSetupInfo_s
@@ -2130,9 +2130,9 @@ typedef struct agsaGpioWriteSetupInfo_s
   bit32         gpioWriteVal;
 }agsaGpioWriteSetupInfo_t;
 
-/** \brief describe a GPIO Read Information in the SAS/SATA hardware
+/** \brief describe a GPIO Read Infomation in the SAS/SATA hardware
  *
- * Describe a configuration for a GPIO read Information in the SAS/SATA hardware
+ * Describe a configuration for a GPIO read Infomation in the SAS/SATA hardware
  *
  */
 typedef struct agsaGpioReadInfo_s

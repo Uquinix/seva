@@ -34,7 +34,7 @@ struct cpuinfo {
 	processorid_t cpu_id;		/* CPU identifier */
 	psetid_t cpu_pset;		/* processor set identifier */
 	chipid_t cpu_chip;		/* chip identifier */
-	lgrp_id_t cpu_lgrp;		/* locality group identifier */
+	lgrp_id_t cpu_lgrp;		/* locality group identifer */
 	processor_info_t cpu_info;	/* CPU information */
 };
 

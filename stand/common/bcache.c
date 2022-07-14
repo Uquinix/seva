@@ -145,7 +145,7 @@ bcache_allocate(void)
     bcache_unit_nblks = bc->bcache_nblks;
     bc->bcache_data = malloc(bc->bcache_nblks * bcache_blksize);
     if (bc->bcache_data == NULL) {
-	/* don't error out yet. fall back to 32 blocks and try again */
+	/* dont error out yet. fall back to 32 blocks and try again */
 	bc->bcache_nblks = 32;
 	bc->bcache_data = malloc(bc->bcache_nblks * bcache_blksize +
 	sizeof(uint32_t));

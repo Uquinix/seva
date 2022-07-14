@@ -225,7 +225,7 @@ lz4_decompress(void *s_start, void *d_start, size_t s_len, size_t d_len,
 
 /*
  * Little Endian or Big Endian?
- * Note: overwrite the below #define if you know your architecture endianness.
+ * Note: overwrite the below #define if you know your architecture endianess.
  */
 #if BYTE_ORDER == BIG_ENDIAN
 #define	LZ4_BIG_ENDIAN 1

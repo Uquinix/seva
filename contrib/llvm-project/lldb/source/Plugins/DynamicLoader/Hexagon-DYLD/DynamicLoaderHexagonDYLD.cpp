@@ -507,7 +507,7 @@ addr_t DynamicLoaderHexagonDYLD::ComputeLoadOffset() {
 //
 // an alternative is to look at the PC if we can be sure that we have connected
 // when the process is at the entry point.
-// I don't think that is reliable for us.
+// I dont think that is reliable for us.
 addr_t DynamicLoaderHexagonDYLD::GetEntryPoint() {
   if (m_entry_point != LLDB_INVALID_ADDRESS)
     return m_entry_point;

@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 //
-//  This file defines the analyzer options available with -analyzer-config.
+//  This file defines the analyzer options avaible with -analyzer-config.
 //
 //===----------------------------------------------------------------------===//
 
@@ -30,7 +30,7 @@ define both 'ANALYZER_OPTION' and 'ANALYZER_OPTION_DEPENDS_ON_USER_MODE' macros!
 #endif
 
 #ifndef ANALYZER_OPTION
-/// Create a new analyzer option, but don't generate a method for it in
+/// Create a new analyzer option, but dont generate a method for it in
 /// AnalyzerOptions.
 ///
 ///   TYPE - The type of the option object that will be stored in
@@ -46,7 +46,7 @@ define both 'ANALYZER_OPTION' and 'ANALYZER_OPTION_DEPENDS_ON_USER_MODE' macros!
 #endif
 
 #ifndef ANALYZER_OPTION_DEPENDS_ON_USER_MODE
-/// Create a new analyzer option, but don't generate a method for it in
+/// Create a new analyzer option, but dont generate a method for it in
 /// AnalyzerOptions. It's value depends on the option "user-mode".
 ///
 ///   TYPE - The type of the option object that will be stored in

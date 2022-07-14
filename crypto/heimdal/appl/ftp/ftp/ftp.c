@@ -361,8 +361,8 @@ getreply (int expecteof)
 	case IAC:
 	    c = getc (cin);
 	    if (c == WILL || c == WONT)
-		fprintf (cout, "%c%c%c", IAC, DON'T, getc (cin));
-	    if (c == DO || c == DON'T)
+		fprintf (cout, "%c%c%c", IAC, DONT, getc (cin));
+	    if (c == DO || c == DONT)
 		fprintf (cout, "%c%c%c", IAC, WONT, getc (cin));
 	    continue;
 	case '\n':
@@ -463,11 +463,11 @@ getreply (int expecteof)
 		case WILL:
 		case WONT:
 		    c = getc (cin);
-		    fprintf (cout, "%c%c%c", IAC, DON'T, c);
+		    fprintf (cout, "%c%c%c", IAC, DONT, c);
 		    fflush (cout);
 		    break;
 		case DO:
-		case DON'T:
+		case DONT:
 		    c = getc (cin);
 		    fprintf (cout, "%c%c%c", IAC, WONT, c);
 		    fflush (cout);

@@ -653,7 +653,7 @@ xnb_txpkt2rsp_emptypkt(char *buffer, size_t buflen)
 	netif_tx_sring_t txs_backup = *xnb_unit_pvt.txs;
 	pkt.list_len = 0;
 
-	/* must call xnb_ring2pkt just to initialize pkt */
+	/* must call xnb_ring2pkt just to intialize pkt */
 	xnb_ring2pkt(&pkt, &xnb_unit_pvt.txb, xnb_unit_pvt.txb.req_cons);
 	xnb_txpkt2rsp(&pkt, &xnb_unit_pvt.txb, 0);
 	XNB_ASSERT(
@@ -986,7 +986,7 @@ xnb_pkt2mbufc_empty(char *buffer, size_t buflen)
 	struct mbuf *pMbuf;
 	pkt.list_len = 0;
 
-	/* must call xnb_ring2pkt just to initialize pkt */
+	/* must call xnb_ring2pkt just to intialize pkt */
 	xnb_ring2pkt(&pkt, &xnb_unit_pvt.txb, xnb_unit_pvt.txb.req_cons);
 	pkt.size = 0;
 	pMbuf = xnb_pkt2mbufc(&pkt, xnb_unit_pvt.ifp);
@@ -1099,7 +1099,7 @@ xnb_txpkt2gnttab_empty(char *buffer, size_t buflen)
 	struct mbuf *pMbuf;
 	pkt.list_len = 0;
 
-	/* must call xnb_ring2pkt just to initialize pkt */
+	/* must call xnb_ring2pkt just to intialize pkt */
 	xnb_ring2pkt(&pkt, &xnb_unit_pvt.txb, xnb_unit_pvt.txb.req_cons);
 	pkt.size = 0;
 	pMbuf = xnb_pkt2mbufc(&pkt, xnb_unit_pvt.ifp);

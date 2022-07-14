@@ -524,7 +524,7 @@ void Minimizer::printDirectiveBody(const char *&First, const char *const End) {
 
 LLVM_NODISCARD static const char *lexRawIdentifier(const char *First,
                                                    const char *const End) {
-  assert(isAsciiIdentifierContinue(*First) && "invalid identifier");
+  assert(isAsciiIdentifierContinue(*First) && "invalid identifer");
   const char *Last = First + 1;
   while (Last != End && isAsciiIdentifierContinue(*Last))
     ++Last;

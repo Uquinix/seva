@@ -46,7 +46,7 @@
 047 "L'option de %s doit être en groupe de deux caractères"
 053 "Le tampon par défaut est vide"
 054 "Le tampon %s est vide"
-055 "Les fichiers don't le nom contient des caractères de saut de ligne sont irrécupérables"
+055 "Les fichiers dont le nom contient des caractères de saut de ligne sont irrécupérables"
 056 "Impossible de récupérer les modifications si la session échoue"
 057 "Copie en cours du fichier pour récupération..."
 058 "La préservation a échoué : %s"

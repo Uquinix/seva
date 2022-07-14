@@ -823,7 +823,7 @@ clknode_set_parent_by_name(struct clknode *clknode, const char *name)
 		return (0);
 
 	/*
-	 * If this node doesn't have mux, then passthrough request to parent.
+	 * If this node doesnt have mux, then passthrough request to parent.
 	 * This feature is used in clock domain initialization and allows us to
 	 * set clock source and target frequency on the tail node of the clock
 	 * chain.

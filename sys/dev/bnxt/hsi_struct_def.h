@@ -23625,7 +23625,7 @@ struct hwrm_nvm_write_input {
 	 * allocated item length, which may be greater than the requested item
 	 * length. The purpose for allocating more than the required number of
 	 * bytes for an item's data is to pre-allocate extra storage (padding)
-	 * to accommodate the potential future growth of an item (e.g. upgraded
+	 * to accomodate the potential future growth of an item (e.g. upgraded
 	 * firmware with a size increase, log growth, expanded configuration
 	 * data).
 	 */

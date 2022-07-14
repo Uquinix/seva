@@ -136,7 +136,7 @@ getauditflagschar(char *auditstr, au_mask_t *masks, int verbose)
 	while ((getauclassent_r(&c)) != NULL) {
 		sel = 0;
 
-		/* Don't do anything for class = no. */
+		/* Dont do anything for class = no. */
 		if (c.ac_class == 0)
 			continue;
 

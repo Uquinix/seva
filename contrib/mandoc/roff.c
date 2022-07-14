@@ -1524,7 +1524,7 @@ roff_expand(struct roff *r, struct buf *buf, int ln, int pos, char newesc)
 				res = roff_getstrn(r, stnam, naml, &deftype);
 
 				/*
-				 * If not overridden, let \*(.T
+				 * If not overriden, let \*(.T
 				 * through to the formatters.
 				 */
 

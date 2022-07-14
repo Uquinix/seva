@@ -595,7 +595,7 @@ hid_report_size(const void *buf, hid_size_t len, enum hid_kind k, uint8_t id)
 	}
 	hid_end_parse(d);
 
-	/* safety check - can happen in case of corrupt descriptors */
+	/* safety check - can happen in case of currupt descriptors */
 	if (lpos > hpos)
 		temp = 0;
 	else
@@ -640,7 +640,7 @@ hid_report_size_max(const void *buf, hid_size_t len, enum hid_kind k,
 	}
 	hid_end_parse(d);
 
-	/* safety check - can happen in case of corrupt descriptors */
+	/* safety check - can happen in case of currupt descriptors */
 	if (lpos > hpos)
 		temp = 0;
 	else

@@ -824,7 +824,7 @@
 
 	* src/ecs.c, src/tblcmp.c: Fix two more casts
 
-2016-03-14  Bastian Kï¿½cher <git@kchr.de>
+2016-03-14  Bastian Köcher <git@kchr.de>
 
 	* src/gen.c: Fixes yyl compare with unsigned warning
 
@@ -5101,7 +5101,7 @@
 
 2002-09-27  Will Estes <wlestes@users.sourceforge.net>
 
-	* configure.in: since we don't run the template test, we don't need to
+	* configure.in: since we dont run the template test, we dont need to
 	generate its Makefile either
 
 2002-09-27  Will Estes <wlestes@users.sourceforge.net>
@@ -6943,7 +6943,7 @@
 
 2002-03-13  Will Estes <wlestes@users.sourceforge.net>
 
-	* po/LINGUAS: french and korean don't crash now
+	* po/LINGUAS: french and korean dont crash now
 
 2002-03-12  Will Estes <wlestes@users.sourceforge.net>
 
@@ -7662,7 +7662,7 @@
 
 2001-06-17  Will Estes <wlestes@users.sourceforge.net>
 
-	* tests/.cvsignore: we don't want the Makefile either
+	* tests/.cvsignore: we dont want the Makefile either
 
 2001-06-17  Will Estes <wlestes@users.sourceforge.net>
 
@@ -7874,7 +7874,7 @@
 
 2001-05-01  Will Estes <wlestes@users.sourceforge.net>
 
-	* configure.in: don't check for initscan.c; check for scan.l instead
+	* configure.in: dont check for initscan.c; check for scan.l instead
 
 2001-05-01  Will Estes <wlestes@users.sourceforge.net>
 

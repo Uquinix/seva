@@ -645,7 +645,7 @@ vatpic_read(struct vatpic *vatpic, struct atpic *atpic, bool in, int port,
 		}
 	} else {
 		if (port & ICU_IMR_OFFSET) {
-			/* read interrupt mask register */
+			/* read interrrupt mask register */
 			*eax = atpic->mask;
 		} else {
 			if (atpic->rd_cmd_reg == OCW3_RIS) {

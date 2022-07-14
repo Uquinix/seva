@@ -960,7 +960,7 @@ print_match(ipmon_action_t *a)
 	}
 
 	if ((a->ac_mflag & IPMAC_WITH) != 0) {
-		printf("%switch ", coma);
+		printf("%swith ", coma);
 		coma = ", ";
 	}
 }

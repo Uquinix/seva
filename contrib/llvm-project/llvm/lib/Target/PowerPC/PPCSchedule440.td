@@ -590,7 +590,7 @@ def PPC440Itineraries : ProcessorItineraries<
 def PPC440Model : SchedMachineModel {
   let IssueWidth = 2;  // 2 instructions are dispatched per cycle.
   let LoadLatency = 5; // Optimistic load latency assuming bypass.
-                       // This is overridden by OperandCycles if the
+                       // This is overriden by OperandCycles if the
                        // Itineraries are queried instead.
 
   let CompleteModel = 0;

@@ -153,6 +153,6 @@ timelocal.pl:
 ntp.pl:
 	perl support for ntp v2 mode 6 message handling
 	WARNING: This code is beta level - it triggers a memory leak;
-		 as for now it is not quite clear, whether this is caused by a
+		 as for now it is not quite clear, wether this is caused by a
 		 bug in perl or by bad usage of perl within this script.
 

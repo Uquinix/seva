@@ -680,7 +680,7 @@ protected:
   }
 
   /// Return the register cost table index. This implementation is sufficient
-  /// for most architectures and can be overridden by targets in case there are
+  /// for most architectures and can be overriden by targets in case there are
   /// multiple cost values associated with each register.
   virtual unsigned getRegisterCostTableIndex(const MachineFunction &MF) const {
     return 0;
@@ -996,7 +996,7 @@ public:
     return false;
   }
 
-  /// This method must be overridden to eliminate abstract frame indices from
+  /// This method must be overriden to eliminate abstract frame indices from
   /// instructions which may use them. The instruction referenced by the
   /// iterator contains an MO_FrameIndex operand which must be eliminated by
   /// this method. This method may modify or replace the specified instruction,

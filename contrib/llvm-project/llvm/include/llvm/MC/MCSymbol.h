@@ -62,7 +62,7 @@ protected:
     SymContentsTargetCommon, // Index stores the section index
   };
 
-  // Special sentinel value for the absolute pseudo fragment.
+  // Special sentinal value for the absolute pseudo fragment.
   static MCFragment *AbsolutePseudoFragment;
 
   /// If a symbol has a Fragment, the section is implied, so we only need

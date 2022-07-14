@@ -79,7 +79,7 @@ _flockfile(FILE *fp)
 }
 
 /*
- * This can be overridden by the threads library if it is linked in.
+ * This can be overriden by the threads library if it is linked in.
  */
 void
 _flockfile_debug_stub(FILE *fp, char *fname, int lineno)

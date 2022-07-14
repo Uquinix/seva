@@ -1086,7 +1086,7 @@ private:
     if (!Rewriter.wasValidSCEV())
       return false;
 
-    // TODO: isKnownPredicate doesn't work well when one SCEV is loop carried (by
+    // TODO: isKnownPredicate doesnt work well when one SCEV is loop carried (by
     //       L0) and the other is not. We could check if it is monotone and test
     //       the beginning and end value instead.
 

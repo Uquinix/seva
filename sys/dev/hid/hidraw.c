@@ -513,7 +513,7 @@ hidraw_write(struct cdev *dev, struct uio *uio, int flag)
 		size = uio->uio_resid;
 		if (size < 2)
 			return (EINVAL);
-		/* Strip leading 0 if the device doesn't use numbered reports */
+		/* Strip leading 0 if the device doesnt use numbered reports */
 		error = uiomove(&id, 1, uio);
 		if (error)
 			return (error);

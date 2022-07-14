@@ -524,7 +524,7 @@ enum _ecore_status_t ecore_vf_hw_prepare(struct ecore_hwfn *p_hwfn)
 	u32 reg;
 	enum _ecore_status_t rc;
 
-	/* Set number of hwfns - might be overridden once leading hwfn learns
+	/* Set number of hwfns - might be overriden once leading hwfn learns
 	 * actual configuration from PF.
 	 */
 	if (IS_LEAD_HWFN(p_hwfn))

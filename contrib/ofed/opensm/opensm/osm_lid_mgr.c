@@ -513,7 +513,7 @@ static int lid_mgr_init_sweep(IN osm_lid_mgr_t * p_mgr)
 						/* This port will use its local lid, and consume the entire required lid range.
 						   Thus we can skip that range. */
 						/* If the disc_max_lid is greater then lid, we can skip right to it,
-						   since we've done all necessary checks on the lids in between. */
+						   since we've done all neccessary checks on the lids in between. */
 						if (disc_max_lid > lid)
 							lid = disc_max_lid;
 					}

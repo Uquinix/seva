@@ -191,7 +191,7 @@ More usefully it will look at and ~/.TheseCells in your home directory
 and for each line which is a cell get afs token for these cells.
 
 The TheseCells file defines the the cells to which applications on the
-local client machine should try to acquire tokens for. It must reside in
+local client machine should try to aquire tokens for. It must reside in
 the directories searched by @manpage{kafs,3} on every AFS client machine.
 
 The file is in ASCII format and contains one character string, the cell

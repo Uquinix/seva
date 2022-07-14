@@ -482,7 +482,7 @@ http_match(const char *str, const char *hdr)
  * from the previous http_next_header() invocation, or, the first
  * time, from a fetch_getln() performed by our caller.
  *
- * This stops when we encounter an empty line (we don't read beyond the header
+ * This stops when we encounter an empty line (we dont read beyond the header
  * area).
  *
  * Note that the "headerbuf" is just a place to return the result. Its

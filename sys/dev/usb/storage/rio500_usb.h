@@ -4,7 +4,7 @@
     Copyright (C) 2000  Cesar Miquel  (miquel@df.uba.ar)
 
     Redistribution and use in source and binary forms, with or without
-    modification, are permitted under any licence of your choice which
+    modification, are permitted under any licence of your choise which
     meets the open source licence definition
     http://www.opensource.org/opd.html such as the GNU licence or the
     BSD licence.

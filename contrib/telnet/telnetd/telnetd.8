@@ -213,9 +213,9 @@ It will still support kludge linemode, but will only
 go into kludge linemode if the remote client requests
 it.
 (This is done by the client sending
-.Dv DON'T SUPPRESS-GO-AHEAD
+.Dv DONT SUPPRESS-GO-AHEAD
 and
-.Dv DON'T ECHO . )
+.Dv DONT ECHO . )
 The
 .Fl k
 option is most useful when there are remote clients
@@ -439,7 +439,7 @@ client, which will improperly respond with
 If a
 .Dv WILL ECHO
 is received, a
-.Dv DON'T ECHO
+.Dv DONT ECHO
 will be sent in response.
 .It "DO TERMINAL-TYPE"
 Indicate a desire to be able to request the

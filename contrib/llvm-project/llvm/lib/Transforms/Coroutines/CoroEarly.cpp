@@ -181,7 +181,7 @@ bool Lowerer::lowerEarlyIntrinsics(Function &F) {
             assert(F.hasFnAttribute(CORO_PRESPLIT_ATTR) &&
                    F.getFnAttribute(CORO_PRESPLIT_ATTR).getValueAsString() ==
                        UNPREPARED_FOR_SPLIT &&
-                   "The frontend uses Switch-Resumed ABI should emit "
+                   "The frontend uses Swtich-Resumed ABI should emit "
                    "\"coroutine.presplit\" attribute with value \"0\" for the "
                    "coroutine.");
             setCannotDuplicate(CII);

@@ -108,7 +108,7 @@ struct ecore_vf_queue {
 
 enum vf_state {
 	VF_FREE		= 0,	/* VF ready to be acquired holds no resc */
-	VF_ACQUIRED	= 1,	/* VF, aquired, but not initialized */
+	VF_ACQUIRED	= 1,	/* VF, aquired, but not initalized */
 	VF_ENABLED	= 2,	/* VF, Enabled */
 	VF_RESET	= 3,	/* VF, FLR'd, pending cleanup */
 	VF_STOPPED      = 4     /* VF, Stopped */

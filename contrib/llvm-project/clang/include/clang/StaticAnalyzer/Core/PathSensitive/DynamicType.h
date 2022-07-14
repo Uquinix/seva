@@ -70,13 +70,13 @@ ProgramStateRef setDynamicTypeAndCastInfo(ProgramStateRef State,
                                           QualType CastToTy,
                                           bool IsCastSucceeds);
 
-/// Removes the dead type information from \p State.
+/// Removes the dead type informations from \p State.
 ProgramStateRef removeDeadTypes(ProgramStateRef State, SymbolReaper &SR);
 
-/// Removes the dead cast information from \p State.
+/// Removes the dead cast informations from \p State.
 ProgramStateRef removeDeadCasts(ProgramStateRef State, SymbolReaper &SR);
 
-/// Removes the dead Class object type information from \p State.
+/// Removes the dead Class object type informations from \p State.
 ProgramStateRef removeDeadClassObjectTypes(ProgramStateRef State,
                                            SymbolReaper &SR);
 

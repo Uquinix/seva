@@ -204,7 +204,7 @@ receive_loop (krb5_context context,
     } while((uint32_t)vers <= server_context->log_context.version);
 
     /*
-     * Read up rest of the entries into the memory...
+     * Read up rest of the entires into the memory...
      */
     left  = krb5_storage_seek (sp, -16, SEEK_CUR);
     right = krb5_storage_seek (sp, 0, SEEK_END);
@@ -226,7 +226,7 @@ receive_loop (krb5_context context,
     free (buf);
 
     /*
-     * Go back to the startpoint and start to commit the entries to
+     * Go back to the startpoint and start to commit the entires to
      * the database.
      */
     krb5_storage_seek (sp, left, SEEK_SET);

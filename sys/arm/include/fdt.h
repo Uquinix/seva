@@ -36,7 +36,7 @@
 #include <machine/bus.h>
 
 /*
- * Bus space tag. XXX endianness info needs to be derived from the blob.
+ * Bus space tag. XXX endianess info needs to be derived from the blob.
  */
 extern bus_space_tag_t fdtbus_bs_tag;
 

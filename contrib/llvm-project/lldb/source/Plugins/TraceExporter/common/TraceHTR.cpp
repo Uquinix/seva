@@ -149,7 +149,7 @@ TraceHTR::TraceHTR(Thread &thread, TraceCursor &cursor)
   bool more_data_in_trace = true;
   while (more_data_in_trace) {
     if (cursor.IsError()) {
-      // Append a load address of 0 for all instructions that an error occurred
+      // Append a load address of 0 for all instructions that an error occured
       // while decoding.
       // TODO: Make distinction between errors by storing the error messages.
       // Currently, all errors are treated the same.

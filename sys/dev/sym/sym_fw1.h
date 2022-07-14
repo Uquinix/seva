@@ -66,7 +66,7 @@
  *  them (for forward jumps). Therefore we declare a struct 
  *  here. If you make changes inside the script,
  *
- *  DON'T FORGET TO CHANGE THE LENGTHS HERE!
+ *  DONT FORGET TO CHANGE THE LENGTHS HERE!
  */
 
 /*

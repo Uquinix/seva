@@ -21,7 +21,7 @@
  * INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
  * NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
  * DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
- * THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * THEORY OF LIABILITY, WETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
@@ -439,7 +439,7 @@ perrx(const char *fmt, ...)
 int
 main(int argc, char *argv[])
 {
-/* Browse through  ATJOB_DIR, checking all the jobfiles whether they should
+/* Browse through  ATJOB_DIR, checking all the jobfiles wether they should
  * be executed and or deleted. The queue is coded into the first byte of
  * the job filename, the date (in minutes since Eon) as a hex number in the
  * following eight bytes, followed by a dot and a serial number.  A file

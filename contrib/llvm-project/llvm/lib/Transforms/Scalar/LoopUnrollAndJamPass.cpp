@@ -175,7 +175,7 @@ static bool computeUnrollAndJamCount(
       /*MaxOrZero*/ false, OuterTripMultiple, OuterLoopSize, UP, PP,
       UseUpperBound);
   if (ExplicitUnroll || UseUpperBound) {
-    // If the user explicitly set the loop as unrolled, don't UnJ it. Leave it
+    // If the user explicitly set the loop as unrolled, dont UnJ it. Leave it
     // for the unroller instead.
     LLVM_DEBUG(dbgs() << "Won't unroll-and-jam; explicit count set by "
                          "computeUnrollCount\n");

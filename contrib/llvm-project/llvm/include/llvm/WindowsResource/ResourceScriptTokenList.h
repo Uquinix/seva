@@ -20,7 +20,7 @@ TOKEN(Identifier)   // Script identifier (resource name or type).
 
 // Short tokens. They usually consist of exactly one character.
 // The definitions are of the form SHORT_TOKEN(TokenName, TokenChar).
-// TokenChar is the one-character token representation occurring in the correct
+// TokenChar is the one-character token representation occuring in the correct
 // .rc scripts.
 SHORT_TOKEN(BlockBegin, '{')   // Start of the script block; can also be BEGIN.
 SHORT_TOKEN(BlockEnd, '}')     // End of the block; can also be END.

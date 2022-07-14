@@ -281,7 +281,7 @@ GLOBAL agsaDeviceDesc_t *siPortSATADeviceAdd(
     pDevice->deviceType = (bit8)((dTypeSRate & 0x30) >> SHIFT4);
     SA_DBG3(("siPortSATADeviceAdd: DeviceType 0x%x Port Context %p\n", pDevice->deviceType, pPort));
 
-    /* setup device common information */
+    /* setup device common infomation */
     pDevice->devInfo.sataDeviceInfo.commonDevInfo.smpTimeout = (bit16)smpReqTimeout;
     pDevice->devInfo.sataDeviceInfo.commonDevInfo.it_NexusTimeout = (bit16)itNexusTimeout;
     pDevice->devInfo.sataDeviceInfo.commonDevInfo.firstBurstSize = (bit16)firstBurstSize;

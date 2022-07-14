@@ -628,7 +628,7 @@ xhci_init(struct xhci_softc *sc, device_t self, uint8_t dma32)
 		return (ENOMEM);
 	}
 
-	/* set up command queue mutex and condition variable */
+	/* set up command queue mutex and condition varible */
 	cv_init(&sc->sc_cmd_cv, "CMDQ");
 	sx_init(&sc->sc_cmd_sx, "CMDQ lock");
 

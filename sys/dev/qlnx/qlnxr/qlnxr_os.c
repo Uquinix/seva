@@ -1021,7 +1021,7 @@ static int qlnxr_addr_event (struct qlnxr_dev *dev,
 	union ib_gid vgid;
 	u16 vlan_id = 0xffff;
 
-	QL_DPRINT12(dev->ha, "Link event occurred\n");
+	QL_DPRINT12(dev->ha, "Link event occured\n");
 	is_vlan = is_vlan_dev(dev->ha->ifp);
 	vlan_id = (is_vlan) ? vlan_dev_vlan_id(dev->ha->ifp) : 0;
 

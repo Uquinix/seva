@@ -400,7 +400,7 @@ rs_destroy(epoch_context_t ctx)
 	rs->rs_flags &= ~RS_FUNERAL_SCHD;
 	/*
 	 * In theory its possible (but unlikely)
-	 * that while the delete was occurring
+	 * that while the delete was occuring
 	 * and we were applying the DEAD flag
 	 * someone slipped in and found the
 	 * interface in a lookup. While we

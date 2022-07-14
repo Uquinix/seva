@@ -843,7 +843,7 @@ public:
   virtual size_t ConnectToWaitingProcesses(lldb_private::Debugger &debugger,
                                            lldb_private::Status &error);
 
-  /// Gather all of crash information into a structured data dictionary.
+  /// Gather all of crash informations into a structured data dictionary.
   ///
   /// If the platform have a crashed process with crash information entries,
   /// gather all the entries into an structured data dictionary or return a
@@ -857,7 +857,7 @@ public:
   ///     A structured data dictionary containing at each entry, the crash
   ///     information type as the entry key and the matching  an array as the
   ///     entry value. \b nullptr if not implemented or  if the process has no
-  ///     crash information entry. \b error if an error occurred.
+  ///     crash information entry. \b error if an error occured.
   virtual llvm::Expected<StructuredData::DictionarySP>
   FetchExtendedCrashInformation(lldb_private::Process &process) {
     return nullptr;

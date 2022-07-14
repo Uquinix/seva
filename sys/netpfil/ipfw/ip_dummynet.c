@@ -860,7 +860,7 @@ schk_match(void *obj, uintptr_t key, int flags, void *_arg)
 }
 
 /*
- * Create the entry and initialize with the sched hash if needed.
+ * Create the entry and intialize with the sched hash if needed.
  * Leave s->fp unset so we can tell whether a dn_ht_find() returns
  * a new object or a previously existing one.
  */
@@ -2562,7 +2562,7 @@ ip_dn_vnet_init(void)
 {
 	if (V_dn_cfg.init_done)
 		return;
-	V_dn_cfg.init_done = 1;
+
 	/* Set defaults here. MSVC does not accept initializers,
 	 * and this is also useful for vimages
 	 */
@@ -2601,6 +2601,8 @@ ip_dn_vnet_init(void)
 
 	/* Initialize curr_time adjustment mechanics. */
 	getmicrouptime(&V_dn_cfg.prev_t);
+
+	V_dn_cfg.init_done = 1;
 }
 
 static void

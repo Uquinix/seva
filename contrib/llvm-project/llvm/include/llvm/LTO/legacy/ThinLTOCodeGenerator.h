@@ -106,7 +106,7 @@ public:
    * \defgroup Cache controlling options
    *
    * These entry points control the ThinLTO cache. The cache is intended to
-   * support incremental build, and thus needs to be persistent across build.
+   * support incremental build, and thus needs to be persistent accross build.
    * The client enabled the cache by supplying a path to an existing directory.
    * The code generator will use this to store objects files that may be reused
    * during a subsequent build.

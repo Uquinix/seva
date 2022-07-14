@@ -1207,7 +1207,7 @@ _mtx_destroy(volatile uintptr_t *c)
 }
 
 /*
- * Initialize the mutex code and system mutexes.  This is called from the MD
+ * Intialize the mutex code and system mutexes.  This is called from the MD
  * startup code prior to mi_startup().  The per-CPU data space needs to be
  * setup before this is called.
  */

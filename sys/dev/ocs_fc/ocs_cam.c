@@ -1961,7 +1961,7 @@ ocs_fcp_change_role(struct ocs_softc *ocs, ocs_fcport *fcp, uint32_t new_role)
  * @ingroup cam_api
  * @brief Process CAM actions
  *
- * The driver supplies this routine to the CAM during initialization and
+ * The driver supplies this routine to the CAM during intialization and
  * is the main entry point for processing CAM Control Blocks (CCB)
  *
  * @param sim pointer to the SCSI Interface Module

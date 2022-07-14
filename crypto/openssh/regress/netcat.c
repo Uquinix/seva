@@ -74,7 +74,7 @@
 
 /* Telnet options from arpa/telnet.h */
 #define IAC	255
-#define DON'T	254
+#define DONT	254
 #define DO	253
 #define WONT	252
 #define WILL	251
@@ -1061,7 +1061,7 @@ fdpass(int nfd)
 #endif
 }
 
-/* Deal with RFC 854 WILL/WONT DO/DON'T negotiation. */
+/* Deal with RFC 854 WILL/WONT DO/DONT negotiation. */
 void
 atelnet(int nfd, unsigned char *buf, unsigned int size)
 {
@@ -1079,8 +1079,8 @@ atelnet(int nfd, unsigned char *buf, unsigned int size)
 		obuf[0] = IAC;
 		p++;
 		if ((*p == WILL) || (*p == WONT))
-			obuf[1] = DON'T;
-		else if ((*p == DO) || (*p == DON'T))
+			obuf[1] = DONT;
+		else if ((*p == DO) || (*p == DONT))
 			obuf[1] = WONT;
 		else
 			continue;

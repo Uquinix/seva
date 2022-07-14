@@ -208,7 +208,7 @@ int ecore_init_vport_rl(struct ecore_hwfn *p_hwfn,
  * @param start_pq -	   first PQ ID to stop
  * @param num_pqs -	   Number of PQs to stop, starting from start_pq.
  *
- * @return bool, true if successful, false if timeout occurred while waiting for
+ * @return bool, true if successful, false if timeout occured while waiting for
  * QM command done.
  */
 bool ecore_send_qm_stop_cmd(struct ecore_hwfn *p_hwfn,

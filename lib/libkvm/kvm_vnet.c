@@ -215,10 +215,10 @@ _kvm_vnet_selectpid(kvm_t *kd, pid_t pid)
  * or not, initialize it if permitted.
  */
 int
-_kvm_vnet_initialized(kvm_t *kd, int initialize)
+_kvm_vnet_initialized(kvm_t *kd, int intialize)
 {
 
-	if (kd->vnet_initialized || !initialize)
+	if (kd->vnet_initialized || !intialize)
 		return (kd->vnet_initialized);
 
 	(void) _kvm_vnet_selectpid(kd, getpid());

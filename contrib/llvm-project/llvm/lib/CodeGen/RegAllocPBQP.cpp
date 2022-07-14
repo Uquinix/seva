@@ -337,7 +337,7 @@ public:
     }
 
     while (!Inactive.empty()) {
-      // Tentatively grab the "next" interval - this choice may be overridden
+      // Tentatively grab the "next" interval - this choice may be overriden
       // below.
       IntervalInfo Cur = Inactive.top();
 

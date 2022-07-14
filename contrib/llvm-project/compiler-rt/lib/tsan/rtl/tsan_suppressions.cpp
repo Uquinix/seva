@@ -32,7 +32,7 @@ static const char *const std_suppressions =
 // See http://llvm.org/bugs/show_bug.cgi?id=17066 for details.
 "race:std::_Sp_counted_ptr_inplace<std::thread::_Impl\n";
 
-// Can be overridden in frontend.
+// Can be overriden in frontend.
 SANITIZER_WEAK_DEFAULT_IMPL
 const char *__tsan_default_suppressions() {
   return 0;

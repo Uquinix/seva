@@ -81,7 +81,7 @@ Output file.
 .sp
         Output file for \fBgnuplot\fP, default to stdout.
 .TP
-.NOP \f\*[B-Font]\-\-don't\-wait\f[]
+.NOP \f\*[B-Font]\-\-dont\-wait\f[]
 Don't wait for keystroke between plots.
 .sp
 .TP

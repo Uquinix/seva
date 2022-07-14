@@ -159,7 +159,7 @@ public:
   /// existing lambdas.
   bool ReplacingOriginal() { return false; }
 
-  /// Whether CXXConstructExpr can be skipped when they are implicit.
+  /// Wether CXXConstructExpr can be skipped when they are implicit.
   /// They will be reconstructed when used if needed.
   /// This is useful when the user that cause rebuilding of the
   /// CXXConstructExpr is outside of the expression at which the TreeTransform

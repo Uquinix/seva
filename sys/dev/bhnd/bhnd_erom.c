@@ -167,7 +167,7 @@ bhnd_erom_probe_driver_classes(devclass_t bus_devclass,
  * @param cid		The device's chip identifier.
  *
  * @retval non-NULL	success
- * @retval NULL		if an error occurred allocating or initializing the
+ * @retval NULL		if an error occured allocating or initializing the
  *			EROM parser.
  */
 bhnd_erom_t *

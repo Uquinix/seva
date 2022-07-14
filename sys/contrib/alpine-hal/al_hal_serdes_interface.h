@@ -647,7 +647,7 @@ struct al_serdes_grp_obj {
 	 * @param obj		The object context
 	 * @param lane		The SERDES lane within the group
 	 * @param is_locked	An indication whether RX BIST is locked
-	 * @param err_cnt_overflow	An indication whether error count overflow occurred
+	 * @param err_cnt_overflow	An indication whether error count overflow occured
 	 * @param err_cnt	Current bit error count
 	 */
 	void (*bist_rx_status)(struct al_serdes_grp_obj *, enum al_serdes_lane, al_bool *,

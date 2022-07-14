@@ -483,7 +483,7 @@ tdq_runq_add(struct tdq *tdq, struct thread *td, int flags)
 			("Invalid priority %d on timeshare runq", pri));
 		/*
 		 * This queue contains only priorities between MIN and MAX
-		 * realtime.  Use the whole queue to represent these values.
+		 * batch.  Use the whole queue to represent these values.
 		 */
 		if ((flags & (SRQ_BORROWING|SRQ_PREEMPTED)) == 0) {
 			pri = RQ_NQS * (pri - PRI_MIN_BATCH) / PRI_BATCH_RANGE;
@@ -963,15 +963,13 @@ static struct thread *
 tdq_move(struct tdq *from, struct tdq *to)
 {
 	struct thread *td;
-	struct tdq *tdq;
 	int cpu;
 
 	TDQ_LOCK_ASSERT(from, MA_OWNED);
 	TDQ_LOCK_ASSERT(to, MA_OWNED);
 
-	tdq = from;
 	cpu = TDQ_ID(to);
-	td = tdq_steal(tdq, cpu);
+	td = tdq_steal(from, cpu);
 	if (td == NULL)
 		return (NULL);
 
@@ -2589,8 +2587,7 @@ out:
 
 /*
  * Choose the highest priority thread to run.  The thread is removed from
- * the run-queue while running however the load remains.  For SMP we set
- * the tdq in the global idle bitmask if it idles here.
+ * the run-queue while running however the load remains.
  */
 struct thread *
 sched_choose(void)

@@ -1,7 +1,7 @@
 @node ntpsweep Invocation
 @section Invoking ntpsweep
 @pindex ntpsweep
-@cindex Print various information about given ntp servers
+@cindex Print various informations about given ntp servers
 @ignore
 #
 # EDIT THIS FILE WITH CAUTION  (invoke-ntpsweep.texi)
@@ -45,7 +45,7 @@ with a status code of 0.
 
 @exampleindent 0
 @example
-ntpsweep - Print various information about given ntp servers - Ver. 4.2.8p15
+ntpsweep - Print various informations about given ntp servers - Ver. 4.2.8p15
 USAGE: ntpsweep [ -<flag> [<val>] | --<name>[@{=| @}<val>] ]... [hostfile]
 
     -l, --host-list=str          Host to execute actions on

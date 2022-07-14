@@ -602,6 +602,7 @@ enum zio_checksum {
 	ZIO_CHECKSUM_SHA512,
 	ZIO_CHECKSUM_SKEIN,
 	ZIO_CHECKSUM_EDONR,
+	ZIO_CHECKSUM_BLAKE3,
 	ZIO_CHECKSUM_FUNCTIONS
 };
 
@@ -1677,7 +1678,7 @@ typedef struct zap_leaf_phys {
 		uint16_t lh_nentries;		/* number of entries */
 		uint16_t lh_prefix_len;		/* num bits used to id this */
 
-/* above is accessible to zap, below is zap_leaf private */
+/* above is accessable to zap, below is zap_leaf private */
 
 		uint16_t lh_freelist;		/* chunk head of free list */
 		uint8_t lh_pad2[12];

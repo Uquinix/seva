@@ -112,7 +112,7 @@ main(int argc, char *argv[])
 	char *env_vals[2];
 
 	/*
-	 * Get environment variable value
+	 * Get envirnment variable value
 	 */
 	for (i = 0; i < sizeof (env_names) / sizeof (char *); i++) {
 		if ((env_vals[i] = getenv(env_names[i])) == NULL) {

@@ -738,7 +738,7 @@ cd9660_susp_ce(struct ISO_SUSP_ATTRIBUTES *p, cd9660node *spinfo __unused)
 {
 	p->attr.su_entry.CE.h.length[0] = 28;
 	p->attr.su_entry.CE.h.version[0] = 1;
-	/* Other attributes don't matter right now, will be updated later */
+	/* Other attributes dont matter right now, will be updated later */
 	return 1;
 }
 

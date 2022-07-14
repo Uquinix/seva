@@ -462,7 +462,7 @@ CrossTranslationUnitContext::ASTUnitStorage::getFileForFunction(
 
 llvm::Error CrossTranslationUnitContext::ASTUnitStorage::ensureCTUIndexLoaded(
     StringRef CrossTUDir, StringRef IndexName) {
-  // Don't initialize if the map is filled.
+  // Dont initialize if the map is filled.
   if (!NameFileMap.empty())
     return llvm::Error::success();
 

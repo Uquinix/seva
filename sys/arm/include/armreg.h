@@ -60,7 +60,7 @@
 #define PSR_F		0x00000040	/* FIQ disable bit */
 #define PSR_I		0x00000080	/* IRQ disable bit */
 #define PSR_A		0x00000100	/* Imprecise abort bit */
-#define PSR_E		0x00000200	/* Data endianness bit */
+#define PSR_E		0x00000200	/* Data endianess bit */
 #define PSR_GE		0x000f0000	/* Greater than or equal to bits */
 #define PSR_J		0x01000000	/* Java bit */
 #define PSR_Q		0x08000000	/* Sticky overflow bit */

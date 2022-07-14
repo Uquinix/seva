@@ -109,7 +109,7 @@ libmulti_a_SOURCES = \
 
 libmulti_a_CFLAGS = -DVERSION=\"$(VERSION)\" $(AM_CFLAGS)
 
-## Other architecture independent implementaions
+## Other architecture independant implementaions
 libbionic_c_a_SOURCES = \
 	reference/bionic-c/bcopy.c \
 	reference/bionic-c/memchr.c \

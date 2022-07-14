@@ -39,7 +39,7 @@ METHOD int init {
 	uint32_t	format;
 }
 
-# Initialize DAI and set up interrupt handler
+# Initialize DAI and set up interrrupt handler
 METHOD int setup_intr {
 	device_t	dev;
 	driver_intr_t	intr_handler;

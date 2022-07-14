@@ -399,7 +399,7 @@ def P8Model : SchedMachineModel {
                        // up to two branches in a dispatch group.
 
   let LoadLatency = 3; // Optimistic load latency assuming bypass.
-                       // This is overridden by OperandCycles if the
+                       // This is overriden by OperandCycles if the
                        // Itineraries are queried instead.
   let MispredictPenalty = 16;
 

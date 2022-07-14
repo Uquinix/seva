@@ -136,7 +136,7 @@ ata_sii_chipinit(device_t dev)
 	    ctlr->channels = 4;
 	}
 
-	/* don't block interrupts from any channel */
+	/* dont block interrupts from any channel */
 	pci_write_config(dev, 0x48,
 			 (pci_read_config(dev, 0x48, 4) & ~0x03c00000), 4);
 

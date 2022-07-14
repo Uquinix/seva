@@ -70,7 +70,7 @@ static void process_ds_response(struct module_qstate* qstate,
 	struct query_info* qinfo, struct sock_list* origin);
 
 
-/* Updates the supplied EDE (RFC8914) code selectively so we don't loose
+/* Updates the suplied EDE (RFC8914) code selectively so we don't loose
  * a more specific code
  */
 static void

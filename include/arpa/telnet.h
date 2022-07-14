@@ -39,7 +39,7 @@
  * Definitions for the TELNET protocol.
  */
 #define	IAC	255		/* interpret as command: */
-#define	DON'T	254		/* you are not to use option */
+#define	DONT	254		/* you are not to use option */
 #define	DO	253		/* please, you use option */
 #define	WONT	252		/* I won't use option */
 #define	WILL	251		/* I will use option */
@@ -65,7 +65,7 @@
 const char *telcmds[] = {
 	"EOF", "SUSP", "ABORT", "EOR",
 	"SE", "NOP", "DMARK", "BRK", "IP", "AO", "AYT", "EC",
-	"EL", "GA", "SB", "WILL", "WONT", "DO", "DON'T", "IAC",
+	"EL", "GA", "SB", "WILL", "WONT", "DO", "DONT", "IAC",
 	0
 };
 #else

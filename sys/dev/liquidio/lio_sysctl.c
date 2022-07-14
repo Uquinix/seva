@@ -1684,7 +1684,7 @@ lio_intrmod_cfg_tx_intrcnt(struct lio *lio, struct octeon_intrmod_cfg *intrmod,
 					(oct->instr_queue[q_no])->inst_cnt_reg;
 				val = lio_read_csr64(oct, inst_cnt_reg);
 				/*
-				 * clear wmark and count.don't want to write
+				 * clear wmark and count.dont want to write
 				 * count back
 				 */
 				val = (val & 0xFFFF000000000000ULL) |

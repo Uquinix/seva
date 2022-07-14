@@ -29,7 +29,7 @@
 atf_test_case makeconf__ok
 makeconf__ok_body() {
 	cat >Makefile <<EOF
-A_TEST_CONFIG_VARIABLE = not overridden
+A_TEST_CONFIG_VARIABLE = not overriden
 
 .PHONY: show-config-var
 show-config-var:
@@ -42,7 +42,7 @@ EOF
 	cat >custom.conf <<EOF
 A_TEST_CONFIG_VARIABLE = 'a value'
 EOF
-	atf_check -o inline:'not overridden\n' \
+	atf_check -o inline:'not overriden\n' \
 	    make MAKECONF="$(pwd)/empty.conf" show-config-var
 	atf_check -o inline:'a value\n' \
 	    make MAKECONF="$(pwd)/custom.conf" show-config-var

@@ -75,7 +75,7 @@ initialize (void)
 #include <openssl/err.h>
 
 /**
- * @brief initialize OpenSSL
+ * @brief intialize OpenSSL
  */
 void
 initialize(void)

@@ -411,7 +411,7 @@
 	u32 bce_debug_temp = bce_debug;				\
 	bce_debug |= cond;
 
-/* Restore the previously overridden debug level. */
+/* Restore the previously overriden debug level. */
 #define DBPOP()							\
 	bce_debug = bce_debug_temp;
 

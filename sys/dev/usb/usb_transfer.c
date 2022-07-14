@@ -2494,7 +2494,7 @@ usbd_callback_wrapper(struct usb_xfer_queue *pq)
 	    (xfer->usb_state == USB_ST_ERROR)) {
 		/* clear flag in case of drain */
 		xfer->flags_int.doing_callback = 0;
-		/* try to loop, but not recursively */
+		/* try to loop, but not recursivly */
 		usb_command_wrapper(&info->done_q, xfer);
 		return;
 	}
@@ -3141,7 +3141,7 @@ done:
 /*------------------------------------------------------------------------*
  *	usb_command_wrapper
  *
- * This function is used to execute commands non-recursively on an USB
+ * This function is used to execute commands non-recursivly on an USB
  * transfer.
  *------------------------------------------------------------------------*/
 void

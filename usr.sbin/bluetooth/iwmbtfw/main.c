@@ -572,7 +572,7 @@ shutdown:
 		libusb_exit(ctx);
 
 	if (retcode == 0)
-		iwmbt_info("Firmware download is successful!");
+		iwmbt_info("Firmware download is succesful!");
 	else
 		iwmbt_err("Firmware download failed!");
 

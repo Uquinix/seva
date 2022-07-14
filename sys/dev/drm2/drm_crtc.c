@@ -236,7 +236,7 @@ static int drm_mode_object_get(struct drm_device *dev,
 }
 
 /**
- * drm_mode_object_put - free an identifier
+ * drm_mode_object_put - free an identifer
  * @dev: DRM device
  * @id: ID to free
  *

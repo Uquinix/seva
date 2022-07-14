@@ -895,7 +895,7 @@ mrsas_attach(device_t dev)
 	sc->bus_tag = rman_get_bustag(sc->reg_res);
 	sc->bus_handle = rman_get_bushandle(sc->reg_res);
 
-	/* Initialize mutexes */
+	/* Intialize mutexes */
 	mtx_init(&sc->sim_lock, "mrsas_sim_lock", NULL, MTX_DEF);
 	mtx_init(&sc->pci_lock, "mrsas_pci_lock", NULL, MTX_DEF);
 	mtx_init(&sc->io_lock, "mrsas_io_lock", NULL, MTX_DEF);
@@ -906,7 +906,7 @@ mrsas_attach(device_t dev)
 	mtx_init(&sc->raidmap_lock, "mrsas_raidmap_lock", NULL, MTX_DEF);
 	mtx_init(&sc->stream_lock, "mrsas_stream_lock", NULL, MTX_DEF);
 
-	/* Initialize linked list */
+	/* Intialize linked list */
 	TAILQ_INIT(&sc->mrsas_mpt_cmd_list_head);
 	TAILQ_INIT(&sc->mrsas_mfi_cmd_list_head);
 
@@ -992,7 +992,7 @@ mrsas_ich_startup(void *arg)
 	struct mrsas_softc *sc = (struct mrsas_softc *)arg;
 
 	/*
-	 * Initialize a counting Semaphore to take care no. of concurrent IOCTLs
+	 * Intialize a counting Semaphore to take care no. of concurrent IOCTLs
 	 */
 	sema_init(&sc->ioctl_count_sema, MRSAS_MAX_IOCTL_CMDS,
 	    IOCTL_SEMA_DESCRIPTION);

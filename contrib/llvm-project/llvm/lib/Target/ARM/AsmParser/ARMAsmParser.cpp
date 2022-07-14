@@ -1901,7 +1901,7 @@ public:
     if (!Memory.OffsetImm)
       return true;
     static_assert(shift < 56,
-                  "Such that we don't shift by a value higher than 62");
+                  "Such that we dont shift by a value higher than 62");
     if (const auto *CE = dyn_cast<MCConstantExpr>(Memory.OffsetImm)) {
       int64_t Val = CE->getValue();
 
@@ -12073,7 +12073,7 @@ ARMAsmParser::FilterNearMisses(SmallVectorImpl<NearMissInfo> &NearMissesIn,
                                SMLoc IDLoc, OperandVector &Operands) {
   // TODO: If operand didn't match, sub in a dummy one and run target
   // predicate, so that we can avoid reporting near-misses that are invalid?
-  // TODO: Many operand types don't have SuperClasses set, so we report
+  // TODO: Many operand types dont have SuperClasses set, so we report
   // redundant ones.
   // TODO: Some operands are superclasses of registers (e.g.
   // MCK_RegShiftedImm), we don't have any way to represent that currently.

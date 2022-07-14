@@ -62,7 +62,7 @@ BEGIN
 BEGIN
 /(1 == self->discard)/
 {
-	printf("Successfully tested buffer discard\n");
+	printf("Succesfully tested buffer discard\n");
 	exit(0);
 }
 

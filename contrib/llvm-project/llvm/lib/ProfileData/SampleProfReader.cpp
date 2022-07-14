@@ -790,7 +790,7 @@ std::error_code SampleProfileReaderExtBinaryBase::readFuncProfiles() {
       // through an ordered context container, where contexts are laid out
       // as if they were walked in preorder of a context trie. While
       // traversing the trie, a link to the highest common ancestor node is
-      // kept so that all of its descendants will be loaded.
+      // kept so that all of its decendants will be loaded.
       assert(OrderedFuncOffsets.get() &&
              "func offset table should always be sorted in CS profile");
       const SampleContext *CommonContext = nullptr;

@@ -544,7 +544,7 @@ extern "C" {
 
 /*
  * FR_BZ_INT_ISR0_REG(128bit):
- * Function 0 Interrupt Acknowledge Status register
+ * Function 0 Interrupt Acknowlege Status register
  */
 #define	FR_BZ_INT_ISR0_REG_OFST 0x00000090
 /* falconb0,sienaa0=net_func_bar2 */

@@ -195,7 +195,7 @@ dir_notempty(const atf_tc_t *tc, const char *mountpath)
 
 	rv = rump_sys_rmdir(pb);
 	if (rv != -1 || errno != ENOTEMPTY)
-		atf_tc_fail("non-empty directory removed successfully");
+		atf_tc_fail("non-empty directory removed succesfully");
 
 	if (rump_sys_unlink(pb2) == -1)
 		atf_tc_fail_errno("cannot remove dir/file");

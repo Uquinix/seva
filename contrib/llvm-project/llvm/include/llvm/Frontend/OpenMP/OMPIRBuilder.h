@@ -1206,7 +1206,7 @@ private:
   /// \param AO     The required atomic ordering
   /// \param AK     The OpenMP atomic operation kind used.
   ///
-  /// \returns		whether a flush was emitted or not
+  /// \returns		wether a flush was emitted or not
   bool checkAndEmitFlushAfterAtomic(const LocationDescription &Loc,
                                     AtomicOrdering AO, AtomicKind AK);
 
@@ -1487,7 +1487,7 @@ private:
 public:
   /// Returns whether this object currently represents the IR of a loop. If
   /// returning false, it may have been consumed by a loop transformation or not
-  /// been initialized. Do not use in this case;
+  /// been intialized. Do not use in this case;
   bool isValid() const { return Header; }
 
   /// The preheader ensures that there is only a single edge entering the loop.

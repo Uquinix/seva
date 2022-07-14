@@ -28,7 +28,7 @@
 
 /*
  * ASSERTION:
- *   Test a bogus enum declaration using an invalid identifier.
+ *   Test a bogus enum declaration using an invalid identifer.
  *
  * SECTION: Type and Constant Definitions/Enumerations
  */

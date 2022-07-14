@@ -4,7 +4,7 @@
 done
 
 case ${HAVE_UUSTAT} in
-DON'T)
+DONT)
     rm -f ${TEMP}
     ;;
 esac

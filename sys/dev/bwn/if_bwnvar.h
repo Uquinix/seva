@@ -105,7 +105,7 @@ struct bwn_mac;
 	if (mac->mac_phy.phy_maskset != NULL) {				\
 		KASSERT(mac->mac_status < BWN_MAC_STATUS_INITED ||	\
 		    mac->mac_suspended > 0,				\
-		    ("don't access PHY or RF registers after turning on MAC")); \
+		    ("dont access PHY or RF registers after turning on MAC")); \
 		mac->mac_phy.phy_maskset(mac, offset, 0xffff, set);	\
 	} else								\
 		BWN_PHY_WRITE(mac, offset,				\
@@ -115,7 +115,7 @@ struct bwn_mac;
 	if (mac->mac_phy.phy_maskset != NULL) {				\
 		KASSERT(mac->mac_status < BWN_MAC_STATUS_INITED ||	\
 		    mac->mac_suspended > 0,				\
-		    ("don't access PHY or RF registers after turning on MAC")); \
+		    ("dont access PHY or RF registers after turning on MAC")); \
 		mac->mac_phy.phy_maskset(mac, offset, mask, set);	\
 	} else								\
 		BWN_PHY_WRITE(mac, offset,				\
@@ -125,7 +125,7 @@ struct bwn_mac;
 	if (mac->mac_phy.phy_maskset != NULL) {				\
 		KASSERT(mac->mac_status < BWN_MAC_STATUS_INITED ||	\
 		    mac->mac_suspended > 0,				\
-		    ("don't access PHY or RF registers after turning on MAC")); \
+		    ("dont access PHY or RF registers after turning on MAC")); \
 		mac->mac_phy.phy_maskset(mac, offset, mask, 0);		\
 	} else								\
 		BWN_PHY_WRITE(mac, offset,				\
@@ -134,7 +134,7 @@ struct bwn_mac;
 #define	BWN_PHY_COPY(mac, dst, src)	do {				\
 	KASSERT(mac->mac_status < BWN_MAC_STATUS_INITED ||		\
 	    mac->mac_suspended > 0,					\
-	    ("don't access PHY or RF registers after turning on MAC"));	\
+	    ("dont access PHY or RF registers after turning on MAC"));	\
 	BWN_PHY_WRITE(mac, dst, BWN_PHY_READ(mac, src));		\
 } while (0)
 #define BWN_LO_CALIB_EXPIRE		(1000 * (30 - 2))

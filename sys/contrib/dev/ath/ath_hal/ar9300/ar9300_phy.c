@@ -861,7 +861,7 @@ ar9300_init_rate_txpower_stbc(struct ath_hal *ah, const HAL_RATE_TABLE *rt,
         break;
     case OSPREY_3_CHAINMASK:
         stbc_power = ahp->upper_limit[2];
-        /* Only FCC requires that we back off with 3 transmit chains */
+        /* Ony FCC requires that we back off with 3 transmit chains */
         if (is_reg_dmn_fcc(ahp->reg_dmn)) {
             twice_array_gain =
                 (ahp->twice_antenna_gain >= ahp->twice_antenna_reduction)?

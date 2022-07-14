@@ -1311,7 +1311,7 @@ ldns_rr_set_push_rr(ldns_rr_list *rr_list, ldns_rr *rr)
 			return false;
 		}
 		/* ok, still alive - check if the rr already
-		 * exists - if so, don't' add it */
+		 * exists - if so, dont' add it */
 		for(i = 0; i < rr_count; i++) {
 			if(ldns_rr_compare(
 					ldns_rr_list_rr(rr_list, i), rr) == 0) {

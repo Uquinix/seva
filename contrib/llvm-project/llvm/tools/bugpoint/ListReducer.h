@@ -34,7 +34,7 @@ template <typename ElTy> struct ListReducer {
 
   virtual ~ListReducer() {}
 
-  /// This virtual function should be overridden by subclasses to implement the
+  /// This virtual function should be overriden by subclasses to implement the
   /// test desired.  The testcase is only required to test to see if the Kept
   /// list still satisfies the property, but if it is going to check the prefix
   /// anyway, it can.

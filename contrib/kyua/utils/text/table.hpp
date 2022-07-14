@@ -100,7 +100,7 @@ class table_formatter {
     /// Widths of the table columns.
     ///
     /// Note that this only includes widths for the column widths explicitly
-    /// overridden by the caller.  In other words, this vector can be shorter
+    /// overriden by the caller.  In other words, this vector can be shorter
     /// than the table passed to the format() method, which is just fine.  Any
     /// non-specified column widths are assumed to be width_auto.
     widths_vector _column_widths;

@@ -2002,7 +2002,7 @@ ieee80211_fragment(struct ieee80211vap *vap, struct mbuf *m0,
 		 * we mark the first fragment with the MORE_FRAG bit
 		 * it automatically is propagated to each fragment; we
 		 * need only clear it on the last fragment (done below).
-		 * NB: frag 1+ don't have Mesh Control field present.
+		 * NB: frag 1+ dont have Mesh Control field present.
 		 */
 		whf = mtod(m, struct ieee80211_frame *);
 		memcpy(whf, wh, hdrsize);

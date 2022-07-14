@@ -1893,7 +1893,7 @@ void CodeGenSchedModels::collectProcResources() {
       continue;
     }
 
-    // This class may have a default ReadWrite list which can be overridden by
+    // This class may have a default ReadWrite list which can be overriden by
     // InstRW definitions.
     for (Record *RW : SC.InstRWs) {
       Record *RWModelDef = RW->getValueAsDef("SchedModel");

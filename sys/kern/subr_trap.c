@@ -163,7 +163,7 @@ userret(struct thread *td, struct trapframe *frame)
 	 *
 	 * In case there is a callchain tracing ongoing because of
 	 * hwpmc(4), skip the scheduler pinning check.
-	 * hwpmc(4) subsystem, infact, will collect callchain information
+	 * hwpmc(4) subsystem, infact, will collect callchain informations
 	 * at ast() checkpoint, which is past userret().
 	 */
 	WITNESS_WARN(WARN_PANIC, NULL, "userret: returning");

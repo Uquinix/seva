@@ -158,7 +158,7 @@ def PPCA2Itineraries : ProcessorItineraries<
 def PPCA2Model : SchedMachineModel {
   let IssueWidth = 1;  // 1 instruction is dispatched per cycle.
   let LoadLatency = 6; // Optimistic load latency assuming bypass.
-                       // This is overridden by OperandCycles if the
+                       // This is overriden by OperandCycles if the
                        // Itineraries are queried instead.
   let MispredictPenalty = 13;
 

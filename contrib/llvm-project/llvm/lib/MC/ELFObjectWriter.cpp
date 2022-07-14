@@ -479,7 +479,7 @@ static uint8_t mergeTypeForSet(uint8_t origType, uint8_t newType) {
   // IFUNC > FUNC > OBJECT > NOTYPE
   // TLS_OBJECT > OBJECT > NOTYPE
   //
-  // don't let the new type degrade the old type
+  // dont let the new type degrade the old type
   switch (origType) {
   default:
     break;

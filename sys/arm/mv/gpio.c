@@ -391,7 +391,7 @@ mv_gpio_intr(device_t dev, void *arg)
 void
 mv_gpio_finish_intrhandler(struct mv_gpio_pindev *s)
 {
-	/* When we achieve full interrupt support
+	/* When we acheive full interrupt support
 	 * This function will be opposite to
 	 * mv_gpio_setup_intrhandler
 	 */

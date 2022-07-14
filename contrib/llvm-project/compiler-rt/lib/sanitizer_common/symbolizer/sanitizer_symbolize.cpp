@@ -59,7 +59,7 @@ bool __sanitizer_symbolize_code(const char *ModuleName, uint64_t ModuleOffset,
     auto Printer =
         std::make_unique<llvm::symbolize::LLVMPrinter>(OS, OS, Config);
 
-    // TODO: it is necessary to set proper SectionIndex here.
+    // TODO: it is neccessary to set proper SectionIndex here.
     // object::SectionedAddress::UndefSection works for only absolute addresses.
     if (InlineFrames) {
       auto ResOrErr = getDefaultSymbolizer()->symbolizeInlinedCode(
@@ -88,7 +88,7 @@ bool __sanitizer_symbolize_data(const char *ModuleName, uint64_t ModuleOffset,
     auto Printer =
         std::make_unique<llvm::symbolize::LLVMPrinter>(OS, OS, Config);
 
-    // TODO: it is necessary to set proper SectionIndex here.
+    // TODO: it is neccessary to set proper SectionIndex here.
     // object::SectionedAddress::UndefSection works for only absolute addresses.
     auto ResOrErr = getDefaultSymbolizer()->symbolizeData(
         ModuleName,

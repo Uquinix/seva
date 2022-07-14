@@ -972,7 +972,7 @@ ees_receive(
 			    call_pps_sample, pps_step);
 	}
 
-	/* See if there has been a 4ms jump at a minute boundary */
+	/* See if there has been a 4ms jump at a minute boundry */
 	{	l_fp	delta;
 #define	delta_isec	delta.l_ui
 #define	delta_ssec	delta.l_i
@@ -1016,7 +1016,7 @@ ees_receive(
 		(delta_f_abs < (EES_STEP_F + EES_STEP_F_GRACE)) &&
 		(ees->second == 0 || ees->second == 1 || ees->second == 2) &&
 		(sincelast < 0 || sincelast > 122)
-		) {	/* 4ms jump at min boundary */
+		) {	/* 4ms jump at min boundry */
 		int old_sincelast;
 		int count=0;
 		int sum = 0;
@@ -1105,7 +1105,7 @@ ees_receive(
 			old_sincelast, ees->last_step_late, count, sum, ees->last_step_secs);
 		if (sum) ees->last_step_secs = sum;
 	}
-	/* OK, so not a 4ms step at a minute boundary */
+	/* OK, so not a 4ms step at a minute boundry */
 	else {
 		if (suspect_4ms_step) msyslog(LOG_ERR,
 					      "MSF%d: suspect = %x, but delta of %d.%04d [%d.%04d<%d.%04d<%d.%04d: %d %d]",

@@ -8,7 +8,7 @@
 ;#     - or print a single plot
 ;#
 ;#  Copyright (c) 1992-1998 
-;#  Rainer Pruy, Friedrich-Alexander Universitï¿½t Erlangen-Nï¿½rnberg
+;#  Rainer Pruy, Friedrich-Alexander Universität Erlangen-Nürnberg
 ;#
 ;#
 ;#############################################################
@@ -709,7 +709,7 @@ sub genfile
 		    ;# is semantically equivalent to the while loop, but
 		    ;# I needed a one line look ahead and this solution
 		    ;# was what I thought of first
-		    ;# and.. If you do not like it don't look
+		    ;# and.. If you do not like it dont look
 		}
 		close(IN);
 		print("             first: ",$F_first{$key},
@@ -1105,7 +1105,7 @@ sub genfile
 	    ;# I know, it is not perl style using indices to access arrays,
 	    ;# but I have to proccess two arrays in sync, non-destructively
 	    ;# (otherwise a (shift(@a1),shift(a2)) would do),
-	    ;# I don't like to make copies of these arrays as they may be huge
+	    ;# I dont like to make copies of these arrays as they may be huge
 	    $i = $[;
 	    $lo->sample(($time[$i]-$timebase)/3600,$offs[$i]),$i++
 		while $i <= $#time;

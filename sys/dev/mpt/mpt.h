@@ -715,7 +715,7 @@ struct mpt_softc {
 	uint16_t		els_cmds_allocated;	/* FC only */
 
 	uint16_t		timeouts;	/* timeout count */
-	uint16_t		success;	/* successes after timeout */
+	uint16_t		success;	/* successes afer timeout */
 	uint16_t		sequence;	/* Sequence Number */
 	uint16_t		pad3;
 

@@ -42,7 +42,7 @@ Prog_Name=${0##*/}
 Results_File=
 
 # The test program's source directory: i.e. where its auxiliary data files
-# and helper utilities can be found.  Can be overridden through the '-s' flag.
+# and helper utilities can be found.  Can be overriden through the '-s' flag.
 Source_Dir="$(dirname ${0})"
 
 # Indicates the test case we are currently processing.

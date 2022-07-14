@@ -52,7 +52,7 @@ THREADLOCAL char cur_thread_placeholder[sizeof(ThreadState)] ALIGNED(
 static char ctx_placeholder[sizeof(Context)] ALIGNED(SANITIZER_CACHE_LINE_SIZE);
 Context *ctx;
 
-// Can be overridden by a front-end.
+// Can be overriden by a front-end.
 #ifdef TSAN_EXTERNAL_HOOKS
 bool OnFinalize(bool failed);
 void OnInitialize();

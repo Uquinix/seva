@@ -352,7 +352,7 @@ bool llvm::formLCSSA(Loop &L, const DominatorTree &DT, const LoopInfo *LI,
 
   SmallSetVector<BasicBlock *, 8> BlocksDominatingExits;
 
-  // We want to avoid use-scanning leveraging dominance information.
+  // We want to avoid use-scanning leveraging dominance informations.
   // If a block doesn't dominate any of the loop exits, the none of the values
   // defined in the loop can be used outside.
   // We compute the set of blocks fullfilling the conditions in advance

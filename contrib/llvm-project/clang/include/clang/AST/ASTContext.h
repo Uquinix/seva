@@ -797,7 +797,7 @@ public:
     return FullSourceLoc(Loc,SourceMgr);
   }
 
-  /// Return the C++ ABI kind that should be used. The C++ ABI can be overridden
+  /// Return the C++ ABI kind that should be used. The C++ ABI can be overriden
   /// at compile time with `-fc++-abi=`. If this is not provided, we instead use
   /// the default ABI set by the target.
   TargetCXXABI::Kind getCXXABIKind() const;

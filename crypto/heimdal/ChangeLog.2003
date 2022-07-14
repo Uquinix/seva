@@ -1269,7 +1269,7 @@
 
 2003-04-24  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* doc/programming.texi: s/management/management/, from jmc
+	* doc/programming.texi: s/managment/management/, from jmc
 	<jmc@prioris.mini.pw.edu.pl>
 
 2003-04-23  Love Hörnquist Åstrand  <lha@it.su.se>
@@ -1628,7 +1628,7 @@
 	
 2003-02-18  Love Hörnquist Åstrand  <lha@it.su.se>
 
-	* kdc/connect.c: s/initialize/initialize, from
+	* kdc/connect.c: s/intialize/initialize, from
 	<jmc@prioris.mini.pw.edu.pl>
 
 2003-02-17  Love Hörnquist Åstrand  <lha@it.su.se>

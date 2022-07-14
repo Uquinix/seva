@@ -58,7 +58,7 @@ typedef struct {
 } _ZWEncodingInfo;
 
 typedef enum {
-	NONE, AMBIGUOUS, ASCII, GB2312
+	NONE, AMBIGIOUS, ASCII, GB2312
 } _ZWCharset;
 
 typedef struct {
@@ -171,10 +171,10 @@ loop:
 			psenc->chlen = 0;
 			break;
 		}
-		psenc->charset = AMBIGUOUS;
+		psenc->charset = AMBIGIOUS;
 		psenc->chlen = 0;
 	/* FALLTHROUGH */
-	case AMBIGUOUS:
+	case AMBIGIOUS:
 		if (psenc->chlen != 0)
 			return (EINVAL);
 		STORE;
@@ -378,7 +378,7 @@ _citrus_ZW_stdenc_get_state_desc_generic(_ZWEncodingInfo * __restrict ei __unuse
 			return (EINVAL);
 		*rstate = _STDENC_SDGEN_INITIAL;
 		break;
-	case AMBIGUOUS:
+	case AMBIGIOUS:
 		if (psenc->chlen != 0)
 			return (EINVAL);
 		*rstate = _STDENC_SDGEN_INCOMPLETE_SHIFT;

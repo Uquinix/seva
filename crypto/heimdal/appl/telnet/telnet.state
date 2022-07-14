@@ -1,14 +1,14 @@
 
    Three pieces of state need to be kept for each side of each option.
-   (You need the localside, sending WILL/WONT & receiving DO/DON'T, and
-   the remoteside, sending DO/DON'T and receiving WILL/WONT)
+   (You need the localside, sending WILL/WONT & receiving DO/DONT, and
+   the remoteside, sending DO/DONT and receiving WILL/WONT)
 
 	MY_STATE:	What state am I in?
 	WANT_STATE:	What state do I want?
 	WANT_RESP:	How many requests have I initiated?
 
    Default values:
-	MY_STATE = WANT_STATE = DON'T
+	MY_STATE = WANT_STATE = DONT
 	WANT_RESP = 0
 
    The local setup will change based on the state of the Telnet
@@ -69,7 +69,7 @@
   Without the if() line, it is:
 		Send DO option
 		Recv WONT option
-		Send DON'T option
+		Send DONT option
   If the other side does not expect to receive the latter case,
   but generates the latter case, then there is a potential for
   option negotiation loops.  An implementation that does not expect

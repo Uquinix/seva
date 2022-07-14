@@ -4291,7 +4291,7 @@ unsigned HexagonInstrInfo::getInstrTimingClassLatency(
 /// operand latency. But it may not be possible for instructions with variable
 /// number of defs / uses.
 ///
-/// This is a raw interface to the itinerary that may be directly overridden by
+/// This is a raw interface to the itinerary that may be directly overriden by
 /// a target. Use computeOperandLatency to get the best estimate of latency.
 int HexagonInstrInfo::getOperandLatency(const InstrItineraryData *ItinData,
                                         const MachineInstr &DefMI,

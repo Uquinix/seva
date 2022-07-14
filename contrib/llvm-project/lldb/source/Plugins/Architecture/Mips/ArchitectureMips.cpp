@@ -108,7 +108,7 @@ lldb::addr_t ArchitectureMips::GetBreakableLoadAddress(lldb::addr_t addr,
       current_offset = addr - function_start;
   }
 
-  // If breakpoint address is start of function then we don't have to do
+  // If breakpoint address is start of function then we dont have to do
   // anything.
   if (current_offset == 0)
     return addr;

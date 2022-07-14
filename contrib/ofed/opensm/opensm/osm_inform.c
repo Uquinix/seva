@@ -491,7 +491,7 @@ static void match_notice_to_inf_rec(IN cl_list_item_t * p_list_item,
 	 * Type         Type         if not 0xFFFF must match
 	 * TrapNumber   TrapNumber   if not 0xFFFF must match
 	 * DeviceId     DeviceID     if not 0xFFFF must match
-	 * QPN don't care
+	 * QPN dont care
 	 * ProducerType ProducerType match or 0xFFFFFF // EZ: actually my interpretation
 	 * VendorID     VendorID     match or 0xFFFFFF
 	 */

@@ -165,7 +165,7 @@ pad_cell(const std::string& input, const std::size_t length, const bool is_last)
 /// \param widths The widths of the row.
 /// \param column The column being refilled.
 /// \param [in,out] textual_rows The output lines as processed so far.  This is
-///     updated to accommodate for the contents of the refilled cell, extending
+///     updated to accomodate for the contents of the refilled cell, extending
 ///     the rows as necessary.
 static void
 refill_cell(const text::table_row& row, const text::widths_vector& widths,

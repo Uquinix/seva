@@ -6992,7 +6992,7 @@ iflib_add_device_sysctl_post(if_ctx_t ctx)
 				   &txq->ift_in_use, 1, "descriptors in use");
 		SYSCTL_ADD_QUAD(ctx_list, queue_list, OID_AUTO, "txq_processed",
 				   CTLFLAG_RD,
-				   &txq->ift_processed, "descriptors processed for clean");
+				   &txq->ift_processed, "descriptors procesed for clean");
 		SYSCTL_ADD_QUAD(ctx_list, queue_list, OID_AUTO, "txq_cleaned",
 				   CTLFLAG_RD,
 				   &txq->ift_cleaned, "total cleaned");

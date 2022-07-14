@@ -71,7 +71,7 @@ static bool usesFrameIndex(const MachineInstr &MI) {
 // Instructions that lose their 'read' operation for a subesquent fence acquire
 // (DMB LD) once the zero register is used.
 //
-// WARNING: The acquire variants of the instructions are also affected, but they
+// WARNING: The aquire variants of the instructions are also affected, but they
 // are split out into `atomicBarrierDroppedOnZero()` to support annotations on
 // assembly.
 static bool atomicReadDroppedOnZero(unsigned Opcode) {

@@ -92,7 +92,7 @@ struct hx509_cert_attribute_data {
 typedef enum {
     HX509_PROMPT_TYPE_PASSWORD		= 0x1,	/* password, hidden */
     HX509_PROMPT_TYPE_QUESTION		= 0x2,	/* question, not hidden */
-    HX509_PROMPT_TYPE_INFO		= 0x4	/* information, reply doesn't matter */
+    HX509_PROMPT_TYPE_INFO		= 0x4	/* infomation, reply doesn't matter */
 } hx509_prompt_type;
 
 typedef struct hx509_prompt {

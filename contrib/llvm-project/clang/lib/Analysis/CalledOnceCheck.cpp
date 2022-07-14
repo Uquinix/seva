@@ -1201,7 +1201,7 @@ private:
   }
 
   /// Return true if the analyzed function is actually a default implementation
-  /// of the method that has to be overridden.
+  /// of the method that has to be overriden.
   ///
   /// These functions can have tracked parameters, but wouldn't call them
   /// because they are not designed to perform any meaningful actions.
@@ -1213,7 +1213,7 @@ private:
   bool isPossiblyEmptyImpl() const {
     if (!isa<ObjCMethodDecl>(AC.getDecl())) {
       // We care only about functions that are not supposed to be called.
-      // Only methods can be overridden.
+      // Only methods can be overriden.
       return false;
     }
 

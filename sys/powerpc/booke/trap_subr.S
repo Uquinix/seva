@@ -167,13 +167,13 @@
 
 /*
  * FRAME_SETUP assumes:
- *	SPRG{1-3}	SP at the time interrupt occurred
+ *	SPRG{1-3}	SP at the time interrupt occured
  *	savearea	r30-r31, DEAR, ESR, xSRR0-1
  *	r30		CR
  *	r31		scratch
  *	r1		kernel stack
  *
- * sprg_sp - SPRG reg containing SP at the time interrupt occurred
+ * sprg_sp - SPRG reg containing SP at the time interrupt occured
  * savearea - temp save
  * exc - exception number (EXC_xxx)
  *

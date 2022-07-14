@@ -604,7 +604,7 @@ void SwingSchedulerDAG::schedule() {
   Pass.ORE->emit([&]() {
     return MachineOptimizationRemark(DEBUG_TYPE, "schedule", Loop.getStartLoc(),
                                      Loop.getHeader())
-           << "Pipelined successfully!";
+           << "Pipelined succesfully!";
   });
 
   // Generate the schedule as a ModuloSchedule.

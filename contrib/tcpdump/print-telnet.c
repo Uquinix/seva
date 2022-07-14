@@ -68,7 +68,7 @@ static const char tstr[] = " [|telnet]";
  * Definitions for the TELNET protocol.
  */
 #define	IAC	255		/* interpret as command: */
-#define	DON'T	254		/* you are not to use option */
+#define	DONT	254		/* you are not to use option */
 #define	DO	253		/* please, you use option */
 #define	WONT	252		/* I won't use option */
 #define	WILL	251		/* I will use option */
@@ -94,7 +94,7 @@ static const char tstr[] = " [|telnet]";
 static const char *telcmds[] = {
 	"EOF", "SUSP", "ABORT", "EOR",
 	"SE", "NOP", "DMARK", "BRK", "IP", "AO", "AYT", "EC",
-	"EL", "GA", "SB", "WILL", "WONT", "DO", "DON'T", "IAC", 0,
+	"EL", "GA", "SB", "WILL", "WONT", "DO", "DONT", "IAC", 0,
 };
 #else
 extern char *telcmds[];
@@ -418,12 +418,12 @@ telnet_parse(netdissect_options *ndo, const u_char *sp, u_int length, int print)
 		goto pktend;
 
 	switch (c) {
-	case DON'T:
+	case DONT:
 	case DO:
 	case WONT:
 	case WILL:
 	case SB:
-		/* DON'T/DO/WONT/WILL x */
+		/* DONT/DO/WONT/WILL x */
 		FETCH(x, sp, length);
 		if (x >= 0 && x < NTELOPTS) {
 			if (print)

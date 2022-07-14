@@ -45,7 +45,7 @@ sub run {
     $output_file_number = 1;
     $gnuplot_terminal   = $opts->{'plot-terminal'}
     || ( $ENV{DISPLAY} ? "x11" : "dumb" );
-    $wait_after_plot    = !$opts->{'don't-wait'};
+    $wait_after_plot    = !$opts->{'dont-wait'};
 
     die "illegal offset-limit: $offset_limit" unless $offset_limit > 0.0;
     $offset_limit *= 1e6;			# scale to microseconds

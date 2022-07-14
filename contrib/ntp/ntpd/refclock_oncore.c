@@ -110,7 +110,7 @@
  * Reg.Clemens (Mar 2004)
  * Support for interfaces other than PPSAPI removed, for Solaris, SunOS,
  * SCO, you now need to use one of the timepps.h files in the root dir.
- * this driver will 'grab' it for you if you don't have one in /usr/include
+ * this driver will 'grab' it for you if you dont have one in /usr/include
  * --------------------------------------------------------------------------
  * This code uses the two devices
  *	/dev/oncore.serial.n
@@ -493,7 +493,7 @@ static u_char oncore_cmd_Ag[]  = { 'A', 'g', 0 };				    /* 6/8/12	Satellite Mas
 static u_char oncore_cmd_Agx[] = { 'A', 'g', 0xff };				    /* 6/8/12	Satellite Mask Angle: read		*/
 static u_char oncore_cmd_As[]  = { 'A', 's', 0,0,0,0, 0,0,0,0, 0,0,0,0, 0 };	    /* 6/8/12	Posn Hold Parameters			*/
 static u_char oncore_cmd_Asx[] = { 'A', 's', 0x7f,0xff,0xff,0xff,		    /* 6/8/12	Posn Hold Readback			*/
-					     0x7f,0xff,0xff,0xff,		    /*		 on UT+ this doesn't work with 0xff	*/
+					     0x7f,0xff,0xff,0xff,		    /*		 on UT+ this doesnt work with 0xff	*/
 					     0x7f,0xff,0xff,0xff, 0xff };	    /*		 but does work with 0x7f (sigh).	*/
 static u_char oncore_cmd_At0[] = { 'A', 't', 0 };				    /* 6/8	Posn Hold: off				*/
 static u_char oncore_cmd_At1[] = { 'A', 't', 1 };				    /* 6/8	Posn Hold: on				*/
@@ -551,7 +551,7 @@ static u_char oncore_cmd_Ia[]  = { 'I', 'a' };					    /* 12	Self Test				*/
  *				    the GT had Au,Av, but not As,At
  * This was as of v2.0 of both firmware sets. possibly 1.3 for UT.
  * Bj in UT at v1.3
- * don't see Bd in UT/GT thru 1999
+ * dont see Bd in UT/GT thru 1999
  * Gj in UT as of 3.0, 1999 , Bj as of 1.3
  */
 
@@ -640,7 +640,7 @@ oncore_start(
 	oncore_log(instance, LOG_NOTICE, "state = ONCORE_NO_IDEA");
 
 	/* Now open files.
-	 * This is a bit complicated, a we don't want to open the same file twice
+	 * This is a bit complicated, a we dont want to open the same file twice
 	 * (its a problem on some OS), and device2 may not exist for the new PPS
 	 */
 
@@ -1030,7 +1030,7 @@ oncore_init_shmem(
 	/* we now walk thru the two buffers (shmem_old and buf, soon to become shmem)
 	 * copying the data in shmem_old to buf.
 	 * When we are done we write it out and free both buffers.
-	 * If the structure sizes don't agree, I will not copy.
+	 * If the structure sizes dont agree, I will not copy.
 	 * This could be due to an addition/deletion or a problem with the disk file.
 	 */
 
@@ -1727,7 +1727,7 @@ oncore_get_timestamp(
 	/* now have timestamp in ts */
 	/* add in saw_tooth and offset, these will be ZERO if no TRAIM */
 	/* they will be IGNORED if the PPSAPI cant do PPS_OFFSET/ASSERT/CLEAR */
-	/* we just try to add them in and don't test for that here */
+	/* we just try to add them in and dont test for that here */
 
 	/* saw_tooth not really necessary if using TIMEVAL */
 	/* since its only precise to us, but do it anyway. */
@@ -1872,7 +1872,7 @@ oncore_get_timestamp(
 		    );
 	}
 
-	/* and some things I don't understand (magic ntp things) */
+	/* and some things I dont understand (magic ntp things) */
 
 #if 1
 	oncore_feed_clockproc(instance);
@@ -3211,7 +3211,7 @@ oncore_msg_Gj(
 	int dt;
 	const char *cp;
 
-	instance->saw_Gj = 1; /* flag, saw_Gj, don't need to try Bj in check_leap */
+	instance->saw_Gj = 1; /* flag, saw_Gj, dont need to try Bj in check_leap */
 
 	/* print the message to verify whats there */
 
@@ -3428,14 +3428,14 @@ oncore_check_leap_sec(
 	if (instance->Bj_day != instance->BEHa[5]) {	/* do this 1/day */
 		instance->Bj_day = instance->BEHa[5];
 
-		if (instance->saw_Gj < 0) {	/* -1 DON'T have Gj use Bj */
+		if (instance->saw_Gj < 0) {	/* -1 DONT have Gj use Bj */
 			if ((instance->BEHa[4] == 6) || (instance->BEHa[4] == 12))
 				oncore_sendmsg(instance, oncore_cmd_Bj, sizeof(oncore_cmd_Bj));
 				oncore_sendmsg(instance, oncore_cmd_Bl, sizeof(oncore_cmd_Bl));
 			return;
 		}
 
-		if (instance->saw_Gj == 0)	/* 0 is don't know if we have Gj */
+		if (instance->saw_Gj == 0)	/* 0 is dont know if we have Gj */
 			instance->count4 = 1;
 
 		oncore_sendmsg(instance, oncore_cmd_Gj, sizeof(oncore_cmd_Gj));

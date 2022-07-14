@@ -1623,7 +1623,7 @@ process_pps(
 	++up->tc_pps_recv;
 
 	/* Bail out if there's indication that time sync is bad or
-	 * if we're explicitly requested to ignore PPS data.
+	 * if we're explicitely requested to ignore PPS data.
 	 */
 	if (up->fl_nosync)
 		return;

@@ -232,7 +232,7 @@ ieee80211_hwmp_init(void)
 	ieee80211_hwmp_net_diameter_traversaltime = msecs_to_ticks(512);
 
 	/*
-	 * NB: I don't know how to make SYSCTL_PROC that calls ms to ticks
+	 * NB: I dont know how to make SYSCTL_PROC that calls ms to ticks
 	 * and return a struct timeval...
 	 */
 	ieee80211_hwmp_rootconfint.tv_usec =
@@ -782,7 +782,7 @@ hwmp_add_meshperr(uint8_t *frm, const struct ieee80211_meshperr_ie *perr)
 #undef	PERR_DRCODE
 
 /*
- * Add a Root Announcement IE to a frame.
+ * Add a Root Annoucement IE to a frame.
  */
 static uint8_t *
 hwmp_add_meshrann(uint8_t *frm, const struct ieee80211_meshrann_ie *rann)
@@ -869,7 +869,7 @@ hwmp_rootmode_cb(void *arg)
 #undef	PREQ_TSEQ
 
 /*
- * Send a Root Announcement (RANN) to find all the nodes on the mesh. We are
+ * Send a Root Annoucement (RANN) to find all the nodes on the mesh. We are
  * called when the vap is configured as a HWMP RANN root node.
  */
 static void
@@ -1175,7 +1175,7 @@ hwmp_recv_preq(struct ieee80211vap *vap, struct ieee80211_node *ni,
 
 		/*
 		 * We have a valid route to this node.
-		 * NB: if target is proxy don't reply.
+		 * NB: if target is proxy dont reply.
 		 */
 		if (rttarg != NULL &&
 		    rttarg->rt_flags & IEEE80211_MESHRT_FLAGS_VALID &&

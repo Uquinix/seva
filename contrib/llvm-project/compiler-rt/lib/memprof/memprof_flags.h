@@ -19,11 +19,11 @@
 
 // MemProf flag values can be defined in four ways:
 // 1) initialized with default values at startup.
-// 2) overridden during compilation of MemProf runtime by providing
+// 2) overriden during compilation of MemProf runtime by providing
 //    compile definition MEMPROF_DEFAULT_OPTIONS.
-// 3) overridden from string returned by user-specified function
+// 3) overriden from string returned by user-specified function
 //    __memprof_default_options().
-// 4) overridden from env variable MEMPROF_OPTIONS.
+// 4) overriden from env variable MEMPROF_OPTIONS.
 
 namespace __memprof {
 

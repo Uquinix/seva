@@ -239,7 +239,7 @@ public:
 
 private:
   /// The objects necessary for carrying out an evaluation of the SavedModel.
-  /// They are expensive to set up, and we maintain them across all the
+  /// They are expensive to set up, and we maintain them accross all the
   /// evaluations of the model.
   TF_Session *Session = nullptr;
   TFGraphPtr Graph;

@@ -390,7 +390,7 @@ private:
   /// stored within that section.
   ///
   /// \returns either the decompressed object file stored within the
-  /// .gnu_debugdata section or \c nullptr if an error occurred or if there's no
+  /// .gnu_debugdata section or \c nullptr if an error occured or if there's no
   /// section with that name.
   std::shared_ptr<ObjectFileELF> GetGnuDebugDataObjectFile();
 };

@@ -166,7 +166,7 @@ static driver_t enetc_driver = {
 };
 
 DRIVER_MODULE(miibus, enetc, miibus_fdt_driver, NULL, NULL);
-/* Make sure miibus gets processed first. */
+/* Make sure miibus gets procesed first. */
 DRIVER_MODULE_ORDERED(enetc, pci, enetc_driver, NULL, NULL, SI_ORDER_ANY);
 MODULE_VERSION(enetc, 1);
 
@@ -868,7 +868,7 @@ enetc_vlan_register(if_ctx_t ctx, uint16_t vid)
 	sc = iflib_get_softc(ctx);
 	hash = enetc_hash_vid(vid);
 
-	/* Check if hash is already present in the bitmap. */
+	/* Check if hash is alredy present in the bitmap. */
 	if (++sc->vlan_bitmap[hash] != 1)
 		return;
 

@@ -59,7 +59,7 @@ BEGIN
 BEGIN
 /var1 && var2 && (!var3)/
 {
-	printf("Successfully got two speculative buffers");
+	printf("Succesfully got two speculative buffers");
 	exit(0);
 }
 

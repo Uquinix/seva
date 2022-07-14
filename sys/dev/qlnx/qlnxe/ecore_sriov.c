@@ -1760,7 +1760,7 @@ static void ecore_iov_vf_mbx_acquire(struct ecore_hwfn       *p_hwfn,
 	OSAL_MEMSET(resp, 0, sizeof(*resp));
 
 	/* Write the PF version so that VF would know which version
-	 * is supported - might be later overridden. This guarantees that
+	 * is supported - might be later overriden. This guarantees that
 	 * VF could recognize legacy PF based on lack of versions in reply.
 	 */
 	pfdev_info->major_fp_hsi = ETH_HSI_VER_MAJOR;
@@ -3977,7 +3977,7 @@ ecore_iov_execute_vf_flr_cleanup(struct ecore_hwfn *p_hwfn,
 		rc = ecore_iov_enable_vf_access(p_hwfn, p_ptt, p_vf);
 		if (rc) {
 			/* TODO - again, a mess... */
-			DP_ERR(p_hwfn, "Failed to re-enable VF[%d] access\n",
+			DP_ERR(p_hwfn, "Failed to re-enable VF[%d] acces\n",
 			       vfid);
 			return rc;
 		}

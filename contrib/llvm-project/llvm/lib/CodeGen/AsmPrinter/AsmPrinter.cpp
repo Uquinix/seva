@@ -1152,7 +1152,7 @@ void AsmPrinter::emitBBAddrMapSection(const MachineFunction &MF) {
   OutStreamer->emitSymbolValue(FunctionSymbol, getPointerSize());
   // Emit the total number of basic blocks in this function.
   OutStreamer->emitULEB128IntValue(MF.size());
-  // Emit BB Information for each basic block in the function.
+  // Emit BB Information for each basic block in the funciton.
   for (const MachineBasicBlock &MBB : MF) {
     const MCSymbol *MBBSymbol =
         MBB.isEntryBlock() ? FunctionSymbol : MBB.getSymbol();
@@ -2019,7 +2019,7 @@ void AsmPrinter::SetupMachineFunction(MachineFunction &MF) {
     // function body does not have the same name as the source function's
     // C-linkage name.
     assert(CurrentFnDescSym && "The function descriptor symbol needs to be"
-                               " initialized first.");
+                               " initalized first.");
 
     // Get the function entry point symbol.
     CurrentFnSym = getObjFileLowering().getFunctionEntryPointSymbol(&F, TM);

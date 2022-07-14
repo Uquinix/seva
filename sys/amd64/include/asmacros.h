@@ -160,7 +160,7 @@ X\vec_name\()_pti:
 	.type	X\vec_name,@function
 X\vec_name:
 	testb	$SEL_RPL_MASK,PTI_CS-3*8(%rsp) /* come from kernel? */
-	jz	.L\vec_name\()_u		/* Yes, don't swapgs again */
+	jz	.L\vec_name\()_u		/* Yes, dont swapgs again */
 	swapgs
 .L\vec_name\()_u:
 	lfence
@@ -243,7 +243,7 @@ X\vec_name:
 
 #ifdef __STDC__
 #define ELFNOTE(name, type, desctype, descdata...) \
-.pushsection .note.name                 ;       \
+.pushsection .note.name, "a", @note     ;       \
   .align 4                              ;       \
   .long 2f - 1f         /* namesz */    ;       \
   .long 4f - 3f         /* descsz */    ;       \
@@ -255,7 +255,7 @@ X\vec_name:
 .popsection
 #else /* !__STDC__, i.e. -traditional */
 #define ELFNOTE(name, type, desctype, descdata) \
-.pushsection .note.name                 ;       \
+.pushsection .note.name, "a", @note     ;       \
   .align 4                              ;       \
   .long 2f - 1f         /* namesz */    ;       \
   .long 4f - 3f         /* descsz */    ;       \

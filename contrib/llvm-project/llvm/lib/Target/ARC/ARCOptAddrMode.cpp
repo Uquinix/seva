@@ -96,11 +96,11 @@ private:
                                     SmallVectorImpl<MachineInstr *> *Uses);
 
   // Returns true if all instruction in \p Uses array can be adjusted
-  // to accommodate increment of register \p BaseReg by \p Incr
+  // to accomodate increment of register \p BaseReg by \p Incr
   bool canFixPastUses(const ArrayRef<MachineInstr *> &Uses,
                       MachineOperand &Incr, unsigned BaseReg);
 
-  // Update all instructions in \p Uses to accommodate increment
+  // Update all instructions in \p Uses to accomodate increment
   // of \p BaseReg by \p Offset
   void fixPastUses(ArrayRef<MachineInstr *> Uses, unsigned BaseReg,
                    int64_t Offset);

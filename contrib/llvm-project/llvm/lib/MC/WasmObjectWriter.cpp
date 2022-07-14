@@ -1547,7 +1547,7 @@ uint64_t WasmObjectWriter::writeOneObject(MCAssembler &Asm,
       }
 
       // Custom sections can also belong to COMDAT groups. In this case the
-      // descriptor's "index" field is the section index (in the final object
+      // decriptor's "index" field is the section index (in the final object
       // file), but that is not known until after layout, so it must be fixed up
       // later
       if (const MCSymbolWasm *C = Section.getGroup()) {

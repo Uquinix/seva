@@ -1033,11 +1033,11 @@ MDNode *MDNode::getMostGenericRange(MDNode *A, MDNode *B) {
   int AN = A->getNumOperands() / 2;
   int BN = B->getNumOperands() / 2;
   while (AI < AN && BI < BN) {
-    ConstantInt *Allow = mdconst::extract<ConstantInt>(A->getOperand(2 * AI));
+    ConstantInt *ALow = mdconst::extract<ConstantInt>(A->getOperand(2 * AI));
     ConstantInt *BLow = mdconst::extract<ConstantInt>(B->getOperand(2 * BI));
 
-    if (Allow->getValue().slt(BLow->getValue())) {
-      addRange(EndPoints, Allow,
+    if (ALow->getValue().slt(BLow->getValue())) {
+      addRange(EndPoints, ALow,
                mdconst::extract<ConstantInt>(A->getOperand(2 * AI + 1)));
       ++AI;
     } else {

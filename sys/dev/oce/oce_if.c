@@ -708,10 +708,10 @@ oce_intr(void *arg, int pending)
 	if (!num_eqes)
 		goto eq_arm; /* Spurious */
 
- 	/* Clear EQ entries, but don't arm */
+ 	/* Clear EQ entries, but dont arm */
 	oce_arm_eq(sc, eq->eq_id, num_eqes, FALSE, FALSE);
 
-	/* Process TX, RX and MCC. But don't arm CQ*/
+	/* Process TX, RX and MCC. But dont arm CQ*/
 	for (i = 0; i < eq->cq_valid; i++) {
 		cq = eq->cq[i];
 		(*cq->cq_handler)(cq->cb_arg);
@@ -2697,7 +2697,7 @@ oce_mq_handler(void *arg)
 static void
 setup_max_queues_want(POCE_SOFTC sc)
 {
-	/* Check if it is FLEX machine. Is so don't use RSS */	
+	/* Check if it is FLEX machine. Is so dont use RSS */	
 	if ((sc->function_mode & FNM_FLEX10_MODE) ||
 	    (sc->function_mode & FNM_UMC_MODE)    ||
 	    (sc->function_mode & FNM_VNIC_MODE)	  ||

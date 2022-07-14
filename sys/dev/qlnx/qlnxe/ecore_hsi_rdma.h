@@ -489,7 +489,7 @@ struct rdma_close_func_ramrod_data
 {
 	u8 cnq_start_offset;
 	u8 num_cnqs;
-	u8 vf_id /* This field should be assigned to Virtual Function ID if vf_valid == 1. Otherwise its don't care */;
+	u8 vf_id /* This field should be assigned to Virtual Function ID if vf_valid == 1. Otherwise its dont care */;
 	u8 vf_valid;
 	u8 reserved[4];
 };
@@ -593,7 +593,7 @@ struct rdma_init_func_hdr
 	u8 cnq_start_offset /* First RDMA CNQ */;
 	u8 num_cnqs /* Number of CNQs */;
 	u8 cq_ring_mode /* 0 for 32 bit cq producer and consumer counters and 1 for 16 bit */;
-	u8 vf_id /* This field should be assigned to Virtual Function ID if vf_valid == 1. Otherwise its don't care */;
+	u8 vf_id /* This field should be assigned to Virtual Function ID if vf_valid == 1. Otherwise its dont care */;
 	u8 vf_valid;
 	u8 relaxed_ordering /* 1 for using relaxed ordering PCI writes */;
 	__le16 first_reg_srq_id /* The SRQ ID of thr first regular (non XRC) SRQ */;
@@ -671,7 +671,7 @@ struct rdma_register_tid_ramrod_data
 #define RDMA_REGISTER_TID_RAMROD_DATA_RESERVED1_SHIFT         2
 	u8 key;
 	u8 length_hi;
-	u8 vf_id /* This field should be assigned to Virtual Function ID if vf_valid == 1. Otherwise its don't care */;
+	u8 vf_id /* This field should be assigned to Virtual Function ID if vf_valid == 1. Otherwise its dont care */;
 	u8 vf_valid;
 	__le16 pd;
 	__le16 reserved2;

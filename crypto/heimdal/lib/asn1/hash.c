@@ -95,7 +95,7 @@ hashtabsearch(Hashtab * htab, void *ptr)
 
 /* add element to hash table */
 /* if already there, set new value */
-/* !NULL if successful */
+/* !NULL if succesful */
 
 void *
 hashtabadd(Hashtab * htab, void *ptr)

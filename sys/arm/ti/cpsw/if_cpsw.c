@@ -1055,7 +1055,7 @@ cpswp_attach(device_t dev)
 		return (ENXIO);
 	}
 	if (!OF_hasprop(opp_table, "syscon")) {
-		device_printf(dev, "/opp-table doesn't have required syscon property\n");
+		device_printf(dev, "/opp-table doesnt have required syscon property\n");
 		cpswp_detach(dev);
 		return (ENXIO);
 	}

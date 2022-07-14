@@ -249,7 +249,7 @@ extern ManagedStatic<SubCommand> AllSubCommands;
 class Option {
   friend class alias;
 
-  // handleOccurrences - Overridden by subclasses to handle the value passed into
+  // handleOccurrences - Overriden by subclasses to handle the value passed into
   // an argument.  Should return true if there was an error processing the
   // argument and the program should exit.
   //

@@ -660,7 +660,7 @@ hdmi_edid_read(struct dwc_hdmi_softc *sc, int block, uint8_t **edid,
 	uint8_t segment = block >> 1;
 	/*
 	 * Some devices do not support E-DDC so attempt
-	 * writing segment address only if it's necessary
+	 * writing segment address only if it's neccessary
 	 */
 	unsigned char xfers = segment ? 3 : 2;
 	struct iic_msg msg[] = {

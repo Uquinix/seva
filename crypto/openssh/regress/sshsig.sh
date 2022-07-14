@@ -445,7 +445,7 @@ for t in $SIGNKEYS; do
 
 done
 
-# Test key independent match-principals
+# Test key independant match-principals
 (
 	printf "principal1 " ; cat $pubkey;
 	printf "princi* " ; cat $pubkey;

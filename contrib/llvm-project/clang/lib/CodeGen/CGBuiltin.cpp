@@ -11869,7 +11869,7 @@ Value *CodeGenFunction::EmitBPFBuiltinExpr(unsigned BuiltinID,
          "unexpected BPF builtin");
 
   // A sequence number, injected into IR builtin functions, to
-  // prevent CSE given the only difference of the function
+  // prevent CSE given the only difference of the funciton
   // may just be the debuginfo metadata.
   static uint32_t BuiltinSeqNum;
 
@@ -15535,7 +15535,7 @@ Value *CodeGenFunction::EmitPPCBuiltinExpr(unsigned BuiltinID,
       // When the second argument is 32 bits, it can either be an integer or
       // a float. The vinsw intrinsic is used in this case.
       F = CGM.getIntrinsic(Intrinsic::ppc_altivec_vinsw);
-      // Fix the constant according to endianness.
+      // Fix the constant according to endianess.
       if (getTarget().isLittleEndian())
         ConstArg = 12 - ConstArg;
     } else {
@@ -15558,7 +15558,7 @@ Value *CodeGenFunction::EmitPPCBuiltinExpr(unsigned BuiltinID,
     }
     // Emit the call to vinsw or vinsd.
     Call = Builder.CreateCall(F, Ops);
-    // Depending on the builtin, bitcast to the appropriate result type.
+    // Depending on the builtin, bitcast to the approriate result type.
     if (BuiltinID == PPC::BI__builtin_altivec_vec_replace_elt &&
         !Ops[1]->getType()->isIntegerTy())
       return Builder.CreateBitCast(Call, ResultType);

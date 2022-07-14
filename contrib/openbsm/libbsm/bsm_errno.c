@@ -746,7 +746,7 @@ bsm_lookup_errno_bsm(u_char bsm_errno)
 }
 
 /*
- * Conversion from a BSM error to a local error number may fail if either
+ * Converstion from a BSM error to a local error number may fail if either
  * OpenBSM doesn't recognize the error on the wire, or because there is no
  * appropriate local mapping.
  */

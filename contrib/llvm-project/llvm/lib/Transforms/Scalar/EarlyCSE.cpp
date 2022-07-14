@@ -1278,7 +1278,7 @@ bool EarlyCSE::processNode(DomTreeNode *Node) {
     // and we can forward values across it. For invariant starts without
     // invariant ends, we can use the fact that the invariantness never ends to
     // start a scope in the current generaton which is true for all future
-    // generations.  Also, we don't need to consume the last store since the
+    // generations.  Also, we dont need to consume the last store since the
     // semantics of invariant.start allow us to perform   DSE of the last
     // store, if there was a store following invariant.start. Consider:
     //

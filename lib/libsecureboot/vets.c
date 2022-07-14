@@ -420,8 +420,9 @@ ve_trust_init(void)
 #endif
 
 #ifdef TRUST_ANCHOR_STR
-	ve_trust_anchors_add_buf(__DECONST(unsigned char *, TRUST_ANCHOR_STR),
-	    sizeof(TRUST_ANCHOR_STR));
+	if (TRUST_ANCHOR_STR != NULL && strlen(TRUST_ANCHOR_STR) != 0ul)
+		ve_trust_anchors_add_buf(__DECONST(unsigned char *,
+		    TRUST_ANCHOR_STR), sizeof(TRUST_ANCHOR_STR));
 #endif
 	once = (int) VEC_LEN(trust_anchors);
 #ifdef VE_OPENPGP_SUPPORT
@@ -505,7 +506,7 @@ verify_signer_xcs(br_x509_certificate *xcs,
 	br_x509_minimal_set_rsa(&mc, &br_rsa_i31_pkcs1_vrfy);
 #endif
 #if defined(UNIT_TEST) && defined(VE_DEPRECATED_RSA_SHA1_SUPPORT)
-	/* This is deprecated! do not enable unless you absolutely have to */
+	/* This is deprecated! do not enable unless you absoultely have to */
 	br_x509_minimal_set_hash(&mc, br_sha1_ID, &br_sha1_vtable);
 #endif
 	br_x509_minimal_set_hash(&mc, br_sha256_ID, &br_sha256_vtable);

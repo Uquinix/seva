@@ -112,7 +112,7 @@ timeout 300 \
         -serial stdio -vga none -nographic -monitor none \
         -snapshot -hda fat:${ROOTDIR} 2>&1 | tee ${BOOTLOG}
 
-# Check whether we successfully booted...
+# Check whether we succesfully booted...
 if grep -q 'Hello world.' ${BOOTLOG}; then
 	echo "OK"
 else

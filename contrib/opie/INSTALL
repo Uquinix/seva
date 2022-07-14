@@ -59,7 +59,7 @@ currently available options, type:
 
   --enable-user-locking[=DIR]: Put user lock files in DIR [/etc/opielocks]
     The OPIE lock files need to be put in an isolated directory that is
-    only accessible by the super-user and has a parent directory that is
+    only accessable by the super-user and has a parent directory that is
     only writable by the super-user. If you are trying to use OPIE with
     the key file shared by NFS, you need to make the lock directory
     shared too. (But you read the README file, so you knew this)

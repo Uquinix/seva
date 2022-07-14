@@ -1892,7 +1892,7 @@ mvneta_xmitfast_locked(struct mvneta_softc *sc, int q, struct mbuf **m)
 
 	ifp = sc->ifp;
 
-	/* Don't enqueue packet if the queue is disabled. */
+	/* Dont enqueue packet if the queue is disabled. */
 	if (__predict_false(tx->queue_status == MVNETA_QUEUE_DISABLED)) {
 		m_freem(*m);
 		*m = NULL;

@@ -44,7 +44,7 @@
   # echo h<press key bound to dabbrev-expande>
   # echo hello\ world<cursor>
 
-  The same problem occurred if spaces were present in a string withing quotation
+  The same problem occured if spaces were present in a string withing quotation
   marks. Example:
 
   # echo "hello world"
@@ -3768,7 +3768,7 @@ v_undo(Char c)
 	cp = UndoPtr;
 	Cursor = UndoPtr;
 	kp = UndoBuf;
-	size = (int)(Cursor-LastChar); /*  NOT NSL independent */
+	size = (int)(Cursor-LastChar); /*  NOT NSL independant */
 	if (size < UndoSize)
 	    size = UndoSize;
 	for (loop = 0; loop < size; loop++) {

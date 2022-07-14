@@ -98,7 +98,7 @@ function setup_testenv
 }
 
 #
-# Cleanup test environment according to pool name
+# Cleanup test envirnment according to pool name
 #
 # $1 pool
 #

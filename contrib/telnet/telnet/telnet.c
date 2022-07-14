@@ -268,9 +268,9 @@ send_dont(int c, int init)
     }
     if (telnetport < 0)
 	return;
-    NET2ADD(IAC, DON'T);
+    NET2ADD(IAC, DONT);
     NETADD(c);
-    printoption("SENT", DON'T, c);
+    printoption("SENT", DONT, c);
 }
 
 void
@@ -552,7 +552,7 @@ dontoption(int option)
 		break;
 #endif
 	    }
-	    /* we always accept a DON'T */
+	    /* we always accept a DONT */
 	    set_my_want_state_wont(option);
 	    if (my_state_is_will(option))
 		send_wont(option, 0);
@@ -854,7 +854,7 @@ suboption(void)
 	case DO:
 	    lm_do(subpointer, SB_LEN());
 	    break;
-	case DON'T:
+	case DONT:
 	    lm_dont(subpointer, SB_LEN());
 	    break;
 	case LM_SLC:
@@ -1030,7 +1030,7 @@ lm_will(unsigned char *cmd, int len)
     switch(cmd[0]) {
     case LM_FORWARDMASK:	/* We shouldn't ever get this... */
     default:
-	str_lm[3] = DON'T;
+	str_lm[3] = DONT;
 	str_lm[4] = cmd[0];
 	if (NETROOM() > (int)sizeof(str_lm)) {
 	    ring_supply_data(&netoring, str_lm, sizeof(str_lm));
@@ -1051,7 +1051,7 @@ lm_wont(unsigned char *cmd, int len)
     switch(cmd[0]) {
     case LM_FORWARDMASK:	/* We shouldn't ever get this... */
     default:
-	/* We are always DON'T, so don't respond */
+	/* We are always DONT, so don't respond */
 	return;
     }
 }
@@ -1774,7 +1774,7 @@ process_iac:
 		telrcv_state = TS_DO;
 		continue;
 
-	    case DON'T:
+	    case DONT:
 		telrcv_state = TS_DONT;
 		continue;
 
@@ -1835,7 +1835,7 @@ process_iac:
 	    continue;
 
 	case TS_DONT:
-	    printoption("RCVD", DON'T, c);
+	    printoption("RCVD", DONT, c);
 	    dontoption(c);
 	    flushline = 1;
 	    setconnmode(0);	/* set new tty mode (maybe) */
@@ -2187,7 +2187,7 @@ nextitem(char *current)
     }
     switch (*(current+1)&0xff) {
     case DO:
-    case DON'T:
+    case DONT:
     case WILL:
     case WONT:
 	return current+3;

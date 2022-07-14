@@ -2927,7 +2927,7 @@ xo_format_string (xo_handle_t *xop, xo_buffer_t *xbp, xo_xff_flags_t flags,
 	    return 0;
 
 	/*
-	 * Don't' deref NULL; use the traditional "(null)" instead
+	 * Dont' deref NULL; use the traditional "(null)" instead
 	 * of the more accurate "who's been a naughty boy, then?".
 	 */
 	if (wcp == NULL) {
@@ -2942,7 +2942,7 @@ xo_format_string (xo_handle_t *xop, xo_buffer_t *xbp, xo_xff_flags_t flags,
 	if (xfp->xf_skip)
 	    return 0;
 
-	/* Echo "Don't' deref NULL" logic */
+	/* Echo "Dont' deref NULL" logic */
 	if (cp == NULL) {
 	    if ((flags & XFF_NOQUOTE) && xo_style_is_encoding(xop)) {
 		cp = null_no_quotes;

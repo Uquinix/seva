@@ -129,8 +129,8 @@ struct init_qm_pq_params
  */
 struct init_qm_vport_params
 {
-	u32 vport_rl /* rate limit in Mb/sec units. a value of 0 means don't configure. ignored if VPORT RL is globally disabled. */;
-	u16 vport_wfq /* WFQ weight. A value of 0 means don't configure. ignored if VPORT WFQ is globally disabled. */;
+	u32 vport_rl /* rate limit in Mb/sec units. a value of 0 means dont configure. ignored if VPORT RL is globally disabled. */;
+	u16 vport_wfq /* WFQ weight. A value of 0 means dont configure. ignored if VPORT WFQ is globally disabled. */;
 	u16 first_tx_pq_id[NUM_OF_TCS] /* the first Tx PQ ID associated with this VPORT for each TC. */;
 };
 

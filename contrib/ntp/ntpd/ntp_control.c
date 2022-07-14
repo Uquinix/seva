@@ -3869,7 +3869,7 @@ send_mru_entry(
  * from the client snapshot at the end, but so far that doesn't seem
  * useful.
  *
- * To accommodate the changing MRU list, the starting point for requests
+ * To accomodate the changing MRU list, the starting point for requests
  * after the first request is supplied as a series of last seen
  * timestamps and associated addresses, the newest ones the client has
  * received.  As long as at least one of those entries hasn't been

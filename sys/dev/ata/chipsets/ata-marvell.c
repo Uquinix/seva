@@ -149,7 +149,7 @@ ata_marvell_ch_attach(device_t dev)
 	int error;
 
 	error = ata_pci_ch_attach(dev);
-    	/* don't use 32 bit PIO transfers */
+    	/* dont use 32 bit PIO transfers */
 	ch->flags |= ATA_USE_16BIT;
 	ch->flags |= ATA_CHECKS_CABLE;
 	return (error);

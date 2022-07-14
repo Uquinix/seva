@@ -3245,7 +3245,7 @@ GLOBAL bit32 mpiGetDevInfoRsp(
   si_memcpy(&pDevice->devInfo.sasDeviceInfo.commonDevInfo, &commonDevInfo, sizeof(agsaDeviceInfo_t));
   si_memcpy(&pDevice->devInfo.sataDeviceInfo.commonDevInfo, &commonDevInfo, sizeof(agsaDeviceInfo_t));
 
-  /* setup device firstBurstSize information */
+  /* setup device firstBurstSize infomation */
   pDevice->devInfo.sataDeviceInfo.commonDevInfo.firstBurstSize =
        (bit16)((IRMcnITNexusTimeOut >> SHIFT16) & FIRST_BURST);
 
@@ -3428,7 +3428,7 @@ GLOBAL bit32 mpiGetDevInfoRspSpc(
 
   Info_avail = OSSA_DEV_INFO_NO_EXTENDED_INFO;
 
-  /* setup device common information */
+  /* setup device common infomation */
   pDevice->devInfo.sasDeviceInfo.commonDevInfo.smpTimeout =
     (bit16)((dTypeSrateSMPTOPortID >> SHIFT8 ) & SMPTO_BITS);
 

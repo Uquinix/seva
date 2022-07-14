@@ -9,7 +9,7 @@
 //  This defines CastValueChecker which models casts of custom RTTIs.
 //
 // TODO list:
-// - It only allows one successful cast between two types however in the wild
+// - It only allows one succesful cast between two types however in the wild
 //   the object could be casted to multiple types.
 // - It needs to check the most likely type information from the dynamic type
 //   map to increase precision of dynamic casting.

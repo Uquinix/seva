@@ -276,7 +276,7 @@ gic_v3_ofw_bus_alloc_res(device_t bus, device_t child, int type, int *rid,
 
 /*
  * Bus capability support for GICv3.
- * Collects and configures device information and finally
+ * Collects and configures device informations and finally
  * adds ITS device as a child of GICv3 in Newbus hierarchy.
  */
 static int
@@ -299,6 +299,14 @@ gic_v3_ofw_bus_attach(device_t dev)
 		    sizeof(size_cells));
 		/* Iterate through all GIC subordinates */
 		for (node = OF_child(parent); node > 0; node = OF_peer(node)) {
+			/*
+			 * Ignore children that lack a compatible property.
+			 * Some of them may be for configuration, for example
+			 * ppi-partitions.
+			 */
+			if (!OF_hasprop(node, "compatible"))
+				continue;
+
 			/* Allocate and populate devinfo. */
 			di = malloc(sizeof(*di), M_GIC_V3, M_WAITOK | M_ZERO);
 

@@ -42,6 +42,9 @@ struct file;
 #include <sys/socket.h>
 #if defined(_KERNEL)
 # include <sys/systm.h>
+# if defined(__FreeBSD__)
+#  include <sys/jail.h>
+# endif
 # if !defined(__SVR4)
 #  include <sys/mbuf.h>
 # endif
@@ -999,6 +1002,12 @@ ipf_nat_ioctl(ipf_main_softc_t *softc, caddr_t data, ioctlcmd_t cmd,
 		IPFERROR(60001);
 		return (EPERM);
 	}
+# if defined(__FreeBSD__)
+	if (jailed_without_vnet(curthread->td_ucred)) {
+		IPFERROR(60076);
+		return (EOPNOTSUPP);
+	}
+# endif
 #endif
 
 	getlock = (mode & NAT_LOCKHELD) ? 0 : 1;
@@ -2467,7 +2476,7 @@ ipf_nat_clearlist(ipf_main_softc_t *softc, ipf_nat_softc_t *softn)
 /*              purge(I) - 1 == allow purge, 0 == prevent purge             */
 /* Locks:       WRITE(ipf_nat)                                              */
 /*                                                                          */
-/* Preventing "purge" from occurring is allowed because when all of the NAT  */
+/* Preventing "purge" from occuring is allowed because when all of the NAT  */
 /* rules are being removed, allowing the "purge" to walk through the list   */
 /* of NAT sessions, possibly multiple times, would be a large performance   */
 /* hit, on the order of O(N^2).                                             */
@@ -5922,7 +5931,7 @@ ipf_nat_sync(ipf_main_softc_t *softc, void *ifp)
 			 * account the new IP#.
 			 */
 			CALC_SUMD(sum1, sum2, sumd);
-			/* XXX - don't change for TCP when solaris does
+			/* XXX - dont change for TCP when solaris does
 			 * hardware checksumming.
 			 */
 			sumd += nat->nat_sumd[0];

@@ -802,7 +802,7 @@ void RegionInfoBase<Tr>::releaseMemory() {
 
 template <class Tr>
 void RegionInfoBase<Tr>::verifyAnalysis() const {
-  // Do only verify regions if explicitly activated using EXPENSIVE_CHECKS or
+  // Do only verify regions if explicitely activated using EXPENSIVE_CHECKS or
   // -verify-region-info
   if (!RegionInfoBase<Tr>::VerifyRegionInfo)
     return;

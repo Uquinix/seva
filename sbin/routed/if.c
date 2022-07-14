@@ -990,7 +990,7 @@ ifinit(void)
 				continue;
 
 			/* It is bad if input or output is not working.
-			 * Require persistent problems before marking it dead.
+			 * Require presistent problems before marking it dead.
 			 */
 			if ((in <= ierr && ierr > 0)
 			    || (out <= oerr && oerr > 0)) {

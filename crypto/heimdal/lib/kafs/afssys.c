@@ -352,7 +352,7 @@ SIGSYS_handler(int sig)
 #endif
 
 /*
- * Try to see if `syscall' is a pioctl.  Return 0 iff successful.
+ * Try to see if `syscall' is a pioctl.  Return 0 iff succesful.
  */
 
 #if defined(AFS_SYSCALL) || defined(AFS_SYSCALL2) || defined(AFS_SYSCALL3)
@@ -377,7 +377,7 @@ try_one (int syscall_num)
 
 /*
  * Try to see if `syscall_pioctl' is a pioctl syscall.  Return 0 iff
- * successful.
+ * succesful.
  *
  */
 

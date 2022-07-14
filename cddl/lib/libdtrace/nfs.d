@@ -34,7 +34,7 @@
 #pragma	D depends_on module nfs
 
 typedef struct nfsv4opinfo {
-	uint64_t noi_xid;	/* unique transaction ID */
+	uint64_t noi_xid;	/* unique transation ID */
 	cred_t *noi_cred;	/* credentials for operation */
 	string noi_curpath;	/* current file handle path (if any) */
 } nfsv4opinfo_t;
@@ -91,7 +91,7 @@ translator nfsv4cbinfo_t < rfs4_deleg_state_t *P > {
 };
 
 typedef struct nfsv3opinfo {
-	uint64_t noi_xid;	/* unique transaction ID */
+	uint64_t noi_xid;	/* unique transation ID */
 	cred_t *noi_cred;	/* credentials for operation */
 	string noi_curpath;	/* current file handle path (if any) */
 } nfsv3opinfo_t;

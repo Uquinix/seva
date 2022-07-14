@@ -135,7 +135,7 @@ struct Config {
   /// Optimization remarks pass filter.
   std::string RemarksPasses;
 
-  /// Whether to emit optimization remarks with hotness information.
+  /// Whether to emit optimization remarks with hotness informations.
   bool RemarksWithHotness = false;
 
   /// The minimum hotness value a diagnostic needs in order to be included in
@@ -156,7 +156,7 @@ struct Config {
   /// The format used for serializing remarks (default: YAML).
   std::string RemarksFormat;
 
-  /// Whether to emit the pass manager debuggging information.
+  /// Whether to emit the pass manager debuggging informations.
   bool DebugPassManager = false;
 
   /// Statistics output file path.

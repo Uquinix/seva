@@ -10,7 +10,7 @@ import re
 wordlist = [
     'hadnot',
     'donot', 'hadnt',
-    'don't', 'have', 'more', 'will', 'your',
+    'dont', 'have', 'more', 'will', 'your',
     'and', 'are', 'had', 'the', 'you',
     'am', 'an', 'is', 'll', 've', 'we',
     'a', 'd', 'i', 'm', 's',

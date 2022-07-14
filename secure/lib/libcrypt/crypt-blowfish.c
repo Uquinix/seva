@@ -199,7 +199,7 @@ crypt_blowfish(const char *key, const char *salt, char *buffer)
 	if (strlen(salt) * 3 / 4 < BCRYPT_MAXSALT)
 		return (-1);
 
-	/* We don't want the base64 salt but the raw data */
+	/* We dont want the base64 salt but the raw data */
 	decode_base64(csalt, BCRYPT_MAXSALT, (const u_int8_t *) salt);
 	salt_len = BCRYPT_MAXSALT;
 	if (minr <= 'a')

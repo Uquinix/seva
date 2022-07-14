@@ -1348,7 +1348,7 @@ void PPCFrameLowering::inlineStackProbe(MachineFunction &MF,
                     "stack is realigned.");
     assert(isPowerOf2_64(ProbeSize) && "Probe size should be power of 2");
 
-    // FIXME: We can eliminate this limitation if we get more information about
+    // FIXME: We can eliminate this limitation if we get more infomation about
     // which part of redzone are already used. Used redzone can be treated
     // probed. But there might be `holes' in redzone probed, this could
     // complicate the implementation.

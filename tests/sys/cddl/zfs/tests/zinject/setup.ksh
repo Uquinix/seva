@@ -35,7 +35,7 @@ verify_runnable "global"
 
 if [[ -n $DISK ]]; then
 	#
-        # Use 'zpool create' to clean up the information in 
+        # Use 'zpool create' to clean up the infomation in 
         # in the given disk to avoid slice overlapping.
         #
 	cleanup_devices $DISK

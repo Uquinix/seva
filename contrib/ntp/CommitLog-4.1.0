@@ -2779,7 +2779,7 @@
 2000-01-21  Sven Dietrich <sven_dietrich@trimble.com>
 
 	* Add pointer to html/hints/winnt.htm to INSTALL file
-	* Fix NT makefiles to accommodate at least one weird
+	* Fix NT makefiles to accomodate at least one weird
 	  version of Visual C that can't handle the LFs without
 	  the DOS CR also.
 

@@ -126,7 +126,7 @@ value can be less than B<size> for a partial write.
 =item E<lt> 0
 
 The write operation was not successful, because either the connection was
-closed, an error occurred or action must be taken by the calling process.
+closed, an error occured or action must be taken by the calling process.
 Call SSL_get_error() with the return value to find out the reason.
 
 =back

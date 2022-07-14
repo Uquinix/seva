@@ -92,7 +92,7 @@
  * DMA Descriptor
  *
  * the ethernet device has 8 rx/tx DMA queues. each of queue has its own
- * descriptor list. descriptors are simply index by counter inside the device.
+ * decriptor list. descriptors are simply index by counter inside the device.
  */
 #define	MVNETA_TX_SEGLIMIT	32
 
@@ -115,7 +115,7 @@ struct mvneta_rx_ring {
 	/* Virtual address of the RX buffer */
 	void 				*rxbuf_virt_addr[MVNETA_RX_RING_CNT];
 
-	/* Management entries for each of descritors */
+	/* Managment entries for each of descritors */
 	struct mvneta_buf		rxbuf[MVNETA_RX_RING_CNT];
 
 	/* locks */
@@ -148,7 +148,7 @@ struct mvneta_tx_ring {
 	bus_dmamap_t			desc_map;
 	bus_addr_t			desc_pa;
 
-	/* Management entries for each of descritors */
+	/* Managment entries for each of descritors */
 	struct mvneta_buf		txbuf[MVNETA_TX_RING_CNT];
 
 	/* locks */

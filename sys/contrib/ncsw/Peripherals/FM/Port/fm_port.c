@@ -1132,7 +1132,7 @@ static t_Error SetPcd(t_FmPort *p_FmPort, t_FmPortPcdParams *p_PcdParams)
 
     if (p_FmPort->imEn)
         RETURN_ERROR(MAJOR, E_INVALID_OPERATION,
-                     ("available for non-independent mode ports only"));
+                     ("available for non-independant mode ports only"));
 
     if ((p_FmPort->portType != e_FM_PORT_TYPE_RX_10G)
             && (p_FmPort->portType != e_FM_PORT_TYPE_RX)
@@ -1678,7 +1678,7 @@ static t_Error DeletePcd(t_FmPort *p_FmPort)
 
     if (p_FmPort->imEn)
         RETURN_ERROR(MAJOR, E_INVALID_OPERATION,
-                     ("available for non-independent mode ports only"));
+                     ("available for non-independant mode ports only"));
 
     if ((p_FmPort->portType != e_FM_PORT_TYPE_RX_10G)
             && (p_FmPort->portType != e_FM_PORT_TYPE_RX)
@@ -5286,7 +5286,7 @@ t_Error FM_PORT_DeletePCD(t_Handle h_FmPort)
 
     if (p_FmPort->imEn)
         RETURN_ERROR(MAJOR, E_INVALID_OPERATION,
-                     ("available for non-independent mode ports only"));
+                     ("available for non-independant mode ports only"));
 
     if ((p_FmPort->portType != e_FM_PORT_TYPE_RX_10G)
             && (p_FmPort->portType != e_FM_PORT_TYPE_RX)

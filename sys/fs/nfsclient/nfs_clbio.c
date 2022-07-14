@@ -1334,7 +1334,7 @@ again:
 		if (ioflag & IO_UNIT) {
 			VATTR_NULL(&vattr);
 			vattr.va_size = orig_size;
-			/* IO_SYNC is handled implicitly */
+			/* IO_SYNC is handled implicitely */
 			(void)VOP_SETATTR(vp, &vattr, cred);
 			uio->uio_offset -= orig_resid - uio->uio_resid;
 			uio->uio_resid = orig_resid;

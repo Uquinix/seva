@@ -265,7 +265,7 @@
  * RAW_INTR_STAT- (RO) Raw Interrupt Status Register		22.2.10
  *
  *	GEN_CALL	Set only when a general call (broadcast) address
- *			is received and acknowledged, stays set until
+ *			is received and acknowleged, stays set until
  *			cleared by reading CLR_GEN_CALL.
  *
  *	START_DET	Set when a START or RESTART condition has occurred
